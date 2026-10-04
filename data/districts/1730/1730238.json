@@ -1,0 +1,12 @@
+{
+  "soato": "1730238",
+  "region_soato": "1730",
+  "name_soato": "Фурқат тумани",
+  "name_polygon_set": "Фурқат т.",
+  "population_2026_official": 132200,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.026775,
+  "mahallas_in_source": 35,
+  "area_km2": 305.3836,
+  "model_vs_official_gap": -0.0261
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1730209",
+  "region_soato": "1730",
+  "name_soato": "Боғдод тумани",
+  "name_polygon_set": "Боғдод т.",
+  "population_2026_official": 243000,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.013643,
+  "mahallas_in_source": 59,
+  "area_km2": 360.5157,
+  "model_vs_official_gap": -0.0135
+}

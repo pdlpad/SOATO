@@ -1,0 +1,12 @@
+{
+  "soato": "1712408",
+  "region_soato": "1712",
+  "name_soato": "Зарафшон шаҳри",
+  "name_polygon_set": "Зарафшон ш.",
+  "population_2026_official": 92100,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 3.297151,
+  "mahallas_in_source": 15,
+  "area_km2": 57.3778,
+  "model_vs_official_gap": -0.6967
+}

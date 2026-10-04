@@ -1,0 +1,12 @@
+{
+  "soato": "1710240",
+  "region_soato": "1710",
+  "name_soato": "Кўкдала тумани",
+  "name_polygon_set": "Кўк дала т.",
+  "population_2026_official": 200000,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.406121,
+  "mahallas_in_source": 37,
+  "area_km2": 1710.3448,
+  "model_vs_official_gap": -0.2888
+}

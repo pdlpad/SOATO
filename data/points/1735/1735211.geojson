@@ -1,0 +1,200 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.941707,
+     43.157547
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3522001,
+    "name": "Қуралпа ОФЙ",
+    "district_soato": "1735211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.142397,
+     43.197361
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3522002,
+    "name": "Есимөзек ОФЙ",
+    "district_soato": "1735211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.124019,
+     42.94972
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3522003,
+    "name": "Маденият ОФЙ",
+    "district_soato": "1735211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.949449,
+     43.311098
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3522004,
+    "name": "Жаңа Қараөзек ШФЙ",
+    "district_soato": "1735211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.967365,
+     42.840217
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3522005,
+    "name": "Аллаяр Досназаров ОФЙ",
+    "district_soato": "1735211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.990233,
+     42.934753
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3522006,
+    "name": "С.Камалов ОФЙ",
+    "district_soato": "1735211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.049976,
+     43.046716
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3522007,
+    "name": "Бердах ОФЙ",
+    "district_soato": "1735211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.019194,
+     43.016356
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3522008,
+    "name": "Есим МФЙ",
+    "district_soato": "1735211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.066726,
+     43.019585
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3522009,
+    "name": "Қараөзек ОФЙ",
+    "district_soato": "1735211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.251915,
+     42.478039
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3522010,
+    "name": "Қойбақ ОФЙ",
+    "district_soato": "1735211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.024585,
+     43.035949
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3522011,
+    "name": "Ата макан МФЙ",
+    "district_soato": "1735211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.015826,
+     43.027436
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3522012,
+    "name": "Ғарезсизлик гүзары МФЙ",
+    "district_soato": "1735211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.99926,
+     43.02585
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3522013,
+    "name": "Қутлы макан МФЙ",
+    "district_soato": "1735211"
+   }
+  }
+ ]
+}

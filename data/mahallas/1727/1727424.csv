@@ -1,0 +1,25 @@
+mahalla_id,name,district_soato,area_km2,populated_area_km2,pop_2026_est,density_gross,density_populated,method,quality_flags
+2721001,Мустақиллик,1727424,1.2816,0.8454,5666.8,4421.6,6703.0,GHS-POP,district_ghs_diverges_2x
+2721002,Туркистон,1727424,0.4324,0.4131,2731.5,6317.2,6612.3,GHS-POP,district_ghs_diverges_2x
+2721003,Олтинобод,1727424,0.2646,0.1412,1131.4,4276.0,8013.0,GHS-POP,district_ghs_diverges_2x
+2721004,Файзли,1727424,0.5212,0.5137,3394.5,6512.8,6607.9,GHS-POP,district_ghs_diverges_2x
+2721005,Фаровон,1727424,0.3413,0.3393,2487.7,7288.8,7331.8,GHS-POP,district_ghs_diverges_2x
+2721006,Рамадон,1727424,0.4494,0.4468,3149.5,7008.3,7049.1,GHS-POP,district_ghs_diverges_2x
+2721007,Сабо,1727424,0.7229,0.7095,5816.1,8045.5,8197.5,GHS-POP,district_ghs_diverges_2x
+2721008,Ишчилар шахарчаси,1727424,0.5873,0.5838,4805.7,8182.6,8231.7,GHS-POP,district_ghs_diverges_2x
+2721009,Янгибоғ,1727424,0.8633,0.8577,5413.5,6270.7,6311.6,GHS-POP,district_ghs_diverges_2x
+2721010,Бахт,1727424,0.8403,0.8256,5495.0,6539.3,6655.7,GHS-POP,district_ghs_diverges_2x
+2721011,Мезон,1727424,0.7143,0.7102,5012.3,7017.1,7057.6,GHS-POP,district_ghs_diverges_2x
+2721012,Наврўз,1727424,0.8335,0.8256,5333.5,6398.9,6460.2,GHS-POP,district_ghs_diverges_2x
+2721013,Олмос,1727424,0.9691,0.9634,7803.8,8052.7,8100.3,GHS-POP,district_ghs_diverges_2x
+2721014,Файзобод,1727424,0.8577,0.831,6055.6,7060.3,7287.2,GHS-POP,district_ghs_diverges_2x
+2721015,Мевазор,1727424,0.2683,0.2641,1713.1,6385.2,6486.7,GHS-POP,district_ghs_diverges_2x
+2721016,Янгиобод,1727424,0.1566,0.0882,251.7,1607.2,2853.6,GHS-POP,district_ghs_diverges_2x
+2721017,Лаззат,1727424,0.4901,0.4845,2564.5,5232.6,5293.1,GHS-POP,district_ghs_diverges_2x
+2721018,Қовунчи тепа,1727424,0.4166,0.4142,2778.1,6668.5,6707.2,GHS-POP,district_ghs_diverges_2x
+2721019,Мустақиллик,1727424,0.8812,0.4571,2700.8,3064.9,5908.6,GHS-POP,district_ghs_diverges_2x
+2721020,Олтинобод,1727424,0.2605,0.1374,1099.1,4219.2,7999.3,GHS-POP,district_ghs_diverges_2x
+2721021,Нов ,1727424,0.8809,0.4425,1938.3,2200.4,4380.3,GHS-POP,district_ghs_diverges_2x
+2721022,Янгихаёт (Янги Ўзбекистон),1727424,0.9878,0.9693,4902.9,4963.4,5058.2,GHS-POP,district_ghs_diverges_2x
+2721023,Боғбон,1727424,0.9128,0.6241,3608.7,3953.5,5782.3,GHS-POP,district_ghs_diverges_2x
+2721024,Бахор ,1727424,1.1013,0.598,3045.8,2765.6,5093.3,GHS-POP,district_ghs_diverges_2x

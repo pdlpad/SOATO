@@ -1,0 +1,12 @@
+{
+  "soato": "1718401",
+  "region_soato": "1718",
+  "name_soato": "Самарқанд шаҳри",
+  "name_polygon_set": "Самарқанд ш.",
+  "population_2026_official": 605800,
+  "estimation_method": "здания OSM",
+  "calibration_factor": 0.018642,
+  "mahallas_in_source": 215,
+  "area_km2": 113.0294,
+  "model_vs_official_gap": -0.2129
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1710235",
+  "region_soato": "1710",
+  "name_soato": "Нишон тумани",
+  "name_polygon_set": "Нишон т.",
+  "population_2026_official": 174600,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.431963,
+  "mahallas_in_source": 36,
+  "area_km2": 2114.092,
+  "model_vs_official_gap": -0.3017
+}

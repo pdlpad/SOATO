@@ -1,0 +1,12 @@
+{
+  "soato": "1710401",
+  "region_soato": "1710",
+  "name_soato": "Қарши шаҳри",
+  "name_polygon_set": "Қарши ш.",
+  "population_2026_official": 306300,
+  "estimation_method": "здания OSM",
+  "calibration_factor": 0.03139,
+  "mahallas_in_source": 64,
+  "area_km2": 98.6992,
+  "model_vs_official_gap": 0.0739
+}

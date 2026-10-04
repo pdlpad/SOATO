@@ -1,0 +1,12 @@
+{
+  "soato": "1706219",
+  "region_soato": "1706",
+  "name_soato": "Когон тумани",
+  "name_polygon_set": "Когон т.",
+  "population_2026_official": 88000,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.805896,
+  "mahallas_in_source": 23,
+  "area_km2": 500.8909,
+  "model_vs_official_gap": 0.2409
+}

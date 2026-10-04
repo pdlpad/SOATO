@@ -1,0 +1,365 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.768712,
+     40.503812
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410001,
+    "name": "Намуна",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.773014,
+     40.480928
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410002,
+    "name": "Аҳиллик",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.796352,
+     40.493909
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410003,
+    "name": "Дўстлик",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.785152,
+     40.487444
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410004,
+    "name": "Навбаҳор",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.77086,
+     40.492943
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410005,
+    "name": "Тараққиёт",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.781267,
+     40.495604
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410006,
+    "name": "Шодлик",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.781077,
+     40.479318
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410007,
+    "name": "Янги хаёт",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.78026,
+     40.511197
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410008,
+    "name": "Бўстон",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.779289,
+     40.526443
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410009,
+    "name": "Истиқлол",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.768596,
+     40.541328
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410010,
+    "name": "Улуғобод",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.764839,
+     40.518619
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410011,
+    "name": "Обод юрт",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.758526,
+     40.488362
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410012,
+    "name": "Маданият",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.754684,
+     40.493499
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410013,
+    "name": "Маънавият",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.754078,
+     40.503131
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410014,
+    "name": "Улуғ йўл",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.749854,
+     40.536597
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410015,
+    "name": "Баҳор",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.768141,
+     40.511858
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410016,
+    "name": "Боғишамол",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.777554,
+     40.505237
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410017,
+    "name": "Сайқал",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.754839,
+     40.514649
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410018,
+    "name": "Юксалиш",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.728056,
+     40.550314
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410019,
+    "name": "Ибратли",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.789285,
+     40.520851
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410020,
+    "name": "Бахт",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.793057,
+     40.511084
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410021,
+    "name": "Буюк келажак",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.754136,
+     40.49773
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410022,
+    "name": "Нихол",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.798218,
+     40.482717
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410023,
+    "name": "Нурафшон",
+    "district_soato": "1724401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.81426,
+     40.48836
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2410024,
+    "name": "Сохил",
+    "district_soato": "1724401"
+   }
+  }
+ ]
+}

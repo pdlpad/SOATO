@@ -1,0 +1,12 @@
+{
+  "soato": "1703209",
+  "region_soato": "1703",
+  "name_soato": "Бўстон тумани",
+  "name_polygon_set": "Бўстон т.",
+  "population_2026_official": 81300,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.133787,
+  "mahallas_in_source": 25,
+  "area_km2": 201.0681,
+  "model_vs_official_gap": -0.118
+}

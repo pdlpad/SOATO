@@ -1,0 +1,12 @@
+{
+  "soato": "1712234",
+  "region_soato": "1712",
+  "name_soato": "Кармана тумани",
+  "name_polygon_set": "Кармана т.",
+  "population_2026_official": 144700,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.805085,
+  "mahallas_in_source": 43,
+  "area_km2": 501.2368,
+  "model_vs_official_gap": 0.2421
+}

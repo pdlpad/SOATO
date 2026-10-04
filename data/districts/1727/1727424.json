@@ -1,0 +1,12 @@
+{
+  "soato": "1727424",
+  "region_soato": "1727",
+  "name_soato": "Янгийўлшаҳри",
+  "name_polygon_set": "Янгиўл ш.",
+  "population_2026_official": 88900,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 2.035296,
+  "mahallas_in_source": 24,
+  "area_km2": 16.035,
+  "model_vs_official_gap": -0.5087
+}

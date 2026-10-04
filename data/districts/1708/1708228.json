@@ -1,0 +1,12 @@
+{
+  "soato": "1708228",
+  "region_soato": "1708",
+  "name_soato": "Пахтакор тумани",
+  "name_polygon_set": "Пахтакор т.",
+  "population_2026_official": 83800,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.432408,
+  "mahallas_in_source": 15,
+  "area_km2": 233.2401,
+  "model_vs_official_gap": -0.3019
+}

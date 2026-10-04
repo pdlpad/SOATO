@@ -1,0 +1,12 @@
+{
+  "soato": "1703214",
+  "region_soato": "1703",
+  "name_soato": "Избоскан тумани",
+  "name_polygon_set": "Избоскан т.",
+  "population_2026_official": 264800,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.12797,
+  "mahallas_in_source": 63,
+  "area_km2": 274.9994,
+  "model_vs_official_gap": -0.1135
+}

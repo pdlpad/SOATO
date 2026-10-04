@@ -1,0 +1,365 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.18123,
+     40.07962
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806001,
+    "name": "Янгихаёт",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.085084,
+     40.124604
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806002,
+    "name": "Тозауруғ",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.366688,
+     40.18077
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806003,
+    "name": "Оқар",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.274697,
+     40.105039
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806004,
+    "name": "Тараққиёт",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.171688,
+     40.098234
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806005,
+    "name": "Тинчлик",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.392439,
+     40.234927
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806006,
+    "name": "Ёшлик",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.076969,
+     40.158687
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806007,
+    "name": "Адиробод",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.217603,
+     40.100143
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806008,
+    "name": "Лалмикор",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.047263,
+     40.100039
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806009,
+    "name": "Шодлик",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.172705,
+     40.100876
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806010,
+    "name": "Мустақиллик",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.235004,
+     40.239197
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806011,
+    "name": "Нурафшон",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.167289,
+     40.11425
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806012,
+    "name": "Оқбулоқ",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.044716,
+     40.20646
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806013,
+    "name": "Янгикент",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.159612,
+     40.171771
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806014,
+    "name": "Шарқ Юлдузи",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.273459,
+     40.179854
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806015,
+    "name": "Андижон",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.094907,
+     40.106211
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806016,
+    "name": "Янгиобод",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.376602,
+     40.130115
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806017,
+    "name": "Тошкесган",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.168698,
+     40.080979
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806018,
+    "name": "Навоий",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.146763,
+     40.084819
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806019,
+    "name": "Равот",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.174599,
+     40.093471
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806020,
+    "name": "Ойбек",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.051681,
+     40.10835
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806021,
+    "name": "Наврўз",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.032775,
+     40.109655
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806022,
+    "name": "Дўстлик",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.142129,
+     40.108338
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806023,
+    "name": "Нуробод ",
+    "district_soato": "1708220"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.435126,
+     40.181121
+    ]
+   },
+   "properties": {
+    "mahalla_id": 806024,
+    "name": "Навбаҳор",
+    "district_soato": "1708220"
+   }
+  }
+ ]
+}

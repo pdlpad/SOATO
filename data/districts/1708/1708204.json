@@ -1,0 +1,12 @@
+{
+  "soato": "1708204",
+  "region_soato": "1708",
+  "name_soato": "Бахмал тумани",
+  "name_polygon_set": "Бахмал т.",
+  "population_2026_official": 177900,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.629892,
+  "mahallas_in_source": 34,
+  "area_km2": 1864.683,
+  "model_vs_official_gap": -0.3865
+}

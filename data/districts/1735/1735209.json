@@ -1,0 +1,12 @@
+{
+  "soato": "1735209",
+  "region_soato": "1735",
+  "name_soato": "Бўзатов тумани",
+  "name_polygon_set": "Бозатау т.",
+  "population_2026_official": 21800,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.4226,
+  "mahallas_in_source": 5,
+  "area_km2": 1966.1297,
+  "model_vs_official_gap": -0.2971
+}

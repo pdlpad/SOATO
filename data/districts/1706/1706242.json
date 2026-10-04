@@ -1,0 +1,12 @@
+{
+  "soato": "1706242",
+  "region_soato": "1706",
+  "name_soato": "Ромитан тумани",
+  "name_polygon_set": "Ромитан т.",
+  "population_2026_official": 155300,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.986566,
+  "mahallas_in_source": 45,
+  "area_km2": 3807.5605,
+  "model_vs_official_gap": 0.0136
+}

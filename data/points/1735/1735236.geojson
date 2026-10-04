@@ -1,0 +1,425 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.450688,
+     42.373476
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518001,
+    "name": "Жана жап ОФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.342845,
+     42.394102
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518002,
+    "name": "Саришунгил ОФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.372034,
+     42.450725
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518003,
+    "name": "Кулаб ОФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.362202,
+     42.525241
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518004,
+    "name": "Қумжыққын ОФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.417205,
+     42.468199
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518005,
+    "name": "Мустақиллик ОФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.290818,
+     42.478246
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518006,
+    "name": "Амударья ОФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.459109,
+     42.411894
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518008,
+    "name": "Абат МФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.469324,
+     42.432861
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518009,
+    "name": "Тутзар МФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.477334,
+     42.430839
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518010,
+    "name": "Нурлы жол  МФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.474984,
+     42.424388
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518011,
+    "name": "Наврўз МФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.513653,
+     42.426232
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518012,
+    "name": "Саманкўл ОФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.448169,
+     42.407859
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518013,
+    "name": "Байтерек МФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.455038,
+     42.403792
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518014,
+    "name": "Жузимзар МФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.451659,
+     42.395104
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518015,
+    "name": "Тынышлық МФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.434907,
+     42.396014
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518016,
+    "name": "Кун нуры МФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.454378,
+     42.409714
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518017,
+    "name": "Муртазабий МФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.459169,
+     42.397758
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518018,
+    "name": "Таскөпир МФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.443389,
+     42.402841
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518019,
+    "name": "Паруаз МФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.426136,
+     42.416218
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518020,
+    "name": "Қумбыз МФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.460636,
+     42.420553
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518021,
+    "name": "Шағалакол МФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.424675,
+     42.407454
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518022,
+    "name": "Бунёдкор МФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.434729,
+     42.410964
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518023,
+    "name": "Қырқыншы МФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.474599,
+     42.416066
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518024,
+    "name": "Суўенли МФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.438394,
+     42.415493
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518025,
+    "name": "Маденият МФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.47335,
+     42.404146
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518026,
+    "name": "Жан Қонырат МФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.544808,
+     42.438094
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518027,
+    "name": "Жайхун ШФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.507182,
+     42.438881
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518028,
+    "name": "Бағман МФЙ",
+    "district_soato": "1735236"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.443273,
+     42.425376
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3518029,
+    "name": "Сәбик МФЙ",
+    "district_soato": "1735236"
+   }
+  }
+ ]
+}

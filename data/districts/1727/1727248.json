@@ -1,0 +1,12 @@
+{
+  "soato": "1727248",
+  "region_soato": "1727",
+  "name_soato": "Қибрай тумани",
+  "name_polygon_set": "Қибрай т.",
+  "population_2026_official": 181700,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.022746,
+  "mahallas_in_source": 71,
+  "area_km2": 268.5238,
+  "model_vs_official_gap": -0.0222
+}

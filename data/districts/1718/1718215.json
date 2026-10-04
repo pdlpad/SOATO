@@ -1,0 +1,12 @@
+{
+  "soato": "1718215",
+  "region_soato": "1718",
+  "name_soato": "Каттақўрғон тумани",
+  "name_polygon_set": "Каттақўрғон т.",
+  "population_2026_official": 305400,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.822749,
+  "mahallas_in_source": 69,
+  "area_km2": 1505.8653,
+  "model_vs_official_gap": 0.2154
+}

@@ -1,0 +1,260 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.269175,
+     43.028838
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3516001,
+    "name": "Ғарезсизлик МФЙ",
+    "district_soato": "1735230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.292877,
+     43.028564
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3516002,
+    "name": "Айдын жол МФЙ",
+    "district_soato": "1735230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.299391,
+     43.01573
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3516003,
+    "name": "Даўир МФЙ",
+    "district_soato": "1735230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.368321,
+     42.896419
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3516005,
+    "name": "Жаңадарья ОФЙ",
+    "district_soato": "1735230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.515647,
+     42.891205
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3516006,
+    "name": "Маржанкөл МФЙ",
+    "district_soato": "1735230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     61.083023,
+     43.011744
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3516007,
+    "name": "Мулик ОФЙ",
+    "district_soato": "1735230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.332817,
+     43.144012
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3516008,
+    "name": "Қаратерең МФЙ",
+    "district_soato": "1735230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.376145,
+     43.122702
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3516009,
+    "name": "Даўқара ОФЙ",
+    "district_soato": "1735230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     61.010307,
+     43.619544
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3516010,
+    "name": "Қоныраткөл ОФЙ",
+    "district_soato": "1735230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.499769,
+     43.139282
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3516011,
+    "name": "Белтаў ОФЙ",
+    "district_soato": "1735230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.264699,
+     42.957196
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3516012,
+    "name": "Атакөл ОФЙ",
+    "district_soato": "1735230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.25998,
+     43.065948
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3516013,
+    "name": "Караой ОФЙ",
+    "district_soato": "1735230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.206775,
+     43.046674
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3516014,
+    "name": "Ўзбекистон МФЙ",
+    "district_soato": "1735230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.419211,
+     42.997193
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3516015,
+    "name": "Даўыт сай МФЙ",
+    "district_soato": "1735230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     61.596351,
+     43.487292
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3516017,
+    "name": "Қоструба МФЙ",
+    "district_soato": "1735230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.369284,
+     43.041628
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3516018,
+    "name": "Ағитай Адилов ОФЙ",
+    "district_soato": "1735230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.278197,
+     43.014475
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3516019,
+    "name": "Тахтакўпир ШФЙ",
+    "district_soato": "1735230"
+   }
+  }
+ ]
+}

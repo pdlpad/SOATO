@@ -1,0 +1,12 @@
+{
+  "soato": "1722214",
+  "region_soato": "1722",
+  "name_soato": "Қумқўрғон тумани",
+  "name_polygon_set": "Қумқўрғон т.",
+  "population_2026_official": 267200,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.271788,
+  "mahallas_in_source": 61,
+  "area_km2": 1762.822,
+  "model_vs_official_gap": -0.2137
+}

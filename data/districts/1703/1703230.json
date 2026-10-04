@@ -1,0 +1,12 @@
+{
+  "soato": "1703230",
+  "region_soato": "1703",
+  "name_soato": "Шахрихон тумани",
+  "name_polygon_set": "Шаҳрихон т.",
+  "population_2026_official": 337400,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.040138,
+  "mahallas_in_source": 79,
+  "area_km2": 289.6809,
+  "model_vs_official_gap": -0.0386
+}

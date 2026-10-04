@@ -1,0 +1,12 @@
+{
+  "soato": "1718236",
+  "region_soato": "1718",
+  "name_soato": "Ургут тумани",
+  "name_polygon_set": "Ургут т.",
+  "population_2026_official": 585800,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.241987,
+  "mahallas_in_source": 120,
+  "area_km2": 1149.5376,
+  "model_vs_official_gap": -0.1948
+}

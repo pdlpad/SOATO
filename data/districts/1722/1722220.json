@@ -1,0 +1,12 @@
+{
+  "soato": "1722220",
+  "region_soato": "1722",
+  "name_soato": "Термиз тумани",
+  "name_polygon_set": "Термиз т.",
+  "population_2026_official": 89700,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.592738,
+  "mahallas_in_source": 30,
+  "area_km2": 707.7827,
+  "model_vs_official_gap": 0.6871
+}

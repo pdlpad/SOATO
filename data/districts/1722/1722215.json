@@ -1,0 +1,12 @@
+{
+  "soato": "1722215",
+  "region_soato": "1722",
+  "name_soato": "Қизириқ тумани",
+  "name_polygon_set": "Қизириқ т.",
+  "population_2026_official": 129600,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.22257,
+  "mahallas_in_source": 31,
+  "area_km2": 398.2718,
+  "model_vs_official_gap": -0.1821
+}

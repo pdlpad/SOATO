@@ -1,0 +1,12 @@
+{
+  "soato": "1726283",
+  "region_soato": "1726",
+  "name_soato": "Сирғали тумани",
+  "name_polygon_set": "Сирғали т.",
+  "population_2026_official": 178700,
+  "estimation_method": "здания OSM",
+  "calibration_factor": 0.01424,
+  "mahallas_in_source": 46,
+  "area_km2": 47.8667,
+  "model_vs_official_gap": 0.5704
+}

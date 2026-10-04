@@ -1,0 +1,12 @@
+{
+  "soato": "1727228",
+  "region_soato": "1727",
+  "name_soato": "Бўка тумани",
+  "name_polygon_set": "Бўка т.",
+  "population_2026_official": 138700,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.837581,
+  "mahallas_in_source": 44,
+  "area_km2": 616.1759,
+  "model_vs_official_gap": -0.4558
+}

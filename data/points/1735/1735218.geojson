@@ -1,0 +1,170 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     58.999383,
+     42.871159
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3513001,
+    "name": "Бескөпир ОФЙ",
+    "district_soato": "1735218"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.239331,
+     42.681432
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3513002,
+    "name": "Сары алтын ОФЙ",
+    "district_soato": "1735218"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     58.920611,
+     42.81385
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3513003,
+    "name": "Арзымбет қум ОФЙ",
+    "district_soato": "1735218"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.029956,
+     42.769156
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3513004,
+    "name": "Бостан ОФЙ",
+    "district_soato": "1735218"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.154963,
+     42.875999
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3513005,
+    "name": "Жайхун МФЙ",
+    "district_soato": "1735218"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.121999,
+     42.810893
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3513006,
+    "name": "Алтынкөл ОФЙ",
+    "district_soato": "1735218"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     58.994345,
+     42.813825
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3513007,
+    "name": "Наврўз ОФЙ",
+    "district_soato": "1735218"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.090888,
+     42.715645
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3513008,
+    "name": "Жаңа қала ОФЙ",
+    "district_soato": "1735218"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.016598,
+     42.835017
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3513009,
+    "name": "Дослық МФЙ",
+    "district_soato": "1735218"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.000283,
+     42.845375
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3513010,
+    "name": "Маденият МФЙ",
+    "district_soato": "1735218"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     58.997342,
+     42.83042
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3513011,
+    "name": "Қанлыкөл ШФЙ",
+    "district_soato": "1735218"
+   }
+  }
+ ]
+}

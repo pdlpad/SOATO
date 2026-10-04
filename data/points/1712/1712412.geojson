@@ -1,0 +1,65 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.423522,
+     40.624978
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1213001,
+    "name": "Гулистон",
+    "district_soato": "1712412"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.422226,
+     40.556115
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1213002,
+    "name": "Мармаробод",
+    "district_soato": "1712412"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.526683,
+     40.55989
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1213003,
+    "name": "Тумар",
+    "district_soato": "1712412"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.497894,
+     40.720888
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1213004,
+    "name": "Шайхон",
+    "district_soato": "1712412"
+   }
+  }
+ ]
+}

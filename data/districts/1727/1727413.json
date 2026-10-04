@@ -1,0 +1,12 @@
+{
+  "soato": "1727413",
+  "region_soato": "1727",
+  "name_soato": "Бекобод шаҳри",
+  "name_polygon_set": "Бекобод ш.",
+  "population_2026_official": 107300,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 2.007826,
+  "mahallas_in_source": 35,
+  "area_km2": 37.6187,
+  "model_vs_official_gap": -0.5019
+}

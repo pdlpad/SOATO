@@ -1,0 +1,230 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.422119,
+     40.386594
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2409001,
+    "name": "Қўрғонтепа",
+    "district_soato": "1724226"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.239972,
+     40.442841
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2409002,
+    "name": "Ота юрт",
+    "district_soato": "1724226"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.363872,
+     40.391197
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2409003,
+    "name": "Дўстлик",
+    "district_soato": "1724226"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.346435,
+     40.404795
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2409004,
+    "name": "Юртдош",
+    "district_soato": "1724226"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.188763,
+     40.312701
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2409005,
+    "name": "Қуйитош",
+    "district_soato": "1724226"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.120159,
+     40.306973
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2409006,
+    "name": "Файзлиобод",
+    "district_soato": "1724226"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.384663,
+     40.322987
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2409007,
+    "name": "Равот",
+    "district_soato": "1724226"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.243588,
+     40.298672
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2409008,
+    "name": "Бирлашган",
+    "district_soato": "1724226"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.320805,
+     40.306753
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2409009,
+    "name": "Пахтакор",
+    "district_soato": "1724226"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.233809,
+     40.369792
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2409010,
+    "name": "Янгиқишлоқ",
+    "district_soato": "1724226"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.292425,
+     40.415048
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2409011,
+    "name": "Бирлик",
+    "district_soato": "1724226"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.174619,
+     40.358266
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2409012,
+    "name": "Халқобод",
+    "district_soato": "1724226"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.378403,
+     40.288068
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2409013,
+    "name": "Зомин",
+    "district_soato": "1724226"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.447573,
+     40.295992
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2409014,
+    "name": "Бўстон",
+    "district_soato": "1724226"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.154126,
+     40.311513
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2409015,
+    "name": "Наврўз",
+    "district_soato": "1724226"
+   }
+  }
+ ]
+}

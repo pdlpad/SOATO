@@ -1,0 +1,12 @@
+{
+  "soato": "1714234",
+  "region_soato": "1714",
+  "name_soato": "Учқўрғон тумани",
+  "name_polygon_set": "Учқўрғон т.",
+  "population_2026_official": 191800,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.282895,
+  "mahallas_in_source": 64,
+  "area_km2": 300.0471,
+  "model_vs_official_gap": -0.2205
+}

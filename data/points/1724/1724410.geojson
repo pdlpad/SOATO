@@ -1,0 +1,110 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.063681,
+     40.227587
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2412001,
+    "name": "Нуробод МФЙ",
+    "district_soato": "1724410"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.145814,
+     40.223362
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2412002,
+    "name": "Фарход МФЙ",
+    "district_soato": "1724410"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.100165,
+     40.234139
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2412003,
+    "name": "Мирзо Улуғбек МФЙ",
+    "district_soato": "1724410"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.125298,
+     40.228818
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2412004,
+    "name": "Бунёдкор МФЙ",
+    "district_soato": "1724410"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.130845,
+     40.224538
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2412005,
+    "name": "Дўстлик МФЙ",
+    "district_soato": "1724410"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.131437,
+     40.230418
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2412006,
+    "name": "А.Темур МФЙ",
+    "district_soato": "1724410"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.116639,
+     40.225753
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2412007,
+    "name": "Ватанпарвар МФЙ",
+    "district_soato": "1724410"
+   }
+  }
+ ]
+}

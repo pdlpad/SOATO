@@ -1,0 +1,12 @@
+{
+  "soato": "1735236",
+  "region_soato": "1735",
+  "name_soato": "Хўжайли тумани",
+  "name_polygon_set": "Хўжайли т.",
+  "population_2026_official": 131300,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.067919,
+  "mahallas_in_source": 28,
+  "area_km2": 534.6041,
+  "model_vs_official_gap": -0.0636
+}

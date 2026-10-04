@@ -1,0 +1,12 @@
+{
+  "soato": "1710233",
+  "region_soato": "1710",
+  "name_soato": "Миришкор тумани",
+  "name_polygon_set": "Миришкор т.",
+  "population_2026_official": 134900,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.09215,
+  "mahallas_in_source": 40,
+  "area_km2": 3102.7545,
+  "model_vs_official_gap": -0.0844
+}

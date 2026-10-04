@@ -1,0 +1,12 @@
+{
+  "soato": "1724410",
+  "region_soato": "1724",
+  "name_soato": "Ширин шаҳри",
+  "name_polygon_set": "Ширин ш.",
+  "population_2026_official": 19400,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.491557,
+  "mahallas_in_source": 7,
+  "area_km2": 13.2806,
+  "model_vs_official_gap": -0.3296
+}

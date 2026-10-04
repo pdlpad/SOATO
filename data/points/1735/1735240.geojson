@@ -1,0 +1,335 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.863558,
+     42.97245
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519001,
+    "name": "Тағ жап ОФЙ",
+    "district_soato": "1735240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.758943,
+     42.917467
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519002,
+    "name": "Дослық МФЙ",
+    "district_soato": "1735240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.778505,
+     42.931261
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519003,
+    "name": "Жипек жолы МФЙ",
+    "district_soato": "1735240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.774873,
+     42.921854
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519004,
+    "name": "Шахтемир МФЙ",
+    "district_soato": "1735240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.763205,
+     42.942443
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519005,
+    "name": "Абат макан МФЙ",
+    "district_soato": "1735240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.794938,
+     42.92076
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519006,
+    "name": "Темир жол гузары МФЙ",
+    "district_soato": "1735240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.788446,
+     42.932935
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519007,
+    "name": "Бердақ МФЙ",
+    "district_soato": "1735240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.791164,
+     42.941359
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519008,
+    "name": "Кокши қала МФЙ",
+    "district_soato": "1735240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.716577,
+     43.018277
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519009,
+    "name": "Бахытлы ОФЙ",
+    "district_soato": "1735240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.69397,
+     42.917796
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519010,
+    "name": "Қамыс-арық ОФЙ",
+    "district_soato": "1735240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.80298,
+     43.158569
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519011,
+    "name": "Қостерек ОФЙ",
+    "district_soato": "1735240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.709825,
+     43.175863
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519012,
+    "name": "Таза жол ОФЙ",
+    "district_soato": "1735240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.781436,
+     42.907801
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519013,
+    "name": "Конши МФЙ",
+    "district_soato": "1735240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.857564,
+     43.112358
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519014,
+    "name": "Кеңес ОФЙ",
+    "district_soato": "1735240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.798759,
+     42.929109
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519015,
+    "name": "Қара кўл МФЙ",
+    "district_soato": "1735240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.761781,
+     42.951788
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519016,
+    "name": "Гужимли МФЙ",
+    "district_soato": "1735240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.751076,
+     42.936491
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519017,
+    "name": "Оржап МФЙ",
+    "district_soato": "1735240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.581925,
+     42.937827
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519018,
+    "name": "Қызыл өзек ОФЙ",
+    "district_soato": "1735240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.639996,
+     43.056543
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519019,
+    "name": "Пашент таў ОФЙ",
+    "district_soato": "1735240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.532851,
+     43.063815
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519020,
+    "name": "Май жап ОФЙ",
+    "district_soato": "1735240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.828454,
+     42.86602
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519021,
+    "name": "Тазғара ОФЙ",
+    "district_soato": "1735240"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.764517,
+     42.902349
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3519022,
+    "name": "Гулистан МФЙ",
+    "district_soato": "1735240"
+   }
+  }
+ ]
+}

@@ -1,0 +1,200 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.44381,
+     42.617587
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3515001,
+    "name": "Қырантаў ОФЙ",
+    "district_soato": "1735225"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.498126,
+     42.629274
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3515002,
+    "name": "Бақаншақлы ОФЙ",
+    "district_soato": "1735225"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.403877,
+     42.720704
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3515003,
+    "name": "Кердер ОФЙ",
+    "district_soato": "1735225"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.35218,
+     42.60265
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3515004,
+    "name": "Ақтерек МФЙ",
+    "district_soato": "1735225"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.600801,
+     42.615659
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3515005,
+    "name": "Қутанкөл МФЙ",
+    "district_soato": "1735225"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.731302,
+     42.465471
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3515006,
+    "name": "Тақыркөл ОФЙ",
+    "district_soato": "1735225"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.565765,
+     42.561504
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3515007,
+    "name": "Саманбай ОФЙ",
+    "district_soato": "1735225"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.544022,
+     42.592686
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3515008,
+    "name": "Ақманғыт ШФЙ",
+    "district_soato": "1735225"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.54698,
+     42.467681
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3515009,
+    "name": "Арбашы ОФЙ",
+    "district_soato": "1735225"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.529524,
+     42.588423
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3515010,
+    "name": "Тўк тов МФЙ",
+    "district_soato": "1735225"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.570013,
+     42.492239
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3515011,
+    "name": "Үлгили мәкан МФЙ",
+    "district_soato": "1735225"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.560381,
+     42.653015
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3515012,
+    "name": "Дарсан МФЙ",
+    "district_soato": "1735225"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.66186,
+     42.564304
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3515013,
+    "name": "Дийхан арна МФЙ",
+    "district_soato": "1735225"
+   }
+  }
+ ]
+}

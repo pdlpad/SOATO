@@ -1,0 +1,12 @@
+{
+  "soato": "1733401",
+  "region_soato": "1733",
+  "name_soato": "Урганч шаҳри",
+  "name_polygon_set": "Урганч ш.",
+  "population_2026_official": 157900,
+  "estimation_method": "здания OSM",
+  "calibration_factor": 0.011912,
+  "mahallas_in_source": 40,
+  "area_km2": 35.5642,
+  "model_vs_official_gap": 0.0407
+}

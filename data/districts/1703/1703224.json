@@ -1,0 +1,12 @@
+{
+  "soato": "1703224",
+  "region_soato": "1703",
+  "name_soato": "Aсака тумани",
+  "name_polygon_set": "Асака т.",
+  "population_2026_official": 368200,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.067234,
+  "mahallas_in_source": 77,
+  "area_km2": 267.6432,
+  "model_vs_official_gap": -0.063
+}

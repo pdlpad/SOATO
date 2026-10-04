@@ -1,0 +1,12 @@
+{
+  "soato": "1712230",
+  "region_soato": "1712",
+  "name_soato": "Навбаҳор тумани",
+  "name_polygon_set": "Навбаҳор т.",
+  "population_2026_official": 124100,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.012675,
+  "mahallas_in_source": 41,
+  "area_km2": 454.9686,
+  "model_vs_official_gap": -0.0125
+}

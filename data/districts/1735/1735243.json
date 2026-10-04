@@ -1,0 +1,12 @@
+{
+  "soato": "1735243",
+  "region_soato": "1735",
+  "name_soato": "Шуманай тумани",
+  "name_polygon_set": "Шуманай т.",
+  "population_2026_official": 58700,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.603993,
+  "mahallas_in_source": 13,
+  "area_km2": 830.1633,
+  "model_vs_official_gap": -0.3766
+}

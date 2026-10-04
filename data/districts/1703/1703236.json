@@ -1,0 +1,12 @@
+{
+  "soato": "1703236",
+  "region_soato": "1703",
+  "name_soato": "Хўжаобод тумани",
+  "name_polygon_set": "Хўжаобод т.",
+  "population_2026_official": 124500,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.925373,
+  "mahallas_in_source": 39,
+  "area_km2": 219.0471,
+  "model_vs_official_gap": 0.0806
+}

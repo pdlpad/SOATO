@@ -1,0 +1,12 @@
+{
+  "soato": "1727239",
+  "region_soato": "1727",
+  "name_soato": "Юқоричирчиқ тумани",
+  "name_polygon_set": "Юқори-чирчиқ т.",
+  "population_2026_official": 144000,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.261379,
+  "mahallas_in_source": 51,
+  "area_km2": 457.6695,
+  "model_vs_official_gap": -0.2072
+}

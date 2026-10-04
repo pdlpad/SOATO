@@ -1,0 +1,12 @@
+{
+  "soato": "1718216",
+  "region_soato": "1718",
+  "name_soato": "Қўшработ тумани",
+  "name_polygon_set": "Қўшрабод т.",
+  "population_2026_official": 146900,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.122845,
+  "mahallas_in_source": 45,
+  "area_km2": 2473.9784,
+  "model_vs_official_gap": -0.1094
+}

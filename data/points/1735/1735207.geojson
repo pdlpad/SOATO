@@ -1,0 +1,605 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.557113,
+     41.963021
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509001,
+    "name": "Олтинсой ОФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.688708,
+     41.806606
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509002,
+    "name": "Махтумқули ОФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.637846,
+     41.913803
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509003,
+    "name": "Абай ОФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     61.084464,
+     42.204079
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509004,
+    "name": "Қизилқалъа ОФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.680501,
+     41.903092
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509005,
+    "name": "Дўстлик ОФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.776689,
+     41.80191
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509006,
+    "name": "Тинчлик ОФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.547317,
+     41.832319
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509007,
+    "name": "Беруний ОФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.565773,
+     41.782167
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509008,
+    "name": "Қангшартол МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.687918,
+     41.733509
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509009,
+    "name": "Шимом ОФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.747605,
+     41.698487
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509010,
+    "name": "Серқуёш МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.78459,
+     41.670533
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509011,
+    "name": "Шаббоз ОФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.841401,
+     41.678279
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509012,
+    "name": "Ў.Жуманиязов МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.718862,
+     41.831518
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509013,
+    "name": "Озод ОФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.815228,
+     41.68904
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509014,
+    "name": "Саркоп ОФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.486769,
+     41.910373
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509015,
+    "name": "Бийбозор ОФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.83333,
+     41.744212
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509016,
+    "name": "Палваш МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.584437,
+     41.874166
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509017,
+    "name": "Мустақиллик МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.631608,
+     41.799854
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509018,
+    "name": "Найман МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.723714,
+     41.680344
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509019,
+    "name": "Қият МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.719904,
+     41.697349
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509020,
+    "name": "Хорезм МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.763147,
+     41.684509
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509021,
+    "name": "Истиқлол МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.729501,
+     41.700434
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509022,
+    "name": "Гүлистан МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.76924,
+     41.685711
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509023,
+    "name": "Пахтакор МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.778138,
+     41.684071
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509024,
+    "name": "Бирлик МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.768325,
+     41.696617
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509025,
+    "name": "Бўстон МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.767001,
+     41.68011
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509026,
+    "name": "Наврўз МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.755399,
+     41.70322
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509027,
+    "name": "Янгиобод МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.750033,
+     41.690697
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509028,
+    "name": "Жайхун МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.802079,
+     41.763029
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509029,
+    "name": "Навоий ОФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.752348,
+     41.696117
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509030,
+    "name": "Зиёкор МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.739915,
+     41.694142
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509031,
+    "name": "Амир.Темур МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.742874,
+     41.687369
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509032,
+    "name": "Марказий МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.739457,
+     41.681362
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509033,
+    "name": "Тўқимачи МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.76265,
+     41.69137
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509034,
+    "name": "Бунёдкор МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.755023,
+     41.683863
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509035,
+    "name": "Янги Ўзбекистон МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.766121,
+     41.629068
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509036,
+    "name": "Ибн-Сино МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.744864,
+     41.654142
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509037,
+    "name": "Турон МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.699366,
+     41.695573
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509038,
+    "name": "Оби ҳаёт МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.747641,
+     41.673542
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509039,
+    "name": "Саройкўл МФЙ",
+    "district_soato": "1735207"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.74976,
+     41.716528
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3509040,
+    "name": "Лолазор МФЙ",
+    "district_soato": "1735207"
+   }
+  }
+ ]
+}

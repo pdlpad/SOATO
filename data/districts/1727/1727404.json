@@ -1,0 +1,12 @@
+{
+  "soato": "1727404",
+  "region_soato": "1727",
+  "name_soato": "Олмалиқ шаҳри",
+  "name_polygon_set": "Олмалиқ ш.",
+  "population_2026_official": 151000,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.957151,
+  "mahallas_in_source": 52,
+  "area_km2": 58.0606,
+  "model_vs_official_gap": -0.4891
+}

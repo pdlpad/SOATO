@@ -1,0 +1,12 @@
+{
+  "soato": "1727265",
+  "region_soato": "1727",
+  "name_soato": "Тошкент тумани",
+  "name_polygon_set": "Тошкент т.",
+  "population_2026_official": 209800,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.00175,
+  "mahallas_in_source": 70,
+  "area_km2": 166.9533,
+  "model_vs_official_gap": -0.0017
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1706401",
+  "region_soato": "1706",
+  "name_soato": "Бухоро шаҳри",
+  "name_polygon_set": "Бухоро ш.",
+  "population_2026_official": 304700,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.316879,
+  "mahallas_in_source": 65,
+  "area_km2": 84.3273,
+  "model_vs_official_gap": -0.2406
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1730203",
+  "region_soato": "1730",
+  "name_soato": "Олтиариқ тумани",
+  "name_polygon_set": "Олтиариқ т.",
+  "population_2026_official": 237300,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.819646,
+  "mahallas_in_source": 72,
+  "area_km2": 532.3853,
+  "model_vs_official_gap": 0.22
+}

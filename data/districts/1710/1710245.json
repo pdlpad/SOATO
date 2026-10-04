@@ -1,0 +1,12 @@
+{
+  "soato": "1710245",
+  "region_soato": "1710",
+  "name_soato": "Шаҳрисабз тумани",
+  "name_polygon_set": "Шаҳрисабз т.",
+  "population_2026_official": 242800,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.072698,
+  "mahallas_in_source": 57,
+  "area_km2": 1631.5964,
+  "model_vs_official_gap": -0.0678
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1733230",
+  "region_soato": "1733",
+  "name_soato": "Шовот тумани",
+  "name_polygon_set": "Шовот т.",
+  "population_2026_official": 186700,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.955024,
+  "mahallas_in_source": 54,
+  "area_km2": 470.6503,
+  "model_vs_official_gap": 0.0471
+}

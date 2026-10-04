@@ -1,0 +1,5 @@
+mahalla_id,name,district_soato,area_km2,populated_area_km2,pop_2026_est,density_gross,density_populated,method,quality_flags
+1213001,Гулистон,1712412,30.9608,1.7312,2035.5,65.7,1175.8,GHS-POP,
+1213002,Мармаробод,1712412,151.2948,6.1373,3084.0,20.4,502.5,GHS-POP,
+1213003,Тумар,1712412,36.1304,2.8371,2277.0,63.0,802.6,GHS-POP,
+1213004,Шайхон,1712412,377.5473,6.4907,2103.5,5.6,324.1,GHS-POP,

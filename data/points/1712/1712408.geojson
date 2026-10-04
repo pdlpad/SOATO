@@ -1,0 +1,230 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.202605,
+     41.572055
+    ]
+   },
+   "properties": {
+    "mahalla_id": 56,
+    "name": "Ўзбекистон",
+    "district_soato": "1712408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.20034,
+     41.583275
+    ]
+   },
+   "properties": {
+    "mahalla_id": 57,
+    "name": "Истиқлол",
+    "district_soato": "1712408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.191232,
+     41.569031
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1202001,
+    "name": "Алишер Навоий",
+    "district_soato": "1712408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.194937,
+     41.559415
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1202002,
+    "name": "Кончилар",
+    "district_soato": "1712408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.601505,
+     41.526821
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1202003,
+    "name": "Мурунтау",
+    "district_soato": "1712408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.166785,
+     41.568745
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1202004,
+    "name": "Янги Зарафшон",
+    "district_soato": "1712408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.180882,
+     41.582428
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1202005,
+    "name": "Олтин водий",
+    "district_soato": "1712408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.212209,
+     41.564905
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1202006,
+    "name": "Қурувчи",
+    "district_soato": "1712408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.612126,
+     41.266406
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1202007,
+    "name": "Даугизтау",
+    "district_soato": "1712408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.210686,
+     41.572391
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1202008,
+    "name": "Ёшлик",
+    "district_soato": "1712408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.218644,
+     41.566807
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1202009,
+    "name": "Тинчлик",
+    "district_soato": "1712408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.225869,
+     41.579083
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1202010,
+    "name": "Наврўз",
+    "district_soato": "1712408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.219506,
+     41.584413
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1202011,
+    "name": "Баҳор",
+    "district_soato": "1712408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.207076,
+     41.585595
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1202012,
+    "name": "Геолог",
+    "district_soato": "1712408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.231902,
+     41.574591
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1202013,
+    "name": "Юлдуз",
+    "district_soato": "1712408"
+   }
+  }
+ ]
+}

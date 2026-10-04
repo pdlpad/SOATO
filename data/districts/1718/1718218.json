@@ -1,0 +1,12 @@
+{
+  "soato": "1718218",
+  "region_soato": "1718",
+  "name_soato": "Нарпай тумани",
+  "name_polygon_set": "Нарпай т.",
+  "population_2026_official": 235400,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.13598,
+  "mahallas_in_source": 57,
+  "area_km2": 441.4483,
+  "model_vs_official_gap": -0.1197
+}

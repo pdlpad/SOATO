@@ -1,0 +1,12 @@
+{
+  "soato": "1703227",
+  "region_soato": "1703",
+  "name_soato": "Мархамат тумани",
+  "name_polygon_set": "Марҳамат т.",
+  "population_2026_official": 193300,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.183807,
+  "mahallas_in_source": 48,
+  "area_km2": 264.2932,
+  "model_vs_official_gap": -0.1553
+}

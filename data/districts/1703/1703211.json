@@ -1,0 +1,12 @@
+{
+  "soato": "1703211",
+  "region_soato": "1703",
+  "name_soato": "Жалақудуқ тумани",
+  "name_polygon_set": "Жалақудуқ т.",
+  "population_2026_official": 205100,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.123124,
+  "mahallas_in_source": 63,
+  "area_km2": 373.0249,
+  "model_vs_official_gap": -0.1096
+}

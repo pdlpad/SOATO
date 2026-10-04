@@ -1,0 +1,12 @@
+{
+  "soato": "1722217",
+  "region_soato": "1722",
+  "name_soato": "Сариосиё тумани",
+  "name_polygon_set": "Сариосиё т.",
+  "population_2026_official": 238000,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.07125,
+  "mahallas_in_source": 61,
+  "area_km2": 973.6376,
+  "model_vs_official_gap": -0.0665
+}

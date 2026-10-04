@@ -1,0 +1,12 @@
+{
+  "soato": "1735250",
+  "region_soato": "1735",
+  "name_soato": "Елликкала тумани",
+  "name_polygon_set": "Элликқалъа т.",
+  "population_2026_official": 176900,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.849199,
+  "mahallas_in_source": 40,
+  "area_km2": 5388.8583,
+  "model_vs_official_gap": 0.1776
+}

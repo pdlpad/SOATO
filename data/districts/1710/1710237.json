@@ -1,0 +1,12 @@
+{
+  "soato": "1710237",
+  "region_soato": "1710",
+  "name_soato": "Касби тумани",
+  "name_polygon_set": "Касби т.",
+  "population_2026_official": 222300,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.981443,
+  "mahallas_in_source": 42,
+  "area_km2": 743.4783,
+  "model_vs_official_gap": 0.0189
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1733217",
+  "region_soato": "1733",
+  "name_soato": "Урганч тумани",
+  "name_polygon_set": "Урганч т.",
+  "population_2026_official": 223700,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.987075,
+  "mahallas_in_source": 60,
+  "area_km2": 439.9568,
+  "model_vs_official_gap": 0.0131
+}

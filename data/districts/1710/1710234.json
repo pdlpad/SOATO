@@ -1,0 +1,12 @@
+{
+  "soato": "1710234",
+  "region_soato": "1710",
+  "name_soato": "Муборак тумани",
+  "name_polygon_set": "Муборак т.",
+  "population_2026_official": 97000,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.912692,
+  "mahallas_in_source": 25,
+  "area_km2": 3083.1887,
+  "model_vs_official_gap": 0.0957
+}

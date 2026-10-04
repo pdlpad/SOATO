@@ -1,0 +1,12 @@
+{
+  "soato": "1712248",
+  "region_soato": "1712",
+  "name_soato": "Учқудуқ тумани",
+  "name_polygon_set": "Учқудуқ ш.",
+  "population_2026_official": 39900,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 3.067994,
+  "mahallas_in_source": 14,
+  "area_km2": 46527.1629,
+  "model_vs_official_gap": -0.6741
+}

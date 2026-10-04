@@ -1,0 +1,12 @@
+{
+  "soato": "1730408",
+  "region_soato": "1730",
+  "name_soato": "Қувасой шаҳри",
+  "name_polygon_set": "Қувасой ш.",
+  "population_2026_official": 104800,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.092433,
+  "mahallas_in_source": 31,
+  "area_km2": 263.6754,
+  "model_vs_official_gap": -0.0846
+}

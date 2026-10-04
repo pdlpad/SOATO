@@ -1,0 +1,605 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.433157,
+     40.858514
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407001,
+    "name": "Кичик Жомашуй",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.37725,
+     40.857299
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407002,
+    "name": "Момохон",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.301689,
+     40.853743
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407003,
+    "name": "Найман",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.402287,
+     40.853401
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407004,
+    "name": "Қирқчек",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.343585,
+     40.863828
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407005,
+    "name": "Қолгандарё",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.230741,
+     40.760953
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407006,
+    "name": "Гулистон",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.4821,
+     40.76917
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407007,
+    "name": "Дамкўл",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.531697,
+     40.781843
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407008,
+    "name": "Баланд Гуртепа",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.607179,
+     40.85902
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407009,
+    "name": "Чордона",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.517382,
+     40.861653
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407010,
+    "name": "Ҳайитобод",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.493672,
+     40.861784
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407011,
+    "name": "Ингичка",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.412193,
+     40.829579
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407012,
+    "name": "Меҳнатобод",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.381109,
+     40.817498
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407013,
+    "name": "Уйирчи-дамкўл",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.31626,
+     40.828481
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407014,
+    "name": "Қўғоликўл",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.552069,
+     40.850814
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407015,
+    "name": "Тўпсада",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.366952,
+     40.831085
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407016,
+    "name": "Қизилқум",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.459745,
+     40.80947
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407017,
+    "name": "Мулкобод",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.477884,
+     40.840684
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407018,
+    "name": "Маданият",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.28128,
+     40.828954
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407019,
+    "name": "Қозоқовул",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.391348,
+     40.754303
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407020,
+    "name": "Мадяровул",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.254909,
+     40.84393
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407021,
+    "name": "Қорашаҳар",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.146741,
+     40.810658
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407022,
+    "name": "Фаровон",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.23292,
+     40.795127
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407023,
+    "name": "Бешсерка",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.219776,
+     40.831246
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407024,
+    "name": "Янги Гулбоғ",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.495786,
+     40.840928
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407025,
+    "name": "Серҳаракат",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.151468,
+     40.780659
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407026,
+    "name": "Алами",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.520542,
+     40.837829
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407027,
+    "name": "Бозорбоши",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.541193,
+     40.815645
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407028,
+    "name": "Қўшқишлоқ",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.191005,
+     40.801445
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407029,
+    "name": "Толлик",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.433513,
+     40.825952
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407030,
+    "name": "Қайрағочовул",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.49731,
+     40.846506
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407031,
+    "name": "Тегирмонбоши",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.188532,
+     40.823015
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407032,
+    "name": "Ёшлик",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.532268,
+     40.851
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407033,
+    "name": "Пахтакор",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.4851,
+     40.815489
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407034,
+    "name": "Ўртақишлоқ",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.461863,
+     40.869647
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407035,
+    "name": "Мустақиллик",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.466991,
+     40.862377
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407036,
+    "name": "Ойбек",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.453536,
+     40.8572
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407037,
+    "name": "Бирлашган",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.464025,
+     40.853282
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407038,
+    "name": "Қўриқобод",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.347481,
+     40.788634
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407039,
+    "name": "Яккатол",
+    "district_soato": "1714204"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.489963,
+     40.828959
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1407040,
+    "name": "Ўзгариш",
+    "district_soato": "1714204"
+   }
+  }
+ ]
+}

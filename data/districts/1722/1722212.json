@@ -1,0 +1,12 @@
+{
+  "soato": "1722212",
+  "region_soato": "1722",
+  "name_soato": "Жарқўрғон тумани",
+  "name_polygon_set": "Жарқўрғон т.",
+  "population_2026_official": 249000,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.0632,
+  "mahallas_in_source": 66,
+  "area_km2": 646.8435,
+  "model_vs_official_gap": -0.0594
+}

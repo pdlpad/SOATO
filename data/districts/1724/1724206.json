@@ -1,0 +1,12 @@
+{
+  "soato": "1724206",
+  "region_soato": "1724",
+  "name_soato": "Оқолтин тумани",
+  "name_polygon_set": "Оқолтин т.",
+  "population_2026_official": 57500,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.462351,
+  "mahallas_in_source": 13,
+  "area_km2": 550.533,
+  "model_vs_official_gap": -0.3162
+}

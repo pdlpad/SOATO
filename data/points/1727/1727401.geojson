@@ -1,0 +1,335 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.36731,
+     41.027977
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723001,
+    "name": "Обод",
+    "district_soato": "1727401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.337827,
+     41.039888
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723002,
+    "name": "Дехқонобод",
+    "district_soato": "1727401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.354489,
+     41.033018
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723003,
+    "name": "Маърифат",
+    "district_soato": "1727401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.352233,
+     40.999478
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723004,
+    "name": "Хуррият",
+    "district_soato": "1727401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.349984,
+     41.054166
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723005,
+    "name": "Наврўз",
+    "district_soato": "1727401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.343145,
+     41.062081
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723006,
+    "name": "Қумариқ",
+    "district_soato": "1727401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.358706,
+     41.048758
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723007,
+    "name": "Муқимий",
+    "district_soato": "1727401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.32676,
+     41.024864
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723008,
+    "name": "Дегантепа",
+    "district_soato": "1727401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.367076,
+     41.010377
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723009,
+    "name": "Бирлик",
+    "district_soato": "1727401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.361359,
+     41.002045
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723010,
+    "name": "Чиғириқ",
+    "district_soato": "1727401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.369298,
+     40.990692
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723011,
+    "name": "Оппоқ",
+    "district_soato": "1727401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.368104,
+     41.046022
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723012,
+    "name": "Эвалак",
+    "district_soato": "1727401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.368753,
+     41.03704
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723013,
+    "name": "Ойбек",
+    "district_soato": "1727401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.347995,
+     41.034375
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723014,
+    "name": "Бобур",
+    "district_soato": "1727401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.350647,
+     41.043165
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723015,
+    "name": "Учқун",
+    "district_soato": "1727401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.335227,
+     41.016113
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723016,
+    "name": "Ёшлик",
+    "district_soato": "1727401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.336657,
+     41.010126
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723017,
+    "name": "Нурафшон",
+    "district_soato": "1727401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.36207,
+     41.046603
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723018,
+    "name": "Обод турмуш",
+    "district_soato": "1727401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.361675,
+     40.993639
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723019,
+    "name": "Тараққиёт",
+    "district_soato": "1727401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.35369,
+     41.045474
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723020,
+    "name": "Тўй-тепа",
+    "district_soato": "1727401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.364832,
+     40.995082
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723021,
+    "name": "Юксалиш",
+    "district_soato": "1727401"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.346663,
+     41.022075
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2723022,
+    "name": "Янги обод",
+    "district_soato": "1727401"
+   }
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1726266",
+  "region_soato": "1726",
+  "name_soato": "Юнусобод тумани",
+  "name_polygon_set": "Юнусобод т.",
+  "population_2026_official": 393000,
+  "estimation_method": "здания OSM",
+  "calibration_factor": 0.022725,
+  "mahallas_in_source": 64,
+  "area_km2": 41.0352,
+  "model_vs_official_gap": -0.0159
+}

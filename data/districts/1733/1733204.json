@@ -1,0 +1,12 @@
+{
+  "soato": "1733204",
+  "region_soato": "1733",
+  "name_soato": "Боғот тумани",
+  "name_polygon_set": "Боғот т.",
+  "population_2026_official": 183000,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.161499,
+  "mahallas_in_source": 43,
+  "area_km2": 444.6974,
+  "model_vs_official_gap": -0.139
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1722204",
+  "region_soato": "1722",
+  "name_soato": "Бойсун тумани",
+  "name_polygon_set": "Бойсун т.",
+  "population_2026_official": 129400,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.03284,
+  "mahallas_in_source": 39,
+  "area_km2": 3358.1284,
+  "model_vs_official_gap": -0.0318
+}

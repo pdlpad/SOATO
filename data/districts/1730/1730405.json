@@ -1,0 +1,12 @@
+{
+  "soato": "1730405",
+  "region_soato": "1730",
+  "name_soato": "Қўқон шаҳри",
+  "name_polygon_set": "Қўқон ш.",
+  "population_2026_official": 319600,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.344961,
+  "mahallas_in_source": 78,
+  "area_km2": 65.8661,
+  "model_vs_official_gap": -0.2565
+}

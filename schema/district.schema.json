@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "District",
+  "type": "object",
+  "required": ["soato", "region_soato", "name_soato", "population_2026_official"],
+  "properties": {
+    "soato": {"type": "string", "pattern": "^[0-9]{7}(\\+[0-9]{7})*$"},
+    "region_soato": {"type": "string", "pattern": "^[0-9]{4}$"},
+    "name_soato": {"type": "string", "minLength": 1},
+    "name_polygon_set": {"type": "string"},
+    "population_2026_official": {"type": "integer", "minimum": 0},
+    "estimation_method": {"type": ["string", "null"]},
+    "calibration_factor": {"type": "number"},
+    "mahallas_in_source": {"type": "integer", "minimum": 0},
+    "area_km2": {"type": "number", "minimum": 0},
+    "model_vs_official_gap": {"type": "number"},
+    "note": {"type": "string"}
+  }
+}

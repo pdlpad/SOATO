@@ -1,0 +1,12 @@
+{
+  "soato": "1708215",
+  "region_soato": "1708",
+  "name_soato": "Дўстлик тумани",
+  "name_polygon_set": "Дўстлик т.",
+  "population_2026_official": 71900,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.448008,
+  "mahallas_in_source": 12,
+  "area_km2": 451.0455,
+  "model_vs_official_gap": -0.3094
+}

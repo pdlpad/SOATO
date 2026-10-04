@@ -1,0 +1,12 @@
+{
+  "soato": "1714237",
+  "region_soato": "1714",
+  "name_soato": "Чуст тумани",
+  "name_polygon_set": "Чуст т.",
+  "population_2026_official": 296700,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.129566,
+  "mahallas_in_source": 65,
+  "area_km2": 920.8202,
+  "model_vs_official_gap": -0.1147
+}

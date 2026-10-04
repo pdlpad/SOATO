@@ -1,0 +1,12 @@
+{
+  "soato": "1727415",
+  "region_soato": "1727",
+  "name_soato": "Оҳангарон шаҳри",
+  "name_polygon_set": "Оҳангарон ш.",
+  "population_2026_official": 42700,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.461286,
+  "mahallas_in_source": 22,
+  "area_km2": 19.6949,
+  "model_vs_official_gap": -0.3157
+}

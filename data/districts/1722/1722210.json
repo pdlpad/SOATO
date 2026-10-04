@@ -1,0 +1,12 @@
+{
+  "soato": "1722210",
+  "region_soato": "1722",
+  "name_soato": "Денов тумани",
+  "name_polygon_set": "Денов т.",
+  "population_2026_official": 440500,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.086637,
+  "mahallas_in_source": 98,
+  "area_km2": 823.0519,
+  "model_vs_official_gap": -0.0797
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1718230",
+  "region_soato": "1718",
+  "name_soato": "Пахтачи тумани",
+  "name_polygon_set": "Пахтачи т.",
+  "population_2026_official": 156700,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.06522,
+  "mahallas_in_source": 59,
+  "area_km2": 1376.0973,
+  "model_vs_official_gap": -0.0612
+}

@@ -1,0 +1,17 @@
+mahalla_id,name,district_soato,area_km2,populated_area_km2,pop_2026_est,density_gross,density_populated,method,quality_flags
+63,Ифтихор,1712248,6.2895,2.242,2472.2,393.1,1102.7,GHS-POP,district_ghs_diverges_2x
+1203001,Узунқудуқ,1712248,11341.3911,5.4525,1180.4,0.1,216.5,GHS-POP,district_ghs_diverges_2x
+1203002,Алтинтов,1712248,10211.7762,3.0544,696.1,0.1,227.9,GHS-POP,district_ghs_diverges_2x
+1203003,Дўстлик,1712248,8.0796,4.8216,11423.3,1413.8,2369.2,GHS-POP,district_ghs_diverges_2x
+1203004,Мустақиллик,1712248,0.8789,0.8703,5272.8,5999.3,6058.6,GHS-POP,district_ghs_diverges_2x
+1203005,Айтим,1712248,0.6416,0.6165,2650.3,4130.7,4298.9,GHS-POP,district_ghs_diverges_2x
+1203006,Navoiy,1712248,0.3077,0.3044,2470.7,8029.6,8116.7,GHS-POP,district_ghs_diverges_2x
+1203007,Абай,1712248,1.078,0.7871,2847.1,2641.1,3617.2,GHS-POP,district_ghs_diverges_2x
+1203008,Кокпатас,1712248,1.9745,0.9787,852.4,431.7,871.0,GHS-POP,district_ghs_diverges_2x
+1203009,Yo'lchilar,1712248,3.6455,1.9939,2001.0,548.9,1003.5,GHS-POP,district_ghs_diverges_2x
+1203010,Shalxar,1712248,215.7597,6.1864,2145.2,9.9,346.8,GHS-POP,district_ghs_diverges_2x
+1203011,Боздун,1712248,8992.1391,19.6337,5276.0,0.6,268.7,GHS-POP,district_ghs_diverges_2x
+1203012,Мингбулоқ,1712248,10704.369,2.6519,527.6,0.0,199.0,GHS-POP,district_ghs_diverges_2x
+1203013,Кўкаяз,1712248,5038.8325,0.3852,84.9,0.0,220.3,GHS-POP,district_ghs_diverges_2x
+1203014,Ифтихор,1712248,,,,,,,
+12030131,Авангард овули («Кўқаяз» ОФЙ таркибида),1712248,,,,,,,

@@ -1,0 +1,12 @@
+{
+  "soato": "1730236",
+  "region_soato": "1730",
+  "name_soato": "Данғара тумани",
+  "name_polygon_set": "Данғара т.",
+  "population_2026_official": 184700,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.985032,
+  "mahallas_in_source": 46,
+  "area_km2": 422.1728,
+  "model_vs_official_gap": 0.0152
+}

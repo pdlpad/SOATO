@@ -1,0 +1,12 @@
+{
+  "soato": "1735212",
+  "region_soato": "1735",
+  "name_soato": "Кегейли тумани",
+  "name_polygon_set": "Кегейли т.",
+  "population_2026_official": 75900,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.093807,
+  "mahallas_in_source": 16,
+  "area_km2": 922.4939,
+  "model_vs_official_gap": -0.0858
+}

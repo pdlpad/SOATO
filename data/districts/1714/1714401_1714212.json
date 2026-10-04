@@ -1,0 +1,13 @@
+{
+  "soato": "1714401+1714212",
+  "region_soato": "1714",
+  "name_soato": "Наманган шаҳри; Наманган тумани",
+  "name_polygon_set": "Давлатобод т., Наманган т., Наманган ш., Янги Наманган т.",
+  "population_2026_official": 929100,
+  "estimation_method": "здания OSM",
+  "calibration_factor": 0.016886,
+  "mahallas_in_source": 168,
+  "area_km2": 379.9494,
+  "model_vs_official_gap": -0.0836,
+  "note": "composite SOATO key: several SOATO units share one mahalla set"
+}

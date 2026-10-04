@@ -1,0 +1,12 @@
+{
+  "soato": "1718203",
+  "region_soato": "1718",
+  "name_soato": "Оқдарё тумани",
+  "name_polygon_set": "Оқдарё т.",
+  "population_2026_official": 180900,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.91924,
+  "mahallas_in_source": 35,
+  "area_km2": 380.9388,
+  "model_vs_official_gap": 0.0879
+}

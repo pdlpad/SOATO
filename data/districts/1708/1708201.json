@@ -1,0 +1,12 @@
+{
+  "soato": "1708201",
+  "region_soato": "1708",
+  "name_soato": "Aрнасой тумани",
+  "name_polygon_set": "Арнасой т.",
+  "population_2026_official": 50200,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.456573,
+  "mahallas_in_source": 13,
+  "area_km2": 23.3871,
+  "model_vs_official_gap": -0.3135
+}

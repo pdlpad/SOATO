@@ -1,0 +1,12 @@
+{
+  "soato": "1722201",
+  "region_soato": "1722",
+  "name_soato": "Олтинсой тумани",
+  "name_polygon_set": "Олтинсой т.",
+  "population_2026_official": 201800,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.612967,
+  "mahallas_in_source": 54,
+  "area_km2": 581.5687,
+  "model_vs_official_gap": -0.38
+}

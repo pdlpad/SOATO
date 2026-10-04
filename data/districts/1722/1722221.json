@@ -1,0 +1,12 @@
+{
+  "soato": "1722221",
+  "region_soato": "1722",
+  "name_soato": "Узун тумани",
+  "name_polygon_set": "Узун т.",
+  "population_2026_official": 196700,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.26464,
+  "mahallas_in_source": 51,
+  "area_km2": 160.2683,
+  "model_vs_official_gap": -0.2093
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1714224",
+  "region_soato": "1714",
+  "name_soato": "Тўрақўрғон тумани",
+  "name_polygon_set": "Тўрақўрғон т.",
+  "population_2026_official": 255600,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.89509,
+  "mahallas_in_source": 67,
+  "area_km2": 166.9987,
+  "model_vs_official_gap": 0.1172
+}

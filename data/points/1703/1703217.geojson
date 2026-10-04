@@ -1,0 +1,365 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.749643,
+     40.86816
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313001,
+    "name": "Чўлобод",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.785507,
+     40.710194
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313002,
+    "name": "Фазогир",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.670324,
+     40.747934
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313003,
+    "name": "Улуғбек",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.721588,
+     40.726201
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313004,
+    "name": "Обод",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.721421,
+     40.838661
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313005,
+    "name": "Теракзор",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.71035,
+     40.742821
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313006,
+    "name": "Шаҳриобод",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.721599,
+     40.797602
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313007,
+    "name": "Сариқ сув",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.631885,
+     40.835637
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313008,
+    "name": "Бўстон",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.685663,
+     40.867377
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313009,
+    "name": "Мингбулоқ",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.714723,
+     40.874471
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313010,
+    "name": "Ўзбекистон",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.752869,
+     40.838661
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313011,
+    "name": "Файзиобод",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.594362,
+     40.744391
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313012,
+    "name": "Уч кўприк",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.761437,
+     40.786825
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313013,
+    "name": "Оқ-том",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.62479,
+     40.803828
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313014,
+    "name": "Янгиобод",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.779439,
+     40.747775
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313015,
+    "name": "Авулмат",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.718603,
+     40.749252
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313016,
+    "name": "Бобур",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.823883,
+     40.780875
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313017,
+    "name": "Тўрттол",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.780215,
+     40.806248
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313018,
+    "name": "Гулистон",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.593194,
+     40.681579
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313019,
+    "name": "Мингчинор",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.773507,
+     40.833497
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313020,
+    "name": "Нуробод",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.694968,
+     40.834929
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313021,
+    "name": "Фаровон",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.715581,
+     40.753805
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313022,
+    "name": "Келажак",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.705735,
+     40.762222
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313023,
+    "name": "Наъмуна",
+    "district_soato": "1703217"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.745768,
+     40.753684
+    ]
+   },
+   "properties": {
+    "mahalla_id": 313024,
+    "name": "Ёшлик",
+    "district_soato": "1703217"
+   }
+  }
+ ]
+}

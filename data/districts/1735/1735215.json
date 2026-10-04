@@ -1,0 +1,12 @@
+{
+  "soato": "1735215",
+  "region_soato": "1735",
+  "name_soato": "Қўнғирот тумани",
+  "name_polygon_set": "Қўнғирот т.",
+  "population_2026_official": 138400,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.134096,
+  "mahallas_in_source": 39,
+  "area_km2": 75842.8349,
+  "model_vs_official_gap": -0.1182
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1726262",
+  "region_soato": "1726",
+  "name_soato": "Учтепа тумани",
+  "name_polygon_set": "Учтепа т.",
+  "population_2026_official": 304400,
+  "estimation_method": "здания OSM",
+  "calibration_factor": 0.02586,
+  "mahallas_in_source": 60,
+  "area_km2": 28.2734,
+  "model_vs_official_gap": -0.1352
+}

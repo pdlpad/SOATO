@@ -1,0 +1,320 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.256765,
+     41.268618
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2604001,
+    "name": "Армуғон",
+    "district_soato": "1726287"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.249005,
+     41.268186
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2604002,
+    "name": "Бошлиқ",
+    "district_soato": "1726287"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.240529,
+     41.268638
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2604003,
+    "name": "Дилбулоқ",
+    "district_soato": "1726287"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.251012,
+     41.277092
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2604004,
+    "name": "Мухандислар",
+    "district_soato": "1726287"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.230533,
+     41.260954
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2604005,
+    "name": "Қушбеги",
+    "district_soato": "1726287"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.229309,
+     41.273759
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2604006,
+    "name": "Мерос",
+    "district_soato": "1726287"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.23513,
+     41.279126
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2604007,
+    "name": "Муқимий",
+    "district_soato": "1726287"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.241431,
+     41.283034
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2604008,
+    "name": "Ракат",
+    "district_soato": "1726287"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.23784,
+     41.274001
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2604009,
+    "name": "Тўқимачи",
+    "district_soato": "1726287"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.223189,
+     41.26238
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2604010,
+    "name": "Яккасарой",
+    "district_soato": "1726287"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.244679,
+     41.290158
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2604011,
+    "name": "Белариқ",
+    "district_soato": "1726287"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.255702,
+     41.291466
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2604012,
+    "name": "Конституция",
+    "district_soato": "1726287"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.24614,
+     41.295251
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2604013,
+    "name": "Ракатбоши",
+    "district_soato": "1726287"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.253854,
+     41.297104
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2604014,
+    "name": "Тепа",
+    "district_soato": "1726287"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.260585,
+     41.304421
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2604015,
+    "name": "Юнус Ражабий",
+    "district_soato": "1726287"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.259135,
+     41.284701
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2604016,
+    "name": "Абдулла Қаххор",
+    "district_soato": "1726287"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.260009,
+     41.277383
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2604017,
+    "name": "Бобур",
+    "district_soato": "1726287"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.263441,
+     41.297975
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2604018,
+    "name": "Боғсарой",
+    "district_soato": "1726287"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.267493,
+     41.275891
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2604019,
+    "name": "Дамариқ",
+    "district_soato": "1726287"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.263946,
+     41.289935
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2604020,
+    "name": "Хамид Сулаймонов",
+    "district_soato": "1726287"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.250457,
+     41.285358
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2604021,
+    "name": "Шохжахон",
+    "district_soato": "1726287"
+   }
+  }
+ ]
+}

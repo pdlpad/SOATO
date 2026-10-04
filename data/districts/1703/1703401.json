@@ -1,0 +1,12 @@
+{
+  "soato": "1703401",
+  "region_soato": "1703",
+  "name_soato": "Aндижон шаҳри",
+  "name_polygon_set": "Андижон ш.",
+  "population_2026_official": 503500,
+  "estimation_method": "здания OSM",
+  "calibration_factor": 0.019495,
+  "mahallas_in_source": 94,
+  "area_km2": 70.6271,
+  "model_vs_official_gap": -0.1646
+}

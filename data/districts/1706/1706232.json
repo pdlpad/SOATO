@@ -1,0 +1,12 @@
+{
+  "soato": "1706232",
+  "region_soato": "1706",
+  "name_soato": "Қоровулбозор тумани",
+  "name_polygon_set": "Қ-бозор т.",
+  "population_2026_official": 20700,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.726729,
+  "mahallas_in_source": 7,
+  "area_km2": 2180.1511,
+  "model_vs_official_gap": 0.376
+}

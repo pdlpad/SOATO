@@ -1,0 +1,155 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.786911,
+     40.379918
+    ]
+   },
+   "properties": {
+    "mahalla_id": 808001,
+    "name": "Узун",
+    "district_soato": "1708225"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.681691,
+     40.424858
+    ]
+   },
+   "properties": {
+    "mahalla_id": 808002,
+    "name": "Лолазор",
+    "district_soato": "1708225"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.753774,
+     40.342894
+    ]
+   },
+   "properties": {
+    "mahalla_id": 808003,
+    "name": "Нурафшон",
+    "district_soato": "1708225"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.878958,
+     40.329495
+    ]
+   },
+   "properties": {
+    "mahalla_id": 808004,
+    "name": "Ёрқин",
+    "district_soato": "1708225"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.81789,
+     40.38768
+    ]
+   },
+   "properties": {
+    "mahalla_id": 808005,
+    "name": "Бўстон",
+    "district_soato": "1708225"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.827163,
+     40.391974
+    ]
+   },
+   "properties": {
+    "mahalla_id": 808006,
+    "name": "Самарқанд",
+    "district_soato": "1708225"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.772441,
+     40.414172
+    ]
+   },
+   "properties": {
+    "mahalla_id": 808007,
+    "name": "Чўлигулистон",
+    "district_soato": "1708225"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.906506,
+     40.396761
+    ]
+   },
+   "properties": {
+    "mahalla_id": 808008,
+    "name": "Бирлик",
+    "district_soato": "1708225"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.761911,
+     40.293084
+    ]
+   },
+   "properties": {
+    "mahalla_id": 808009,
+    "name": "Писталикент",
+    "district_soato": "1708225"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.603884,
+     40.423178
+    ]
+   },
+   "properties": {
+    "mahalla_id": 808010,
+    "name": "Чимқўрғон",
+    "district_soato": "1708225"
+   }
+  }
+ ]
+}

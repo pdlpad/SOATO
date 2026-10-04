@@ -1,0 +1,12 @@
+{
+  "soato": "1706215",
+  "region_soato": "1706",
+  "name_soato": "Ғиждувон тумани",
+  "name_polygon_set": "Ғиждувон т.",
+  "population_2026_official": 331900,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.982236,
+  "mahallas_in_source": 75,
+  "area_km2": 3789.7221,
+  "model_vs_official_gap": 0.0181
+}

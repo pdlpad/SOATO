@@ -1,0 +1,12 @@
+{
+  "soato": "1706246",
+  "region_soato": "1706",
+  "name_soato": "Жондор тумани",
+  "name_polygon_set": "Жондор т.",
+  "population_2026_official": 191900,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.112405,
+  "mahallas_in_source": 52,
+  "area_km2": 1323.5244,
+  "model_vs_official_gap": -0.101
+}

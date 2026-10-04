@@ -1,0 +1,12 @@
+{
+  "soato": "1724231",
+  "region_soato": "1724",
+  "name_soato": "Сирдарё тумани",
+  "name_polygon_set": "Сирдарё т.",
+  "population_2026_official": 141100,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.914361,
+  "mahallas_in_source": 38,
+  "area_km2": 532.1867,
+  "model_vs_official_gap": 0.0937
+}

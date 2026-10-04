@@ -1,0 +1,12 @@
+{
+  "soato": "1708235",
+  "region_soato": "1708",
+  "name_soato": "Фориш тумани",
+  "name_polygon_set": "Фориш т.",
+  "population_2026_official": 101000,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.164169,
+  "mahallas_in_source": 25,
+  "area_km2": 6465.5557,
+  "model_vs_official_gap": -0.141
+}

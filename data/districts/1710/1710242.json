@@ -1,0 +1,12 @@
+{
+  "soato": "1710242",
+  "region_soato": "1710",
+  "name_soato": "Чироқчи тумани",
+  "name_polygon_set": "Чироқчи т.",
+  "population_2026_official": 280900,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.198972,
+  "mahallas_in_source": 59,
+  "area_km2": 1157.8913,
+  "model_vs_official_gap": -0.166
+}

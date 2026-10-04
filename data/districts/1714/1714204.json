@@ -1,0 +1,12 @@
+{
+  "soato": "1714204",
+  "region_soato": "1714",
+  "name_soato": "Мингбулоқ тумани",
+  "name_polygon_set": "Mingbuloq t.",
+  "population_2026_official": 142300,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.905285,
+  "mahallas_in_source": 40,
+  "area_km2": 599.8155,
+  "model_vs_official_gap": 0.1046
+}

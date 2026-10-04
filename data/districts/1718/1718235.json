@@ -1,0 +1,12 @@
+{
+  "soato": "1718235",
+  "region_soato": "1718",
+  "name_soato": "Нуробод тумани",
+  "name_polygon_set": "Нуробод т.",
+  "population_2026_official": 168700,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.527092,
+  "mahallas_in_source": 39,
+  "area_km2": 4651.0161,
+  "model_vs_official_gap": -0.3452
+}

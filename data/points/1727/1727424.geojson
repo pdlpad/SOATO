@@ -1,0 +1,365 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.055392,
+     41.104128
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721001,
+    "name": "Мустақиллик",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.064495,
+     41.111986
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721002,
+    "name": "Туркистон",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.065443,
+     41.116248
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721003,
+    "name": "Олтинобод",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.069346,
+     41.121601
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721004,
+    "name": "Файзли",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.074618,
+     41.127692
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721005,
+    "name": "Фаровон",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.03991,
+     41.101356
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721006,
+    "name": "Рамадон",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.036037,
+     41.10528
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721007,
+    "name": "Сабо",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.043399,
+     41.113968
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721008,
+    "name": "Ишчилар шахарчаси",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.065706,
+     41.136279
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721009,
+    "name": "Янгибоғ",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.072907,
+     41.13292
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721010,
+    "name": "Бахт",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.063917,
+     41.125301
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721011,
+    "name": "Мезон",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.055207,
+     41.115404
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721012,
+    "name": "Наврўз",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.057067,
+     41.129082
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721013,
+    "name": "Олмос",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.046068,
+     41.119135
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721014,
+    "name": "Файзобод",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.049706,
+     41.106591
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721015,
+    "name": "Мевазор",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.08189,
+     41.135354
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721016,
+    "name": "Янгиобод",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.044887,
+     41.100801
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721017,
+    "name": "Лаззат",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.047694,
+     41.109999
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721018,
+    "name": "Қовунчи тепа",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.053894,
+     41.101734
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721019,
+    "name": "Мустақиллик",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.066463,
+     41.114896
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721020,
+    "name": "Олтинобод",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.088013,
+     41.140905
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721021,
+    "name": "Нов ",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.084052,
+     41.129323
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721022,
+    "name": "Янгихаёт (Янги Ўзбекистон)",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.032161,
+     41.108947
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721023,
+    "name": "Боғбон",
+    "district_soato": "1727424"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.082431,
+     41.144199
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2721024,
+    "name": "Бахор ",
+    "district_soato": "1727424"
+   }
+  }
+ ]
+}

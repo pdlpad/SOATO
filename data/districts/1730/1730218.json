@@ -1,0 +1,12 @@
+{
+  "soato": "1730218",
+  "region_soato": "1730",
+  "name_soato": "Қува тумани",
+  "name_polygon_set": "Қува т.",
+  "population_2026_official": 285400,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.297821,
+  "mahallas_in_source": 65,
+  "area_km2": 437.3618,
+  "model_vs_official_gap": -0.2295
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1730215",
+  "region_soato": "1730",
+  "name_soato": "Бешариқ тумани",
+  "name_polygon_set": "Бешариқ т.",
+  "population_2026_official": 251300,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.961673,
+  "mahallas_in_source": 62,
+  "area_km2": 718.8925,
+  "model_vs_official_gap": 0.0399
+}

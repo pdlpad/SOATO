@@ -1,0 +1,12 @@
+{
+  "soato": "1726264",
+  "region_soato": "1726",
+  "name_soato": "Бектемир тумани",
+  "name_polygon_set": "Бектемир т.",
+  "population_2026_official": 71300,
+  "estimation_method": "здания OSM",
+  "calibration_factor": 0.012897,
+  "mahallas_in_source": 18,
+  "area_km2": 38.1885,
+  "model_vs_official_gap": 0.734
+}

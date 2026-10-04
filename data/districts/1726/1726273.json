@@ -1,0 +1,12 @@
+{
+  "soato": "1726273",
+  "region_soato": "1726",
+  "name_soato": "Миробод тумани",
+  "name_polygon_set": "Миробод т.",
+  "population_2026_official": 156500,
+  "estimation_method": "здания OSM",
+  "calibration_factor": 0.019112,
+  "mahallas_in_source": 39,
+  "area_km2": 16.6784,
+  "model_vs_official_gap": 0.1701
+}

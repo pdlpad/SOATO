@@ -1,0 +1,12 @@
+{
+  "soato": "1724228",
+  "region_soato": "1724",
+  "name_soato": "Мирзаобод тумани",
+  "name_polygon_set": "Мирзаобод т.",
+  "population_2026_official": 83900,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.015235,
+  "mahallas_in_source": 18,
+  "area_km2": 729.6252,
+  "model_vs_official_gap": -0.015
+}

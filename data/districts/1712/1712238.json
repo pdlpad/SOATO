@@ -1,0 +1,12 @@
+{
+  "soato": "1712238",
+  "region_soato": "1712",
+  "name_soato": "Нурота тумани",
+  "name_polygon_set": "Нурота т.",
+  "population_2026_official": 91900,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.367313,
+  "mahallas_in_source": 31,
+  "area_km2": 5891.8244,
+  "model_vs_official_gap": -0.2686
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1730242",
+  "region_soato": "1730",
+  "name_soato": "Ёзёвон тумани",
+  "name_polygon_set": "Ёзёвон т.",
+  "population_2026_official": 124400,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.036697,
+  "mahallas_in_source": 33,
+  "area_km2": 410.1379,
+  "model_vs_official_gap": -0.0354
+}

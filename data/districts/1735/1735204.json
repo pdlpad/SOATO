@@ -1,0 +1,12 @@
+{
+  "soato": "1735204",
+  "region_soato": "1735",
+  "name_soato": "Aмударё тумани",
+  "name_polygon_set": "Амударё т.",
+  "population_2026_official": 218700,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.285939,
+  "mahallas_in_source": 49,
+  "area_km2": 1054.9426,
+  "model_vs_official_gap": -0.2224
+}

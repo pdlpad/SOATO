@@ -1,0 +1,12 @@
+{
+  "soato": "1712216",
+  "region_soato": "1712",
+  "name_soato": "Қизилтепа тумани",
+  "name_polygon_set": "Қизилтепа т.",
+  "population_2026_official": 167100,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.946494,
+  "mahallas_in_source": 53,
+  "area_km2": 2262.9056,
+  "model_vs_official_gap": 0.0565
+}

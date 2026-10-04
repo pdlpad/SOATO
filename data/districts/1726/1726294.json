@@ -1,0 +1,12 @@
+{
+  "soato": "1726294",
+  "region_soato": "1726",
+  "name_soato": "Чилонзор тумани",
+  "name_polygon_set": "Чилонзор т.",
+  "population_2026_official": 277500,
+  "estimation_method": "здания OSM",
+  "calibration_factor": 0.026293,
+  "mahallas_in_source": 55,
+  "area_km2": 30.4731,
+  "model_vs_official_gap": -0.1495
+}

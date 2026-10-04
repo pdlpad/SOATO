@@ -1,0 +1,12 @@
+{
+  "soato": "1712401",
+  "region_soato": "1712",
+  "name_soato": "Навоий шаҳри",
+  "name_polygon_set": "Навоий ш.",
+  "population_2026_official": 171300,
+  "estimation_method": "здания OSM",
+  "calibration_factor": 0.027986,
+  "mahallas_in_source": 36,
+  "area_km2": 38.0375,
+  "model_vs_official_gap": -0.3844
+}

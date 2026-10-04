@@ -1,0 +1,185 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.788136,
+     40.271436
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2413001,
+    "name": "З.М.Бобур",
+    "district_soato": "1724413"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.804092,
+     40.280083
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2413002,
+    "name": "Т.Малик",
+    "district_soato": "1724413"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.816956,
+     40.290931
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2413003,
+    "name": "А.Жомий",
+    "district_soato": "1724413"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.826717,
+     40.272084
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2413004,
+    "name": "Шукрона",
+    "district_soato": "1724413"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.836418,
+     40.267646
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2413005,
+    "name": "Давлатобод",
+    "district_soato": "1724413"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.810918,
+     40.2633
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2413006,
+    "name": "Маърифат",
+    "district_soato": "1724413"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.840266,
+     40.274385
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2413007,
+    "name": "Бинокор",
+    "district_soato": "1724413"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.813141,
+     40.222854
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2413008,
+    "name": "Наврузобод",
+    "district_soato": "1724413"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.814924,
+     40.270945
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2413009,
+    "name": "Фазилат",
+    "district_soato": "1724413"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.835631,
+     40.252455
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2413010,
+    "name": "Шодиёна",
+    "district_soato": "1724413"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.815834,
+     40.25155
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2413011,
+    "name": "Юксалиш",
+    "district_soato": "1724413"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.816457,
+     40.232433
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2413012,
+    "name": "Янгиобод МФЙ",
+    "district_soato": "1724413"
+   }
+  }
+ ]
+}

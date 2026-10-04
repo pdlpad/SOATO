@@ -1,0 +1,12 @@
+{
+  "soato": "1726269",
+  "region_soato": "1726",
+  "name_soato": "Мирзо Улуғбек тумани",
+  "name_polygon_set": "М.Улуғбек т.",
+  "population_2026_official": 342200,
+  "estimation_method": "здания OSM",
+  "calibration_factor": 0.017543,
+  "mahallas_in_source": 78,
+  "area_km2": 72.3985,
+  "model_vs_official_gap": 0.2148
+}

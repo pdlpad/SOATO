@@ -1,0 +1,605 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.829162,
+     39.060399
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002001,
+    "name": "Ўрда",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.815583,
+     39.02623
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002002,
+    "name": "Чоштепа",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.818966,
+     39.036903
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002003,
+    "name": "Тутзор",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.81655,
+     39.04065
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002004,
+    "name": "Бўстон",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.816298,
+     39.060042
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002005,
+    "name": "Наврўз",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.816444,
+     39.051129
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002006,
+    "name": "Қушхона",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.824999,
+     39.051418
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002007,
+    "name": "Кулоллик",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.83236,
+     39.056073
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002008,
+    "name": "Қозигузар",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.823713,
+     39.046028
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002009,
+    "name": "Хабарлик",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.857461,
+     39.037683
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002010,
+    "name": "Заргарлик",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.800511,
+     39.039398
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002011,
+    "name": "Аммағон",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.83101,
+     39.049208
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002012,
+    "name": "Қўшховуз",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.830756,
+     39.097755
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002013,
+    "name": "Турон",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.833366,
+     39.090289
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002014,
+    "name": "Дўстлик",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.845673,
+     39.094117
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002015,
+    "name": "Бунёдкор",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.87191,
+     39.082086
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002016,
+    "name": "Гулистон",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.853198,
+     39.084279
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002017,
+    "name": "Наматон",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.867232,
+     39.067775
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002018,
+    "name": "Уймовут",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.865836,
+     39.056271
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002019,
+    "name": "Қорасув",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.833595,
+     39.083389
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002020,
+    "name": "Кеш",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.843909,
+     39.094308
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002021,
+    "name": "Маърифат",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.849653,
+     39.072357
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002022,
+    "name": "Файзобод",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.823935,
+     39.059066
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002023,
+    "name": "Зингирон",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.841183,
+     39.063523
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002024,
+    "name": "Зиёкор",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.841153,
+     39.069066
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002025,
+    "name": "Барҳаёт",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.824842,
+     39.064564
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002026,
+    "name": "Намозгох",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.824613,
+     39.06702
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002027,
+    "name": "Сариосиё",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.840561,
+     39.075018
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002028,
+    "name": "Ғалаба",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.840171,
+     39.07842
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002029,
+    "name": "Ипак Йули",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.828375,
+     39.075209
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002030,
+    "name": "Пиллакашлик",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.84434,
+     39.080148
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002031,
+    "name": "Камолот",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.821741,
+     39.09067
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002032,
+    "name": "Синабоғ",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.844401,
+     39.058436
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002033,
+    "name": "Боғибахор",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.846762,
+     39.033279
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002034,
+    "name": "Яшил диёр",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.846663,
+     39.046784
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002035,
+    "name": "Оқ сарой",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.870221,
+     39.040861
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002036,
+    "name": "К.Новқат",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.831739,
+     39.028831
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002037,
+    "name": "Янгиҳаёт",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.835119,
+     39.044074
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002038,
+    "name": "Тикланиш",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.839196,
+     39.051655
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002039,
+    "name": "Кунчиқар",
+    "district_soato": "1710405"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.838556,
+     39.056167
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1002040,
+    "name": "Уйчилик",
+    "district_soato": "1710405"
+   }
+  }
+ ]
+}

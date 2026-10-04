@@ -1,0 +1,19 @@
+mahalla_id,name,district_soato,area_km2,populated_area_km2,pop_2026_est,density_gross,density_populated,method,quality_flags
+2611001,Ийкота,1726264,2.379,2.3545,8114.5,3410.9,3446.4,здания OSM,district_buildings_diverge_50pct
+2611002,Устозлар,1726264,0.7706,0.7661,2928.4,3800.2,3822.5,здания OSM,district_buildings_diverge_50pct
+2611003,Соҳил,1726264,2.8423,1.2075,5345.8,1880.8,4427.1,здания OSM,district_buildings_diverge_50pct
+2611004,Нурлийул,1726264,5.3412,1.3686,2278.9,426.7,1665.1,здания OSM,district_buildings_diverge_50pct
+2611005,Забардаст,1726264,2.0603,1.9416,5974.1,2899.6,3076.9,здания OSM,district_buildings_diverge_50pct
+2611006,Мусаффо,1726264,5.2599,1.4064,1579.5,300.3,1123.1,здания OSM,district_buildings_diverge_50pct
+2611007,Гулбоғ,1726264,2.5765,2.1893,5377.7,2087.2,2456.4,здания OSM,district_buildings_diverge_50pct
+2611008,Миришкор,1726264,3.4951,3.3269,3957.3,1132.3,1189.5,здания OSM,district_buildings_diverge_50pct
+2611009,Зилола,1726264,0.2073,0.2061,1846.0,8904.8,8956.7,здания OSM,district_buildings_diverge_50pct
+2611010,Мажнунтол,1726264,1.6133,1.6039,6530.8,4048.1,4071.8,здания OSM,district_buildings_diverge_50pct
+2611011,Иқбол,1726264,0.318,0.3162,4121.1,12959.5,13033.3,здания OSM,district_buildings_diverge_50pct
+2611012,Абай,1726264,1.3796,1.3716,4634.1,3359.0,3378.6,здания OSM,district_buildings_diverge_50pct
+2611013,Хусайн Бойқаро,1726264,0.8154,0.8099,2899.8,3556.2,3580.4,здания OSM,district_buildings_diverge_50pct
+2611014,Чашма,1726264,0.0965,0.0959,491.2,5090.2,5122.1,здания OSM,small_polygon;district_buildings_diverge_50pct
+2611015,Роҳат,1726264,0.2862,0.2846,2102.4,7345.9,7387.2,здания OSM,district_buildings_diverge_50pct
+2611016,Олтинтопган,1726264,3.8918,3.8041,6591.1,1693.6,1732.6,здания OSM,district_buildings_diverge_50pct
+2611017,Бектемир,1726264,0.9689,0.9633,3261.2,3365.9,3385.5,здания OSM,district_buildings_diverge_50pct
+2611018,Нурафшон,1726264,3.8866,3.4457,3266.2,840.4,947.9,здания OSM,district_buildings_diverge_50pct

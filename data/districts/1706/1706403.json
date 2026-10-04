@@ -1,0 +1,12 @@
+{
+  "soato": "1706403",
+  "region_soato": "1706",
+  "name_soato": "Когон шаҳри",
+  "name_polygon_set": "Когон ш.",
+  "population_2026_official": 66100,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.422563,
+  "mahallas_in_source": 22,
+  "area_km2": 15.4845,
+  "model_vs_official_gap": -0.297
+}

@@ -1,0 +1,215 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     63.581342,
+     42.128958
+    ]
+   },
+   "properties": {
+    "mahalla_id": 63,
+    "name": "Ифтихор",
+    "district_soato": "1712248"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     62.787052,
+     41.500649
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1203001,
+    "name": "Узунқудуқ",
+    "district_soato": "1712248"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     63.20039,
+     43.03358
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1203002,
+    "name": "Алтинтов",
+    "district_soato": "1712248"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     63.548623,
+     42.150124
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1203003,
+    "name": "Дўстлик",
+    "district_soato": "1712248"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     63.555185,
+     42.158692
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1203004,
+    "name": "Мустақиллик",
+    "district_soato": "1712248"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     63.563448,
+     42.162862
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1203005,
+    "name": "Айтим",
+    "district_soato": "1712248"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     63.56605,
+     42.153436
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1203006,
+    "name": "Navoiy",
+    "district_soato": "1712248"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     63.573672,
+     42.159578
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1203007,
+    "name": "Абай",
+    "district_soato": "1712248"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     63.892086,
+     42.2239
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1203008,
+    "name": "Кокпатас",
+    "district_soato": "1712248"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     63.581464,
+     42.171125
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1203009,
+    "name": "Yo'lchilar",
+    "district_soato": "1712248"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     63.644225,
+     42.01053
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1203010,
+    "name": "Shalxar",
+    "district_soato": "1712248"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     63.967714,
+     42.423873
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1203011,
+    "name": "Боздун",
+    "district_soato": "1712248"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     62.520919,
+     42.609198
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1203012,
+    "name": "Мингбулоқ",
+    "district_soato": "1712248"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.147648,
+     43.297963
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1203013,
+    "name": "Кўкаяз",
+    "district_soato": "1712248"
+   }
+  }
+ ]
+}

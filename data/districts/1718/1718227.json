@@ -1,0 +1,12 @@
+{
+  "soato": "1718227",
+  "region_soato": "1718",
+  "name_soato": "Пастдарғом тумани",
+  "name_polygon_set": "Пастдарғом т.",
+  "population_2026_official": 400000,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.871426,
+  "mahallas_in_source": 107,
+  "area_km2": 883.5788,
+  "model_vs_official_gap": 0.1475
+}

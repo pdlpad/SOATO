@@ -1,0 +1,12 @@
+{
+  "soato": "1727249",
+  "region_soato": "1727",
+  "name_soato": "Паркент тумани",
+  "name_polygon_set": "Паркент т.",
+  "population_2026_official": 185100,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.610223,
+  "mahallas_in_source": 62,
+  "area_km2": 122.9909,
+  "model_vs_official_gap": -0.379
+}

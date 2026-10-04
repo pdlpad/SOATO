@@ -1,0 +1,230 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.138557,
+     40.284395
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1204001,
+    "name": "Бирлик",
+    "district_soato": "1712211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.154182,
+     40.27642
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1204002,
+    "name": "Наврўз",
+    "district_soato": "1712211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.125871,
+     40.290323
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1204003,
+    "name": "Дўстлик",
+    "district_soato": "1712211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.924964,
+     40.272312
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1204004,
+    "name": "Шўркўл",
+    "district_soato": "1712211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.010815,
+     40.285378
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1204005,
+    "name": "Тўққизтепа",
+    "district_soato": "1712211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.123488,
+     40.269095
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1204006,
+    "name": "Гулистон",
+    "district_soato": "1712211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.157346,
+     40.266175
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1204007,
+    "name": "Шўртепа",
+    "district_soato": "1712211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.080049,
+     40.279344
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1204008,
+    "name": "Юксалиш",
+    "district_soato": "1712211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.257065,
+     41.030233
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1204009,
+    "name": "Караката",
+    "district_soato": "1712211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.155811,
+     40.875115
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1204010,
+    "name": "Саржал",
+    "district_soato": "1712211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.933604,
+     41.214368
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1204011,
+    "name": "Янгиқазған",
+    "district_soato": "1712211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.353584,
+     41.244644
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1204012,
+    "name": "Баймурат",
+    "district_soato": "1712211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.21963,
+     41.726972
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1204013,
+    "name": "Учтепа",
+    "district_soato": "1712211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.045014,
+     40.427887
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1204014,
+    "name": "Зафаробод",
+    "district_soato": "1712211"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.993888,
+     40.539241
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1204015,
+    "name": "Кўкча",
+    "district_soato": "1712211"
+   }
+  }
+ ]
+}

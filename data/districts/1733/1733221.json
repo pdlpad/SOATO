@@ -1,0 +1,12 @@
+{
+  "soato": "1733221",
+  "region_soato": "1733",
+  "name_soato": "Тупроққалъа тумани",
+  "name_polygon_set": "Тупроққалъа т.",
+  "population_2026_official": 61800,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.033139,
+  "mahallas_in_source": 18,
+  "area_km2": 1931.3162,
+  "model_vs_official_gap": -0.0321
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1703220",
+  "region_soato": "1703",
+  "name_soato": "Қўрғонтепа тумани",
+  "name_polygon_set": "Қўрғонтепа т.",
+  "population_2026_official": 238100,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.152926,
+  "mahallas_in_source": 74,
+  "area_km2": 336.3742,
+  "model_vs_official_gap": -0.1326
+}

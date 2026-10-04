@@ -1,0 +1,12 @@
+{
+  "soato": "1710232",
+  "region_soato": "1710",
+  "name_soato": "Китоб тумани",
+  "name_polygon_set": "Китоб т.",
+  "population_2026_official": 293400,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.980704,
+  "mahallas_in_source": 59,
+  "area_km2": 1750.4337,
+  "model_vs_official_gap": 0.0197
+}

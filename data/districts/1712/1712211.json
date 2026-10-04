@@ -1,0 +1,12 @@
+{
+  "soato": "1712211",
+  "region_soato": "1712",
+  "name_soato": "Конимех тумани",
+  "name_polygon_set": "Конимех т.",
+  "population_2026_official": 36900,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.199993,
+  "mahallas_in_source": 15,
+  "area_km2": 16053.943,
+  "model_vs_official_gap": -0.1667
+}

@@ -1,0 +1,335 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.463751,
+     37.887671
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216001,
+    "name": "Наврўз",
+    "district_soato": "1722203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.177001,
+     37.771736
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216002,
+    "name": "Обод юрт",
+    "district_soato": "1722203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.232668,
+     37.794699
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216003,
+    "name": "Бағрикенг",
+    "district_soato": "1722203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.285815,
+     37.821763
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216004,
+    "name": "Зевар",
+    "district_soato": "1722203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.258974,
+     37.829009
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216005,
+    "name": "Хўжаипок",
+    "district_soato": "1722203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.367719,
+     37.860179
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216006,
+    "name": "Бектепа",
+    "district_soato": "1722203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.393371,
+     37.97189
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216007,
+    "name": "Қудуқсой",
+    "district_soato": "1722203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.418434,
+     37.886481
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216008,
+    "name": "Сарой",
+    "district_soato": "1722203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.478927,
+     37.793056
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216009,
+    "name": "Лимонзор",
+    "district_soato": "1722203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.45017,
+     38.028903
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216010,
+    "name": "Обикор",
+    "district_soato": "1722203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.404298,
+     37.870343
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216011,
+    "name": "Бандихон",
+    "district_soato": "1722203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.419545,
+     37.80732
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216012,
+    "name": "Қалдирғоч",
+    "district_soato": "1722203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.451315,
+     37.824822
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216013,
+    "name": "Гулбоғ",
+    "district_soato": "1722203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.326255,
+     37.826769
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216014,
+    "name": "Чинор",
+    "district_soato": "1722203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.341014,
+     37.908703
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216015,
+    "name": "Обод турмуш",
+    "district_soato": "1722203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.36915,
+     37.807558
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216016,
+    "name": "Фаровон",
+    "district_soato": "1722203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.305743,
+     37.803727
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216017,
+    "name": "Бирдамлик",
+    "district_soato": "1722203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.320082,
+     37.790176
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216018,
+    "name": "Пахтакор",
+    "district_soato": "1722203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.330477,
+     37.835875
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216019,
+    "name": "Навбаҳор",
+    "district_soato": "1722203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.396802,
+     37.812875
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216020,
+    "name": "Баҳористон",
+    "district_soato": "1722203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.348424,
+     37.806236
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216021,
+    "name": "Ўргилсой",
+    "district_soato": "1722203"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.284537,
+     37.862518
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2216022,
+    "name": "Полвонтош",
+    "district_soato": "1722203"
+   }
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1727220",
+  "region_soato": "1727",
+  "name_soato": "Бекобод тумани",
+  "name_polygon_set": "Бекобод т.",
+  "population_2026_official": 170900,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.602482,
+  "mahallas_in_source": 51,
+  "area_km2": 639.6729,
+  "model_vs_official_gap": -0.376
+}

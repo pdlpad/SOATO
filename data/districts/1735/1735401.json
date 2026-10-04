@@ -1,0 +1,12 @@
+{
+  "soato": "1735401",
+  "region_soato": "1735",
+  "name_soato": "Нукус шаҳри",
+  "name_polygon_set": "Нукус ш.",
+  "population_2026_official": 349400,
+  "estimation_method": "здания OSM",
+  "calibration_factor": 0.02737,
+  "mahallas_in_source": 71,
+  "area_km2": 289.6836,
+  "model_vs_official_gap": -0.1045
+}

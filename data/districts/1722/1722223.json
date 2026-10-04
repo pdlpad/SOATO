@@ -1,0 +1,12 @@
+{
+  "soato": "1722223",
+  "region_soato": "1722",
+  "name_soato": "Шеробод тумани",
+  "name_polygon_set": "Шеробод т.",
+  "population_2026_official": 218900,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.973504,
+  "mahallas_in_source": 48,
+  "area_km2": 2624.298,
+  "model_vs_official_gap": 0.0272
+}

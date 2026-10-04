@@ -1,0 +1,12 @@
+{
+  "soato": "1730221",
+  "region_soato": "1730",
+  "name_soato": "Учкўприк тумани",
+  "name_polygon_set": "Учкўприк т.",
+  "population_2026_official": 252100,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.019564,
+  "mahallas_in_source": 52,
+  "area_km2": 314.1331,
+  "model_vs_official_gap": -0.0192
+}

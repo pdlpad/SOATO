@@ -1,0 +1,110 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.776768,
+     39.417395
+    ]
+   },
+   "properties": {
+    "mahalla_id": 614001,
+    "name": "Бўстон",
+    "district_soato": "1706232"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.081618,
+     39.479796
+    ]
+   },
+   "properties": {
+    "mahalla_id": 614002,
+    "name": "Жарқоқ",
+    "district_soato": "1706232"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.669412,
+     39.32294
+    ]
+   },
+   "properties": {
+    "mahalla_id": 614003,
+    "name": "Бўзачи",
+    "district_soato": "1706232"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.905452,
+     39.569494
+    ]
+   },
+   "properties": {
+    "mahalla_id": 614004,
+    "name": "Навбаҳор",
+    "district_soato": "1706232"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.793111,
+     39.493917
+    ]
+   },
+   "properties": {
+    "mahalla_id": 614005,
+    "name": "Тинчлик",
+    "district_soato": "1706232"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.779744,
+     39.50636
+    ]
+   },
+   "properties": {
+    "mahalla_id": 614006,
+    "name": "Чўлқувар",
+    "district_soato": "1706232"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.736711,
+     39.496211
+    ]
+   },
+   "properties": {
+    "mahalla_id": 614007,
+    "name": "Имом Бухорий",
+    "district_soato": "1706232"
+   }
+  }
+ ]
+}

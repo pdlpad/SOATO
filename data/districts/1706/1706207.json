@@ -1,0 +1,12 @@
+{
+  "soato": "1706207",
+  "region_soato": "1706",
+  "name_soato": "Бухоро тумани",
+  "name_polygon_set": "Бухоро т.",
+  "population_2026_official": 185000,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.974345,
+  "mahallas_in_source": 36,
+  "area_km2": 411.9922,
+  "model_vs_official_gap": 0.0263
+}

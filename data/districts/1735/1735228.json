@@ -1,0 +1,12 @@
+{
+  "soato": "1735228",
+  "region_soato": "1735",
+  "name_soato": "Тахиатош тумани",
+  "name_polygon_set": "Тахиатош т.",
+  "population_2026_official": 77800,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.209713,
+  "mahallas_in_source": 14,
+  "area_km2": 188.6316,
+  "model_vs_official_gap": -0.1734
+}

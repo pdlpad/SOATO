@@ -1,0 +1,12 @@
+{
+  "soato": "1733226",
+  "region_soato": "1733",
+  "name_soato": "Хива тумани",
+  "name_polygon_set": "Хива т.",
+  "population_2026_official": 161200,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.052373,
+  "mahallas_in_source": 34,
+  "area_km2": 430.4313,
+  "model_vs_official_gap": -0.0498
+}

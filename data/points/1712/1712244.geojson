@@ -1,0 +1,125 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     63.848452,
+     41.549897
+    ]
+   },
+   "properties": {
+    "mahalla_id": 62,
+    "name": "Шарқ",
+    "district_soato": "1712244"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.726771,
+     41.489349
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1207001,
+    "name": "Томдибулоқ",
+    "district_soato": "1712244"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.509448,
+     42.278225
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1207002,
+    "name": "Ақтов",
+    "district_soato": "1712244"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.473629,
+     41.409514
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1207003,
+    "name": "Аяққудуқ",
+    "district_soato": "1712244"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.852863,
+     42.776449
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1207004,
+    "name": "Сукетти",
+    "district_soato": "1712244"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.212536,
+     42.5284
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1207005,
+    "name": "Кериз",
+    "district_soato": "1712244"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.419465,
+     42.656243
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1207006,
+    "name": "Керегетау",
+    "district_soato": "1712244"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.859394,
+     42.519904
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1207007,
+    "name": "Шиели",
+    "district_soato": "1712244"
+   }
+  }
+ ]
+}

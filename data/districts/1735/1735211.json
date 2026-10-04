@@ -1,0 +1,12 @@
+{
+  "soato": "1735211",
+  "region_soato": "1735",
+  "name_soato": "Қораўзак тумани",
+  "name_polygon_set": "Қораўзак т.",
+  "population_2026_official": 54800,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.475019,
+  "mahallas_in_source": 13,
+  "area_km2": 5881.1289,
+  "model_vs_official_gap": -0.322
+}

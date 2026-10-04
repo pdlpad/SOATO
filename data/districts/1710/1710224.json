@@ -1,0 +1,12 @@
+{
+  "soato": "1710224",
+  "region_soato": "1710",
+  "name_soato": "Қарши тумани",
+  "name_polygon_set": "Қарши т.",
+  "population_2026_official": 286500,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.789285,
+  "mahallas_in_source": 58,
+  "area_km2": 914.8268,
+  "model_vs_official_gap": 0.267
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1735240",
+  "region_soato": "1735",
+  "name_soato": "Чимбой тумани",
+  "name_polygon_set": "Чимбой т.",
+  "population_2026_official": 117100,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.119727,
+  "mahallas_in_source": 22,
+  "area_km2": 1405.617,
+  "model_vs_official_gap": -0.1069
+}

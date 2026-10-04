@@ -1,0 +1,12 @@
+{
+  "soato": "1703232",
+  "region_soato": "1703",
+  "name_soato": "Пахтаобод тумани",
+  "name_polygon_set": "Пахтаобод т.",
+  "population_2026_official": 216100,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.097525,
+  "mahallas_in_source": 67,
+  "area_km2": 260.2571,
+  "model_vs_official_gap": -0.0889
+}

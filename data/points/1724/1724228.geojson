@@ -1,0 +1,275 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.633767,
+     40.571438
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2405001,
+    "name": "Т.Ахмедов",
+    "district_soato": "1724228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.704278,
+     40.602513
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2405002,
+    "name": "Оқолтин",
+    "district_soato": "1724228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.695492,
+     40.568768
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2405003,
+    "name": "Ойдин",
+    "district_soato": "1724228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.678789,
+     40.476926
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2405004,
+    "name": "Тинчлик",
+    "district_soato": "1724228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.678986,
+     40.510772
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2405005,
+    "name": "Наврўз",
+    "district_soato": "1724228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.725883,
+     40.496198
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2405006,
+    "name": "Боғистон",
+    "district_soato": "1724228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.54962,
+     40.538158
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2405007,
+    "name": "Мирзачўл",
+    "district_soato": "1724228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.747708,
+     40.471737
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2405008,
+    "name": "Тошкент",
+    "district_soato": "1724228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.686517,
+     40.439553
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2405009,
+    "name": "Нурафшон",
+    "district_soato": "1724228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.763282,
+     40.43
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2405010,
+    "name": "Мирзо Улугбек",
+    "district_soato": "1724228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.671826,
+     40.361693
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2405011,
+    "name": "Йулдошобод",
+    "district_soato": "1724228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.640817,
+     40.423543
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2405012,
+    "name": "Хақиқат",
+    "district_soato": "1724228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.667947,
+     40.535183
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2405013,
+    "name": "Дехқонобод",
+    "district_soato": "1724228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.569927,
+     40.397836
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2405014,
+    "name": "Баҳористон",
+    "district_soato": "1724228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.47743,
+     40.411368
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2405015,
+    "name": "Навбахор",
+    "district_soato": "1724228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.595332,
+     40.477734
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2405016,
+    "name": "Дўнгариқ",
+    "district_soato": "1724228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.773488,
+     40.379387
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2405017,
+    "name": "Янги хаёт",
+    "district_soato": "1724228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.605481,
+     40.439216
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2405018,
+    "name": "Янги Ўзбекистон ",
+    "district_soato": "1724228"
+   }
+  }
+ ]
+}

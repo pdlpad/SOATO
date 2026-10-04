@@ -1,0 +1,200 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.384098,
+     40.589158
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2401001,
+    "name": "Тошкент",
+    "district_soato": "1724206"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.469926,
+     40.512371
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2401002,
+    "name": "Шодлик",
+    "district_soato": "1724206"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.3419,
+     40.476125
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2401003,
+    "name": "Аҳиллик",
+    "district_soato": "1724206"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.3668,
+     40.522304
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2401004,
+    "name": "А.Навоий",
+    "district_soato": "1724206"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.338048,
+     40.566926
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2401005,
+    "name": "Мустақиллик",
+    "district_soato": "1724206"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.249019,
+     40.609212
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2401006,
+    "name": "Андижон",
+    "district_soato": "1724206"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.408602,
+     40.54454
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2401007,
+    "name": "Янги давр",
+    "district_soato": "1724206"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.423452,
+     40.568572
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2401008,
+    "name": "Кўркам диёр",
+    "district_soato": "1724206"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.231736,
+     40.521065
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2401009,
+    "name": "Бўстон",
+    "district_soato": "1724206"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.289225,
+     40.56989
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2401010,
+    "name": "Обод",
+    "district_soato": "1724206"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.410087,
+     40.527283
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2401011,
+    "name": "Саховат",
+    "district_soato": "1724206"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.340135,
+     40.610446
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2401012,
+    "name": "Янги ҳаёт",
+    "district_soato": "1724206"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.437959,
+     40.507406
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2401013,
+    "name": "Янги Тошкент",
+    "district_soato": "1724206"
+   }
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1733220",
+  "region_soato": "1733",
+  "name_soato": "Хазорасп тумани",
+  "name_polygon_set": "Ҳазорасп т.",
+  "population_2026_official": 214000,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.067481,
+  "mahallas_in_source": 47,
+  "area_km2": 423.2464,
+  "model_vs_official_gap": -0.0632
+}

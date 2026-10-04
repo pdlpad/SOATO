@@ -1,0 +1,12 @@
+{
+  "soato": "1722401",
+  "region_soato": "1722",
+  "name_soato": "Термиз шаҳри",
+  "name_polygon_set": "Термиз ш.",
+  "population_2026_official": 213000,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.009223,
+  "mahallas_in_source": 37,
+  "area_km2": 44.1797,
+  "model_vs_official_gap": -0.0091
+}

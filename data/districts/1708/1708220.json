@@ -1,0 +1,12 @@
+{
+  "soato": "1708220",
+  "region_soato": "1708",
+  "name_soato": "Зарбдор тумани",
+  "name_polygon_set": "Зарбдор т.",
+  "population_2026_official": 98300,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.199484,
+  "mahallas_in_source": 24,
+  "area_km2": 768.6885,
+  "model_vs_official_gap": -0.1663
+}

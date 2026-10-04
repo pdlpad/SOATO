@@ -1,0 +1,12 @@
+{
+  "soato": "1727233",
+  "region_soato": "1727",
+  "name_soato": "Қуйичирчиқ тумани",
+  "name_polygon_set": "Қуйи-чирчиқ т.",
+  "population_2026_official": 119400,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.639664,
+  "mahallas_in_source": 37,
+  "area_km2": 575.8273,
+  "model_vs_official_gap": 0.5633
+}

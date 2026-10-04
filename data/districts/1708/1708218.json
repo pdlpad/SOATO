@@ -1,0 +1,12 @@
+{
+  "soato": "1708218",
+  "region_soato": "1708",
+  "name_soato": "Зомин тумани",
+  "name_polygon_set": "Зомин т.",
+  "population_2026_official": 188100,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.220843,
+  "mahallas_in_source": 39,
+  "area_km2": 311.2552,
+  "model_vs_official_gap": -0.1809
+}

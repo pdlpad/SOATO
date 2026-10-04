@@ -1,0 +1,12 @@
+{
+  "soato": "1733212",
+  "region_soato": "1733",
+  "name_soato": "Қўшкўпир тумани",
+  "name_polygon_set": "Қўшкўпир т.",
+  "population_2026_official": 188600,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.013257,
+  "mahallas_in_source": 50,
+  "area_km2": 541.8879,
+  "model_vs_official_gap": -0.0131
+}

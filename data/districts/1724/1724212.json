@@ -1,0 +1,12 @@
+{
+  "soato": "1724212",
+  "region_soato": "1724",
+  "name_soato": "Боёвут тумани",
+  "name_polygon_set": "Боёвут т.",
+  "population_2026_official": 144100,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.202503,
+  "mahallas_in_source": 39,
+  "area_km2": 567.3047,
+  "model_vs_official_gap": -0.1684
+}

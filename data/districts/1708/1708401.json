@@ -1,0 +1,12 @@
+{
+  "soato": "1708401",
+  "region_soato": "1708",
+  "name_soato": "Жиззах шаҳри",
+  "name_polygon_set": "Жиззах ш.",
+  "population_2026_official": 203300,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.073772,
+  "mahallas_in_source": 34,
+  "area_km2": 105.0473,
+  "model_vs_official_gap": -0.0687
+}

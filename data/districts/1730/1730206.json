@@ -1,0 +1,12 @@
+{
+  "soato": "1730206",
+  "region_soato": "1730",
+  "name_soato": "Қўштепа тумани",
+  "name_polygon_set": "Қўштепа т.",
+  "population_2026_official": 217800,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.849122,
+  "mahallas_in_source": 51,
+  "area_km2": 385.3259,
+  "model_vs_official_gap": 0.1777
+}

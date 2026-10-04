@@ -1,0 +1,830 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.160082,
+     41.263146
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606001,
+    "name": "Баҳористон",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.219902,
+     41.28729
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606002,
+    "name": "Новза",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.231713,
+     41.296341
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606003,
+    "name": "1-Чарх Камолон",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.197207,
+     41.268082
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606004,
+    "name": "2-Қатортол",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.210574,
+     41.287967
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606005,
+    "name": "Дилобод",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.170343,
+     41.25751
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606006,
+    "name": "Бектўпи",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.223703,
+     41.278712
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606007,
+    "name": "Катта Чилонзор-2",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.192069,
+     41.258311
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606008,
+    "name": "Яккабоғ",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.214376,
+     41.264699
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606009,
+    "name": "Гавҳар",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.158588,
+     41.260966
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606010,
+    "name": "Гулистон",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.169675,
+     41.264789
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606011,
+    "name": "Шарқ тонги",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.207459,
+     41.294014
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606012,
+    "name": "1-Қатортол",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.191125,
+     41.27255
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606013,
+    "name": "Мехржон",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.194808,
+     41.264878
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606014,
+    "name": "Мевазор",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.218,
+     41.298453
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606015,
+    "name": "3-Чарх Камолон",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.212649,
+     41.284917
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606016,
+    "name": "Халқлар Дўстлиги",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.207438,
+     41.297062
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606017,
+    "name": "Боғзор",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.19838,
+     41.28282
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606018,
+    "name": "Кўтарма",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.245024,
+     41.308611
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606019,
+    "name": "Катта Олмазор",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.1779,
+     41.263693
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606020,
+    "name": "Хайробод",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.173518,
+     41.263037
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606021,
+    "name": "Хонтўпи",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.186663,
+     41.26786
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606022,
+    "name": "Шухрат",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.162817,
+     41.264449
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606023,
+    "name": "Шараф",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.216682,
+     41.270332
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606024,
+    "name": "Катта Қозиробод",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.196196,
+     41.271634
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606025,
+    "name": "Ботирма",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.203477,
+     41.278235
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606026,
+    "name": "Навбаҳор",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.180798,
+     41.270232
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606027,
+    "name": "Хирмонтепа",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.229663,
+     41.283765
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606028,
+    "name": "Катта Чилонзор-1",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.213726,
+     41.291775
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606029,
+    "name": "Бешчинор",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.19967,
+     41.297338
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606030,
+    "name": "Лутфий",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.200986,
+     41.273136
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606031,
+    "name": "Зарқўрғон",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.188091,
+     41.270803
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606032,
+    "name": "Кичик Хирмонтепа",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.232142,
+     41.290794
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606033,
+    "name": "Чилонзор",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.178768,
+     41.238587
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606034,
+    "name": "Бешқўрғон",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.207782,
+     41.29042
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606035,
+    "name": "Нафосат",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.182625,
+     41.265105
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606036,
+    "name": "Яккатут",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.245218,
+     41.304866
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606037,
+    "name": "Бешёғоч",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.165616,
+     41.266312
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606038,
+    "name": "Шарқ",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.221868,
+     41.284312
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606039,
+    "name": "Катта Чилонзор-3",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.208967,
+     41.260386
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606040,
+    "name": "Дўмбиробод",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.202524,
+     41.267703
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606041,
+    "name": "Наққошлик",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.197071,
+     41.290074
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606042,
+    "name": "Чўпон-ота",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.190055,
+     41.265568
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606043,
+    "name": "Бўрижар",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.203512,
+     41.262775
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606044,
+    "name": "Катта Дўмбиробод",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.152585,
+     41.261463
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606045,
+    "name": "Ал-Хоразмий",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.176696,
+     41.268516
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606046,
+    "name": "Катта Хирмонтепа",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.226004,
+     41.29694
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606047,
+    "name": "2-Чарх Камолон",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.196826,
+     41.249979
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606048,
+    "name": "Тирсакобод",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.212824,
+     41.297062
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606049,
+    "name": "Оқ-тепа",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.200032,
+     41.287476
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606050,
+    "name": "Қатортол",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.19843,
+     41.275947
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606051,
+    "name": "Фидокор",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.21403,
+     41.276102
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606052,
+    "name": "Қозиробод",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.202211,
+     41.290888
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606053,
+    "name": "Диёр",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.206634,
+     41.282968
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606054,
+    "name": "Катта Навбаҳор",
+    "district_soato": "1726294"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.21837,
+     41.29005
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2606055,
+    "name": "Кўркам",
+    "district_soato": "1726294"
+   }
+  }
+ ]
+}

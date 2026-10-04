@@ -1,0 +1,12 @@
+{
+  "soato": "1710212",
+  "region_soato": "1710",
+  "name_soato": "Деҳқонобод тумани",
+  "name_polygon_set": "Деҳқонобод т.",
+  "population_2026_official": 166200,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.438178,
+  "mahallas_in_source": 54,
+  "area_km2": 4105.2941,
+  "model_vs_official_gap": -0.3047
+}

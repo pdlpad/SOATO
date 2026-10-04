@@ -1,0 +1,12 @@
+{
+  "soato": "1708237",
+  "region_soato": "1708",
+  "name_soato": "Янгиобод тумани",
+  "name_polygon_set": "Янгиобод т.",
+  "population_2026_official": 30500,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.903567,
+  "mahallas_in_source": 8,
+  "area_km2": 732.4314,
+  "model_vs_official_gap": 0.1067
+}

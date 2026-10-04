@@ -1,0 +1,12 @@
+{
+  "soato": "1724235",
+  "region_soato": "1724",
+  "name_soato": "Ховос тумани",
+  "name_polygon_set": "Ховос т.",
+  "population_2026_official": 105600,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.26957,
+  "mahallas_in_source": 28,
+  "area_km2": 571.0019,
+  "model_vs_official_gap": -0.2123
+}

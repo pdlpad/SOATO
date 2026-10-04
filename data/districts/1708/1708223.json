@@ -1,0 +1,12 @@
+{
+  "soato": "1708223",
+  "region_soato": "1708",
+  "name_soato": "Мирзачўл тумани",
+  "name_polygon_set": "Мирзачўл т.",
+  "population_2026_official": 57100,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.381727,
+  "mahallas_in_source": 12,
+  "area_km2": 501.3885,
+  "model_vs_official_gap": -0.2763
+}

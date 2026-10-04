@@ -1,0 +1,12 @@
+{
+  "soato": "1703203",
+  "region_soato": "1703",
+  "name_soato": "Aндижон тумани",
+  "name_polygon_set": "Андижон т.",
+  "population_2026_official": 298600,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.835998,
+  "mahallas_in_source": 79,
+  "area_km2": 374.0139,
+  "model_vs_official_gap": 0.1962
+}

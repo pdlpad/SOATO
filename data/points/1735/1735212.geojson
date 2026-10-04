@@ -1,0 +1,245 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.69177,
+     42.616711
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3511001,
+    "name": "Жузим бағ ОФЙ",
+    "district_soato": "1735212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.577811,
+     42.718206
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3511002,
+    "name": "Жанабазар ОФЙ",
+    "district_soato": "1735212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.540242,
+     42.854146
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3511003,
+    "name": "Абат ОФЙ",
+    "district_soato": "1735212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.629841,
+     42.79155
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3511004,
+    "name": "Ақтуба ОФЙ",
+    "district_soato": "1735212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.735749,
+     42.754887
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3511005,
+    "name": "Қумшунгул ОФЙ",
+    "district_soato": "1735212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.839578,
+     42.742654
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3511006,
+    "name": "Жалпақ жап ОФЙ",
+    "district_soato": "1735212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.733651,
+     42.681342
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3511007,
+    "name": "Қуяшлы МФЙ",
+    "district_soato": "1735212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.613543,
+     42.768962
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3511008,
+    "name": "Нурлы бостан МФЙ",
+    "district_soato": "1735212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.731346,
+     42.698717
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3511009,
+    "name": "Гужим терек МФЙ",
+    "district_soato": "1735212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.605141,
+     42.781526
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3511010,
+    "name": "Жылўан жап МФЙ",
+    "district_soato": "1735212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.620282,
+     42.771595
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3511011,
+    "name": "Маденият МФЙ",
+    "district_soato": "1735212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.736735,
+     42.689553
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3511012,
+    "name": "Халкабад МФЙ",
+    "district_soato": "1735212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.719092,
+     42.684046
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3511013,
+    "name": "Бахытлы МФЙ",
+    "district_soato": "1735212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.60055,
+     42.768859
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3511014,
+    "name": "Абат макан МФЙ",
+    "district_soato": "1735212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.713669,
+     42.666794
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3511015,
+    "name": "Ийшан қала ОФЙ",
+    "district_soato": "1735212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.888785,
+     42.676016
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3511016,
+    "name": "Көк өзек ОФЙ",
+    "district_soato": "1735212"
+   }
+  }
+ ]
+}

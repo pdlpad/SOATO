@@ -1,0 +1,320 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.391738,
+     41.412695
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3303001,
+    "name": "Лолазор",
+    "district_soato": "1733406"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.376924,
+     41.393769
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3303002,
+    "name": "Сангар",
+    "district_soato": "1733406"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.368613,
+     41.367369
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3303003,
+    "name": "Ангарик",
+    "district_soato": "1733406"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.346652,
+     41.378587
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3303004,
+    "name": "Калта минор",
+    "district_soato": "1733406"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.341441,
+     41.373997
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3303005,
+    "name": "Қибла тозабоғ",
+    "district_soato": "1733406"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.349391,
+     41.368198
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3303006,
+    "name": "Шихлар",
+    "district_soato": "1733406"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.33841,
+     41.413174
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3303007,
+    "name": "Гулирайхон",
+    "district_soato": "1733406"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.343066,
+     41.394617
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3303008,
+    "name": "Гулшан-2",
+    "district_soato": "1733406"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.367633,
+     41.375125
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3303009,
+    "name": "Қумяска",
+    "district_soato": "1733406"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.353535,
+     41.382235
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3303010,
+    "name": "Янги турмуш",
+    "district_soato": "1733406"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.363772,
+     41.390686
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3303011,
+    "name": "Янги ҳаёт",
+    "district_soato": "1733406"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.367278,
+     41.389241
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3303012,
+    "name": "Тозабоғ",
+    "district_soato": "1733406"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.343596,
+     41.401466
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3303013,
+    "name": "Янги Бинокор",
+    "district_soato": "1733406"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.324113,
+     41.411871
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3303014,
+    "name": "Гулистон",
+    "district_soato": "1733406"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.361005,
+     41.374162
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3303015,
+    "name": "Каптархона",
+    "district_soato": "1733406"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.356045,
+     41.391377
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3303016,
+    "name": "Дўстлик",
+    "district_soato": "1733406"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.36503,
+     41.382876
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3303017,
+    "name": "Мевастан",
+    "district_soato": "1733406"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.360214,
+     41.378217
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3303018,
+    "name": "Ичон қаъла",
+    "district_soato": "1733406"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.361883,
+     41.407385
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3303019,
+    "name": "Қиёт",
+    "district_soato": "1733406"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.374421,
+     41.376011
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3303020,
+    "name": "Газчи",
+    "district_soato": "1733406"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.374938,
+     41.38401
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3303021,
+    "name": "Гиламчи",
+    "district_soato": "1733406"
+   }
+  }
+ ]
+}

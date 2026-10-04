@@ -1,0 +1,230 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     73.018484,
+     40.830432
+    ]
+   },
+   "properties": {
+    "mahalla_id": 303001,
+    "name": "Хидирша",
+    "district_soato": "1703408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.9999,
+     40.825201
+    ]
+   },
+   "properties": {
+    "mahalla_id": 303002,
+    "name": "Меҳмонобод",
+    "district_soato": "1703408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.982182,
+     40.816291
+    ]
+   },
+   "properties": {
+    "mahalla_id": 303003,
+    "name": "Фозилмон",
+    "district_soato": "1703408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     73.027339,
+     40.781784
+    ]
+   },
+   "properties": {
+    "mahalla_id": 303004,
+    "name": "Кампирровот",
+    "district_soato": "1703408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.992291,
+     40.787693
+    ]
+   },
+   "properties": {
+    "mahalla_id": 303005,
+    "name": "Янги ҳаёт",
+    "district_soato": "1703408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.974395,
+     40.803272
+    ]
+   },
+   "properties": {
+    "mahalla_id": 303006,
+    "name": "Хонобод",
+    "district_soato": "1703408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.96458,
+     40.803567
+    ]
+   },
+   "properties": {
+    "mahalla_id": 303007,
+    "name": "Юксалиш",
+    "district_soato": "1703408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     73.012885,
+     40.792124
+    ]
+   },
+   "properties": {
+    "mahalla_id": 303008,
+    "name": "Тейит",
+    "district_soato": "1703408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.995272,
+     40.806973
+    ]
+   },
+   "properties": {
+    "mahalla_id": 303009,
+    "name": "Истиқлол",
+    "district_soato": "1703408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     73.008111,
+     40.805093
+    ]
+   },
+   "properties": {
+    "mahalla_id": 303010,
+    "name": "Мустақиллик",
+    "district_soato": "1703408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.977715,
+     40.820303
+    ]
+   },
+   "properties": {
+    "mahalla_id": 303011,
+    "name": "А.Навоий",
+    "district_soato": "1703408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.985064,
+     40.795902
+    ]
+   },
+   "properties": {
+    "mahalla_id": 303012,
+    "name": "Анҳор",
+    "district_soato": "1703408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.96432,
+     40.814725
+    ]
+   },
+   "properties": {
+    "mahalla_id": 303013,
+    "name": "Бунёдкор",
+    "district_soato": "1703408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.996186,
+     40.799009
+    ]
+   },
+   "properties": {
+    "mahalla_id": 303014,
+    "name": "А.Фитрат",
+    "district_soato": "1703408"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     72.983085,
+     40.806827
+    ]
+   },
+   "properties": {
+    "mahalla_id": 303015,
+    "name": "Хонтоғ",
+    "district_soato": "1703408"
+   }
+  }
+ ]
+}

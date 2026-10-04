@@ -1,0 +1,125 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.73769,
+     39.870705
+    ]
+   },
+   "properties": {
+    "mahalla_id": 813001,
+    "name": "Баландчақир",
+    "district_soato": "1708237"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.785751,
+     39.90815
+    ]
+   },
+   "properties": {
+    "mahalla_id": 813002,
+    "name": "Янгиобод",
+    "district_soato": "1708237"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.654498,
+     40.017266
+    ]
+   },
+   "properties": {
+    "mahalla_id": 813003,
+    "name": "Совот",
+    "district_soato": "1708237"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.756751,
+     40.007453
+    ]
+   },
+   "properties": {
+    "mahalla_id": 813004,
+    "name": "Дўстлик",
+    "district_soato": "1708237"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.920954,
+     40.102725
+    ]
+   },
+   "properties": {
+    "mahalla_id": 813005,
+    "name": "Хавотоғ",
+    "district_soato": "1708237"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.682567,
+     39.900927
+    ]
+   },
+   "properties": {
+    "mahalla_id": 813006,
+    "name": "Хўжамушкент",
+    "district_soato": "1708237"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.869592,
+     39.972709
+    ]
+   },
+   "properties": {
+    "mahalla_id": 813007,
+    "name": "Сармич",
+    "district_soato": "1708237"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.801509,
+     39.934226
+    ]
+   },
+   "properties": {
+    "mahalla_id": 813008,
+    "name": "Шодлик",
+    "district_soato": "1708237"
+   }
+  }
+ ]
+}

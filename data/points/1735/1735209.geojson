@@ -1,0 +1,80 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.382924,
+     42.898715
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3510001,
+    "name": "Еркиндарё ОФЙ",
+    "district_soato": "1735209"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.536944,
+     43.251393
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3510002,
+    "name": "Кўк-сўв ОФЙ",
+    "district_soato": "1735209"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.249833,
+     43.198051
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3510003,
+    "name": "Аспантай ОФЙ",
+    "district_soato": "1735209"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.356673,
+     43.00631
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3510004,
+    "name": "Бўзатов ШФЙ",
+    "district_soato": "1735209"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.252122,
+     42.983194
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3510005,
+    "name": "Қусханатов ОФЙ",
+    "district_soato": "1735209"
+   }
+  }
+ ]
+}

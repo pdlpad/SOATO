@@ -1,0 +1,12 @@
+{
+  "soato": "1706212",
+  "region_soato": "1706",
+  "name_soato": "Вобкент тумани",
+  "name_polygon_set": "Вобкент т.",
+  "population_2026_official": 154000,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.935726,
+  "mahallas_in_source": 44,
+  "area_km2": 299.9198,
+  "model_vs_official_gap": 0.0687
+}

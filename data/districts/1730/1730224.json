@@ -1,0 +1,12 @@
+{
+  "soato": "1730224",
+  "region_soato": "1730",
+  "name_soato": "Риштон тумани",
+  "name_polygon_set": "Риштон т.",
+  "population_2026_official": 225200,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.971113,
+  "mahallas_in_source": 71,
+  "area_km2": 333.6132,
+  "model_vs_official_gap": 0.0297
+}

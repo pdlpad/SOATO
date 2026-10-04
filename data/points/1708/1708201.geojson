@@ -1,0 +1,200 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.886215,
+     40.498132
+    ]
+   },
+   "properties": {
+    "mahalla_id": 801001,
+    "name": "3.Бобур",
+    "district_soato": "1708201"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.893252,
+     40.562869
+    ]
+   },
+   "properties": {
+    "mahalla_id": 801002,
+    "name": "Бўстон",
+    "district_soato": "1708201"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.78421,
+     40.468797
+    ]
+   },
+   "properties": {
+    "mahalla_id": 801003,
+    "name": "Янгибўстон",
+    "district_soato": "1708201"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.746371,
+     40.465028
+    ]
+   },
+   "properties": {
+    "mahalla_id": 801004,
+    "name": "Чинобод",
+    "district_soato": "1708201"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.879141,
+     40.484496
+    ]
+   },
+   "properties": {
+    "mahalla_id": 801005,
+    "name": "О.Водий",
+    "district_soato": "1708201"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.866835,
+     40.50126
+    ]
+   },
+   "properties": {
+    "mahalla_id": 801006,
+    "name": "Ғ.Ғулом",
+    "district_soato": "1708201"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.88282,
+     40.502455
+    ]
+   },
+   "properties": {
+    "mahalla_id": 801007,
+    "name": "Ғолиблар",
+    "district_soato": "1708201"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.838793,
+     40.690368
+    ]
+   },
+   "properties": {
+    "mahalla_id": 801008,
+    "name": "Тинчлик",
+    "district_soato": "1708201"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.779348,
+     40.542945
+    ]
+   },
+   "properties": {
+    "mahalla_id": 801009,
+    "name": "Зарафшон",
+    "district_soato": "1708201"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.793167,
+     40.608094
+    ]
+   },
+   "properties": {
+    "mahalla_id": 801010,
+    "name": "Гулбахор",
+    "district_soato": "1708201"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.793602,
+     40.61193
+    ]
+   },
+   "properties": {
+    "mahalla_id": 801011,
+    "name": "Дўстлик",
+    "district_soato": "1708201"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.868954,
+     40.700329
+    ]
+   },
+   "properties": {
+    "mahalla_id": 801012,
+    "name": "Чўлкувар",
+    "district_soato": "1708201"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.703499,
+     40.574091
+    ]
+   },
+   "properties": {
+    "mahalla_id": 801013,
+    "name": "Бахтли",
+    "district_soato": "1708201"
+   }
+  }
+ ]
+}

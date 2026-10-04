@@ -1,0 +1,12 @@
+{
+  "soato": "1727419",
+  "region_soato": "1727",
+  "name_soato": "Чирчиқ шаҳри",
+  "name_polygon_set": "Чирчиқ ш.",
+  "population_2026_official": 178300,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 2.160502,
+  "mahallas_in_source": 44,
+  "area_km2": 44.267,
+  "model_vs_official_gap": -0.5371
+}

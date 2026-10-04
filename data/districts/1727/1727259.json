@@ -1,0 +1,12 @@
+{
+  "soato": "1727259",
+  "region_soato": "1727",
+  "name_soato": "Янгийўл тумани",
+  "name_polygon_set": "Янгиўл т.",
+  "population_2026_official": 207700,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.745517,
+  "mahallas_in_source": 70,
+  "area_km2": 457.7937,
+  "model_vs_official_gap": 0.3414
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1703206",
+  "region_soato": "1703",
+  "name_soato": "Балиқчи тумани",
+  "name_polygon_set": "Балиқчи т.",
+  "population_2026_official": 224100,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.182385,
+  "mahallas_in_source": 66,
+  "area_km2": 334.8408,
+  "model_vs_official_gap": -0.1543
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1708212",
+  "region_soato": "1708",
+  "name_soato": "Шароф Рашидов тумани",
+  "name_polygon_set": "Ш.Рашидов т.",
+  "population_2026_official": 255100,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.833509,
+  "mahallas_in_source": 49,
+  "area_km2": 1346.7386,
+  "model_vs_official_gap": 0.1997
+}

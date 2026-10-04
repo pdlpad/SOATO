@@ -1,0 +1,12 @@
+{
+  "soato": "1730412",
+  "region_soato": "1730",
+  "name_soato": "Марғилон шаҳри",
+  "name_polygon_set": "Марғилон ш.",
+  "population_2026_official": 261900,
+  "estimation_method": "здания OSM",
+  "calibration_factor": 0.019148,
+  "mahallas_in_source": 55,
+  "area_km2": 40.7568,
+  "model_vs_official_gap": -0.3619
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1718238",
+  "region_soato": "1718",
+  "name_soato": "Тайлоқ тумани",
+  "name_polygon_set": "Тойлоқ т.",
+  "population_2026_official": 231100,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.925128,
+  "mahallas_in_source": 50,
+  "area_km2": 239.4424,
+  "model_vs_official_gap": 0.0809
+}

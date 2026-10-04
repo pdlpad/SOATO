@@ -1,0 +1,12 @@
+{
+  "soato": "1722207",
+  "region_soato": "1722",
+  "name_soato": "Музработ тумани",
+  "name_polygon_set": "Музрабод т.",
+  "population_2026_official": 159900,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.027518,
+  "mahallas_in_source": 37,
+  "area_km2": 502.0511,
+  "model_vs_official_gap": -0.0268
+}

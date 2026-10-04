@@ -1,0 +1,12 @@
+{
+  "soato": "1703202",
+  "region_soato": "1703",
+  "name_soato": "Олтинкўл тумани",
+  "name_polygon_set": "Олтинкўл т.",
+  "population_2026_official": 196500,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.90469,
+  "mahallas_in_source": 59,
+  "area_km2": 212.0018,
+  "model_vs_official_gap": 0.1054
+}

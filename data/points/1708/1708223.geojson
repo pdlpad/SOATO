@@ -1,0 +1,185 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.162133,
+     40.6714
+    ]
+   },
+   "properties": {
+    "mahalla_id": 809001,
+    "name": "Дўстлик",
+    "district_soato": "1708223"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.186657,
+     40.65942
+    ]
+   },
+   "properties": {
+    "mahalla_id": 809002,
+    "name": "Ержар",
+    "district_soato": "1708223"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.998103,
+     40.78737
+    ]
+   },
+   "properties": {
+    "mahalla_id": 809003,
+    "name": "Янгидала",
+    "district_soato": "1708223"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.184343,
+     40.623901
+    ]
+   },
+   "properties": {
+    "mahalla_id": 809004,
+    "name": "Ипак Йўли",
+    "district_soato": "1708223"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.174041,
+     40.666512
+    ]
+   },
+   "properties": {
+    "mahalla_id": 809005,
+    "name": "Мустақиллик",
+    "district_soato": "1708223"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.953891,
+     40.686325
+    ]
+   },
+   "properties": {
+    "mahalla_id": 809006,
+    "name": "Ўзбекистон",
+    "district_soato": "1708223"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.11732,
+     40.658264
+    ]
+   },
+   "properties": {
+    "mahalla_id": 809007,
+    "name": "Мирзадала",
+    "district_soato": "1708223"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.028101,
+     40.688446
+    ]
+   },
+   "properties": {
+    "mahalla_id": 809008,
+    "name": "Пахтазор",
+    "district_soato": "1708223"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.172549,
+     40.696056
+    ]
+   },
+   "properties": {
+    "mahalla_id": 809009,
+    "name": "Боғбон",
+    "district_soato": "1708223"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.167314,
+     40.654866
+    ]
+   },
+   "properties": {
+    "mahalla_id": 809010,
+    "name": "Ғалаба",
+    "district_soato": "1708223"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.910188,
+     40.751174
+    ]
+   },
+   "properties": {
+    "mahalla_id": 809011,
+    "name": "Гулзор",
+    "district_soato": "1708223"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.100415,
+     40.721307
+    ]
+   },
+   "properties": {
+    "mahalla_id": 809012,
+    "name": "Тошкент",
+    "district_soato": "1708223"
+   }
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1703408",
+  "region_soato": "1703",
+  "name_soato": "Хонобод шаҳри",
+  "name_polygon_set": "Хонобод ш.",
+  "population_2026_official": 47000,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.128183,
+  "mahallas_in_source": 15,
+  "area_km2": 39.5624,
+  "model_vs_official_gap": -0.1136
+}

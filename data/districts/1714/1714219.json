@@ -1,0 +1,12 @@
+{
+  "soato": "1714219",
+  "region_soato": "1714",
+  "name_soato": "Поп тумани",
+  "name_polygon_set": "Поп т.",
+  "population_2026_official": 243500,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.991055,
+  "mahallas_in_source": 77,
+  "area_km2": 3023.1522,
+  "model_vs_official_gap": 0.009
+}

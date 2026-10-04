@@ -1,0 +1,890 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.652438,
+     40.057551
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819001,
+    "name": "Гулобод маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.480214,
+     40.067091
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819002,
+    "name": "Бурқут маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.641532,
+     40.087989
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819003,
+    "name": "Сулувқўрғон маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.509261,
+     40.104701
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819004,
+    "name": "Гулшан маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.568892,
+     40.090176
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819005,
+    "name": "Можор маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.677988,
+     40.027331
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819006,
+    "name": "Бодой маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.670506,
+     40.034163
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819007,
+    "name": "Амир Темур номли маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.669236,
+     40.018528
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819008,
+    "name": "Мирзо Улуғбек номли маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.582881,
+     40.079621
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819009,
+    "name": "Амиробод маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.655192,
+     40.07757
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819010,
+    "name": "Тараққиёт маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.565506,
+     40.125684
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819011,
+    "name": "Урганжи маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.586333,
+     40.116011
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819012,
+    "name": "Оқтепа маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.618859,
+     40.094193
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819013,
+    "name": "Ободон маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.531906,
+     40.152567
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819014,
+    "name": "Тинчлик маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.528443,
+     40.132123
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819015,
+    "name": "Кўрпа маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.594037,
+     40.09846
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819016,
+    "name": "Нурафшон маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.546392,
+     40.13799
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819017,
+    "name": "Қувондиқ маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.57024,
+     40.101619
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819018,
+    "name": "Сарой маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.596456,
+     40.065669
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819019,
+    "name": "Мирза Салимий номли маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.513744,
+     40.075532
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819020,
+    "name": "Тўғолон маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.710244,
+     40.00702
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819021,
+    "name": "Тадбиркор маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.619545,
+     39.934054
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819022,
+    "name": "Гулистон маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.70017,
+     39.978329
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819023,
+    "name": "Қоратепа маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.503006,
+     40.040569
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819024,
+    "name": "Қўшҳовуз маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.71174,
+     39.967155
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819025,
+    "name": "Кештали маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.533796,
+     40.050095
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819026,
+    "name": "Гўрўғли маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.495979,
+     40.113863
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819027,
+    "name": "Тома маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.678429,
+     39.948808
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819028,
+    "name": "Фай маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.739664,
+     40.027277
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819029,
+    "name": "Қайнарбулоқ маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.676828,
+     40.007864
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819030,
+    "name": "Миркан маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.348315,
+     39.828718
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819031,
+    "name": "Қарнабота маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.617518,
+     40.045231
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819032,
+    "name": "Қиргули маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.663858,
+     40.036557
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819033,
+    "name": "Тошкўприк маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.797073,
+     39.98075
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819034,
+    "name": "Болтали маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.518785,
+     40.107328
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819035,
+    "name": "Мирзо Нодим номли маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.78735,
+     39.925685
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819036,
+    "name": "Фаровон Йўлдошобод маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.534973,
+     39.875883
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819037,
+    "name": "Чашма маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.552633,
+     40.091866
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819038,
+    "name": "Худойберди маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.78356,
+     39.980564
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819039,
+    "name": "Урғуч маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.705827,
+     39.937096
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819040,
+    "name": "Зарафшон маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.720692,
+     39.990741
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819041,
+    "name": "Боғолони маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.541896,
+     40.101857
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819042,
+    "name": "Мирза Олим номли маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.767734,
+     40.011578
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819043,
+    "name": "Дабусқалъа маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.510763,
+     40.116875
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819044,
+    "name": "Ёбу маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.547416,
+     40.115994
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819045,
+    "name": "Сардоба маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.510936,
+     40.131712
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819046,
+    "name": "Истиқбол маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.742922,
+     39.976244
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819047,
+    "name": "Чоргўша маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.529884,
+     40.096467
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819048,
+    "name": "Ҳунарманд маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.573893,
+     40.061246
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819049,
+    "name": "Наҳрипай маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.76454,
+     39.986162
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819050,
+    "name": "Жона маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.624456,
+     40.065852
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819051,
+    "name": "Ҳайит Элбеги маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.792851,
+     40.009948
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819052,
+    "name": "Найман маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.655334,
+     40.033022
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819053,
+    "name": "Истиқлол маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.697289,
+     40.04187
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819054,
+    "name": "Жаҳонобод маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.663965,
+     40.047843
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819055,
+    "name": "Бўстон маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.650625,
+     40.021415
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819056,
+    "name": "Янгиобод маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.742993,
+     40.005256
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819057,
+    "name": "Шамсназар маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.73941,
+     39.932442
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819058,
+    "name": "Дўнг маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     65.767674,
+     39.933182
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1819059,
+    "name": "Украш маҳалла фуқаролар йиғини",
+    "district_soato": "1718230"
+   }
+  }
+ ]
+}

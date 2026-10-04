@@ -1,0 +1,12 @@
+{
+  "soato": "1710250",
+  "region_soato": "1710",
+  "name_soato": "Яккабоғ тумани",
+  "name_polygon_set": "Яккабоғ т.",
+  "population_2026_official": 293800,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.044713,
+  "mahallas_in_source": 62,
+  "area_km2": 1159.7392,
+  "model_vs_official_gap": -0.0428
+}

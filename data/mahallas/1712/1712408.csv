@@ -1,0 +1,19 @@
+mahalla_id,name,district_soato,area_km2,populated_area_km2,pop_2026_est,density_gross,density_populated,method,quality_flags
+56,Ўзбекистон,1712408,0.2707,0.2691,4280.5,15812.8,15906.8,GHS-POP,district_ghs_diverges_2x
+57,Истиқлол,1712408,1.6055,1.4901,8317.5,5180.6,5581.8,GHS-POP,district_ghs_diverges_2x
+1202001,Алишер Навоий,1712408,1.5751,1.5402,8014.0,5087.9,5203.2,GHS-POP,district_ghs_diverges_2x
+1202002,Кончилар,1712408,3.0965,2.1286,8857.9,2860.6,4161.4,GHS-POP,district_ghs_diverges_2x
+1202003,Мурунтау,1712408,1.6923,1.6009,5765.2,3406.7,3601.2,GHS-POP,district_ghs_diverges_2x
+1202004,Янги Зарафшон,1712408,4.3082,3.4603,13626.5,3162.9,3938.0,GHS-POP,district_ghs_diverges_2x
+1202005,Олтин водий,1712408,4.7253,4.0859,11133.4,2356.1,2724.8,GHS-POP,district_ghs_diverges_2x
+1202006,Қурувчи,1712408,1.1784,0.5314,4289.3,3639.9,8071.6,GHS-POP,district_ghs_diverges_2x
+1202007,Даугизтау,1712408,30.2391,2.1493,227.6,7.5,105.9,GHS-POP,district_ghs_diverges_2x
+1202008,Ёшлик,1712408,0.2179,0.2166,3443.6,15803.8,15898.6,GHS-POP,district_ghs_diverges_2x
+1202009,Тинчлик,1712408,1.1572,0.3857,5132.6,4435.4,13307.3,GHS-POP,district_ghs_diverges_2x
+1202010,Наврўз,1712408,0.8651,0.5033,4313.4,4986.0,8570.2,GHS-POP,district_ghs_diverges_2x
+1202011,Баҳор,1712408,2.2221,0.526,3356.3,1510.4,6380.9,GHS-POP,district_ghs_diverges_2x
+1202012,Геолог,1712408,2.2877,1.5689,6800.3,2972.6,4334.5,GHS-POP,district_ghs_diverges_2x
+1202013,Юлдуз,1712408,1.9367,1.1634,4541.8,2345.1,3903.9,GHS-POP,district_ghs_diverges_2x
+1202014,Ўзбекистон,1712408,,,,,,,
+1202015,Истиқлол,1712408,,,,,,,
+1202016,Ўзбекистон,1712408,,,,,,,

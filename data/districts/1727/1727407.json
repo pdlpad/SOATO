@@ -1,0 +1,12 @@
+{
+  "soato": "1727407",
+  "region_soato": "1727",
+  "name_soato": "Aнгрен шаҳри",
+  "name_polygon_set": "Ангрен ш.",
+  "population_2026_official": 188300,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.60554,
+  "mahallas_in_source": 51,
+  "area_km2": 165.6278,
+  "model_vs_official_gap": -0.3772
+}

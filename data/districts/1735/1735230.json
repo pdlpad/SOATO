@@ -1,0 +1,12 @@
+{
+  "soato": "1735230",
+  "region_soato": "1735",
+  "name_soato": "Тахтакўпир тумани",
+  "name_polygon_set": "Тахтакўпир т.",
+  "population_2026_official": 38900,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.229689,
+  "mahallas_in_source": 17,
+  "area_km2": 21071.852,
+  "model_vs_official_gap": -0.1868
+}

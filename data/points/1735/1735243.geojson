@@ -1,0 +1,200 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     58.915757,
+     42.676827
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3520001,
+    "name": "Ақ жап ОФЙ",
+    "district_soato": "1735243"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     58.94786,
+     42.622262
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3520002,
+    "name": "Мамый ОФЙ",
+    "district_soato": "1735243"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.077904,
+     42.574421
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3520003,
+    "name": "Бирлешик ОФЙ",
+    "district_soato": "1735243"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     58.715134,
+     42.777588
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3520004,
+    "name": "Кетенлер ОФЙ",
+    "district_soato": "1735243"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     58.827421,
+     42.713726
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3520005,
+    "name": "Сарманбайкөл ОФЙ",
+    "district_soato": "1735243"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     58.792087,
+     42.809423
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3520006,
+    "name": "Дийханабад ОФЙ",
+    "district_soato": "1735243"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.092645,
+     42.636644
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3520007,
+    "name": "Бегжап ОФЙ",
+    "district_soato": "1735243"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     58.842299,
+     42.649098
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3520008,
+    "name": "Айбуйир МФЙ",
+    "district_soato": "1735243"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     58.942022,
+     42.632079
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3520009,
+    "name": "Моншақлы МФЙ",
+    "district_soato": "1735243"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     58.928349,
+     42.632079
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3520010,
+    "name": "Маденият МФЙ",
+    "district_soato": "1735243"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     58.921017,
+     42.636676
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3520011,
+    "name": "Тазабазар МФЙ",
+    "district_soato": "1735243"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.1825,
+     42.633004
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3520012,
+    "name": "Қарабайлы МФЙ",
+    "district_soato": "1735243"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     58.912054,
+     42.638038
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3520013,
+    "name": "Наврўз МФЙ",
+    "district_soato": "1735243"
+   }
+  }
+ ]
+}

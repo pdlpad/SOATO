@@ -1,0 +1,830 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.118269,
+     40.567232
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008001,
+    "name": "Чумбоғиш",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.133903,
+     40.592361
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008002,
+    "name": "Шўр",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.167077,
+     40.635921
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008003,
+    "name": "Пошшопирим",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.178715,
+     40.605805
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008004,
+    "name": "Pishag'ar",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.235023,
+     40.609902
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008005,
+    "name": "Oqtepa",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.119535,
+     40.53837
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008006,
+    "name": "Ing'irchoq",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.068231,
+     40.598952
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008007,
+    "name": "Tepalik",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.153947,
+     40.632476
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008008,
+    "name": "Олтинқўрғон",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.130096,
+     40.630022
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008009,
+    "name": "Oyimqishloq",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.161226,
+     40.569326
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008010,
+    "name": "Қўрғонча",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.118119,
+     40.588326
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008011,
+    "name": "Tuman",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.190314,
+     40.636299
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008012,
+    "name": "Бекобод",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.171389,
+     40.564325
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008013,
+    "name": "Jaloyer",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.140905,
+     40.598885
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008014,
+    "name": "Таррачи",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.123323,
+     40.554127
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008015,
+    "name": "Беглар",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.166141,
+     40.555616
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008016,
+    "name": "Jiydali",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.128419,
+     40.565216
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008017,
+    "name": "Qo'ng'irot",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.084565,
+     40.606708
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008018,
+    "name": "Oqqo'rg'on",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.081172,
+     40.591605
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008019,
+    "name": "Yuqori Mang'it",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.206712,
+     40.611823
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008020,
+    "name": "Xonobod",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.211588,
+     40.596079
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008021,
+    "name": "Qo'rg'onobod",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.088843,
+     40.678461
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008022,
+    "name": "Озод",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.149686,
+     40.600314
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008023,
+    "name": "Деҳқонобод",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.145426,
+     40.54546
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008024,
+    "name": "Dodxo",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.024174,
+     40.645764
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008025,
+    "name": "Jilva",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.17615,
+     40.545774
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008026,
+    "name": "Maslahat",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.13805,
+     40.562708
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008027,
+    "name": "Yashnarobod",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.056888,
+     40.628959
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008028,
+    "name": "Beshterak",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.081003,
+     40.668474
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008029,
+    "name": "Bumozor",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.031778,
+     40.701273
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008030,
+    "name": "Араб",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.145921,
+     40.577771
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008031,
+    "name": "Қоратепа",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.139623,
+     40.670652
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008032,
+    "name": "Жов",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.069539,
+     40.627884
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008033,
+    "name": "Cho'taka",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.02187,
+     40.679873
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008034,
+    "name": "Qum",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.034213,
+     40.648407
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008035,
+    "name": "Urganji",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.039857,
+     40.666664
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008036,
+    "name": "Turk",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.062753,
+     40.614733
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008037,
+    "name": "Shodlik",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.138803,
+     40.678352
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008038,
+    "name": "Elobod",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.122062,
+     40.580417
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008039,
+    "name": "O'rta Qo'ng'irot",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.03234,
+     40.637733
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008040,
+    "name": "Xakimto'ra",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.048147,
+     40.617891
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008041,
+    "name": "Xo'jaobod",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.158955,
+     40.656198
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008042,
+    "name": "Қорақум",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.083579,
+     40.631686
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008043,
+    "name": "Buvayda",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.209074,
+     40.65278
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008044,
+    "name": "Yangiqadam",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.247479,
+     40.623734
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008045,
+    "name": "Xasanqo'rg'oncha",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.058105,
+     40.65461
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008046,
+    "name": "Sho'rqishloq",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.112702,
+     40.614151
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008047,
+    "name": "Nayman",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.044707,
+     40.697564
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008048,
+    "name": "Янгиҳаёт",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.184984,
+     40.595574
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008049,
+    "name": "Ponsod",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.159819,
+     40.6145
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008050,
+    "name": "Bachqir",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.101801,
+     40.628317
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008051,
+    "name": "Tog'liq",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.188566,
+     40.576448
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008052,
+    "name": "Янгиқишлоқ",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.141264,
+     40.561676
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008053,
+    "name": "Янгиқўрғон",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.399653,
+     40.640037
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008054,
+    "name": "Узумзор",
+    "district_soato": "1730212"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.112256,
+     40.656261
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3008055,
+    "name": "Buyuk Ipak Yo'li",
+    "district_soato": "1730212"
+   }
+  }
+ ]
+}

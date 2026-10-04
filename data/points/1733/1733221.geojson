@@ -1,0 +1,275 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     61.993556,
+     41.037881
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3314001,
+    "name": "Саримой",
+    "district_soato": "1733221"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     61.301362,
+     41.195292
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3314002,
+    "name": "Саидлар",
+    "district_soato": "1733221"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     61.256931,
+     41.172025
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3314003,
+    "name": "Шехлар",
+    "district_soato": "1733221"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     61.297917,
+     41.220748
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3314004,
+    "name": "Навбаҳор",
+    "district_soato": "1733221"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     62.149411,
+     40.951542
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3314005,
+    "name": "Ҳазорасп",
+    "district_soato": "1733221"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     61.303953,
+     41.227589
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3314006,
+    "name": "Ёшлик",
+    "district_soato": "1733221"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     61.318845,
+     41.215447
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3314007,
+    "name": "Муҳаббат",
+    "district_soato": "1733221"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     61.299663,
+     41.243264
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3314008,
+    "name": "Шарлаук",
+    "district_soato": "1733221"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     61.329083,
+     41.20959
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3314009,
+    "name": "Саховат",
+    "district_soato": "1733221"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     61.3084,
+     41.17268
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3314010,
+    "name": "Пастом",
+    "district_soato": "1733221"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     61.346708,
+     41.178644
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3314011,
+    "name": "Йўлдош Оҳунбобоев",
+    "district_soato": "1733221"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     61.257875,
+     41.227111
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3314012,
+    "name": "Обод",
+    "district_soato": "1733221"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     61.312307,
+     41.206313
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3314013,
+    "name": "Саяпир",
+    "district_soato": "1733221"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     62.217291,
+     40.750988
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3314014,
+    "name": "Тупроққалъа маскани",
+    "district_soato": "1733221"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     61.811635,
+     41.193937
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3314015,
+    "name": "Нукус маскани",
+    "district_soato": "1733221"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     61.26021,
+     41.183945
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3314016,
+    "name": "Янги замин",
+    "district_soato": "1733221"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     61.243703,
+     41.240566
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3314017,
+    "name": "Нуробод",
+    "district_soato": "1733221"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     61.282236,
+     41.236011
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3314018,
+    "name": "Якка чиқир",
+    "district_soato": "1733221"
+   }
+  }
+ ]
+}

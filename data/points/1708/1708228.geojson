@@ -1,0 +1,230 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.091358,
+     40.298721
+    ]
+   },
+   "properties": {
+    "mahalla_id": 810001,
+    "name": "Буюк ипак йўли",
+    "district_soato": "1708228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.969829,
+     40.445077
+    ]
+   },
+   "properties": {
+    "mahalla_id": 810002,
+    "name": "Боғишамол",
+    "district_soato": "1708228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.961867,
+     40.359247
+    ]
+   },
+   "properties": {
+    "mahalla_id": 810003,
+    "name": "Оқбулоқ",
+    "district_soato": "1708228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.956583,
+     40.322581
+    ]
+   },
+   "properties": {
+    "mahalla_id": 810004,
+    "name": "Ғалаба",
+    "district_soato": "1708228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.081025,
+     40.392051
+    ]
+   },
+   "properties": {
+    "mahalla_id": 810005,
+    "name": "Мингчинор",
+    "district_soato": "1708228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.987244,
+     40.331586
+    ]
+   },
+   "properties": {
+    "mahalla_id": 810006,
+    "name": "Олмазор",
+    "district_soato": "1708228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.00875,
+     40.315107
+    ]
+   },
+   "properties": {
+    "mahalla_id": 810007,
+    "name": "Пахтакор",
+    "district_soato": "1708228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.959103,
+     40.313707
+    ]
+   },
+   "properties": {
+    "mahalla_id": 810008,
+    "name": "Дўстлик",
+    "district_soato": "1708228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.95914,
+     40.306974
+    ]
+   },
+   "properties": {
+    "mahalla_id": 810009,
+    "name": "Тошкент",
+    "district_soato": "1708228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.969582,
+     40.305955
+    ]
+   },
+   "properties": {
+    "mahalla_id": 810010,
+    "name": "Олтинкўл",
+    "district_soato": "1708228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.958134,
+     40.299668
+    ]
+   },
+   "properties": {
+    "mahalla_id": 810011,
+    "name": "Самарқанд",
+    "district_soato": "1708228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.94776,
+     40.30299
+    ]
+   },
+   "properties": {
+    "mahalla_id": 810012,
+    "name": "Сувонобод",
+    "district_soato": "1708228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.947948,
+     40.314543
+    ]
+   },
+   "properties": {
+    "mahalla_id": 810013,
+    "name": "Дилором",
+    "district_soato": "1708228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.959583,
+     40.24277
+    ]
+   },
+   "properties": {
+    "mahalla_id": 810014,
+    "name": "Чаманзор",
+    "district_soato": "1708228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.003418,
+     40.401367
+    ]
+   },
+   "properties": {
+    "mahalla_id": 810015,
+    "name": "Нурли пангат",
+    "district_soato": "1708228"
+   }
+  }
+ ]
+}

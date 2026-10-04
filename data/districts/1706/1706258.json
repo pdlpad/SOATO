@@ -1,0 +1,12 @@
+{
+  "soato": "1706258",
+  "region_soato": "1706",
+  "name_soato": "Шофиркон тумани",
+  "name_polygon_set": "Шофиркон т.",
+  "population_2026_official": 189900,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.793781,
+  "mahallas_in_source": 50,
+  "area_km2": 329.2122,
+  "model_vs_official_gap": 0.2598
+}

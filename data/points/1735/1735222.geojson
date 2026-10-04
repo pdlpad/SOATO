@@ -1,0 +1,185 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     58.943188,
+     43.310152
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3514001,
+    "name": "Ҳәким-ата ОФЙ",
+    "district_soato": "1735222"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     58.962004,
+     43.502718
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3514002,
+    "name": "Бозатаў ОФЙ",
+    "district_soato": "1735222"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.100292,
+     43.701931
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3514003,
+    "name": "Тикөзек ОФЙ",
+    "district_soato": "1735222"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     58.898062,
+     43.776944
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3514004,
+    "name": "Ушсай МФЙ",
+    "district_soato": "1735222"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.047662,
+     44.461552
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3514005,
+    "name": "Мәдели ОФЙ",
+    "district_soato": "1735222"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.023855,
+     43.751289
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3514006,
+    "name": "Мойнақ МФЙ",
+    "district_soato": "1735222"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.03353,
+     43.759317
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3514007,
+    "name": "Жәйҳун МФЙ",
+    "district_soato": "1735222"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.023916,
+     43.766771
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3514008,
+    "name": "Арал МФЙ",
+    "district_soato": "1735222"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.037662,
+     43.778559
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3514009,
+    "name": "Таллы өзек МФЙ",
+    "district_soato": "1735222"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.02587,
+     43.789398
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3514010,
+    "name": "Дослық МФЙ",
+    "district_soato": "1735222"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60.360572,
+     44.143977
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3514011,
+    "name": "Қазақдәрья ОФЙ",
+    "district_soato": "1735222"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.152761,
+     43.305642
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3514012,
+    "name": "Қызыл жар ОФЙ",
+    "district_soato": "1735222"
+   }
+  }
+ ]
+}

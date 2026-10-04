@@ -1,0 +1,12 @@
+{
+  "soato": "1727401",
+  "region_soato": "1727",
+  "name_soato": "Нурафшон шаҳри",
+  "name_polygon_set": "Нурафшон ш.",
+  "population_2026_official": 58800,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.798889,
+  "mahallas_in_source": 22,
+  "area_km2": 35.0775,
+  "model_vs_official_gap": -0.4441
+}

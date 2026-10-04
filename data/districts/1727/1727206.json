@@ -1,0 +1,12 @@
+{
+  "soato": "1727206",
+  "region_soato": "1727",
+  "name_soato": "Оққўрғон тумани",
+  "name_polygon_set": "Оққўрғон т.",
+  "population_2026_official": 115500,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.856844,
+  "mahallas_in_source": 29,
+  "area_km2": 397.5623,
+  "model_vs_official_gap": -0.4615
+}

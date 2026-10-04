@@ -1,0 +1,12 @@
+{
+  "soato": "1706204",
+  "region_soato": "1706",
+  "name_soato": "Олот тумани",
+  "name_polygon_set": "Олот т.",
+  "population_2026_official": 107300,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.274003,
+  "mahallas_in_source": 38,
+  "area_km2": 3254.6941,
+  "model_vs_official_gap": -0.2151
+}

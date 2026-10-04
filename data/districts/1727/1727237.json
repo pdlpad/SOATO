@@ -1,0 +1,12 @@
+{
+  "soato": "1727237",
+  "region_soato": "1727",
+  "name_soato": "Зангиота тумани",
+  "name_polygon_set": "Зангиота т.",
+  "population_2026_official": 180500,
+  "estimation_method": "здания OSM",
+  "calibration_factor": 0.011615,
+  "mahallas_in_source": 74,
+  "area_km2": 197.8478,
+  "model_vs_official_gap": 0.1788
+}

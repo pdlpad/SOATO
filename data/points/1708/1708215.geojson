@@ -1,0 +1,185 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.029081,
+     40.509056
+    ]
+   },
+   "properties": {
+    "mahalla_id": 805001,
+    "name": "Алишер Навоий",
+    "district_soato": "1708215"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.028232,
+     40.523995
+    ]
+   },
+   "properties": {
+    "mahalla_id": 805002,
+    "name": "Чинобод",
+    "district_soato": "1708215"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.034649,
+     40.519852
+    ]
+   },
+   "properties": {
+    "mahalla_id": 805003,
+    "name": "Ғофур Ғулом",
+    "district_soato": "1708215"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.03413,
+     40.53516
+    ]
+   },
+   "properties": {
+    "mahalla_id": 805004,
+    "name": "Саноатчилар",
+    "district_soato": "1708215"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.114812,
+     40.55523
+    ]
+   },
+   "properties": {
+    "mahalla_id": 805005,
+    "name": "Қаҳрамон",
+    "district_soato": "1708215"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.062489,
+     40.58866
+    ]
+   },
+   "properties": {
+    "mahalla_id": 805006,
+    "name": "Олтин водий",
+    "district_soato": "1708215"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.976714,
+     40.58284
+    ]
+   },
+   "properties": {
+    "mahalla_id": 805007,
+    "name": "Саритепа",
+    "district_soato": "1708215"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.920835,
+     40.622069
+    ]
+   },
+   "properties": {
+    "mahalla_id": 805008,
+    "name": "Бунёдкор",
+    "district_soato": "1708215"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.154813,
+     40.436765
+    ]
+   },
+   "properties": {
+    "mahalla_id": 805009,
+    "name": "Манас",
+    "district_soato": "1708215"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.070295,
+     40.463318
+    ]
+   },
+   "properties": {
+    "mahalla_id": 805010,
+    "name": "Наврўз",
+    "district_soato": "1708215"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.971258,
+     40.512686
+    ]
+   },
+   "properties": {
+    "mahalla_id": 805011,
+    "name": "Боғзор",
+    "district_soato": "1708215"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     68.015682,
+     40.528876
+    ]
+   },
+   "properties": {
+    "mahalla_id": 805012,
+    "name": "Мевазор",
+    "district_soato": "1708215"
+   }
+  }
+ ]
+}

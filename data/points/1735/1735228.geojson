@@ -1,0 +1,215 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.5836,
+     42.305422
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3504001,
+    "name": "Найманкөл ОФЙ",
+    "district_soato": "1735228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.427717,
+     42.335895
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3504002,
+    "name": "Саройкўл МФЙ",
+    "district_soato": "1735228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.558568,
+     42.327926
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3504003,
+    "name": "Тахиатош МФЙ",
+    "district_soato": "1735228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.539459,
+     42.305849
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3504004,
+    "name": "Қусшылық МФЙ",
+    "district_soato": "1735228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.568015,
+     42.340838
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3504005,
+    "name": "Абат макан МФЙ",
+    "district_soato": "1735228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.580719,
+     42.334894
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3504006,
+    "name": "Марказий МФЙ",
+    "district_soato": "1735228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.590144,
+     42.325917
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3504007,
+    "name": "Нурлы келешек МФЙ",
+    "district_soato": "1735228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.601548,
+     42.342995
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3504008,
+    "name": "Дослық МФЙ",
+    "district_soato": "1735228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.567811,
+     42.332981
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3504009,
+    "name": "Шамшырақ МФЙ",
+    "district_soato": "1735228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.557646,
+     42.346264
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3504010,
+    "name": "Айдын жол МФЙ",
+    "district_soato": "1735228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.517006,
+     42.326888
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3504011,
+    "name": "Кенегес ОФЙ",
+    "district_soato": "1735228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.59246,
+     42.332643
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3504012,
+    "name": "Халықлар дослығы МФЙ",
+    "district_soato": "1735228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.589142,
+     42.36584
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3504013,
+    "name": "Жайхун МФЙ",
+    "district_soato": "1735228"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     59.668972,
+     42.316478
+    ]
+   },
+   "properties": {
+    "mahalla_id": 3504014,
+    "name": "Янги макон ОФЙ",
+    "district_soato": "1735228"
+   }
+  }
+ ]
+}

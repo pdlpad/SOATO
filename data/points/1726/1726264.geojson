@@ -1,0 +1,275 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.372529,
+     41.239328
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2611001,
+    "name": "Ийкота",
+    "district_soato": "1726264"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.339792,
+     41.223009
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2611002,
+    "name": "Устозлар",
+    "district_soato": "1726264"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.314914,
+     41.213046
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2611003,
+    "name": "Соҳил",
+    "district_soato": "1726264"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.315775,
+     41.203393
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2611004,
+    "name": "Нурлийул",
+    "district_soato": "1726264"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.34141,
+     41.213624
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2611005,
+    "name": "Забардаст",
+    "district_soato": "1726264"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.322543,
+     41.205593
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2611006,
+    "name": "Мусаффо",
+    "district_soato": "1726264"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.357673,
+     41.226783
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2611007,
+    "name": "Гулбоғ",
+    "district_soato": "1726264"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.36992,
+     41.258054
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2611008,
+    "name": "Миришкор",
+    "district_soato": "1726264"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.373299,
+     41.251076
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2611009,
+    "name": "Зилола",
+    "district_soato": "1726264"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.384156,
+     41.246619
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2611010,
+    "name": "Мажнунтол",
+    "district_soato": "1726264"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.369998,
+     41.245823
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2611011,
+    "name": "Иқбол",
+    "district_soato": "1726264"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.355727,
+     41.240555
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2611012,
+    "name": "Абай",
+    "district_soato": "1726264"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.347422,
+     41.2393
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2611013,
+    "name": "Хусайн Бойқаро",
+    "district_soato": "1726264"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.369128,
+     41.247743
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2611014,
+    "name": "Чашма",
+    "district_soato": "1726264"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.378621,
+     41.253098
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2611015,
+    "name": "Роҳат",
+    "district_soato": "1726264"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.305704,
+     41.217877
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2611016,
+    "name": "Олтинтопган",
+    "district_soato": "1726264"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.336155,
+     41.230256
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2611017,
+    "name": "Бектемир",
+    "district_soato": "1726264"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     69.313089,
+     41.231237
+    ]
+   },
+   "properties": {
+    "mahalla_id": 2611018,
+    "name": "Нурафшон",
+    "district_soato": "1726264"
+   }
+  }
+ ]
+}

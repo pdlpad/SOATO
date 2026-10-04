@@ -1,0 +1,380 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.189395,
+     40.442038
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811001,
+    "name": "Қўлба",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.180862,
+     40.417083
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811002,
+    "name": "Боғдон",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.172285,
+     40.421964
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811003,
+    "name": "Ойбек",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.425938,
+     40.402058
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811004,
+    "name": "Нурак",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.042349,
+     40.509621
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811005,
+    "name": "Учма",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.911955,
+     40.343555
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811006,
+    "name": "Гараша",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.530012,
+     40.337246
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811007,
+    "name": "Эгизбулоқ",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.036132,
+     40.33179
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811008,
+    "name": "Мустақиллик",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.029249,
+     40.268635
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811009,
+    "name": "Яссикечув",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.900169,
+     40.625003
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811010,
+    "name": "Ўхум",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.155906,
+     40.682926
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811011,
+    "name": "Қизилқум",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.336896,
+     40.407072
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811012,
+    "name": "Осмонсой",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.216462,
+     40.368113
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811013,
+    "name": "Оқтепа",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.193108,
+     40.416097
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811014,
+    "name": "Ўзбекистон",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.325285,
+     40.518415
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811015,
+    "name": "Учқулоч",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.061527,
+     40.226787
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811016,
+    "name": "Қораобдол ота",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.175862,
+     40.225661
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811017,
+    "name": "Нарвон",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.249876,
+     40.34139
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811018,
+    "name": "Сайёд",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.610957,
+     40.246364
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811019,
+    "name": "Оқтом",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.263836,
+     40.497983
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811020,
+    "name": "Хонбанди",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.7751,
+     40.662544
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811021,
+    "name": "Дўстлик",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     66.96403,
+     40.311393
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811022,
+    "name": "Илонли",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.672587,
+     41.014973
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811023,
+    "name": "Истиқлол",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.167322,
+     40.364554
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811024,
+    "name": "Амир Темур",
+    "district_soato": "1708235"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     67.117931,
+     41.014508
+    ]
+   },
+   "properties": {
+    "mahalla_id": 811025,
+    "name": "Дарбоза",
+    "district_soato": "1708235"
+   }
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+  "soato": "1708225",
+  "region_soato": "1708",
+  "name_soato": "Зафаробод тумани",
+  "name_polygon_set": "Зафаробод т.",
+  "population_2026_official": 55400,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.143999,
+  "mahallas_in_source": 10,
+  "area_km2": 536.1357,
+  "model_vs_official_gap": -0.1259
+}

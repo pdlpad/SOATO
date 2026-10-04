@@ -1,0 +1,12 @@
+{
+  "soato": "1718406",
+  "region_soato": "1718",
+  "name_soato": "Каттақўрғон шаҳар",
+  "name_polygon_set": "Каттақўрғон ш.",
+  "population_2026_official": 97000,
+  "estimation_method": "здания OSM",
+  "calibration_factor": 0.016714,
+  "mahallas_in_source": 36,
+  "area_km2": 44.6147,
+  "model_vs_official_gap": -0.2308
+}

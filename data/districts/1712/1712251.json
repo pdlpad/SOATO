@@ -1,0 +1,12 @@
+{
+  "soato": "1712251",
+  "region_soato": "1712",
+  "name_soato": "Хатирчи тумани",
+  "name_polygon_set": "Хатирчи т.",
+  "population_2026_official": 219200,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.408409,
+  "mahallas_in_source": 70,
+  "area_km2": 1363.1584,
+  "model_vs_official_gap": -0.29
+}

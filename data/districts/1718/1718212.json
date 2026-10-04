@@ -1,0 +1,12 @@
+{
+  "soato": "1718212",
+  "region_soato": "1718",
+  "name_soato": "Иштихон тумани",
+  "name_polygon_set": "Иштихон т.",
+  "population_2026_official": 288100,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.036281,
+  "mahallas_in_source": 62,
+  "area_km2": 718.6175,
+  "model_vs_official_gap": -0.035
+}

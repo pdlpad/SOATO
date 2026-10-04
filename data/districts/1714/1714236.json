@@ -1,0 +1,12 @@
+{
+  "soato": "1714236",
+  "region_soato": "1714",
+  "name_soato": "Чортоқ тумани",
+  "name_polygon_set": "Чортоқ т.",
+  "population_2026_official": 223300,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.197226,
+  "mahallas_in_source": 57,
+  "area_km2": 374.4673,
+  "model_vs_official_gap": -0.1647
+}

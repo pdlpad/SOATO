@@ -1,0 +1,12 @@
+{
+  "soato": "1735233",
+  "region_soato": "1735",
+  "name_soato": "Тўрткўл тумани",
+  "name_polygon_set": "Тўрткўл т.",
+  "population_2026_official": 236100,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.930853,
+  "mahallas_in_source": 49,
+  "area_km2": 7380.5721,
+  "model_vs_official_gap": 0.0743
+}

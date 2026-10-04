@@ -1,0 +1,12 @@
+{
+  "soato": "1724216",
+  "region_soato": "1724",
+  "name_soato": "Сайхунобод тумани",
+  "name_polygon_set": " Сайхунобод т.",
+  "population_2026_official": 85400,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.130753,
+  "mahallas_in_source": 19,
+  "area_km2": 450.3339,
+  "model_vs_official_gap": -0.1156
+}

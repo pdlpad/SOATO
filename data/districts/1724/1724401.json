@@ -1,0 +1,12 @@
+{
+  "soato": "1724401",
+  "region_soato": "1724",
+  "name_soato": "Гулистон шаҳри",
+  "name_polygon_set": "Гулистон ш.",
+  "population_2026_official": 104600,
+  "estimation_method": "здания OSM",
+  "calibration_factor": 0.028422,
+  "mahallas_in_source": 24,
+  "area_km2": 41.4076,
+  "model_vs_official_gap": 0.0226
+}

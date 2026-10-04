@@ -1,0 +1,12 @@
+{
+  "soato": "1735222",
+  "region_soato": "1735",
+  "name_soato": "Мўйноқ тумани",
+  "name_polygon_set": "Мўйноқ т.",
+  "population_2026_official": 34100,
+  "estimation_method": "здания OSM",
+  "calibration_factor": 0.036475,
+  "mahallas_in_source": 12,
+  "area_km2": 37707.0246,
+  "model_vs_official_gap": -0.2626
+}

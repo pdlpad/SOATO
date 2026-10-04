@@ -1,0 +1,12 @@
+{
+  "soato": "1703210",
+  "region_soato": "1703",
+  "name_soato": "Булоқбоши тумани",
+  "name_polygon_set": "Булоқбоши т.",
+  "population_2026_official": 158600,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.03498,
+  "mahallas_in_source": 37,
+  "area_km2": 181.3286,
+  "model_vs_official_gap": -0.0338
+}

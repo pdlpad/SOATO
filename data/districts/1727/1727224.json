@@ -1,0 +1,12 @@
+{
+  "soato": "1727224",
+  "region_soato": "1727",
+  "name_soato": "Бўстонлиқ тумани",
+  "name_polygon_set": "Бўстонлиқ т.",
+  "population_2026_official": 179100,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.581695,
+  "mahallas_in_source": 59,
+  "area_km2": 1029.0279,
+  "model_vs_official_gap": -0.3678
+}

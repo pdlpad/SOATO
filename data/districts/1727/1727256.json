@@ -1,0 +1,12 @@
+{
+  "soato": "1727256",
+  "region_soato": "1727",
+  "name_soato": "Чиноз тумани",
+  "name_polygon_set": "Чиноз т.",
+  "population_2026_official": 150500,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.406943,
+  "mahallas_in_source": 55,
+  "area_km2": 344.3164,
+  "model_vs_official_gap": -0.2892
+}

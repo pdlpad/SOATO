@@ -1,0 +1,335 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.537389,
+     39.737991
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603001,
+    "name": "Бобур",
+    "district_soato": "1706403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.544094,
+     39.732677
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603002,
+    "name": "А.Навоий",
+    "district_soato": "1706403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.533399,
+     39.732945
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603003,
+    "name": "Мирзо Улуғбек",
+    "district_soato": "1706403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.552315,
+     39.735494
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603004,
+    "name": "Истиқлол",
+    "district_soato": "1706403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.552524,
+     39.735571
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603005,
+    "name": "Амир Темур",
+    "district_soato": "1706403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.560221,
+     39.734906
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603006,
+    "name": "Бунёдкор",
+    "district_soato": "1706403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.552398,
+     39.718911
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603007,
+    "name": "Беруний",
+    "district_soato": "1706403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.543612,
+     39.714125
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603008,
+    "name": "А.Қодирий",
+    "district_soato": "1706403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.551122,
+     39.715388
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603009,
+    "name": "Туркистон",
+    "district_soato": "1706403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.562958,
+     39.715519
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603010,
+    "name": "Фурқат",
+    "district_soato": "1706403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.557408,
+     39.723778
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603011,
+    "name": "Бухорои Шариф",
+    "district_soato": "1706403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.555992,
+     39.713985
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603012,
+    "name": "Ватанпарвар",
+    "district_soato": "1706403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.527554,
+     39.724221
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603013,
+    "name": "Мустақиллик",
+    "district_soato": "1706403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.538516,
+     39.71851
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603014,
+    "name": "Темирйўлчи МФЙ",
+    "district_soato": "1706403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.532719,
+     39.726341
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603015,
+    "name": "Арабхона",
+    "district_soato": "1706403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.525219,
+     39.728363
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603016,
+    "name": "Зиёкор",
+    "district_soato": "1706403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.536366,
+     39.722888
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603017,
+    "name": "Дўстлик",
+    "district_soato": "1706403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.530271,
+     39.720123
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603018,
+    "name": "Адолат",
+    "district_soato": "1706403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.567559,
+     39.730721
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603019,
+    "name": "Махтумқули",
+    "district_soato": "1706403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.569073,
+     39.720696
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603020,
+    "name": "Зиробод",
+    "district_soato": "1706403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.575823,
+     39.718767
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603021,
+    "name": "Навзирабод",
+    "district_soato": "1706403"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     64.582813,
+     39.721356
+    ]
+   },
+   "properties": {
+    "mahalla_id": 603022,
+    "name": "Хўжабарги",
+    "district_soato": "1706403"
+   }
+  }
+ ]
+}

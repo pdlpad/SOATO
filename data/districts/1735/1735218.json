@@ -1,0 +1,12 @@
+{
+  "soato": "1735218",
+  "region_soato": "1735",
+  "name_soato": "Қанликўл тумани",
+  "name_polygon_set": "Қонликўл т.",
+  "population_2026_official": 54800,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 1.439575,
+  "mahallas_in_source": 11,
+  "area_km2": 764.7532,
+  "model_vs_official_gap": -0.3054
+}

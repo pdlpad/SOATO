@@ -1,0 +1,12 @@
+{
+  "soato": "1730227",
+  "region_soato": "1730",
+  "name_soato": "Тошлоқ тумани",
+  "name_polygon_set": "Тошлоқ т.",
+  "population_2026_official": 226200,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.997421,
+  "mahallas_in_source": 51,
+  "area_km2": 244.4192,
+  "model_vs_official_gap": 0.0026
+}

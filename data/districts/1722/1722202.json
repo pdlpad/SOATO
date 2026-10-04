@@ -1,0 +1,12 @@
+{
+  "soato": "1722202",
+  "region_soato": "1722",
+  "name_soato": "Aнгор тумани",
+  "name_polygon_set": "Ангор т.",
+  "population_2026_official": 150100,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.831996,
+  "mahallas_in_source": 36,
+  "area_km2": 384.149,
+  "model_vs_official_gap": 0.2019
+}

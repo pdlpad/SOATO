@@ -1,0 +1,12 @@
+{
+  "soato": "1710207",
+  "region_soato": "1710",
+  "name_soato": "Ғузор тумани",
+  "name_polygon_set": "Ғузор т.",
+  "population_2026_official": 232000,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.967472,
+  "mahallas_in_source": 51,
+  "area_km2": 2736.587,
+  "model_vs_official_gap": 0.0336
+}

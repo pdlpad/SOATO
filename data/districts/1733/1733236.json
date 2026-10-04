@@ -1,0 +1,12 @@
+{
+  "soato": "1733236",
+  "region_soato": "1733",
+  "name_soato": "Янгибозор тумани",
+  "name_polygon_set": "Янгибозор т.",
+  "population_2026_official": 95400,
+  "estimation_method": "GHS-POP",
+  "calibration_factor": 0.999572,
+  "mahallas_in_source": 30,
+  "area_km2": 344.9708,
+  "model_vs_official_gap": 0.0004
+}

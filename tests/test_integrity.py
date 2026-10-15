@@ -1,4 +1,4 @@
-import csv, json, unittest
+import csv, importlib.util, json, unittest
 from pathlib import Path
 
 DATA = Path(__file__).resolve().parent.parent / "data"
@@ -71,6 +71,20 @@ class Integrity(unittest.TestCase):
             points = len(load(DATA / "points" / p.parent.name / f"{p.stem}.geojson")["features"])
             self.assertEqual(with_pop, o["mahallas_in_source"], p)
             self.assertEqual(points, o["mahallas_in_source"], p)
+
+    def test_region_polygons(self):
+        gj = json.loads((DATA / "regions" / "regions.geojson").read_text(encoding="utf-8"))
+        codes = {load(p)["soato"] for p in (DATA / "regions").glob("*.json")}
+        self.assertEqual({f["properties"]["soato"] for f in gj["features"]}, codes)
+        for f in gj["features"]:
+            self.assertIn(f["geometry"]["type"], ("Polygon", "MultiPolygon"), f["properties"]["soato"])
+
+    def test_map_page_is_current(self):
+        spec = importlib.util.spec_from_file_location("build_map", DATA.parent / "tools" / "build_map.py")
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        self.assertEqual((DATA.parent / "docs" / "index.html").read_text(encoding="utf-8"), mod.build_html(),
+                         "docs/index.html устарел: запустите python3 tools/build_map.py")
 
 
 if __name__ == "__main__":

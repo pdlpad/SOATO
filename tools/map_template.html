@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Махалли Узбекистана: центроиды</title>
+<meta name="description" content="Центроиды 9 467 махаллей Узбекистана с привязкой к СОАТО: фильтры по регионам и районам, поиск и оценка населения на 01.01.2026. Оценка модели, не официальная статистика.">
+<style>
+  :root { color-scheme: light dark; --bg:#f6f7f9; --fg:#1d2430; --muted:#5b6575; --card:#ffffff; --line:#e3e7ee; --acc:#21918c; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#12161d; --fg:#e6eaf0; --muted:#9aa4b2; --card:#1b212b; --line:#2a313d; } }
+  * { box-sizing:border-box; }
+  html, body { margin:0; height:100%; background:var(--bg); color:var(--fg); font:14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  #app { display:flex; height:100%; }
+  #side { width:340px; flex:0 0 340px; overflow:auto; padding:14px 14px 24px; background:var(--card); border-right:1px solid var(--line); }
+  #map { position:relative; flex:1; min-width:0; overflow:hidden; }
+  #c { position:absolute; left:0; top:0; width:100%; height:100%; display:block; cursor:grab; }
+  h1 { font-size:18px; margin:0 0 2px; }
+  h2 { font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); margin:18px 0 8px; font-weight:600; }
+  .sub { color:var(--muted); margin:0 0 8px; }
+  .tiles { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  .tile { border:1px solid var(--line); border-radius:8px; padding:8px 10px; }
+  .tile b { display:block; font-size:18px; }
+  .tile span { color:var(--muted); font-size:12px; }
+  .row { display:flex; align-items:center; gap:8px; padding:3px 0; cursor:pointer; }
+  .row span:nth-child(2) { flex:1; }
+  .muted { color:var(--muted); }
+  .scroll { max-height:220px; overflow:auto; border:1px solid var(--line); border-radius:6px; padding:4px 8px; }
+  input[type=search] { width:100%; padding:7px 9px; border:1px solid var(--line); border-radius:6px; background:var(--bg); color:var(--fg); font:inherit; }
+  .res { display:block; width:100%; text-align:left; background:none; border:0; border-bottom:1px solid var(--line); padding:6px 2px; color:var(--fg); font:inherit; cursor:pointer; }
+  .res:hover { background:var(--bg); }
+  .bar { display:grid; grid-template-columns:130px 1fr 66px; gap:6px; align-items:center; margin:4px 0; font-size:12px; }
+  .bar .bt { background:var(--line); border-radius:3px; height:10px; overflow:hidden; }
+  .bar .bt > span { display:block; height:100%; background:var(--acc); opacity:.5; }
+  .bar.on .bt > span { opacity:1; }
+  .bar.on .bl { font-weight:600; }
+  .bar .bv { text-align:right; color:var(--muted); }
+  ol#top { padding-left:20px; margin:0; }
+  ol#top li { margin:4px 0; }
+  .link { background:none; border:0; padding:0; color:var(--fg); font:inherit; text-align:left; cursor:pointer; text-decoration:underline; text-underline-offset:2px; }
+  #tip { position:absolute; display:none; pointer-events:none; background:var(--card); border:1px solid var(--line); padding:6px 8px; border-radius:6px; font-size:13px; max-width:280px; box-shadow:0 2px 8px rgba(0,0,0,.2); }
+  #card { position:absolute; right:12px; bottom:12px; display:none; max-width:300px; background:var(--card); border:1px solid var(--line); border-radius:8px; padding:10px 34px 10px 12px; box-shadow:0 2px 8px rgba(0,0,0,.2); }
+  #card .x { position:absolute; right:6px; top:2px; background:none; border:0; font-size:20px; color:var(--muted); cursor:pointer; }
+  #reset { position:absolute; left:12px; top:12px; background:var(--card); color:var(--fg); border:1px solid var(--line); border-radius:6px; padding:6px 10px; font:inherit; cursor:pointer; }
+  #legend { position:absolute; left:12px; bottom:12px; background:var(--card); border:1px solid var(--line); border-radius:8px; padding:8px 10px; font-size:12px; }
+  #legend div { margin:2px 0; }
+  #legend span { display:inline-block; width:11px; height:11px; border-radius:50%; margin-right:6px; vertical-align:middle; }
+  footer { margin-top:18px; color:var(--muted); font-size:12px; }
+  footer a { color:inherit; }
+  @media (max-width:760px) {
+    #app { flex-direction:column; }
+    #side { width:auto; flex:none; max-height:50vh; border-right:0; border-bottom:1px solid var(--line); }
+    #map { flex:none; height:50vh; }
+  }
+</style>
+</head>
+<body>
+<div id="app">
+<aside id="side">
+  <h1>Махалли Узбекистана</h1>
+  <p class="sub">Центроиды махаллей с оценкой населения на 01.01.2026</p>
+  <div class="tiles">
+    <div class="tile"><b id="t-count">—</b><span>махаллей</span></div>
+    <div class="tile"><b id="t-dist">—</b><span>районов</span></div>
+    <div class="tile"><b id="t-reg">—</b><span>регионов</span></div>
+    <div class="tile"><b id="t-pop">—</b><span>население (сумма оценок)</span></div>
+  </div>
+  <p class="muted" id="t-note" style="margin:6px 0 0"></p>
+
+  <h2>Регионы</h2>
+  <div id="regions"></div>
+
+  <h2>Районы <span class="muted" id="dcount" style="text-transform:none;letter-spacing:0"></span></h2>
+  <input type="search" id="dq" placeholder="Фильтр районов по названию">
+  <div class="scroll" id="districts" style="margin-top:6px"></div>
+
+  <h2>Поиск махалли</h2>
+  <input type="search" id="q" placeholder="Название махалли, например «Чинниобод»">
+  <div id="results" style="margin-top:6px"></div>
+
+  <h2>Население по регионам, млн</h2>
+  <div id="bars"></div>
+
+  <h2>Топ-10 махаллей по населению</h2>
+  <ol id="top"></ol>
+
+  <footer>
+    Население махаллей — оценка модели (GHS-POP и здания OSM). Сумма по каждому району равна официальному итогу. Не официальная статистика.<br><br>
+    Границы регионов: Natural Earth (public domain). Граница Тошкент шаҳри в этом источнике не охватывает часть районов города (например, Яшнобод), поэтому их точки могут попадать на карте в область.<br><br>
+    Исходный код и данные: <a href="https://github.com/pdlpad/SOATO">github.com/pdlpad/SOATO</a>. © OpenStreetMap contributors.
+  </footer>
+</aside>
+<main id="map">
+  <canvas id="c"></canvas>
+  <button id="reset" type="button">Сбросить вид</button>
+  <div id="legend"></div>
+  <div id="tip"></div>
+  <div id="card"></div>
+</main>
+</div>
+<script>
+const D = __DATA__;
+
+const COLORS = ['#440154', '#3b528b', '#21918c', '#5ec962', '#fde725'];
+const fmt = v => Math.round(v).toLocaleString('ru-RU');
+const fmtMln = v => (v / 1e6).toLocaleString('ru-RU', {maximumFractionDigits: 2}) + ' млн';
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'})[c]);
+const $ = id => document.getElementById(id);
+
+// ---- данные ----
+const REG = D.regions, DIS = D.districts, PTS = D.points, N = PTS.length;
+const pName = new Array(N), pDi = new Int32Array(N), pRi = new Int32Array(N);
+const pPop = new Float64Array(N), pLon = new Float64Array(N), pLat = new Float64Array(N);
+for (let i = 0; i < N; i++) {
+  const p = PTS[i];
+  pName[i] = p[0]; pDi[i] = p[1]; pRi[i] = DIS[p[1]].r; pPop[i] = p[2]; pLon[i] = p[3]; pLat[i] = p[4];
+}
+const sortedPop = Array.from(pPop).sort((a, b) => a - b);
+const cuts = [0.2, 0.4, 0.6, 0.8].map(t => sortedPop[Math.floor(t * N)]);
+const bucketOf = p => { let b = 0; while (b < cuts.length && p >= cuts[b]) b++; return b; };
+const pCol = Array.from(pPop, p => COLORS[bucketOf(p)]);
+const regCount = REG.map(() => 0), regPop = REG.map(() => 0);
+for (let i = 0; i < N; i++) { regCount[pRi[i]]++; regPop[pRi[i]] += pPop[i]; }
+
+$('legend').innerHTML = '<b>Население махалли</b>' + [
+  'до ' + fmt(cuts[0]), fmt(cuts[0]) + '–' + fmt(cuts[1]), fmt(cuts[1]) + '–' + fmt(cuts[2]),
+  fmt(cuts[2]) + '–' + fmt(cuts[3]), 'от ' + fmt(cuts[3])
+].map((t, k) => `<div><span style="background:${COLORS[k]}"></span>${t}</div>`).join('');
+
+// ---- состояние фильтров ----
+const selR = new Set(), selD = new Set();
+let selP = -1, query = '';
+const filtered = () => selD.size > 0 || selR.size > 0;
+const visible = i => selD.size ? selD.has(pDi[i]) : (selR.size ? selR.has(pRi[i]) : true);
+
+// ---- вид карты: центр (cx, cy) в градусах, S — пикселей на градус широты ----
+const cv = $('c'), ctx = cv.getContext('2d'), tip = $('tip');
+let W = 1, H = 1, cx = 0, cy = 0, S = 100;
+const kx = () => Math.cos(cy * Math.PI / 180);
+const px = (lon, lat) => [W / 2 + (lon - cx) * kx() * S, H / 2 - (lat - cy) * S];
+const unpx = (X, Y) => [cx + (X - W / 2) / (kx() * S), cy - (Y - H / 2) / S];
+
+function bbox(pred) {
+  let a = 1e9, b = -1e9, c = 1e9, d = -1e9, any = false;
+  for (let i = 0; i < N; i++) {
+    if (!pred(i)) continue;
+    any = true;
+    if (pLon[i] < a) a = pLon[i];
+    if (pLon[i] > b) b = pLon[i];
+    if (pLat[i] < c) c = pLat[i];
+    if (pLat[i] > d) d = pLat[i];
+  }
+  return any ? [a, b, c, d] : null;
+}
+const ALL = bbox(() => true);
+
+function fitBox(box) {
+  if (!box) return;
+  const pad = 0.05;
+  cx = (box[0] + box[1]) / 2;
+  cy = (box[2] + box[3]) / 2;
+  const wDeg = (box[1] - box[0] + 2 * pad) * kx();
+  const hDeg = box[3] - box[2] + 2 * pad;
+  S = Math.min(W / wDeg, H / hDeg) * 0.95;
+}
+function regionBox(set) {
+  let a = 1e9, b = -1e9, c = 1e9, d = -1e9;
+  for (const r of set) for (const ring of REG[r].rings) for (const [x, y] of ring) {
+    if (x < a) a = x; if (x > b) b = x; if (y < c) c = y; if (y > d) d = y;
+  }
+  return [a, b, c, d];
+}
+function fitCurrent() {
+  if (selD.size) fitBox(bbox(visible));
+  else if (selR.size) fitBox(regionBox(selR));
+  else fitBox(ALL);
+  draw();
+}
+function resetView() { selectPoint(-1, false); fitCurrent(); }
+
+function layout() {
+  const dpr = window.devicePixelRatio || 1;
+  const r = $('map').getBoundingClientRect();
+  W = Math.max(1, r.width); H = Math.max(1, r.height);
+  cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+
+// ---- отрисовка ----
+function draw() {
+  ctx.clearRect(0, 0, W, H);
+  const hi = new Set(selR);
+  for (const d of selD) hi.add(DIS[d].r);
+  for (let r = 0; r < REG.length; r++) {
+    const on = hi.has(r);
+    ctx.beginPath();
+    for (const ring of REG[r].rings) {
+      for (let k = 0; k < ring.length; k++) {
+        const [X, Y] = px(ring[k][0], ring[k][1]);
+        if (k) ctx.lineTo(X, Y); else ctx.moveTo(X, Y);
+      }
+      ctx.closePath();
+    }
+    ctx.fillStyle = on ? 'rgba(33,145,140,0.18)' : 'rgba(127,140,160,0.06)';
+    ctx.fill('evenodd');
+    ctx.lineWidth = on ? 1.6 : 0.8;
+    ctx.strokeStyle = on ? '#21918c' : 'rgba(127,140,160,0.6)';
+    ctx.stroke();
+  }
+  const fa = filtered();
+  for (let i = 0; i < N; i++) {
+    const [X, Y] = px(pLon[i], pLat[i]);
+    if (X < -5 || Y < -5 || X > W + 5 || Y > H + 5) continue;
+    ctx.fillStyle = fa && !visible(i) ? 'rgba(127,127,127,0.14)' : pCol[i];
+    ctx.beginPath(); ctx.arc(X, Y, 2.2, 0, Math.PI * 2); ctx.fill();
+  }
+  if (selP >= 0) {
+    const [X, Y] = px(pLon[selP], pLat[selP]);
+    ctx.beginPath(); ctx.arc(X, Y, 7, 0, Math.PI * 2);
+    ctx.lineWidth = 2.5; ctx.strokeStyle = '#ffffff'; ctx.stroke();
+    ctx.lineWidth = 1.2; ctx.strokeStyle = '#111111'; ctx.stroke();
+  }
+}
+
+function pick(mx, my, maxd) {
+  const fa = filtered();
+  let best = -1, bd = maxd * maxd;
+  for (let i = 0; i < N; i++) {
+    if (fa && !visible(i)) continue;
+    const [X, Y] = px(pLon[i], pLat[i]);
+    const d = (X - mx) ** 2 + (Y - my) ** 2;
+    if (d < bd) { bd = d; best = i; }
+  }
+  return best;
+}
+
+function showTip(i, x, y) {
+  if (i < 0) { tip.style.display = 'none'; return; }
+  tip.innerHTML = `<b>${esc(pName[i])}</b><br>${esc(DIS[pDi[i]].n)}<br>Население (оценка): ${fmt(pPop[i])}`;
+  tip.style.left = (x + 14) + 'px';
+  tip.style.top = (y + 14) + 'px';
+  tip.style.display = 'block';
+}
+
+function showCard(i) {
+  $('card').innerHTML = `<button class="x" id="cardx" type="button" aria-label="Закрыть">×</button>` +
+    `<b>${esc(pName[i])}</b><div>${esc(DIS[pDi[i]].n)}</div><div class="muted">${esc(REG[pRi[i]].n)}</div>` +
+    `<div>Население (оценка): <b>${fmt(pPop[i])}</b></div>`;
+  $('card').style.display = 'block';
+}
+
+function selectPoint(i, zoom) {
+  selP = i;
+  if (i >= 0 && filtered() && !visible(i)) {
+    // махалля вне текущих фильтров: переключаем фильтр на её регион
+    selD.clear();
+    selR.clear(); selR.add(pRi[i]);
+    onChange();
+  }
+  if (i >= 0) {
+    showCard(i);
+    if (zoom) { cx = pLon[i]; cy = pLat[i]; S = Math.max(S, 160); }
+  } else {
+    $('card').style.display = 'none';
+  }
+  draw();
+}
+
+// ---- мышь и колесо ----
+let drag = null;
+cv.addEventListener('mousedown', e => { drag = {x: e.clientX, y: e.clientY, moved: 0}; cv.style.cursor = 'grabbing'; });
+window.addEventListener('mouseup', e => {
+  if (drag && drag.moved < 5) {
+    const r = cv.getBoundingClientRect();
+    selectPoint(pick(e.clientX - r.left, e.clientY - r.top, 9), false);
+  }
+  drag = null;
+  cv.style.cursor = 'grab';
+});
+window.addEventListener('mousemove', e => {
+  const r = cv.getBoundingClientRect();
+  if (drag) {
+    const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+    drag.x = e.clientX; drag.y = e.clientY;
+    drag.moved += Math.abs(dx) + Math.abs(dy);
+    if (drag.moved >= 5) {
+      cx -= dx / (kx() * S);
+      cy += dy / S;
+      tip.style.display = 'none';
+      draw();
+    }
+    return;
+  }
+  const inside = e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
+  if (!inside) { showTip(-1); return; }
+  const x = e.clientX - r.left, y = e.clientY - r.top;
+  const i = pick(x, y, 7);
+  cv.style.cursor = i >= 0 ? 'pointer' : 'grab';
+  showTip(i, x, y);
+});
+cv.addEventListener('wheel', e => {
+  e.preventDefault();
+  const r = cv.getBoundingClientRect();
+  const mx = e.clientX - r.left, my = e.clientY - r.top;
+  const [lon, lat] = unpx(mx, my);
+  S = Math.min(Math.max(S * Math.exp(-e.deltaY * 0.0015), 25), 4000);
+  cy = lat + (my - H / 2) / S;
+  cx = lon - (mx - W / 2) / (kx() * S);
+  showTip(-1);
+  draw();
+}, {passive: false});
+cv.addEventListener('dblclick', resetView);
+
+// ---- панели ----
+function renderRegions() {
+  $('regions').innerHTML = REG.map((r, k) =>
+    `<label class="row"><input type="checkbox" data-r="${k}"${selR.has(k) ? ' checked' : ''}>` +
+    `<span>${esc(r.n)}</span><span class="muted">${fmt(regCount[k])}</span></label>`).join('');
+}
+
+function renderDistricts() {
+  const q = $('dq').value.trim().toLowerCase();
+  const list = [];
+  for (let k = 0; k < DIS.length; k++) {
+    if (selR.size && !selR.has(DIS[k].r)) continue;
+    if (q && !DIS[k].n.toLowerCase().includes(q)) continue;
+    list.push(k);
+  }
+  $('dcount').textContent = list.length + ' из ' + DIS.length;
+  $('districts').innerHTML = list.map(k =>
+    `<label class="row"><input type="checkbox" data-d="${k}"${selD.has(k) ? ' checked' : ''}><span>${esc(DIS[k].n)}</span></label>`
+  ).join('') || '<div class="muted">Нет районов</div>';
+}
+
+function renderStats() {
+  let cnt = 0, pop = 0;
+  const ds = new Set(), rs = new Set();
+  for (let i = 0; i < N; i++) {
+    if (!visible(i)) continue;
+    cnt++; pop += pPop[i]; ds.add(pDi[i]); rs.add(pRi[i]);
+  }
+  $('t-count').textContent = fmt(cnt);
+  $('t-dist').textContent = fmt(ds.size);
+  $('t-reg').textContent = fmt(rs.size);
+  $('t-pop').textContent = fmtMln(pop);
+  $('t-note').textContent = filtered() ? 'Показатели по выбранным фильтрам' : 'Показатели по всем данным';
+}
+
+function renderTop() {
+  const idx = [];
+  for (let i = 0; i < N; i++) if (visible(i)) idx.push(i);
+  idx.sort((a, b) => pPop[b] - pPop[a]);
+  $('top').innerHTML = idx.slice(0, 10).map(i =>
+    `<li><button class="link" type="button" data-p="${i}">${esc(pName[i])}</button> ` +
+    `<span class="muted">${esc(DIS[pDi[i]].n)}</span> <b>${fmt(pPop[i])}</b></li>`).join('');
+}
+
+function renderBars() {
+  const max = Math.max(...regPop);
+  $('bars').innerHTML = REG.map((r, k) =>
+    `<div class="bar${selR.has(k) ? ' on' : ''}"><span class="bl">${esc(r.n)}</span>` +
+    `<span class="bt"><span style="width:${(100 * regPop[k] / max).toFixed(1)}%"></span></span>` +
+    `<span class="bv">${fmtMln(regPop[k])}</span></div>`).join('');
+}
+
+function search(q) {
+  q = q.trim().toLowerCase();
+  const out = [];
+  if (!q) return out;
+  for (let i = 0; i < N && out.length < 10; i++) {
+    if (pName[i].toLowerCase().includes(q)) out.push(i);
+  }
+  return out;
+}
+
+function renderResults() {
+  const res = search(query);
+  $('results').innerHTML = res.map(i =>
+    `<button class="res" type="button" data-p="${i}">${esc(pName[i])} <span class="muted">· ${esc(DIS[pDi[i]].n)}</span></button>`
+  ).join('') || (query.trim() ? '<div class="muted">Ничего не найдено</div>' : '');
+}
+
+function onChange() {
+  renderRegions(); renderDistricts(); renderStats(); renderTop(); renderBars(); fitCurrent();
+}
+
+$('regions').addEventListener('change', e => {
+  const k = +e.target.dataset.r;
+  if (e.target.checked) selR.add(k); else selR.delete(k);
+  onChange();
+});
+$('districts').addEventListener('change', e => {
+  const k = +e.target.dataset.d;
+  if (e.target.checked) selD.add(k); else selD.delete(k);
+  onChange();
+});
+$('dq').addEventListener('input', renderDistricts);
+$('q').addEventListener('input', e => { query = e.target.value; renderResults(); });
+$('q').addEventListener('keydown', e => {
+  if (e.key === 'Enter') { const r = search(query); if (r.length) selectPoint(r[0], true); }
+});
+$('results').addEventListener('click', e => {
+  const b = e.target.closest('[data-p]');
+  if (b) selectPoint(+b.dataset.p, true);
+});
+$('top').addEventListener('click', e => {
+  const b = e.target.closest('[data-p]');
+  if (b) selectPoint(+b.dataset.p, true);
+});
+$('card').addEventListener('click', e => {
+  if (e.target.id === 'cardx') selectPoint(-1, false);
+});
+$('reset').addEventListener('click', () => {
+  selR.clear(); selD.clear(); query = '';
+  $('q').value = ''; $('dq').value = '';
+  selectPoint(-1, false);
+  onChange();
+  renderResults();
+});
+window.addEventListener('resize', () => { layout(); draw(); });
+
+// ---- старт ----
+layout();
+renderRegions(); renderDistricts(); renderStats(); renderTop(); renderBars(); renderResults();
+fitBox(ALL);
+draw();
+</script>
+</body>
+</html>

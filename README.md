@@ -9,9 +9,9 @@ Reference dataset of **~9,500 mahallas** (neighbourhoods) of Uzbekistan, linked 
 - `data/mahallas/<region>/<district>.csv`: mahalla table. Column descriptions are in [`schema/`](schema/README.md).
 - `data/points/<region>/<district>.geojson`: centroids. `data/districts/` and `data/regions/` hold metadata.
 - Rows with `quality_flags = no_data` are placeholders (no estimate, no point). Filter them out.
-- No mahalla boundary polygons are included.
+- No mahalla boundary polygons are included. Region boundaries (Natural Earth, public domain) are in `data/regions/regions.geojson`.
 - Licence: data under [CC BY 4.0](DATA_LICENSE.md), code under MIT. The data contains OpenStreetMap-derived values: © OpenStreetMap contributors. Sources: [SOURCES.md](SOURCES.md).
-- Status: in development.
+- Status: in development. Interactive map (region boundaries, filters by region and district, search): https://pdlpad.github.io/SOATO/. Rebuild with `python3 tools/build_map.py`.
 
 ```python
 import csv
@@ -35,6 +35,8 @@ Until a DOI is assigned, cite the repository: https://github.com/pdlpad/SOATO
 > официальным данным района), а не официальная статистика.
 
 Статус: в разработке.
+
+Интерактивная карта: https://pdlpad.github.io/SOATO/ (границы регионов, фильтры по регионам и районам, поиск махаллей). Пересборка: `python3 tools/build_map.py`.
 
 ## Источники и лицензия
 

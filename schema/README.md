@@ -6,4 +6,5 @@
   density_gross, density_populated, method, quality_flags`.
   Пустое значение = данных нет (не ноль).
   `quality_flags = no_data` — строка-заглушка: махалля есть в списке района, но без оценки населения, метода и точки (`pop_2026_est` и `method` пусты, точки нет).
+- Поля `calibration_factor` и `model_vs_official_gap` в `district.schema.json` вычисляются при расчёте оценок. Скрипта расчёта в репозитории нет, поэтому их точный смысл здесь не описан.
 - Точки — GeoJSON `data/points/<регион>/<район>.geojson` (EPSG:4326).

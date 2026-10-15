@@ -1,7 +1,7 @@
 mahalla_id,name,district_soato,area_km2,populated_area_km2,pop_2026_est,density_gross,density_populated,method,quality_flags
 2712001,Бунёдкор,1727253,1.5321,0.8439,11708.1,7641.8,13873.8,GHS-POP,district_ghs_diverges_2x
 2712002,Ўчоқли,1727253,2.5274,1.701,15060.8,5959.0,8854.1,GHS-POP,district_ghs_diverges_2x
-2712003,Хўжа,1727253,,,,,,,
+2712003,Хўжа,1727253,,,,,,,no_data
 2712004,Йўнғичқоли,1727253,4.9201,0.9041,4073.2,827.9,4505.3,GHS-POP,district_ghs_diverges_2x
 2712005,Янги турмуш,1727253,3.3481,2.2932,16342.0,4881.0,7126.3,GHS-POP,district_ghs_diverges_2x
 2712006,Фаровон,1727253,3.6693,1.0737,2903.8,791.4,2704.4,GHS-POP,district_ghs_diverges_2x
@@ -57,4 +57,4 @@ mahalla_id,name,district_soato,area_km2,populated_area_km2,pop_2026_est,density_
 2712056,Файзобод,1727253,7.5515,2.6638,1464.7,194.0,549.9,GHS-POP,district_ghs_diverges_2x
 2712057,Қўшдарё,1727253,5.2455,2.8697,514.2,98.0,179.2,GHS-POP,district_ghs_diverges_2x
 2712058,КИМ ПЕН ХВА,1727253,6.3144,2.9816,22664.4,3589.3,7601.4,GHS-POP,district_ghs_diverges_2x
-2712059,Жалоир,1727253,,,,,,,
+2712059,Жалоир,1727253,,,,,,,no_data

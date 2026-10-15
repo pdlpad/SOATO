@@ -49,6 +49,20 @@ class Integrity(unittest.TestCase):
                 self.assertTrue(55 <= x <= 74 and 36 <= y <= 46, (p, x, y))
                 self.assertIn(ft["properties"]["mahalla_id"], ids)
 
+    def test_mahalla_points_coverage(self):
+        for p in (DATA / "mahallas").glob("*/*.csv"):
+            geo = load(DATA / "points" / p.parent.name / f"{p.stem}.geojson")
+            ids = {ft["properties"]["mahalla_id"] for ft in geo["features"]}
+            with p.open(encoding="utf-8", newline="") as f:
+                for r in csv.DictReader(f):
+                    mid = int(r["mahalla_id"])
+                    if r["quality_flags"] == "no_data":
+                        self.assertEqual(r["pop_2026_est"], "", (p, mid))
+                        self.assertNotIn(mid, ids, (p, mid))
+                    else:
+                        self.assertNotEqual(r["pop_2026_est"], "", (p, mid))
+                        self.assertIn(mid, ids, (p, mid))
+
 
 if __name__ == "__main__":
     unittest.main()

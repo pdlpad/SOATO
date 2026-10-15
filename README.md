@@ -7,3 +7,9 @@
 > официальным данным района), а не официальная статистика.
 
 Статус: в разработке.
+
+## Источники и лицензия
+
+- Данные: [CC BY 4.0](DATA_LICENSE.md), код: MIT.
+- Оценка населения махаллей основана на данных OpenStreetMap: © OpenStreetMap contributors (ODbL).
+- Подробнее: [SOURCES.md](SOURCES.md), [DATA_LICENSE.md](DATA_LICENSE.md).

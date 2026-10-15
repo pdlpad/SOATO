@@ -66,12 +66,18 @@ def build_data():
     return {"regions": regions, "districts": districts, "points": points}
 
 
-def build_html():
+def build_html(template=TEMPLATE):
     payload = json.dumps(build_data(), ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-    return TEMPLATE.read_text(encoding="utf-8").replace("__DATA__", payload)
+    return pathlib.Path(template).read_text(encoding="utf-8").replace("__DATA__", payload)
 
 
 if __name__ == "__main__":
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(build_html(), encoding="utf-8")
-    print("written:", OUT)
+    import argparse
+    ap = argparse.ArgumentParser(description="Собрать страницу карты из шаблона и данных")
+    ap.add_argument("--template", default=str(TEMPLATE), help="путь к шаблону (по умолчанию tools/map_template.html)")
+    ap.add_argument("--out", default=str(OUT), help="куда записать HTML (по умолчанию docs/index.html)")
+    args = ap.parse_args()
+    out = pathlib.Path(args.out)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(build_html(args.template), encoding="utf-8")
+    print("written:", out)

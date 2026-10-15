@@ -63,6 +63,15 @@ class Integrity(unittest.TestCase):
                         self.assertNotEqual(r["pop_2026_est"], "", (p, mid))
                         self.assertIn(mid, ids, (p, mid))
 
+    def test_counts_match_source(self):
+        for p in (DATA / "districts").glob("*/*.json"):
+            o = load(p)
+            with (DATA / "mahallas" / p.parent.name / f"{p.stem}.csv").open(encoding="utf-8", newline="") as f:
+                with_pop = sum(1 for r in csv.DictReader(f) if r["pop_2026_est"] and float(r["pop_2026_est"]) > 0)
+            points = len(load(DATA / "points" / p.parent.name / f"{p.stem}.geojson")["features"])
+            self.assertEqual(with_pop, o["mahallas_in_source"], p)
+            self.assertEqual(points, o["mahallas_in_source"], p)
+
 
 if __name__ == "__main__":
     unittest.main()

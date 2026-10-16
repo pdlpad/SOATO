@@ -2,7 +2,7 @@
 
 [![ci](https://github.com/pdlpad/SOATO/actions/workflows/ci.yml/badge.svg)](https://github.com/pdlpad/SOATO/actions/workflows/ci.yml)
 
-**[Интерактивная карта](https://pdlpad.github.io/SOATO/)** · [English](#english)
+**[Интерактивная карта](https://pdlpad.github.io/SOATO/)** · [Oʻzbekcha (lotin)](#uzbek) · [English](#english)
 
 Набор данных о **9 473 махаллях** Узбекистана. Для каждой махалли есть оценка населения на 01.01.2026, площадь, плотность, точка-центроид и контур-полигон (EPSG:4326). Махалли привязаны к СОАТО **до уровня района** (7-значный код). Охват: 14 регионов, 205 районов, 38 236 700 человек. Суммы по районам равны официальным (в пределах одного человека).
 
@@ -20,9 +20,12 @@ data/
   districts/<регион>/<район>.json    метаданные района (официальное население, метод, калибровка)
   regions/<регион>.json              метаданные региона
   regions/regions.geojson            границы 14 регионов (Natural Earth)
+  layers/mahallas_2026_simplified.geojson  готовый слой для QGIS/ArcGIS: контуры и цифры (9 471 махалля)
 schema/                              описание полей и JSON Schema
 tools/build_map.py                   сборка страницы карты в docs/index.html
 tools/build_web_polygons.py          облегчённые контуры для карты (docs/polygons/)
+tools/build_gis_layer.py             сборка слоя для QGIS/ArcGIS
+tools/translit.py                    транслитерация названий в латиницу
 tools/split_polygons.py              раскладка исходного GeoJSON с контурами по районам
 tests/                               проверки целостности данных (запускаются в CI)
 ```
@@ -57,6 +60,7 @@ tests/                               проверки целостности д�
 | `no_data` | 188 | строка-заглушка: махалля есть в списке района, но оценки, метода и точки нет |
 | `district_ghs_diverges_2x` | 189 | в районе GHS-POP расходится с официальным итогом примерно вдвое или больше |
 | `district_buildings_diverge_50pct` | 64 | в районе здания OSM расходятся с официальным итогом на 50 % и больше |
+| `test_record` | 2 | тестовая запись источника (махалля TEST в районах Олмазор и Яшнобод): её контур лежит поверх настоящих махаллей других районов. Население входит в районные суммы, в слой для GIS запись не попадает |
 | `small_polygon` | 46 | очень маленький контур махалли в источнике, оценка менее надёжна |
 
 Строки `no_data` нужно отфильтровывать. Без них остаётся 9 473 махаллей, и именно по ним построены точки и карта. Названия флагов даны как в данных; расчётного кода в репозитории нет.
@@ -80,6 +84,10 @@ print(len(rows), rows[0]["name"], rows[0]["pop_2026_est"])  # 71 Өрнек МФ
 - Границы регионов взяты из Natural Earth. Граница Тошкент шаҳри там устарела и не охватывает, например, Яшнобод, поэтому часть городских точек на карте лежит вне полигона города.
 - Оценки по отдельным махаллям приблизительны. Надёжны только суммы по районам, они равны официальным.
 
+## Слой для QGIS/ArcGIS
+
+Файл [`data/layers/mahallas_2026_simplified.geojson`](data/layers/mahallas_2026_simplified.geojson) (EPSG:4326, около 29 МБ) содержит контуры махаллей и цифры в одной таблице атрибутов: идентификатор, название (кириллицей и латиницей), район, регион, площади, население, плотности, метод и флаги. Контуры упрощены с допуском 2,5 м. Записи `no_data` и `test_record` в слой не входят. Слой с полными контурами (около 80 МБ) собирается командой `python3 tools/build_gis_layer.py --full OUT.geojson`. Латинские названия получены автоматической транслитерацией и могут отличаться от официального написания.
+
 ## Карта и проверки
 
 Интерактивная карта: https://pdlpad.github.io/SOATO/ (границы регионов, фильтры по регионам и районам, поиск махалли, инфографика). При приближении к району или городу карта подгружает контуры махаллей и красит их по населению.
@@ -101,6 +109,114 @@ python3 -m unittest discover -s tests -v      # проверки целостн�
 
 ---
 
+<a id="uzbek"></a>
+## Oʻzbekcha (lotin)
+
+Oʻzbekistonning **9 473 ta mahallasi** haqidagi maʼlumotlar toʻplami. Har bir mahalla uchun 2026-yil 1-yanvar holatiga aholi sonining bahosi, maydoni, zichligi, markaz nuqtasi (sentroid) va kontur-poligoni (EPSG:4326) berilgan. Mahallalar SOATO bilan **tuman darajasigacha** (7 xonali kod) bogʻlangan. Qamrov: 14 ta viloyat, 205 ta tuman, 38 236 700 kishi. Tumanlar boʻyicha yigʻindilar rasmiy raqamlarga teng (bir kishi aniqligida).
+
+> Mahallalar boʻyicha aholi soni — **model bahosi** (GHS-POP va OSM binolari asosida), tumanlar boʻyicha rasmiy yakunlarga moslashtirilgan. Bu rasmiy statistika emas.
+
+Holati: ishlab chiqilmoqda.
+
+### Tarkibi
+
+```text
+data/
+  mahallas/<viloyat>/<tuman>.csv      tuman mahallalari jadvali
+  points/<viloyat>/<tuman>.geojson    tuman mahallalarining markaz nuqtalari
+  polygons/<viloyat>/<tuman>.geojson  tuman mahallalarining konturlari (MultiPolygon, har bir mahalla alohida obyekt)
+  districts/<viloyat>/<tuman>.json    tuman metamaʼlumotlari (rasmiy aholi, usul, kalibrlash)
+  regions/<viloyat>.json              viloyat metamaʼlumotlari
+  regions/regions.geojson             14 ta viloyat chegaralari (Natural Earth)
+  layers/mahallas_2026_simplified.geojson  QGIS/ArcGIS uchun tayyor qatlam: konturlar va raqamlar (9 471 ta mahalla)
+schema/                               maydonlar tavsifi va JSON Schema
+tools/build_map.py                    xarita sahifasini yigʻish (docs/index.html)
+tools/build_web_polygons.py           xarita uchun yengil konturlar (docs/polygons/)
+tools/build_gis_layer.py              QGIS/ArcGIS uchun qatlamni yigʻish
+tools/translit.py                     nomlarni lotin yozuviga transliteratsiya qilish
+tools/split_polygons.py               konturlarning manba GeoJSON faylini tumanlar boʻyicha ajratish
+tests/                                maʼlumotlar yaxlitligini tekshirish (CI orqali ishga tushiriladi)
+```
+
+Tuman fayllarining nomi — tumanning SOATO kodi; koddagi `+` belgisi `_` bilan almashtirilgan.
+
+### `data/mahallas/*/*.csv` ustunlari
+
+| Ustun | Maʼnosi |
+|---|---|
+| `mahalla_id` | mahalla identifikatori |
+| `name` | nomi |
+| `district_soato` | tumanning SOATO kodi (7 raqam) |
+| `area_km2` | mahalla maydoni, km² |
+| `populated_area_km2` | aholi yashaydigan qismining maydoni, km² |
+| `pop_2026_est` | 2026-yil 1-yanvar holatiga aholi soni bahosi, kishi |
+| `density_gross` | butun maydon boʻyicha zichlik, kishi/km² |
+| `density_populated` | aholi yashaydigan maydon boʻyicha zichlik, kishi/km² |
+| `method` | baho nimaga asoslangan: `здания OSM`, `GHS-POP` yoki `GHS-POP (дыра в OSM)` |
+| `quality_flags` | sifat belgilari, `;` bilan ajratilgan (pastga qarang) |
+
+Boʻsh qiymat «maʼlumot yoʻq» degani, nol emas. Batafsil: [schema/README.md](schema/README.md).
+
+### Aholi bahosi qanday olingan
+
+Tumanning 2026-yil 1-yanvar holatidagi rasmiy aholisi tuman mahallalari oʻrtasida taqsimlangan. Taqsimot GHS-POP rastriga yoki OpenStreetMap binolariga tayanadi (`method` ustuni). Har bir tuman yigʻindisi rasmiy raqamga keltirilgan; koeffitsient `district.calibration_factor` maydonida saqlanadi. Hisoblash skripti repozitoriyda yoʻq, shuning uchun bahoni bu fayllardan qayta hisoblab boʻlmaydi.
+
+### Sifat belgilari
+
+| Belgi | Qatorlar | Maʼnosi |
+|---|---|---|
+| `no_data` | 188 | oʻrin egallovchi qator: mahalla tuman roʻyxatida bor, ammo baho, usul va nuqta yoʻq |
+| `district_ghs_diverges_2x` | 189 | tumanda GHS-POP rasmiy yakundan taxminan ikki baravar yoki undan koʻp farq qiladi |
+| `district_buildings_diverge_50pct` | 64 | tumanda OSM binolari rasmiy yakundan 50 % va undan koʻp farq qiladi |
+| `test_record` | 2 | manbaning sinov yozuvi (Olmazor va Yashnobod tumanlaridagi TEST mahalla): uning konturi boshqa tumanlarning haqiqiy mahallalari ustida yotadi. Aholi soni tuman yigʻindilariga kiradi, yozuv esa GIS qatlamiga kiritilmaydi |
+| `small_polygon` | 46 | manbada mahalla konturi juda kichik, baho kamroq ishonchli |
+
+`no_data` qatorlarini filtrlab tashlash kerak. Ularsiz 9 473 ta mahalla qoladi, nuqtalar va xarita aynan shular boʻyicha qurilgan. Belgilar nomi maʼlumotlardagidek berilgan; hisoblash kodi repozitoriyda yoʻq.
+
+### Tezkor boshlash
+
+```python
+import csv
+
+with open("data/mahallas/1735/1735401.csv", encoding="utf-8", newline="") as f:
+    rows = [r for r in csv.DictReader(f) if r["quality_flags"] != "no_data"]
+
+print(len(rows), rows[0]["name"], rows[0]["pop_2026_est"])  # 71 Өрнек МФЙ 3663.0
+```
+
+### Cheklovlar
+
+- Konturlar: 9 473 ta obyekt, bahosi bor har bir mahalla uchun bittadan. Konturi yoʻq `no_data` qatori faqat Chust tumanida (1714237, Yangichak mahallasi) bor. Barcha sentroidlar oʻz konturi ichida yotadi, kontur maydonlarining `area_km2` dan farqi 1 % dan oshmaydi.
+- Aholi haqidagi maʼlumotlar faqat CSV faylida saqlanadi, konturlarda yoʻq. Kontur fayllari jami taxminan 75 MB joy egallaydi.
+- Qoʻshni mahallalarning konturlari baʼzi joylarda ustma-ust tushadi: 365 ta mahallaning (taxminan 4 %) ichki nuqtasi boshqa mahalla konturi ichida yotadi. Geometriya manba faylidagidek qoldirilgan.
+- Viloyat chegaralari Natural Earth maʼlumotlaridan olingan. Toshkent shahri chegarasi u yerda eskirgan va, masalan, Yashnobodni qamrab olmaydi, shu sababli xaritada baʼzi shahar nuqtalari shahar poligonidan tashqarida yotadi.
+- Alohida mahallalar boʻyicha baholar taxminiy. Faqat tuman yigʻindilari ishonchli, ular rasmiy raqamlarga teng.
+
+### QGIS/ArcGIS uchun qatlam
+
+[`data/layers/mahallas_2026_simplified.geojson`](data/layers/mahallas_2026_simplified.geojson) fayli (EPSG:4326, taxminan 29 MB) mahalla konturlari va raqamlarini bitta atributlar jadvalida beradi: identifikator, nomi (kirill va lotin yozuvida), tuman, viloyat, maydonlar, aholi soni, zichliklar, usul va belgilar. Konturlar 2,5 m yoʻl qoʻyiladigan chetlanish bilan soddalashtirilgan. `no_data` va `test_record` yozuvlari qatlamga kiritilmagan. Toʻliq konturli qatlam (taxminan 80 MB) `python3 tools/build_gis_layer.py --full OUT.geojson` buyrugʻi bilan yigʻiladi. Lotin yozuvidagi nomlar avtomatik transliteratsiya natijasi boʻlib, rasmiy yozilishdan farq qilishi mumkin.
+
+### Xarita va tekshiruvlar
+
+Interaktiv xarita: https://pdlpad.github.io/SOATO/ (viloyat chegaralari, viloyat va tumanlar boʻyicha filtrlar, mahalla qidiruvi, infografika). Tuman yoki shaharga yaqinlashtirilganda xarita mahalla konturlarini yuklaydi va ularni aholi soni boʻyicha boʻyaydi.
+
+```bash
+python3 tools/build_web_polygons.py           # xarita uchun yengil konturlar: docs/polygons/
+python3 tools/build_map.py                    # docs/index.html faylini qayta yigʻish
+python3 -m unittest discover -s tests -v      # maʼlumotlar yaxlitligini tekshirish
+```
+
+### Manbalar va litsenziya
+
+- Maʼlumotlar: [CC BY 4.0](DATA_LICENSE.md), kod: MIT.
+- Tumanlar aholisi — rasmiy statistika. Mahallalar boʻyicha baho OpenStreetMap binolaridan (© OpenStreetMap contributors, ODbL) va GHS-POP rastridan (JRC, Yevropa komissiyasi) foydalanadi. Viloyat chegaralari — Natural Earth (public domain).
+- Mahalla konturlari: repozitoriy egasi taqdim etgan `mahallalar_2026.geojson` fayli. Ega nashr etish huquqini tasdiqlagan va mahalla chegaralari ommaga ochiq maʼlumot ekanini bildirgan; fayldagi dastlabki chegaralarning kelib chiqishi koʻrsatilmagan (qarang: [SOURCES.md](SOURCES.md)).
+- Batafsil: [SOURCES.md](SOURCES.md), [DATA_LICENSE.md](DATA_LICENSE.md).
+
+Hozircha DOI yoʻq, repozitoriyga havola qiling: https://github.com/pdlpad/SOATO
+
+---
+
 ## English
 
 Reference dataset of **9,473 mahallas** (neighbourhoods) of Uzbekistan, linked to **SOATO** district codes (7-digit, district level). For each mahalla: area, populated area, estimated population as of 01.01.2026, gross and populated density, and a centroid point (EPSG:4326). Coverage: 14 regions, 205 districts, 38,236,700 people; district sums equal the official figures (within one person).
@@ -109,7 +225,8 @@ Reference dataset of **9,473 mahallas** (neighbourhoods) of Uzbekistan, linked t
 
 - `data/mahallas/<region>/<district>.csv`: mahalla table. Column descriptions are in [`schema/`](schema/README.md).
 - `data/points/<region>/<district>.geojson`: centroids. `data/polygons/<region>/<district>.geojson`: mahalla boundary polygons (9,473 features, ~75 MB). `data/districts/` and `data/regions/` hold metadata.
-- Rows with `quality_flags = no_data` (188) are placeholders: no estimate, no point. Filter them out.
+- Rows with `quality_flags = no_data` (188) are placeholders: no estimate, no point. Filter them out. Two rows named TEST (`test_record`, Olmazor and Yashnobod districts) are test records of the source whose polygons overlie real mahallas of other districts.
+- `data/layers/mahallas_2026_simplified.geojson`: ready-to-use layer for QGIS/ArcGIS (polygons plus attributes, Cyrillic and Latin names, ~29 MB). A full-detail layer: `python3 tools/build_gis_layer.py --full OUT.geojson`.
 - `method` is `здания OSM`, `GHS-POP` or `GHS-POP (дыра в OSM)`. The estimation script is not in this repository.
 - Polygons carry only `mahalla_id`, `name` and `district_soato`; population lives in the CSV. Region boundaries (Natural Earth, public domain) are in `data/regions/regions.geojson`; the Tashkent city boundary there is outdated.
 - Interactive map (region boundaries, filters by region and district, search): https://pdlpad.github.io/SOATO/. Rebuild with `python3 tools/build_map.py`; run the checks with `python3 -m unittest discover -s tests -v`.

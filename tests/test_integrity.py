@@ -169,6 +169,30 @@ class Integrity(unittest.TestCase):
                 exact = sum(float(r["pop_2026_est"]) for r in csv.DictReader(f) if r["pop_2026_est"])
             self.assertEqual(page[k], round(exact), d["c"])
 
+    def test_transliteration(self):
+        spec = importlib.util.spec_from_file_location("translit", DATA.parent / "tools" / "translit.py")
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        cases = [("Тошкент шаҳри", "Toshkent shahri"), ("Қорақалпоғистон Республикаси", "Qoraqalpog\u02bbiston Respublikasi"),
+                 ("Ўртачирчиқ тумани", "O\u02bbrtachirchiq tumani"), ("Ёшлик МФЙ", "Yoshlik MFY"), ("Еттитепа", "Yettitepa"),
+                 ("ШАҲАР", "SHAHAR"), ("Aндижон тумани", "Andijon tumani")]
+        for src, want in cases:
+            self.assertEqual(mod.to_latin(src), want)
+        self.assertEqual(mod.to_latin("Нәўбәҳар", karakalpak=True), "N\u00e1w" + "b\u00e1har")
+        names = [r["name"] for p in (DATA / "mahallas").glob("*/*.csv") for r in csv.DictReader(p.open(encoding="utf-8", newline=""))]
+        for name in names:
+            for karakalpak in (False, True):
+                self.assertFalse(any("\u0400" <= c <= "\u04ff" for c in mod.to_latin(name, karakalpak)), name)
+
+    def test_gis_layer_is_current(self):
+        spec = importlib.util.spec_from_file_location("build_gis_layer", DATA.parent / "tools" / "build_gis_layer.py")
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        text, count = mod.build()
+        self.assertEqual((DATA / "layers" / "mahallas_2026_simplified.geojson").read_text(encoding="utf-8"), text,
+                         "слой устарел: запустите python3 tools/build_gis_layer.py")
+        self.assertNotIn('"name":"TEST"', text)
+
     def test_map_page_is_current(self):
         spec = importlib.util.spec_from_file_location("build_map", DATA.parent / "tools" / "build_map.py")
         mod = importlib.util.module_from_spec(spec)

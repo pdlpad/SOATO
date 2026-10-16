@@ -25,21 +25,43 @@ def _letter(ch):
     return ch.isalpha()
 
 
+KK_ONLY = set("әөүңы")  # буквы, которых нет в узбекском: признак каракалпакского слова
+
+
+def _word_has_kk_letters(text, i):
+    a = i
+    while a > 0 and _letter(text[a - 1]):
+        a -= 1
+    b = i
+    while b < len(text) and _letter(text[b]):
+        b += 1
+    return any(c.lower() in KK_ONLY for c in text[a:b])
+
+
 def to_latin(text, karakalpak=False):
+    """Кириллица -> латиница. В режиме karakalpak буква ў читается как w только рядом с гласной
+    (таў, Наўрыз), между согласными это узбекское oʻ (Дўстлик -> Doʻstlik); заглавная И даёт İ
+    только в слове с каракалпакскими буквами (ә ө ү ң ы)."""
     table = KK if karakalpak else UZ
     out = []
+    prev_w = False
     for i, ch in enumerate(text):
         low = ch.lower()
         if low not in table:
             out.append(ch)
+            prev_w = False
             continue
         lat = table[low]
         prev = text[i - 1] if i else ""
         nxt = text[i + 1] if i + 1 < len(text) else ""
-        if low == "е" and (not _letter(prev) or prev.lower() in VOWELS or prev.lower() in "ъь"):
+        is_w = False
+        if karakalpak and low == "ў":
+            if prev.lower() in VOWELS and prev.lower() != "ў":
+                lat, is_w = "w", True
+            else:
+                lat = UZ["ў"]
+        if low == "е" and (not _letter(prev) or (prev.lower() in VOWELS and not prev_w) or prev.lower() in "ъь"):
             lat = "ye"
-        if karakalpak and low == "и" and ch.isupper():
-            lat = "i"
         if ch.isupper() and lat:
             if len(lat.replace(OKINA, "").replace(TUTUQ, "")) == 1:
                 lat = lat[0].upper() + lat[1:]
@@ -48,6 +70,7 @@ def to_latin(text, karakalpak=False):
             else:
                 lat = lat[0].upper() + lat[1:]
             if karakalpak and low == "и":
-                lat = "İ"
+                lat = "İ" if _word_has_kk_letters(text, i) else "I"
         out.append(lat)
+        prev_w = is_w
     return "".join(out)

@@ -179,6 +179,11 @@ class Integrity(unittest.TestCase):
         for src, want in cases:
             self.assertEqual(mod.to_latin(src), want)
         self.assertEqual(mod.to_latin("Нәўбәҳар", karakalpak=True), "N\u00e1w" + "b\u00e1har")
+        kk = {"Дўстлик МФЙ": "Do\u02bbstlik MFY", "Ўзбекистон МФЙ": "O\u02bbzbekiston MFY", "Тўрткўл": "To\u02bbrtko\u02bbl",
+              "Истиқлол МФЙ": "Istiqlol MFY", "Суўенли": "Suwenli", "Наўқан бағ": "Nawqan ba\u01f5", "Бозатаў ОФЙ": "Bozataw OFY",
+              "Қызыл қум": "Q\u0131z\u0131l qum"}
+        for src, want in kk.items():
+            self.assertEqual(mod.to_latin(src, karakalpak=True), want)
         names = [r["name"] for p in (DATA / "mahallas").glob("*/*.csv") for r in csv.DictReader(p.open(encoding="utf-8", newline=""))]
         for name in names:
             for karakalpak in (False, True):

@@ -5,8 +5,7 @@
   python3 tools/build_gis_layer.py                 # облегчённый слой: data/layers/mahallas_2026_simplified.geojson
   python3 tools/build_gis_layer.py --full OUT.geojson   # контуры без упрощения (около 80 МБ)
 
-Берёт контуры (data/polygons или docs/polygons) и цифры из data/mahallas. Тестовые записи (quality_flags
-содержит test_record) и строки no_data в слой не попадают. Код распространяется по лицензии MIT (см. LICENSE).
+Берёт контуры (data/polygons или docs/polygons) и цифры из data/mahallas. Строки no_data в слой не попадают. Код распространяется по лицензии MIT (см. LICENSE).
 """
 import argparse
 import csv
@@ -23,7 +22,7 @@ from translit import to_latin  # noqa: E402
 DATA = ROOT / "data"
 DOCS_POLYGONS = ROOT / "docs" / "polygons"
 DEFAULT_OUT = DATA / "layers" / "mahallas_2026_simplified.geojson"
-HIDDEN_FLAGS = {"no_data", "test_record"}
+HIDDEN_FLAGS = {"no_data"}
 
 
 def num(text):

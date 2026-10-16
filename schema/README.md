@@ -5,7 +5,6 @@
   `mahalla_id, name, district_soato, area_km2, populated_area_km2, pop_2026_est,
   density_gross, density_populated, method, quality_flags`.
   Пустое значение = данных нет (не ноль).
-  `quality_flags = test_record` — тестовая запись источника (махалля TEST, районы 1726280 и 1726290): контур лежит поверх настоящих махаллей других районов.
   `quality_flags = no_data` — строка-заглушка: махалля есть в списке района, но без оценки населения, метода и точки (`pop_2026_est` и `method` пусты, точки нет).
 - Поля `calibration_factor` и `model_vs_official_gap` в `district.schema.json` вычисляются при расчёте оценок. Скрипта расчёта в репозитории нет, поэтому их точный смысл здесь не описан.
 - В каждом районе число махалей с оценкой (`pop_2026_est` > 0) и число точек равны `mahallas_in_source` из `district.schema.json`. Это проверяют тесты.

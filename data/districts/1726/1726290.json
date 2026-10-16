@@ -5,8 +5,8 @@
   "name_polygon_set": "Яшнобод т.",
   "population_2026_official": 317200,
   "estimation_method": "здания OSM",
-  "calibration_factor": 0.021408,
-  "mahallas_in_source": 68,
+  "calibration_factor": 0.021504,
+  "mahallas_in_source": 67,
   "area_km2": 57.6247,
   "model_vs_official_gap": 0.0399
 }

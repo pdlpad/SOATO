@@ -5,8 +5,8 @@
   "name_polygon_set": "Чуст т.",
   "population_2026_official": 296700,
   "estimation_method": "GHS-POP",
-  "calibration_factor": 1.129566,
-  "mahallas_in_source": 65,
+  "calibration_factor": 1.042786,
+  "mahallas_in_source": 71,
   "area_km2": 920.8202,
-  "model_vs_official_gap": -0.1147
+  "model_vs_official_gap": -0.041
 }

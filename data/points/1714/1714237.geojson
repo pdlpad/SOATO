@@ -666,6 +666,21 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     71.178262,
+     40.965479
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1416045,
+    "name": "Янгиобод",
+    "district_soato": "1714237"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      71.248618,
      41.04499
     ]
@@ -741,6 +756,21 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     71.087933,
+     41.016142
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1416051,
+    "name": "Мунчоқтепа",
+    "district_soato": "1714237"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      71.219881,
      41.054843
     ]
@@ -801,6 +831,21 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     71.249638,
+     40.994511
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1416056,
+    "name": "Гулистон",
+    "district_soato": "1714237"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      71.22046,
      40.955631
     ]
@@ -808,6 +853,36 @@
    "properties": {
     "mahalla_id": 1416057,
     "name": "Садача",
+    "district_soato": "1714237"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.072702,
+     41.011791
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1416059,
+    "name": "Бозорбоши",
+    "district_soato": "1714237"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.212894,
+     41.080999
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1416060,
+    "name": "Ютмос",
     "district_soato": "1714237"
    }
   },
@@ -913,6 +988,21 @@
    "properties": {
     "mahalla_id": 1416067,
     "name": "Мустақиллик",
+    "district_soato": "1714237"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.247335,
+     41.007849
+    ]
+   },
+   "properties": {
+    "mahalla_id": 1416068,
+    "name": "Яккабулоқ",
     "district_soato": "1714237"
    }
   },

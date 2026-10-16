@@ -184,6 +184,15 @@ class Integrity(unittest.TestCase):
             for karakalpak in (False, True):
                 self.assertFalse(any("\u0400" <= c <= "\u04ff" for c in mod.to_latin(name, karakalpak)), name)
 
+    def test_gis_layer_is_current(self):
+        spec = importlib.util.spec_from_file_location("build_gis_layer", DATA.parent / "tools" / "build_gis_layer.py")
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        text, count = mod.build()
+        self.assertEqual((DATA / "layers" / "mahallas_2026_simplified.geojson").read_text(encoding="utf-8"), text,
+                         "слой устарел: запустите python3 tools/build_gis_layer.py")
+        self.assertNotIn('"name":"TEST"', text)
+
     def test_map_page_is_current(self):
         spec = importlib.util.spec_from_file_location("build_map", DATA.parent / "tools" / "build_map.py")
         mod = importlib.util.module_from_spec(spec)

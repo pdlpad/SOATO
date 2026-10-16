@@ -1,4 +1,4 @@
-import csv, importlib.util, json, unittest
+import csv, importlib.util, json, math, unittest
 from pathlib import Path
 
 DATA = Path(__file__).resolve().parent.parent / "data"
@@ -6,6 +6,33 @@ DATA = Path(__file__).resolve().parent.parent / "data"
 
 def load(p):
     return json.loads(p.read_text(encoding="utf-8"))
+
+
+def polygons_of(geometry):
+    """Список полигонов: каждый полигон - список колец (внешнее, затем дыры)."""
+    return geometry["coordinates"] if geometry["type"] == "MultiPolygon" else [geometry["coordinates"]]
+
+
+def ring_area_km2(ring):
+    """Площадь кольца в км² в локальной равнопромежуточной проекции (хватает для проверки в пределах процентов)."""
+    lat0 = math.radians(sum(y for _, y in ring) / len(ring))
+    kx, ky = 111.32 * math.cos(lat0), 110.57
+    s = 0.0
+    for (x1, y1), (x2, y2) in zip(ring, ring[1:]):
+        s += x1 * y2 - x2 * y1
+    return abs(s) / 2 * kx * ky
+
+
+def in_ring(x, y, ring):
+    inside = False
+    for (x1, y1), (x2, y2) in zip(ring, ring[1:]):
+        if (y1 > y) != (y2 > y) and x < (x2 - x1) * (y - y1) / (y2 - y1) + x1:
+            inside = not inside
+    return inside
+
+
+def in_polygon(x, y, rings):
+    return in_ring(x, y, rings[0]) and not any(in_ring(x, y, h) for h in rings[1:])
 
 
 class Integrity(unittest.TestCase):
@@ -78,6 +105,40 @@ class Integrity(unittest.TestCase):
         self.assertEqual({f["properties"]["soato"] for f in gj["features"]}, codes)
         for f in gj["features"]:
             self.assertIn(f["geometry"]["type"], ("Polygon", "MultiPolygon"), f["properties"]["soato"])
+
+    def test_mahalla_polygons(self):
+        for p in (DATA / "mahallas").glob("*/*.csv"):
+            with p.open(encoding="utf-8", newline="") as f:
+                rows = {int(r["mahalla_id"]): r for r in csv.DictReader(f)}
+            pts = {ft["properties"]["mahalla_id"]: ft["geometry"]["coordinates"]
+                   for ft in load(DATA / "points" / p.parent.name / f"{p.stem}.geojson")["features"]}
+            poly_path = DATA / "polygons" / p.parent.name / f"{p.stem}.geojson"
+            self.assertTrue(poly_path.exists(), poly_path)
+            seen = set()
+            for ft in load(poly_path)["features"]:
+                mid = ft["properties"]["mahalla_id"]
+                self.assertIn(mid, rows, (poly_path, mid))
+                self.assertNotIn(mid, seen, (poly_path, mid))
+                seen.add(mid)
+                self.assertEqual(ft["properties"]["name"], rows[mid]["name"], (poly_path, mid))
+                self.assertEqual(ft["properties"]["district_soato"], rows[mid]["district_soato"], (poly_path, mid))
+                self.assertIn(ft["geometry"]["type"], ("Polygon", "MultiPolygon"), (poly_path, mid))
+                area = 0.0
+                for rings in polygons_of(ft["geometry"]):
+                    for k, ring in enumerate(rings):
+                        self.assertGreaterEqual(len(ring), 4, (poly_path, mid))
+                        self.assertEqual(ring[0], ring[-1], (poly_path, mid))
+                        for x, y in ring:
+                            self.assertTrue(55 <= x <= 74 and 36 <= y <= 46, (poly_path, mid, x, y))
+                        area += ring_area_km2(ring) * (1 if k == 0 else -1)
+                if rows[mid]["area_km2"]:
+                    self.assertAlmostEqual(area / float(rows[mid]["area_km2"]), 1.0, delta=0.02, msg=(poly_path, mid))
+                if mid in pts:
+                    x, y = pts[mid]
+                    self.assertTrue(any(in_polygon(x, y, rings) for rings in polygons_of(ft["geometry"])), (poly_path, mid))
+            for mid, r in rows.items():
+                if r["quality_flags"] != "no_data":
+                    self.assertIn(mid, seen, (poly_path, mid))
 
     def test_map_page_is_current(self):
         spec = importlib.util.spec_from_file_location("build_map", DATA.parent / "tools" / "build_map.py")

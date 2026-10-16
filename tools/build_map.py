@@ -9,8 +9,11 @@ import csv
 import glob
 import json
 import pathlib
+import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from translit import to_latin  # noqa: E402
 DATA = ROOT / "data"
 TEMPLATE = ROOT / "tools" / "map_template.html"
 OUT = ROOT / "docs" / "index.html"
@@ -46,8 +49,8 @@ def build_data():
     regions = []
     for f in sorted(gj["features"], key=lambda f: f["properties"]["soato"]):
         soato = f["properties"]["soato"]
-        regions.append({"n": DISPLAY.get(soato, f["properties"]["name"]),
-                        "rings": rings_of(f["geometry"]), "_soato": soato})
+        name = DISPLAY.get(soato, f["properties"]["name"])
+        regions.append({"n": name, "nl": to_latin(name), "rings": rings_of(f["geometry"]), "_soato": soato})
     region_index = {r["_soato"]: k for k, r in enumerate(regions)}
 
     poly_index = {}
@@ -59,7 +62,8 @@ def build_data():
     for path in glob.glob(str(DATA / "districts" / "*" / "*.json")):
         o = json.loads(pathlib.Path(path).read_text(encoding="utf-8"))
         code = o["soato"].replace("+", "_")
-        d = {"n": o["name_soato"], "r": region_index[o["region_soato"]], "_code": code, "_region": o["region_soato"]}
+        d = {"n": o["name_soato"], "nl": to_latin(o["name_soato"]), "r": region_index[o["region_soato"]],
+             "_code": code, "_region": o["region_soato"]}
         if code in poly_index:
             d["c"], d["b"] = code, poly_index[code]  # файл docs/polygons/<c>.json и границы района [minLon, minLat, maxLon, maxLat]
         districts.append(d)
@@ -77,7 +81,9 @@ def build_data():
         for ft in geo["features"]:
             mid = ft["properties"]["mahalla_id"]
             lon, lat = ft["geometry"]["coordinates"]
-            points.append([ft["properties"]["name"], k, pops[mid], round(lon, 5), round(lat, 5), mid])
+            name = ft["properties"]["name"]
+            latin = to_latin(name, karakalpak=d["_region"] == "1735")  # в Каракалпакстане названия каракалпакские
+            points.append([name, k, pops[mid], round(lon, 5), round(lat, 5), mid, latin if latin != name else ""])
 
     for r in regions:
         del r["_soato"]
@@ -88,8 +94,13 @@ def build_data():
 
 
 def build_html(template=TEMPLATE):
-    payload = json.dumps(build_data(), ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-    return pathlib.Path(template).read_text(encoding="utf-8").replace("__DATA__", payload)
+    data = build_data()
+    payload = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    nbsp = "\u00a0"
+    count = f"{len(data['points']):,}".replace(",", nbsp)
+    total = f"{sum(p[2] for p in data['points']):,}".replace(",", nbsp)
+    text = pathlib.Path(template).read_text(encoding="utf-8")
+    return text.replace("__DATA__", payload).replace("__COUNT__", count).replace("__TOTAL__", total)
 
 
 if __name__ == "__main__":

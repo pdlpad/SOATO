@@ -112,9 +112,9 @@ python3 -m unittest discover -s tests -v      # проверки целостн�
 <a id="uzbek"></a>
 ## Oʻzbekcha (lotin)
 
-Oʻzbekistonning **9 473 ta mahallasi** haqidagi maʼlumotlar toʻplami. Har bir mahalla uchun 2026-yil 1-yanvar holatiga aholi soni bahosi, maydoni, zichligi, markaz nuqtasi (sentroid) va kontur-poligoni (EPSG:4326) berilgan. Mahallalar SOATO bilan **tuman darajasigacha** (7 xonali kod) bogʻlangan. Qamrov: 14 ta viloyat, 205 ta tuman, 38 236 700 kishi. Tumanlar boʻyicha yigʻindilar rasmiy raqamlarga teng (bir kishi aniqligida).
+Oʻzbekistonning **9 473 ta mahallasi** haqidagi maʼlumotlar toʻplami. Har bir mahalla uchun 2026-yil 1-yanvar holatiga aholi sonining bahosi, maydoni, zichligi, markaz nuqtasi (sentroid) va kontur-poligoni (EPSG:4326) berilgan. Mahallalar SOATO bilan **tuman darajasigacha** (7 xonali kod) bogʻlangan. Qamrov: 14 ta viloyat, 205 ta tuman, 38 236 700 kishi. Tumanlar boʻyicha yigʻindilar rasmiy raqamlarga teng (bir kishi aniqligida).
 
-> Mahallalar boʻyicha aholi soni — **model taxmini** (GHS-POP va OSM binolari asosida), tumanlar boʻyicha rasmiy yakunlarga moslashtirilgan. Bu rasmiy statistika emas.
+> Mahallalar boʻyicha aholi soni — **model bahosi** (GHS-POP va OSM binolari asosida), tumanlar boʻyicha rasmiy yakunlarga moslashtirilgan. Bu rasmiy statistika emas.
 
 Holati: ishlab chiqilmoqda.
 
@@ -128,10 +128,14 @@ data/
   districts/<viloyat>/<tuman>.json    tuman metamaʼlumotlari (rasmiy aholi, usul, kalibrlash)
   regions/<viloyat>.json              viloyat metamaʼlumotlari
   regions/regions.geojson             14 ta viloyat chegaralari (Natural Earth)
-  layers/mahallas_2026_simplified.geojson  QGIS/ArcGIS uchun tayyor qatlam: konturlar va raqamlar
+  layers/mahallas_2026_simplified.geojson  QGIS/ArcGIS uchun tayyor qatlam: konturlar va raqamlar (9 471 ta mahalla)
 schema/                               maydonlar tavsifi va JSON Schema
-tools/                                xarita, qatlam va transliteratsiya skriptlari
-tests/                                maʼlumotlar yaxlitligini tekshirish (CI da ishlaydi)
+tools/build_map.py                    xarita sahifasini yigʻish (docs/index.html)
+tools/build_web_polygons.py           xarita uchun yengil konturlar (docs/polygons/)
+tools/build_gis_layer.py              QGIS/ArcGIS uchun qatlamni yigʻish
+tools/translit.py                     nomlarni lotin yozuviga transliteratsiya qilish
+tools/split_polygons.py               konturlarning manba GeoJSON faylini tumanlar boʻyicha ajratish
+tests/                                maʼlumotlar yaxlitligini tekshirish (CI orqali ishga tushiriladi)
 ```
 
 Tuman fayllarining nomi — tumanning SOATO kodi; koddagi `+` belgisi `_` bilan almashtirilgan.
@@ -161,10 +165,10 @@ Tumanning 2026-yil 1-yanvar holatidagi rasmiy aholisi tuman mahallalari oʻrtasi
 
 | Belgi | Qatorlar | Maʼnosi |
 |---|---|---|
-| `no_data` | 188 | oraliq qator: mahalla tuman roʻyxatida bor, ammo baho, usul va nuqta yoʻq |
+| `no_data` | 188 | oʻrin egallovchi qator: mahalla tuman roʻyxatida bor, ammo baho, usul va nuqta yoʻq |
 | `district_ghs_diverges_2x` | 189 | tumanda GHS-POP rasmiy yakundan taxminan ikki baravar yoki undan koʻp farq qiladi |
 | `district_buildings_diverge_50pct` | 64 | tumanda OSM binolari rasmiy yakundan 50 % va undan koʻp farq qiladi |
-| `test_record` | 2 | manbaning sinov yozuvi (Olmazor va Yashnobod tumanlaridagi TEST mahalla): uning konturi boshqa tumanlarning haqiqiy mahallalari ustida yotadi. Aholi tuman yigʻindilariga kiradi, GIS qatlamiga kirmaydi |
+| `test_record` | 2 | manbaning sinov yozuvi (Olmazor va Yashnobod tumanlaridagi TEST mahalla): uning konturi boshqa tumanlarning haqiqiy mahallalari ustida yotadi. Aholi soni tuman yigʻindilariga kiradi, yozuv esa GIS qatlamiga kiritilmaydi |
 | `small_polygon` | 46 | manbada mahalla konturi juda kichik, baho kamroq ishonchli |
 
 `no_data` qatorlarini filtrlab tashlash kerak. Ularsiz 9 473 ta mahalla qoladi, nuqtalar va xarita aynan shular boʻyicha qurilgan. Belgilar nomi maʼlumotlardagidek berilgan; hisoblash kodi repozitoriyda yoʻq.
@@ -182,15 +186,15 @@ print(len(rows), rows[0]["name"], rows[0]["pop_2026_est"])  # 71 Өрнек МФ
 
 ### Cheklovlar
 
-- Konturlar: 9 473 ta obyekt, bahosi bor har bir mahalla uchun bittadan. Konturi yoʻq `no_data` qatori faqat Chust tumanida (1714237, Yangichak mahallasi) bor. Barcha sentroidlar oʻz konturi ichida yotadi, kontur maydonlari `area_km2` bilan 1 % ichida mos keladi.
-- Aholi soni va boshqa raqamlar faqat CSV da saqlanadi, konturlarda yoʻq. Kontur fayllari jami taxminan 75 MB joy egallaydi.
-- Qoʻshni mahallalarning konturlari baʼzi joylarda ustma-ust tushadi: 365 ta mahallaning ichki nuqtasi boshqa mahalla konturi ichida yotadi. Geometriya manba faylidagidek qoldirilgan.
-- Viloyat chegaralari Natural Earth'dan olingan. Toshkent shahri chegarasi u yerda eskirgan va, masalan, Yashnobodni qamramaydi, shu sababli xaritada baʼzi shahar nuqtalari shahar poligonidan tashqarida yotishi mumkin.
+- Konturlar: 9 473 ta obyekt, bahosi bor har bir mahalla uchun bittadan. Konturi yoʻq `no_data` qatori faqat Chust tumanida (1714237, Yangichak mahallasi) bor. Barcha sentroidlar oʻz konturi ichida yotadi, kontur maydonlarining `area_km2` dan farqi 1 % dan oshmaydi.
+- Aholi haqidagi maʼlumotlar faqat CSV faylida saqlanadi, konturlarda yoʻq. Kontur fayllari jami taxminan 75 MB joy egallaydi.
+- Qoʻshni mahallalarning konturlari baʼzi joylarda ustma-ust tushadi: 365 ta mahallaning (taxminan 4 %) ichki nuqtasi boshqa mahalla konturi ichida yotadi. Geometriya manba faylidagidek qoldirilgan.
+- Viloyat chegaralari Natural Earth maʼlumotlaridan olingan. Toshkent shahri chegarasi u yerda eskirgan va, masalan, Yashnobodni qamrab olmaydi, shu sababli xaritada baʼzi shahar nuqtalari shahar poligonidan tashqarida yotadi.
 - Alohida mahallalar boʻyicha baholar taxminiy. Faqat tuman yigʻindilari ishonchli, ular rasmiy raqamlarga teng.
 
 ### QGIS/ArcGIS uchun qatlam
 
-[`data/layers/mahallas_2026_simplified.geojson`](data/layers/mahallas_2026_simplified.geojson) fayli (EPSG:4326, taxminan 29 MB) mahalla konturlari va raqamlarini bitta atributlar jadvalida beradi: identifikator, nomi (kirill va lotin yozuvida), tuman, viloyat, maydonlar, aholi soni, zichliklar, usul va belgilar. Konturlar 2,5 m aniqlikda soddalashtirilgan. `no_data` va `test_record` yozuvlari qatlamga kiritilmagan. Toʻliq konturli qatlam (taxminan 80 MB) `python3 tools/build_gis_layer.py --full OUT.geojson` buyrugʻi bilan yigʻiladi. Lotin yozuvidagi nomlar avtomatik transliteratsiya natijasi boʻlib, rasmiy yozilishdan farq qilishi mumkin.
+[`data/layers/mahallas_2026_simplified.geojson`](data/layers/mahallas_2026_simplified.geojson) fayli (EPSG:4326, taxminan 29 MB) mahalla konturlari va raqamlarini bitta atributlar jadvalida beradi: identifikator, nomi (kirill va lotin yozuvida), tuman, viloyat, maydonlar, aholi soni, zichliklar, usul va belgilar. Konturlar 2,5 m yoʻl qoʻyiladigan chetlanish bilan soddalashtirilgan. `no_data` va `test_record` yozuvlari qatlamga kiritilmagan. Toʻliq konturli qatlam (taxminan 80 MB) `python3 tools/build_gis_layer.py --full OUT.geojson` buyrugʻi bilan yigʻiladi. Lotin yozuvidagi nomlar avtomatik transliteratsiya natijasi boʻlib, rasmiy yozilishdan farq qilishi mumkin.
 
 ### Xarita va tekshiruvlar
 
@@ -198,15 +202,15 @@ Interaktiv xarita: https://pdlpad.github.io/SOATO/ (viloyat chegaralari, viloyat
 
 ```bash
 python3 tools/build_web_polygons.py           # xarita uchun yengil konturlar: docs/polygons/
-python3 tools/build_map.py                    # docs/index.html ni qayta yigʻish
+python3 tools/build_map.py                    # docs/index.html faylini qayta yigʻish
 python3 -m unittest discover -s tests -v      # maʼlumotlar yaxlitligini tekshirish
 ```
 
 ### Manbalar va litsenziya
 
 - Maʼlumotlar: [CC BY 4.0](DATA_LICENSE.md), kod: MIT.
-- Tumanlar aholisi — rasmiy statistika. Mahallalar boʻyicha baho OpenStreetMap binolaridan (© OpenStreetMap contributors, ODbL) va GHS-POP dan (JRC, Yevropa komissiyasi) foydalanadi. Viloyat chegaralari — Natural Earth (public domain).
-- Mahalla konturlari: repozitoriy egasi taqdim etgan `mahallalar_2026.geojson` fayli. Ega nashr etish huquqini tasdiqlagan va mahalla chegaralari ommaviy axborot ekanini bildirgan; fayldagi dastlabki chegaralarning kelib chiqishi koʻrsatilmagan (qarang: [SOURCES.md](SOURCES.md)).
+- Tumanlar aholisi — rasmiy statistika. Mahallalar boʻyicha baho OpenStreetMap binolaridan (© OpenStreetMap contributors, ODbL) va GHS-POP rastridan (JRC, Yevropa komissiyasi) foydalanadi. Viloyat chegaralari — Natural Earth (public domain).
+- Mahalla konturlari: repozitoriy egasi taqdim etgan `mahallalar_2026.geojson` fayli. Ega nashr etish huquqini tasdiqlagan va mahalla chegaralari ommaga ochiq maʼlumot ekanini bildirgan; fayldagi dastlabki chegaralarning kelib chiqishi koʻrsatilmagan (qarang: [SOURCES.md](SOURCES.md)).
 - Batafsil: [SOURCES.md](SOURCES.md), [DATA_LICENSE.md](DATA_LICENSE.md).
 
 Hozircha DOI yoʻq, repozitoriyga havola qiling: https://github.com/pdlpad/SOATO

@@ -156,6 +156,19 @@ class Integrity(unittest.TestCase):
                         self.assertEqual(len(ring) % 2, 0, p)
         self.assertEqual(len(index["d"]), len(list((DATA / "polygons").glob("*/*.geojson"))))
 
+    def test_map_data_keeps_district_totals(self):
+        spec = importlib.util.spec_from_file_location("build_map", DATA.parent / "tools" / "build_map.py")
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        data = mod.build_data()
+        page = {}
+        for _name, k, pop, *_ in data["points"]:
+            page[k] = page.get(k, 0) + pop
+        for k, d in enumerate(data["districts"]):
+            with (DATA / "mahallas" / d["c"][:4] / f"{d['c']}.csv").open(encoding="utf-8", newline="") as f:
+                exact = sum(float(r["pop_2026_est"]) for r in csv.DictReader(f) if r["pop_2026_est"])
+            self.assertEqual(page[k], round(exact), d["c"])
+
     def test_map_page_is_current(self):
         spec = importlib.util.spec_from_file_location("build_map", DATA.parent / "tools" / "build_map.py")
         mod = importlib.util.module_from_spec(spec)

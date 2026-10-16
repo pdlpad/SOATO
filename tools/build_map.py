@@ -30,6 +30,17 @@ def rings_of(geometry):
     return [[[round(x, 4), round(y, 4)] for x, y in ring] for poly in polys for ring in poly]
 
 
+def round_keep_sum(values):
+    """Округляет значения до целых так, чтобы сумма равнялась округлённой сумме исходных (метод наибольших остатков).
+
+    values: {ключ: число}. Так суммы по районам на странице совпадают с официальными цифрами, а не плывут на сотни единиц."""
+    floors = {k: int(v // 1) for k, v in values.items()}
+    left = round(sum(values.values())) - sum(floors.values())
+    for k in sorted(values, key=lambda k: (-(values[k] - floors[k]), k))[:max(left, 0)]:
+        floors[k] += 1
+    return floors
+
+
 def build_data():
     gj = json.loads((DATA / "regions" / "regions.geojson").read_text(encoding="utf-8"))
     regions = []
@@ -62,10 +73,11 @@ def build_data():
                 if row["pop_2026_est"]:
                     pops[int(row["mahalla_id"])] = float(row["pop_2026_est"])
         geo = json.loads((DATA / "points" / d["_region"] / f"{d['_code']}.geojson").read_text(encoding="utf-8"))
+        pops = round_keep_sum(pops)
         for ft in geo["features"]:
             mid = ft["properties"]["mahalla_id"]
             lon, lat = ft["geometry"]["coordinates"]
-            points.append([ft["properties"]["name"], k, round(pops[mid]), round(lon, 5), round(lat, 5), mid])
+            points.append([ft["properties"]["name"], k, pops[mid], round(lon, 5), round(lat, 5), mid])
 
     for r in regions:
         del r["_soato"]

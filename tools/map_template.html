@@ -6,6 +6,7 @@
 <title>Махалли Узбекистана: центроиды</title>
 <meta name="description" content="Центроиды 9 467 махаллей Узбекистана с привязкой к СОАТО: фильтры по регионам и районам, поиск и оценка населения на 01.01.2026. Оценка модели, не официальная статистика.">
 <meta name="color-scheme" content="light dark">
+<meta name="darkreader-lock">
 <meta name="theme-color" content="#e6ecf5">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23184f95'/%3E%3Ccircle cx='10' cy='11.5' r='2.5' fill='%23fff'/%3E%3Ccircle cx='18.5' cy='9' r='1.9' fill='%23fff'/%3E%3Ccircle cx='22' cy='17' r='3.4' fill='%23fff'/%3E%3Ccircle cx='12.5' cy='21' r='3' fill='%23fff'/%3E%3C/svg%3E">
 <script>try{var m=localStorage.getItem('mahalla-theme');if(m==='light'||m==='dark')document.documentElement.setAttribute('data-theme',m)}catch(e){}</script>
@@ -58,9 +59,33 @@
     --axis: #bcc7d8;
 
     /* одна синяя шкала: светлее значит меньше; первая ступень не ниже 3:1 к суше */
-    --c1: #4789e4; --c2: #2a78d6; --c3: #256abf; --c4: #1c5cab; --c5: #154c92; --c6: #0f3d78; --c7: #0a2e5c;
-    --e1: #326bb8; --e2: #1d59a5; --e3: #1a5096; --e4: #144789; --e5: #103d79; --e6: #0c3368; --e7: #092956;
+    --c1: #4789e4; --c2: #2a78d6; --c3: #256abf; --c4: #1a59a6; --c5: #174685; --c6: #123465; --c7: #0d2245;
+    --e1: #326bb8; --e2: #1d59a5; --e3: #1a5096; --e4: #124b8e; --e5: #0e3a71; --e6: #072853; --e7: #051937;
     --dimpt: rgba(96, 114, 146, .22);
+
+    /* контуры махаллей: заливка в цвет класса точки, светлые «швы» между махаллями; без оценки - штриховка */
+    /* заливка почти непрозрачна, а цвет класса заранее поправлен на подложку --poly-land: на карте он совпадает со ступенью легенды */
+    --poly-a: .96;
+    --poly-land: #edf2f9;
+    --poly-land-dim: #e4eaf3;
+    --poly-line: rgba(255, 255, 255, .82);
+    --poly-dim: rgba(120, 138, 168, .16);
+    --poly-dim-line: rgba(255, 255, 255, .6);
+    --poly-none: #e3e8f0;
+    --poly-none-hatch: rgba(61, 78, 108, .46);
+    /* наведение не зависит от класса: тёмная кайма снаружи (1 px), светлая внутри (2 px) и лёгкая вуаль */
+    --poly-hover: #0d1a2e;
+    --poly-hover-in: #ffffff;
+    --poly-hover-wash: rgba(255, 255, 255, .08);
+    --poly-sel: #2a78d6;
+    --poly-sel-wash: rgba(42, 120, 214, .22);
+    --poly-halo: rgba(255, 255, 255, .94);
+    /* названия махаллей на контурах: светлый текст с тёмной обводкой на тёмных ступенях, тёмный со светлой на светлых; элементы управления над контурами почти непрозрачны */
+    --poly-ink-l: #ffffff;
+    --poly-ink-d: #0b1626;
+    --poly-halo-d: rgba(6, 18, 40, .62);
+    --poly-halo-l: rgba(255, 255, 255, .74);
+    --glass-ctl: rgba(251, 252, 254, .96);
 
     --sea: #dbe4f0;
     --land: #f8fafd;
@@ -129,9 +154,30 @@
       --grid: #1f2b3d;
       --axis: #34445c;
 
-      --c1: #2778d6; --c2: #3e8de9; --c3: #61a2f3; --c4: #81b7f8; --c5: #a2cafb; --c6: #bedafc; --c7: #d6e9ff;
-      --e1: #0568c1; --e2: #1476ce; --e3: #2f83d4; --e4: #408dd5; --e5: #5495d4; --e6: #649dd4; --e7: #72a4d4;
+      --c1: #3071c7; --c2: #3583e0; --c3: #5597e9; --c4: #71a9ee; --c5: #8ab8f1; --c6: #a2c5f2; --c7: #b7d3f5;
+      --e1: #135eaf; --e2: #186cc2; --e3: #317aca; --e4: #4585cb; --e5: #5a90cb; --e6: #6d99ca; --e7: #7ea2cb;
       --dimpt: rgba(150, 172, 210, .22);
+
+      --poly-a: .96;
+      --poly-land: #1a2639;
+      --poly-land-dim: #141e2e;
+      --poly-line: rgba(7, 11, 18, .6);
+      --poly-dim: rgba(150, 172, 210, .1);
+      --poly-dim-line: rgba(7, 11, 18, .5);
+      --poly-none: #1a2433;
+      --poly-none-hatch: rgba(160, 182, 220, .42);
+      --poly-hover: #eaf0fa;
+      --poly-hover-in: #050a12;
+      --poly-hover-wash: rgba(5, 10, 18, .08);
+      --poly-sel: #5aa0f0;
+      --poly-sel-wash: rgba(90, 160, 240, .26);
+      --poly-halo: rgba(6, 16, 30, .92);
+      --poly-ink-l: #ffffff;
+      --poly-ink-d: #0b1626;
+      --poly-halo-d: rgba(3, 10, 24, .66);
+      --poly-halo-l: rgba(255, 255, 255, .74);
+      --glass-ctl: rgba(16, 24, 38, .96);
+
 
       --sea: #0b121e;
       --land: #121c2b;
@@ -195,9 +241,28 @@
     --grid: #1f2b3d;
     --axis: #34445c;
 
-    --c1: #2778d6; --c2: #3e8de9; --c3: #61a2f3; --c4: #81b7f8; --c5: #a2cafb; --c6: #bedafc; --c7: #d6e9ff;
-    --e1: #0568c1; --e2: #1476ce; --e3: #2f83d4; --e4: #408dd5; --e5: #5495d4; --e6: #649dd4; --e7: #72a4d4;
+    --c1: #3071c7; --c2: #3583e0; --c3: #5597e9; --c4: #71a9ee; --c5: #8ab8f1; --c6: #a2c5f2; --c7: #b7d3f5;
+    --e1: #135eaf; --e2: #186cc2; --e3: #317aca; --e4: #4585cb; --e5: #5a90cb; --e6: #6d99ca; --e7: #7ea2cb;
     --dimpt: rgba(150, 172, 210, .22);
+    --poly-a: .96;
+    --poly-land: #1a2639;
+    --poly-land-dim: #141e2e;
+    --poly-line: rgba(7, 11, 18, .6);
+    --poly-dim: rgba(150, 172, 210, .1);
+    --poly-dim-line: rgba(7, 11, 18, .5);
+    --poly-none: #1a2433;
+    --poly-none-hatch: rgba(160, 182, 220, .42);
+    --poly-hover: #eaf0fa;
+    --poly-hover-in: #050a12;
+    --poly-hover-wash: rgba(5, 10, 18, .08);
+    --poly-sel: #5aa0f0;
+    --poly-sel-wash: rgba(90, 160, 240, .26);
+    --poly-halo: rgba(6, 16, 30, .92);
+    --poly-ink-l: #ffffff;
+    --poly-ink-d: #0b1626;
+    --poly-halo-d: rgba(3, 10, 24, .66);
+    --poly-halo-l: rgba(255, 255, 255, .74);
+    --glass-ctl: rgba(16, 24, 38, .96);
 
     --sea: #0b121e;
     --land: #121c2b;
@@ -620,6 +685,10 @@
   .lg-ticks { position: relative; height: 18px; margin-top: 4px; font-size: 12px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
   .lg-ticks span { position: absolute; top: 0; transform: translateX(-50%); white-space: nowrap; }
   .lg-ticks .t-b { display: none; }
+  /* образец штриховки «нет оценки»: строка появляется, пока в кадре есть махалля без оценки населения */
+  .lg-n { display: flex; align-items: center; gap: 8px; margin-top: 4px; padding-top: 6px; border-top: 1px solid var(--line); font-size: 12px; line-height: 16px; color: var(--ink-3); white-space: nowrap; }
+  .lg-n[hidden] { display: none; }
+  .lg-nh { display: block; width: 22px; height: 10px; flex: none; border-radius: 3px; border: 1px solid var(--hair); background: repeating-linear-gradient(135deg, var(--poly-none-hatch) 0 1px, var(--poly-none) 1px 4px); }
 
   .mapctl { position: absolute; z-index: 10; right: calc(26px + var(--rp)); bottom: calc(var(--bot) + 10px); display: flex; gap: 8px; align-items: flex-end; transition: right .32s var(--ease), opacity .2s; }
   .zoom { display: flex; padding: 3px; border-radius: 13px; box-shadow: none; }
@@ -629,8 +698,53 @@
   @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
     .mapctl .btn-view { background: var(--glass); -webkit-backdrop-filter: blur(22px) saturate(1.5); backdrop-filter: blur(22px) saturate(1.5); }
   }
-  .scale { position: absolute; z-index: 9; right: calc(26px + var(--rp)); bottom: calc(var(--bot) + 68px); display: flex; flex-direction: column; align-items: flex-end; gap: 3px; font-size: 12px; font-weight: 500; color: var(--ink-2); pointer-events: none; transition: right .32s var(--ease); text-shadow: var(--text-halo); font-variant-numeric: tabular-nums; }
-  .scale i { display: block; height: 5px; border: 1.5px solid var(--ink-2); border-top: 0; border-radius: 0 0 1px 1px; }
+  /* ---- контуры махаллей: кнопка рядом с масштабом, строка состояния над легендой ---- */
+  .mapctl .btn-poly { height: 46px; padding: 0 16px 0 14px; border-radius: 13px; background: var(--glass-solid); box-shadow: none; }
+  @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    .mapctl .btn-poly { background: var(--glass); -webkit-backdrop-filter: blur(22px) saturate(1.5); backdrop-filter: blur(22px) saturate(1.5); }
+  }
+  /* нажатая кнопка стоит на непрозрачной подложке: сквозь стекло просвечивали бы тёмные контуры, и подпись теряла бы контраст (нужно не меньше 4,5:1 при любой карте под ней) */
+  .mapctl .btn-poly[aria-pressed="true"] { color: var(--accent-ink); border-color: var(--accent-line); background: linear-gradient(var(--accent-wash-2), var(--accent-wash-2)), var(--glass-solid); -webkit-backdrop-filter: none; backdrop-filter: none; }
+  /* три состояния: включено и видно (насыщенная вуаль), включено, но масштаб ещё крупный (бледная вуаль, штриховые значок и рамка), выключено (обычное стекло) */
+  .btn-poly.far .ic { stroke-dasharray: 2.4 2.6; }
+  .mapctl .btn-poly.far[aria-pressed="true"] { color: var(--ink-2); border-style: dashed; border-color: var(--accent-line); background: linear-gradient(var(--accent-wash), var(--accent-wash)), var(--glass-solid); }
+  .mapctl .btn-poly.far[aria-pressed="true"]:hover { background: linear-gradient(var(--accent-wash), var(--accent-wash)), var(--surface-2); }
+  /* поверх контуров стекло плотнее и размытие сильнее: линии и заливки под кнопками не дают шума за значками и подписями */
+  .poly-vis .legend, .poly-vis .mapctl .zoom, .poly-vis .mapctl .btn-view:not(:hover), .poly-vis .mapctl .btn-poly:not([aria-pressed="true"]):not(:hover) { background: var(--glass-ctl); }
+  @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    .poly-vis .legend, .poly-vis .mapctl .zoom, .poly-vis .mapctl .btn-view, .poly-vis .mapctl .btn-poly:not([aria-pressed="true"]) { -webkit-backdrop-filter: blur(30px) saturate(1.6); backdrop-filter: blur(30px) saturate(1.6); }
+  }
+  .mapctl .btn-poly:hover, .mapctl .btn-view:hover { background: var(--surface-2); }
+  .mapctl .btn-poly[aria-pressed="true"]:hover { background: linear-gradient(var(--accent-wash-2), var(--accent-wash-2)), var(--surface-2); }
+  .ctl-tight .mapctl .btn-poly, .ctl-tight .mapctl .btn-view { width: 46px; padding: 0; justify-content: center; }
+  .ctl-tight .mapctl .btn-poly .rt-t, .ctl-tight .mapctl .btn-view .rt-t { display: none; }
+  .poly-status {
+    position: absolute; z-index: 10; left: calc(26px + var(--lp)); bottom: calc(var(--bot) + 10px + var(--lg-h, 62px) + 8px);
+    display: flex; align-items: center; gap: 8px; height: 28px; padding: 0 12px 0 10px; border-radius: 14px; box-shadow: none;
+    font-size: 12px; line-height: 1; color: var(--ink-2); white-space: nowrap; pointer-events: none;
+    opacity: 0; visibility: hidden; transform: translateY(4px);
+    transition: opacity .18s, transform .18s var(--ease), visibility 0s linear .18s, left .32s var(--ease);
+  }
+  .poly-status:not([data-s=""]) { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  /* подсказка к кнопке «Контуры» стоит над самой кнопкой, по её центру, со стрелкой; положение и стрелку задаёт скрипт (left, bottom и --ax) */
+  .poly-status.at-r { background: var(--glass-solid); box-shadow: var(--shadow-btn); transition: opacity .18s, transform .18s var(--ease), visibility 0s linear .18s; }
+  .poly-status.at-r::after { content: ""; position: absolute; left: var(--ax, 50%); bottom: -5px; width: 8px; height: 8px; margin-left: -4px; background: var(--glass-solid); border: 1px solid var(--hair); border-top: 0; border-left: 0; border-radius: 0 0 2px 0; transform: rotate(45deg); }
+  .poly-vis .poly-status:not(.at-r) { background: var(--glass-ctl); }
+  .poly-status[data-s="hint"] .ps-dot { border-style: dashed; border-color: var(--accent); }
+  .ps-dot { width: 8px; height: 8px; flex: none; border-radius: 50%; border: 1.5px solid var(--ink-3); }
+  .poly-status[data-s="load"] .ps-dot { background: var(--accent); border-color: var(--accent); animation: psp 1.1s ease-in-out infinite; }
+  @keyframes psp { 50% { opacity: .3; } }
+  .tip.force { display: block !important; }
+  .tip.under { z-index: 45; }
+
+  .scale { position: absolute; z-index: 9; right: calc(16px + var(--rp)); bottom: calc(var(--bot) + 62px); display: flex; flex-direction: column; align-items: flex-end; gap: 3px; padding: 6px 10px 7px; border: 1px solid transparent; border-radius: 12px; font-size: 12px; font-weight: 500; color: var(--ink-2); pointer-events: none; transition: right .32s var(--ease), background-color .2s, border-color .2s, color .2s; text-shadow: var(--text-halo); font-variant-numeric: tabular-nums; }
+  .scale i { display: block; height: 5px; border: 1.5px solid var(--ink-2); border-top: 0; border-radius: 0 0 1px 1px; transition: border-color .2s; }
+  /* поверх контуров подложка, как у легенды: подпись и линейка не теряются на насыщенных заливках */
+  .scale.on-poly { background: var(--glass-solid); border-color: var(--hair); color: var(--ink); text-shadow: none; box-shadow: var(--shadow-btn); }
+  @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    .scale.on-poly { background: var(--glass-ctl); -webkit-backdrop-filter: blur(30px) saturate(1.6); backdrop-filter: blur(30px) saturate(1.6); }
+  }
+  .scale.on-poly i { border-color: var(--ink); }
 
   /* ---- «?» в шапке: примечания открываются по запросу ---- */
   .about { position: absolute; z-index: 70; top: calc(100% + 8px); right: 12px; width: 392px; max-width: calc(100vw - 32px); padding: 16px 18px 14px; border-radius: 14px; background: var(--glass-solid); border: 1px solid var(--hair); box-shadow: var(--shadow-2); font-size: 13px; line-height: 1.55; color: var(--ink-2); }
@@ -678,6 +792,9 @@
   .card::after { content: ""; position: absolute; width: 12px; height: 12px; left: var(--ax, 50%); margin-left: -6px; background: var(--pop); border: 1px solid var(--hair); transform: rotate(45deg); display: none; }
   .card.above::after { display: block; bottom: -7px; border-top: 0; border-left: 0; }
   .card.below::after { display: block; top: -7px; border-bottom: 0; border-right: 0; }
+  /* карточка рядом с контуром махалли: стрелка на боковой кромке */
+  .card.rt::after { display: block; left: -7px; margin-left: 0; top: var(--ay, 50%); margin-top: -6px; border-top: 0; border-right: 0; }
+  .card.lt::after { display: block; left: auto; right: -7px; margin-left: 0; top: var(--ay, 50%); margin-top: -6px; border-bottom: 0; border-left: 0; }
 
   @media (min-width: 1024px) {
     .panel [data-close] { display: none; }
@@ -833,6 +950,7 @@
     .dock-b:not([aria-expanded="true"]):hover { background: var(--surface-3); }
 
     .legend { left: 18px; bottom: calc(var(--sheet-b) + 10px); width: 200px; padding: 8px 12px 4px; border-radius: 12px; }
+    .poly-status { left: 18px; bottom: calc(var(--sheet-b) + 10px + var(--lg-h, 56px) + 8px); }
     .lg-t { font-size: 12px; margin-bottom: 6px; }
     .lg-ticks .t-r { display: none; }
     .lg-ticks .t-b { display: block; }
@@ -840,6 +958,7 @@
     .cap-n { display: none; }
     .scale { display: none; }
     .card-open .legend { opacity: 0; pointer-events: none; }
+    .card-open .poly-status { left: 18px; bottom: calc(var(--card-h, 280px) + 16px + env(safe-area-inset-bottom, 0px)); }
 
     .panel {
       position: fixed; z-index: 60; left: 0; right: 0; bottom: 0; top: auto; height: auto; max-height: calc(100dvh - var(--sheet-top)); width: auto; max-width: 640px; margin-inline: auto;
@@ -985,12 +1104,18 @@
     .scope.many .btn-reset-all .lbl { display: none; }
 
     .legend { width: 196px; left: 14px; bottom: calc(var(--sheet-b) + 8px); overflow: hidden; }
+    .poly-status { left: 14px; bottom: calc(var(--sheet-b) + 8px + var(--lg-h, 56px) + 8px); }
     .lg-m { display: none; }
     .mapctl { right: 14px; bottom: calc(var(--sheet-b) + 8px); }
     .lg-ticks { font-size: 12px; }
     .mapctl { gap: 6px; }
-    .mapctl .btn-view { width: 46px; padding: 0; justify-content: center; }
-    .mapctl .btn-view .rt-t { display: none; }
+    .mapctl .btn-view, .mapctl .btn-poly { width: 46px; padding: 0; justify-content: center; }
+    .mapctl .btn-view .rt-t, .mapctl .btn-poly .rt-t { display: none; }
+    /* телефон: сверху «Контуры» и «Сбросить вид», под ними масштаб; ряд из четырёх кнопок упёрся бы в легенду */
+    .mapctl { display: grid; grid-template-columns: auto auto; justify-content: end; align-items: end; }
+    .mapctl .btn-poly { grid-column: 1; grid-row: 1; }
+    .mapctl .btn-view { grid-column: 2; grid-row: 1; }
+    .mapctl .zoom { grid-column: 1 / -1; grid-row: 2; justify-self: end; }
     .zoom .icon-btn { width: 40px; height: 40px; }
 
     .hc-area { height: 168px; }
@@ -1039,7 +1164,7 @@
     .icon-btn { width: 36px; }
     .legend { width: 150px; padding-left: 10px; padding-right: 10px; }
     .mapctl { gap: 4px; }
-    .zoom .icon-btn { width: 36px; }
+    .zoom .icon-btn { width: 40px; min-width: 40px; }
   }
   @media (max-width: 700px) and (max-height: 720px) {
     .mast { min-height: 44px; }
@@ -1154,6 +1279,7 @@
     <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
     <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
     <symbol id="i-fit" viewBox="0 0 24 24"><path d="M4 9V5h4M20 9V5h-4M4 15v4h4M20 15v4h-4"/></symbol>
+    <symbol id="i-poly" viewBox="0 0 24 24"><path d="M3.8 8.6L9.6 4l9.2 2.4 1.6 8.2-6.2 5.2-8.6-2.4z"/><path d="M9.6 4l3.4 7.4-2.2 7.6"/></symbol>
     <symbol id="i-x" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></symbol>
     <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
     <symbol id="i-code" viewBox="0 0 24 24"><path d="M8.5 7l-5 5 5 5M15.5 7l5 5-5 5M13.5 4.5l-3 15"/></symbol>
@@ -1288,19 +1414,24 @@
   </aside>
 
   <main class="mapwrap" id="main">
-    <canvas id="c" tabindex="0" role="application" aria-roledescription="карта" aria-describedby="map-help" aria-label="Карта махаллей Узбекистана. Цвет точки показывает оценку населения."></canvas>
-    <p class="sr" id="map-help">Стрелки двигают карту, плюс и минус меняют масштаб, ноль сбрасывает вид. Enter выбирает ближайшую к центру махаллю, затем стрелки переходят к соседним махаллям, Escape закрывает карточку. Махаллю можно также выбрать через поиск или список крупнейших.</p>
+    <canvas id="c" tabindex="0" role="application" aria-roledescription="карта" aria-describedby="map-help" aria-label="Карта махаллей Узбекистана. Цвет точки и, при увеличении, контура махалли показывает оценку населения."></canvas>
+    <p class="sr" id="map-help">Стрелки двигают карту, плюс и минус меняют масштаб, ноль сбрасывает вид. Enter выбирает ближайшую к центру махаллю, затем стрелки переходят к соседним махаллям, Escape закрывает карточку. Махаллю можно также выбрать через поиск или список крупнейших. Контуры махаллей появляются при увеличении и отключаются кнопкой «Контуры».</p>
     <div class="sr" id="sel-live" role="status" aria-live="polite"></div>
 
     <div class="legend glass" id="legend" role="group" aria-label="Шкала цвета: население махалли">
       <div class="lg-t"><span class="lg-tt">Население<span class="lg-m"> махалли</span></span><span class="lg-u">тыс. чел.</span></div>
       <div class="lg-bar" id="lg-bar" role="group" tabindex="0" aria-label="Классы численности. Стрелки влево и вправо подсвечивают класс на карте"></div>
       <div class="lg-ticks" id="lg-ticks" aria-hidden="true"></div>
+      <div class="lg-n" id="lg-n" hidden><i class="lg-nh" aria-hidden="true"></i><span>Нет оценки населения</span></div>
     </div>
+
+    <div class="poly-status glass" id="poly-status" role="status" aria-live="polite" data-s=""><i class="ps-dot" aria-hidden="true"></i><span id="poly-st-t"></span></div>
+    <span class="sr" id="poly-hint">Контуры появляются при увеличении</span>
 
     <div class="scale" id="scale" aria-hidden="true"><span id="scale-t">100 км</span><i id="scale-i" style="width:80px"></i></div>
 
     <div class="mapctl" id="mapctl">
+      <button class="btn btn-poly glass" id="btn-poly" type="button" aria-pressed="true" aria-label="Контуры махаллей" aria-describedby="poly-hint" title="Контуры появляются при увеличении"><svg class="ic" aria-hidden="true"><use href="#i-poly"/></svg><span class="rt-t">Контуры</span></button>
       <div class="zoom glass" role="group" aria-label="Масштаб карты">
         <button class="icon-btn" id="z-out" type="button" aria-label="Уменьшить"><svg class="ic" aria-hidden="true"><use href="#i-minus"/></svg></button>
         <button class="icon-btn" id="z-in" type="button" aria-label="Увеличить"><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></button>
@@ -1544,7 +1675,19 @@ function readTheme() {
   const g = n => cs.getPropertyValue(n).trim();
   T.scheme = g('--scheme') || 'light';
   for (let k = 0; k < NC; k++) { T.c[k] = g('--c' + (k + 1)); T.e[k] = g('--e' + (k + 1)); }
-  ['sea', 'land', 'land-2', 'land-3', 'land-dim', 'land-sel', 'border', 'border-hi', 'grat', 'grat-label', 'label', 'halo', 'ring', 'ring-halo', 'dimpt', 'neat', 'ink', 'ink-2', 'accent', 'accent-wash', 'label-dim', 'bg', 'focus'].forEach(n => { T[n] = g('--' + n); });
+  ['sea', 'land', 'land-2', 'land-3', 'land-dim', 'land-sel', 'border', 'border-hi', 'grat', 'grat-label', 'label', 'halo', 'ring', 'ring-halo', 'dimpt', 'neat', 'ink', 'ink-2', 'accent', 'accent-wash', 'label-dim', 'bg', 'focus', 'poly-line', 'poly-dim', 'poly-dim-line', 'poly-none', 'poly-none-hatch', 'poly-hover', 'poly-hover-in', 'poly-hover-wash', 'poly-sel', 'poly-sel-wash', 'poly-halo', 'poly-land', 'poly-land-dim', 'poly-ink-l', 'poly-ink-d', 'poly-halo-d', 'poly-halo-l'].forEach(n => { T[n] = g('--' + n); });
+  T.polyA = parseFloat(g('--poly-a')) || 0.96;
+  // Цвет класса в растре контуров поправлен на подложку: fa * цвет + (1 - fa) * land == ступень легенды, поэтому ячейка читается по шкале
+  const pl = parseColor(T['poly-land']), fa = T.polyA;
+  T.cp = T.c.map(c => { const q = parseColor(c); return 'rgb(' + [0, 1, 2].map(j => clamp(Math.round((q[j] - (1 - fa) * pl[j]) / fa), 0, 255)).join(',') + ')'; });
+  // подпись контура: светлая с тёмной обводкой на тёмных ступенях шкалы, тёмная со светлой обводкой на светлых
+  T.lt = []; T.lh = [];
+  for (let k = 0; k < NC; k++) {
+    const q = parseColor(T.c[k]), lin = v => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); };
+    const dark = 0.2126 * lin(q[0]) + 0.7152 * lin(q[1]) + 0.0722 * lin(q[2]) < 0.19;
+    T.lt[k] = dark ? T['poly-ink-l'] : T['poly-ink-d']; T.lh[k] = dark ? T['poly-halo-d'] : T['poly-halo-l'];
+  }
+  polyPat = null; polyInvalidate(); plDirty = true;
   T.tint = [T.land, T['land-2'], T['land-3']];
   T.font = g('--font') || 'system-ui, sans-serif';
   T.mono = g('--mono') || 'ui-monospace, monospace';
@@ -1615,6 +1758,7 @@ function recompute() {
   ST.top = [];
   for (let k = 0; k < N && ST.top.length < 10; k++) if (vis[ordDesc[k]]) ST.top.push(ordDesc[k]);
   ST.maxI = ST.top.length ? ST.top[0] : -1;
+  polyInvalidate(); polyFilterVer++;
 }
 
 // ---------- вид карты ----------
@@ -1623,7 +1767,7 @@ const baseCv = document.createElement('canvas'), baseCtx = baseCv.getContext('2d
 const dotCv = document.createElement('canvas'), dotCtx = dotCv.getContext('2d');
 let ctx = mainCtx;
 const tip = $('tip'), card = $('card'), appEl = $('app'), ctip = $('ctip');
-let W = 1, H = 1, DPR = 1, cx = 64.5, cy = 41.3, S = 60, S0 = 60, SMIN = 30, SMAX = 9000;
+let W = 1, H = 1, DPR = 1, cx = 64.5, cy = 41.3, S = 60, S0 = 60, SMIN = 30, SMAX = 16000;
 const LAY = {top: 262, bot: 76, sheetB: 120, ctlH: 76};
 const P = {pf: false, pi: false};
 let cardOpen = false, cardW = 312, cardH = 280;
@@ -1676,6 +1820,9 @@ function syncLayout() {
     appEl.style.setProperty('--bot', LAY.bot + 'px');
   }
   const lg = $('legend').offsetHeight || 64;
+  // узкая карта: подписи кнопок «Контуры» и «Сбросить вид» уходят, остаются значки
+  const pw = plateRect(); appEl.classList.toggle('ctl-tight', pw.r - pw.l < 780);
+  appEl.style.setProperty('--lg-h', lg + 'px');
   LAY.ctlH = Math.max(lg, 46) + (comp ? 12 : 36);
   cacheKeepouts();
 }
@@ -1774,13 +1921,14 @@ function computeS0() { S0 = fitView(ALLBOX, fitRect()).S; SMIN = S0 * 0.5; }
 
 // ----- анимация вида (время от performance.now, финализатор по таймеру) -----
 let anim = null, animTm = 0;
-function cancelAnim() { if (anim) { anim = null; clearTimeout(animTm); } }
+function cancelAnim() { moveStamp++; if (anim) { anim = null; clearTimeout(animTm); } }
 function animateTo(t, dur) {
   cancelAnim(); markLabels();
   if (RM() || dur <= 0 || !started) { cx = t.cx; cy = t.cy; S = t.S; requestDraw(); return; }
   const a = anim = {t0: performance.now(), dur, cx0: cx, cy0: cy, ls0: Math.log(S), cx1: t.cx, cy1: t.cy, ls1: Math.log(t.S)};
   schedule();
-  animTm = setTimeout(() => { if (anim === a) { cx = a.cx1; cy = a.cy1; S = Math.exp(a.ls1); anim = null; markLabels(); requestDraw(); } }, dur + 45);
+  polyScan();   // районы для конечного вида грузятся, пока идёт перелёт
+  animTm = setTimeout(() => { if (anim === a) { cx = a.cx1; cy = a.cy1; S = Math.exp(a.ls1); anim = null; markLabels(); requestDraw(); polyNow(); } }, dur + 45);
 }
 const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 function fitCurrent(animate) {
@@ -1813,16 +1961,25 @@ function flyToPoint(i) {
   const p = plateRect();
   const rect = {l: p.l, t: p.t, r: p.r, b: comp && cardOpen ? card.offsetTop - 14 : p.b - 24};
   lastFit = fitRect(); userMoved = true;
-  const s = Math.max(Math.min(S, 9000), zoomTargetFor(i));
+  const tok = ++flyTok; polyPend = null;
+  if (polyEnabled) {
+    // контур загружен: вписываем его в вид; нет - летим к точке на масштабе, где слой виден, и вписываем контур, когда файл придёт
+    const d = pDi[i], e = PC.get(d), mi = e ? e.idx.get(pMid[i]) : undefined;
+    if (mi !== undefined) { animateTo(polyFitTarget(e, mi, i), 520); return; }
+    polyWant(d);
+  }
+  const s = Math.max(Math.min(S, SMAX), zoomTargetFor(i), polyEnabled ? MPD / POLY_FLY : 0);
   const scx = (rect.l + rect.r) / 2, scy = (rect.t + rect.b) / 2 + (comp ? 0 : 60);
   animateTo({cx: pLon[i] - (scx - W / 2) / (KX * s), cy: pLat[i] + (scy - H / 2) / s, S: s}, 520);
+  if (polyEnabled) polyPend = {i: i, tok: tok, stamp: moveStamp};
 }
 function revealPoint(i) {
   // держим точку внутри пластины; на ширине десктопа карточка стоит над точкой, поэтому над ней нужно место
   const sx = KX * S, X = W / 2 + (pLon[i] - cx) * sx, Y = H / 2 - (pLat[i] - cy) * S;
   const p = plateRect(), comp = isCompact();
   const bottom = comp && cardOpen ? card.offsetTop - 14 : p.b - LAY.ctlH + 30;
-  const m = 36, top = p.t + (comp ? m : (cardOpen ? Math.min(cardH + 40, (p.b - p.t) * 0.62) : m));
+  const beside = polyInter() && p.r - p.l > 760;   // карточка встанет рядом с контуром, места над точкой не нужно
+  const m = 36, top = p.t + (comp || beside ? m : (cardOpen ? Math.min(cardH + 40, (p.b - p.t) * 0.62) : m));
   const nx = clamp(X, p.l + m, p.r - m), ny = clamp(Y, top, Math.max(top, bottom - 24));
   if (Math.abs(nx - X) < 3 && Math.abs(ny - Y) < 3) return;
   userMoved = true;
@@ -1841,8 +1998,10 @@ function resetView() { selectPoint(-1); fitCurrent(true); }
 
 // ---------- отрисовка ----------
 let rafId = 0, needDraw = true, hoverQ = null;
+let lastMouse = null, hvCx = 0, hvCy = 0, hvS = 0;   // последнее положение мыши над картой и вид, для которого считалось наведение
+const LM = {x: 0, y: 0, out: false};
 function schedule() { if (!rafId) rafId = requestAnimationFrame(frame); }
-function requestDraw() { needDraw = true; schedule(); }
+function requestDraw() { needDraw = true; schedule(); polyKick(); }
 function frame(now) {
   rafId = 0;
   now = now || performance.now();
@@ -1853,7 +2012,7 @@ function frame(now) {
     cy = anim.cy0 + (anim.cy1 - anim.cy0) * e;
     S = Math.exp(anim.ls0 + (anim.ls1 - anim.ls0) * e);
     needDraw = true;
-    if (p >= 1) { clearTimeout(animTm); anim = null; markLabels(); } else again = true;
+    if (p >= 1) { clearTimeout(animTm); anim = null; markLabels(); polyNow(); } else again = true;
   }
   if (plateAnim) {
     const p = clamp((now - plateAnim.t0) / plateAnim.dur, 0, 1), e = 1 - Math.pow(1 - p, 3), a = plateAnim.a, b = plateAnim.b;
@@ -1862,6 +2021,8 @@ function frame(now) {
     if (p >= 1) { clearTimeout(plateTm); plateCur = {l: b.l, t: b.t, r: b.r, b: b.b}; plateAnim = null; markLabels(); } else again = true;
   }
   if (numsActive) { if (stepNums(now)) again = true; }
+  if (polyStep(now)) again = true;
+  hoverStale(now);
   if (hoverQ) { const q = hoverQ; hoverQ = null; processHover(q); }
   if (needDraw) { needDraw = false; draw(); }
   if (again) schedule();
@@ -1874,8 +2035,43 @@ let glStep = 1;
 const NICE = [0.1, 0.2, 0.5, 1, 2, 5, 10, 20, 50, 100, 200, 500, 1000];
 let scaleKey = '';
 // на общем плане точек почти десять тысяч: они мельче и чуть прозрачнее, чтобы плотные города сохраняли фактуру
-const dotR = () => Math.round(clamp(1.2 + 0.65 * Math.log2(Math.max(S / S0, 1)), 1.2, 4) * 4) / 4;
-const dotA = () => S < S0 * 2.5 ? 0.88 : 1;
+// Под слоем контуров точки вспомогательные: цвет несёт заливка. Радиус и прозрачность плавно зависят от polyA и от размера клетки махалли на экране
+// (в плотном ядре города клетки по 3-8 px, поэтому точки там мельче и бледнее); крупнее ~110 м/пкс точки не рисуются вовсе.
+// Точки районов, контуры которых ещё не загружены, остаются в обычном виде: карта нигде не пустеет.
+const dotRB = () => Math.round(clamp(1.2 + 0.65 * Math.log2(Math.max(S / S0, 1)), 1.2, 4) * 4) / 4;
+const dotAB = () => S < S0 * 2.5 ? 0.88 : 1;
+let polyCell = 14;       // типичный размер клетки махалли в видимых районах, px
+function dotR() {
+  const rb = dotRB(), f = polyA;
+  if (f < 0.004) return rb;
+  const rp = Math.min(rb, clamp(0.3 * polyCell, 0.8, 2.4));
+  return Math.round((rb + (rp - rb) * f) * 4) / 4;
+}
+function dotA() {
+  const ab = dotAB(), f = polyA;
+  if (f < 0.004) return ab;
+  const m = mpp();
+  let ap = m <= 40 ? 0.9 : m <= 60 ? 0.9 - 0.35 * (m - 40) / 20 : m < 110 ? 0.55 * (110 - m) / 50 : 0;
+  ap *= clamp(0.3 + (polyCell - 3) / 9, 0.3, 1);
+  return Math.round((ab + (ap - ab) * f) * 20) / 20;
+}
+const sstep = (a, b, x) => { const t = x <= a ? 0 : x >= b ? 1 : (x - a) / (b - a); return t * t * (3 - 2 * t); };
+const cellW = [];
+function polyCellUpdate() {
+  if (polyA < 0.004) return;
+  const p = plateCur || plateRect(), kx = 1e-5 * KX * S, ky = 1e-5 * S, k = 1e-5 * S * Math.sqrt(KX), ox = W / 2 - cx * KX * S, oy = H / 2 + cy * S;
+  cellW.length = 0;
+  let tot = 0;
+  PC.forEach(e => {
+    const bx = ox + e.ox * kx, by = oy - e.oy * ky;
+    if (bx + e.x1 * kx < p.l || bx + e.x0 * kx > p.r || by - e.y0 * ky < p.t || by - e.y1 * ky > p.b) return;
+    cellW.push([e.cell * k, e.n]); tot += e.n;
+  });
+  if (!tot) return;
+  cellW.sort((a, b) => a[0] - b[0]);
+  let acc = 0;
+  for (let q = 0; q < cellW.length; q++) { acc += cellW[q][1]; if (acc >= tot / 2) { polyCell = cellW[q][0]; break; } }
+}
 // две самые тёмные ступени на общем плане чуть мельче: в плотных городах средние синие между ними остаются видны
 const dotK = () => S < S0 * 2 ? 0.84 : 1;
 
@@ -1908,23 +2104,40 @@ function traceRegion(r, ox, sx, oy) {
   }
   return any ? path : null;
 }
+// смесь двух цветов CSS (для плавной смены подложки при появлении контуров)
+function mixCol(a, b, t) {
+  if (t <= 0.004) return a;
+  if (t >= 0.996) return b;
+  const A = parseColor(a), B = parseColor(b);
+  return 'rgb(' + Math.round(A[0] + (B[0] - A[0]) * t) + ',' + Math.round(A[1] + (B[1] - A[1]) * t) + ',' + Math.round(A[2] + (B[2] - A[2]) * t) + ')';
+}
 function regionsLayer(sx, ox, oy) {
   ctx.lineJoin = 'round'; ctx.lineWidth = 1;
+  const pa = polyA;
   for (let r = 0; r < NR; r++) {
     const path = RP[r] = traceRegion(r, ox, sx, oy);
     if (!path) continue;
-    ctx.fillStyle = hiMask[r] ? T['land-sel'] : (filteredFlag ? T['land-dim'] : T.tint[TINT[r]]);
+    // под контурами махаллей суша остальных областей сливается в одну спокойную подложку, а тон выбранного региона уходит в неё: ни клина, ни просветов между махаллями
+    const sel = hiMask[r] === 1, dim = filteredFlag && !sel;
+    ctx.fillStyle = pa > 0.004
+      ? mixCol(sel ? T['land-sel'] : dim ? T['land-dim'] : T.tint[TINT[r]], dim ? T['poly-land-dim'] : T['poly-land'], pa)
+      : (sel ? T['land-sel'] : dim ? T['land-dim'] : T.tint[TINT[r]]);
     ctx.fill(path, 'evenodd');
-    ctx.strokeStyle = T.border; ctx.stroke(path);
+    // граница региона по Natural Earth грубее контуров махаллей: под заливкой она остаётся только там, где контуров нет
+    ctx.strokeStyle = T.border; ctx.globalAlpha = 1 - 0.55 * pa; ctx.stroke(path); ctx.globalAlpha = 1;
+    // выделение региона: 2 px только на точках; под контурами оно сужается до 1 px и бледнеет, чтобы не резать махалли
+    if (pa > 0.004 && hiMask[r]) { ctx.lineWidth = 2 - pa; ctx.strokeStyle = T['border-hi']; ctx.globalAlpha = 1 - 0.75 * pa; ctx.stroke(path); ctx.globalAlpha = 1; ctx.lineWidth = 1; }
   }
 }
 function dotsArc(sx, ox, oy) {
-  const r = dotR(), da = dotA(), kk = dotK(), m = r + 2, x0 = -m, y0 = -m, x1 = W + m, y1 = H + m;
+  const r = dotR(), da = dotA(), kk = dotK(), m = Math.max(r, dotRB()) + 2, x0 = -m, y0 = -m, x1 = W + m, y1 = H + m;
+  const mix = polyA > 0.004, rB = dotRB(), aB = dotAB();
   if (filteredFlag) {
-    const rd = Math.max(1.2, r * 0.78);
+    const rd = Math.max(1.2, r * 0.78), noDimOnPoly = polyA > 0.5;
     ctx.beginPath();
     for (let i = 0; i < N; i++) {
       if (vis[i]) continue;
+      if (noDimOnPoly && PS[pDi[i]] === 3) continue;
       const X = ox + pLon[i] * sx, Y = oy - pLat[i] * S;
       if (X < x0 || X > x1 || Y < y0 || Y > y1) continue;
       ctx.moveTo(X + rd, Y); ctx.arc(X, Y, rd, 0, TAU);
@@ -1933,20 +2146,27 @@ function dotsArc(sx, ox, oy) {
   }
   ctx.lineWidth = 0.55;
   for (let c = 0; c < NC; c++) {
-    const list = byCls[c], rc = c >= 5 ? r * kk : r;
-    ctx.globalAlpha = hoverCls >= 0 && c !== hoverCls ? 0.16 : da;
-    ctx.beginPath();
-    for (let n = 0; n < list.length; n++) {
-      const i = list[n];
-      if (!vis[i]) continue;
-      const X = ox + pLon[i] * sx, Y = oy - pLat[i] * S;
-      if (X < x0 || X > x1 || Y < y0 || Y > y1) continue;
-      ctx.moveTo(X + rc, Y); ctx.arc(X, Y, rc, 0, TAU);
-      const ci = ((Y / OCC) | 0) * occW + ((X / OCC) | 0);
-      if (ci >= 0 && ci < occ.length) occ[ci] = 1;
+    const list = byCls[c];
+    for (let pass = mix ? 0 : 1; pass < 2; pass++) {
+      // проход 0: точки районов с загруженными контурами (вспомогательный вид); проход 1: остальные (обычный вид)
+      const sec = mix && pass === 0, r0 = mix && !sec ? rB : r, a0 = mix && !sec ? aB : da;
+      if (sec && a0 < 0.03) continue;
+      const rc = c >= 5 ? r0 * kk : r0;
+      ctx.globalAlpha = hoverCls >= 0 && c !== hoverCls ? 0.16 : a0;
+      ctx.beginPath();
+      for (let n = 0; n < list.length; n++) {
+        const i = list[n];
+        if (!vis[i]) continue;
+        if (mix && (PS[pDi[i]] === 3) !== sec) continue;
+        const X = ox + pLon[i] * sx, Y = oy - pLat[i] * S;
+        if (X < x0 || X > x1 || Y < y0 || Y > y1) continue;
+        ctx.moveTo(X + rc, Y); ctx.arc(X, Y, rc, 0, TAU);
+        const ci = ((Y / OCC) | 0) * occW + ((X / OCC) | 0);
+        if (ci >= 0 && ci < occ.length) occ[ci] = 1;
+      }
+      ctx.fillStyle = T.c[c]; ctx.fill();
+      ctx.strokeStyle = T.e[c]; ctx.stroke();
     }
-    ctx.fillStyle = T.c[c]; ctx.fill();
-    ctx.strokeStyle = T.e[c]; ctx.stroke();
   }
   ctx.globalAlpha = 1;
 }
@@ -1960,7 +2180,7 @@ function parseColor(c) {
   if (m) return [+m[1], +m[2], +m[3], m[4] === undefined ? 1 : +m[4]];
   return [128, 128, 128, 1];
 }
-const SPL = {key: '', cls: [], fade: [], dim: null};
+const SPL = {key: '', cls: [], fade: [], bcls: [], bfade: [], dim: null};
 function makeSprites(rd, fillRgb, edgeRgb, alpha, edgeW) {
   // 16 вариантов сдвига центра внутри пикселя (по 4 по каждой оси)
   const half = Math.ceil(rd + 1.2), sw = half * 2 + 1, out = {half: half, sw: sw, a: [], c: []};
@@ -1979,13 +2199,21 @@ function makeSprites(rd, fillRgb, edgeRgb, alpha, edgeW) {
   }
   return out;
 }
-const splKey = r => r.toFixed(2) + '|' + dotA() + '|' + dotK() + '|' + DPR + '|' + T.c[0] + T.c[6];
+const splKey = r => r.toFixed(2) + '|' + dotA() + '|' + dotK() + '|' + DPR + '|' + T.c[0] + T.c[6] + '|' + (polyA > 0.004 ? dotRB() + '|' + dotAB() : '');
 function buildSplat(r) {
   const rd = r * DPR, edgeW = Math.max(0.6, 0.62 * DPR), da = dotA();
-  SPL.cls = []; SPL.fade = [];
+  SPL.cls = []; SPL.fade = []; SPL.bcls = []; SPL.bfade = [];
   for (let k = 0; k < NC; k++) {
     const rk = k >= 5 ? rd * dotK() : rd;
     SPL.cls.push(makeSprites(rk, parseColor(T.c[k]), parseColor(T.e[k]), da, edgeW)); SPL.fade.push(makeSprites(rk, parseColor(T.c[k]), parseColor(T.e[k]), 0.16, edgeW));
+  }
+  if (polyA > 0.004) {
+    // обычный вид для точек районов без загруженных контуров
+    const rb = dotRB() * DPR, ab = dotAB();
+    for (let k = 0; k < NC; k++) {
+      const rk = k >= 5 ? rb * dotK() : rb;
+      SPL.bcls.push(makeSprites(rk, parseColor(T.c[k]), parseColor(T.e[k]), ab, edgeW)); SPL.bfade.push(makeSprites(rk, parseColor(T.c[k]), parseColor(T.e[k]), 0.16, edgeW));
+    }
   }
   const dc = parseColor(T.dimpt);
   SPL.dim = makeSprites(Math.max(1.2 * DPR, rd * 0.78), dc, null, dc[3], 1);
@@ -2020,12 +2248,14 @@ function dotsSplat(sx, ox, oy) {
   const r = dotR();
   if (SPL.key !== splKey(r)) buildSplat(r);
   if (dirtyRows[1] >= dirtyRows[0]) dbuf.fill(0, dirtyRows[0] * DW, (dirtyRows[1] + 1) * DW);
-  const m = r + 2, x0 = -m, y0 = -m, x1 = W + m, y1 = H + m, k = DPR;
+  const mix = polyA > 0.004, secOff = mix && dotA() < 0.03;
+  const m = Math.max(r, dotRB()) + 2, x0 = -m, y0 = -m, x1 = W + m, y1 = H + m, k = DPR;
   let minY = 1e9, maxY = -1e9, minX = 1e9, maxX = -1e9;
   if (filteredFlag) {
-    const sp = SPL.dim;
+    const sp = SPL.dim, noDimOnPoly = polyA > 0.5;
     for (let i = 0; i < N; i++) {
       if (vis[i]) continue;
+      if (noDimOnPoly && PS[pDi[i]] === 3) continue;
       const X = ox + pLon[i] * sx, Y = oy - pLat[i] * S;
       if (X < x0 || X > x1 || Y < y0 || Y > y1) continue;
       blit(sp, X * k, Y * k, true);
@@ -2034,13 +2264,15 @@ function dotsSplat(sx, ox, oy) {
   }
   for (let c = 0; c < NC; c++) {
     const faded = hoverCls >= 0 && c !== hoverCls;
-    const list = byCls[c], sp = faded ? SPL.fade[c] : SPL.cls[c];
+    const list = byCls[c], sp = faded ? SPL.fade[c] : SPL.cls[c], spB = mix ? (faded ? SPL.bfade[c] : SPL.bcls[c]) : sp;
     for (let n = 0; n < list.length; n++) {
       const i = list[n];
       if (!vis[i]) continue;
+      let q = sp;
+      if (mix) { if (PS[pDi[i]] === 3) { if (secOff) continue; } else q = spB; }
       const X = ox + pLon[i] * sx, Y = oy - pLat[i] * S;
       if (X < x0 || X > x1 || Y < y0 || Y > y1) continue;
-      blit(sp, X * k, Y * k, faded);
+      blit(q, X * k, Y * k, faded);
       const ci = ((Y / OCC) | 0) * occW + ((X / OCC) | 0);
       if (ci >= 0 && ci < occ.length) occ[ci] = 1;
       if (Y < minY) minY = Y; if (Y > maxY) maxY = Y; if (X < minX) minX = X; if (X > maxX) maxX = X;
@@ -2059,6 +2291,7 @@ function dotsSplat(sx, ox, oy) {
 }
 function dotsLayer(sx, ox, oy) {
   occ.fill(0, 0, occW * occH);
+  polyCellUpdate();
   if (useSplat()) dotsSplat(sx, ox, oy); else dotsArc(sx, ox, oy);
 }
 function occFrac(x0, y0, x1, y1) {
@@ -2074,10 +2307,10 @@ function occFrac(x0, y0, x1, y1) {
 const placed = [];
 let fixedN = 0;
 const labGeo = new Array(NR).fill(null), labVar = new Uint8Array(NR), labLead = new Uint8Array(NR);
-let labDirty = true, wheelUntil = 0, wheelTm = 0;
+let labDirty = true, plDirty = true, wheelUntil = 0, wheelTm = 0;
 let hoverGeo = null, hoverGeoR = -1, hoverVar = 0, hoverLead = 0;
 const isMoving = () => !!anim || (gesture && gesture.kind !== 'pan' ? true : (gesture && gesture.moved >= 6)) || performance.now() < wheelUntil;
-const markLabels = () => { labDirty = true; };
+const markLabels = () => { labDirty = true; plDirty = true; };
 // два кегля: основной и запасной (на узких экранах крупнейшие регионы иначе остаются без подписи)
 const LV = [{px: 11, ls: 0.9, hh: 9}, {px: 10, ls: 0.3, hh: 8}];
 function labelFont(v) {
@@ -2432,6 +2665,10 @@ function labelsLayer() {
 }
 function gratLabelsLayer() {
   if (!glN) return;
+  // под контурами линий сетки не видно, а подписи без них висят в воздухе: они гаснут вместе с появлением слоя
+  const fade = 1 - sstep(0.45, 0.95, polyA);
+  if (fade < 0.02) return;
+  ctx.globalAlpha = fade;
   ctx.font = '500 10.5px ' + T.mono; if ('letterSpacing' in ctx) ctx.letterSpacing = '0px';
   ctx.textBaseline = 'middle'; ctx.lineJoin = 'round'; ctx.lineWidth = 3; ctx.strokeStyle = T.halo; ctx.fillStyle = T['grat-label'];
   for (let k = 0; k < glN; k++) {
@@ -2443,6 +2680,7 @@ function gratLabelsLayer() {
     ctx.textAlign = e.al;
     ctx.strokeText(e.t, e.x, e.y); ctx.fillText(e.t, e.x, e.y);
   }
+  ctx.globalAlpha = 1;
 }
 function rr(x, y, w, h, r) {
   ctx.beginPath();
@@ -2467,6 +2705,8 @@ function plateLayer() {
   const p = plateCur; if (!p) return;
   const w = p.r - p.l, h = p.b - p.t;
   if (w < 120 || h < 120) return;
+  // стиль задаётся здесь явно: иначе засечки наследуют обводку, оставшуюся от прошлого кадра (белый штрих у кромки)
+  ctx.lineWidth = 1; ctx.lineCap = 'butt'; ctx.globalAlpha = 1; ctx.strokeStyle = T.neat;
   ctx.beginPath();
   for (let k = 0; k < glX.length; k++) { const X = glX[k]; if (X > p.l + 18 && X < p.r - 18) { ctx.moveTo(X, p.t + 1); ctx.lineTo(X, p.t + 6); ctx.moveTo(X, p.b - 1); ctx.lineTo(X, p.b - 6); } }
   for (let k = 0; k < glY.length; k++) { const Y = glY[k]; if (Y > p.t + 18 && Y < p.b - 18) { ctx.moveTo(p.l + 1, Y); ctx.lineTo(p.l + 6, Y); ctx.moveTo(p.r - 1, Y); ctx.lineTo(p.r - 6, Y); } }
@@ -2480,21 +2720,32 @@ function ringAt(i, rad, w, col, halo) {
   ctx.lineWidth = w; ctx.strokeStyle = col; ctx.stroke();
 }
 function marksLayer() {
-  const r = dotR();
-  // выбранные и наведённые регионы: контур поверх точек
+  const r = dotR(), sx = KX * S, ox = W / 2 - cx * sx, oy = H / 2 + cy * S;
+  // выбранные и наведённые регионы: контур поверх точек (грубая граница Natural Earth не совпадает с контурами махаллей, поэтому под ними он тоньше)
   ctx.lineJoin = 'round';
   for (let q = 0; q < NR; q++) {
     if (!RP[q] || (!hiMask[q] && q !== hoverR)) continue;
-    ctx.lineWidth = hiMask[q] ? 2 : 1.5; ctx.strokeStyle = T['border-hi']; ctx.globalAlpha = hiMask[q] ? 1 : 0.75;
+    ctx.lineWidth = hiMask[q] ? 2 : 1.5; ctx.strokeStyle = T['border-hi']; ctx.globalAlpha = (hiMask[q] ? 1 : 0.75) * (1 - polyA);
     ctx.stroke(RP[q]);
   }
   ctx.globalAlpha = 1;
-  if (extP >= 0 && extP !== selP) ringAt(extP, r + 4.5, 1.8, T.ink, true);
-  if (hoverP >= 0 && hoverP !== selP && vis[hoverP]) ringAt(hoverP, r + 3.5, 1.6, T.ink, true);
+  // контуры наведённой и выбранной махалли; у кого контур нарисован, тому кольцо на точке не нужно
+  let hl = false, hl2 = false, sl = false;
+  if (polyA > 0.02) {
+    if (hoverNE && hoverNEm >= 0) hl = polyMark(hoverNE, hoverNEm, 0, sx, ox, oy);
+    if (extP >= 0 && extP !== selP && vis[extP]) { const mi = polyOf(extP); if (mi >= 0) hl2 = polyMark(PC.get(pDi[extP]), mi, 0, sx, ox, oy); }
+    if (hoverP >= 0 && hoverP !== selP && vis[hoverP] && hoverP !== extP) { const mi = polyOf(hoverP); if (mi >= 0) hl = polyMark(PC.get(pDi[hoverP]), mi, 0, sx, ox, oy) || hl; }
+    if (selP >= 0) { const mi = polyOf(selP); if (mi >= 0) sl = polyMark(PC.get(pDi[selP]), mi, 1, sx, ox, oy); }
+  }
+  if (extP >= 0 && extP !== selP && !hl2) ringAt(extP, r + 4.5, 1.8, T.ink, true);
+  if (hoverP >= 0 && hoverP !== selP && vis[hoverP] && !hl) ringAt(hoverP, r + 3.5, 1.6, T.ink, true);
   if (selP >= 0) {
-    const sx = KX * S, X = W / 2 + (pLon[selP] - cx) * sx, Y = H / 2 - (pLat[selP] - cy) * S;
-    ctx.beginPath(); ctx.arc(X, Y, r + 11, 0, TAU); ctx.fillStyle = T.ring; ctx.globalAlpha = 0.14; ctx.fill(); ctx.globalAlpha = 1;
-    ringAt(selP, r + 5, 2.4, T.ring, true);
+    const X = W / 2 + (pLon[selP] - cx) * sx, Y = H / 2 - (pLat[selP] - cy) * S;
+    if (sl) ringAt(selP, r + 3.2, 1.8, T.ring, true);
+    else {
+      ctx.beginPath(); ctx.arc(X, Y, r + 11, 0, TAU); ctx.fillStyle = T.ring; ctx.globalAlpha = 0.14; ctx.fill(); ctx.globalAlpha = 1;
+      ringAt(selP, r + 5, 2.4, T.ring, true);
+    }
   }
 }
 function updateScale() {
@@ -2507,12 +2758,957 @@ function updateScale() {
     $('scale-i').style.width = Math.round(km * pxKm) + 'px';
   }
 }
+// ---------- контуры махаллей ----------
+// Слой полигонов включается, когда на пиксель приходится не больше POLY_ON метров. Файлы районов грузятся лениво
+// (по рамкам D.districts[i].b), раскладываются один раз в типизированные массивы и рисуются пачками по классам цвета.
+const MPD = 111200;                        // метров на градус широты (как в масштабной линейке)
+const POLY_ON = 160, POLY_OFF = 178;       // порог показа, м/пкс; слой гаснет выше POLY_OFF (гистерезис против мерцания); 160: вид области Андижон (151 м/пкс) уже с контурами
+const POLY_FLY = 95;                       // м/пкс, к которому приводит выбор махалли, пока контур не загружен
+const POLY_BIGFIT = 600;                   // м/пкс: самый крупный масштаб подгонки под огромную махаллю (чуть мельче POLY_FAR, чтобы слой не гас от дрожи порога)
+const POLY_FADE = 200;                     // длительность появления и исчезновения, мс
+const POLY_CAP = 6, POLY_LRU = 60, POLY_VERTS = 900000;
+const POLY_HTTP = /^https?:$/.test(location.protocol);
+const POLY_URL = (() => { try { return new URL('polygons/', location.href).href; } catch (e) { return 'polygons/'; } })();
+const mpp = () => MPD / S;
+const pMid = new Int32Array(N), midPt = new Map();
+for (let i = 0; i < N; i++) { const m = PTS[i][5] | 0; pMid[i] = m; midPt.set(m, i); }
+let polyEnabled = true;
+try { if (localStorage.getItem('mahalla-poly') === '0') polyEnabled = false; } catch (e) { /* без хранилища */ }
+let polyOn = false, polyA = 0, polyTo = 0, polyFrom = 0, polyT0 = 0, polyFadeTm = 0, polyKickTm = 0, polyUiTm2 = 0, polyFail = false, polyTick = 0, polyVerts = 0;
+const PC = new Map();                      // индекс района -> геометрия
+const PS = new Uint8Array(ND);             // 0 нет, 1 в очереди, 2 грузится, 3 готов, 4 ошибка
+const pFailT = new Float64Array(ND), pFailS = new Float64Array(ND), pFailX = new Float64Array(ND), pFailY = new Float64Array(ND);
+let polyQ = [], polyAct = 0, polyBusyT = 0, polyUiTm = 0, polyFailRun = 0, polyHold = 0, polyHoldTm = 0;
+let polyPend = null, flyTok = 0, moveStamp = 0, polyBig = -1;   // polyBig: выбранная махалля, под которую вид подогнан на масштабе грубее POLY_FLY
+let polyHintHold = false, polyMsg = '', polyMsgUntil = 0, polyHintTm = 0;
+const PP = new Array(36).fill(null);   // пути по слоям вложенности и классам: слой * 9 + класс (0-6 ступени шкалы, 7 вне фильтра, 8 без оценки)
+const polyInter = () => polyEnabled && polyOn;
+
+// Порог по масштабу: до POLY_ON м/пкс слой включается всегда. Редкий кадр (крупные районы пустынных областей: десятки больших махаллей)
+// получает контуры и на более крупном плане, до POLY_FAR; плотный, как целый регион в долине, остаётся только на точках.
+const POLY_FAR = 640, POLY_FEW = 170;
+let polyDens = 0, polyDensKey = '', polyFilterVer = 0;
+// сколько махаллей в кадре с центром (vcx, vcy) и масштабом vS (при фильтре считаются только выбранные)
+function polyCountAt(vcx, vcy, vS) {
+  const key = (vcx * 1e4 | 0) + '|' + (vcy * 1e4 | 0) + '|' + (vS | 0) + '|' + W + '|' + H + '|' + polyFilterVer;
+  if (key === polyDensKey) return polyDens;
+  polyDensKey = key;
+  const p = plateCur || plateRect(), sx = KX * vS;
+  const lon0 = vcx + (p.l - W / 2) / sx, lon1 = vcx + (p.r - W / 2) / sx, lat1 = vcy - (p.t - H / 2) / vS, lat0 = vcy - (p.b - H / 2) / vS;
+  let n = 0;
+  for (let i = 0; i < N; i++) if (pLon[i] >= lon0 && pLon[i] <= lon1 && pLat[i] >= lat0 && pLat[i] <= lat1 && vis[i]) n++;
+  return polyDens = n;
+}
+const polyCount = () => polyCountAt(cx, cy, S);
+// выбранная огромная махалля (контур крупнее экрана при 95 м/пкс): слой остаётся включённым до POLY_FAR, чтобы был виден её контур, а не одна заливка
+const polyPinned = () => selP >= 0 && polyBig === selP;
+function polyZoom() {
+  const m = mpp();
+  if (!polyOn) polyOn = m <= POLY_ON || (m <= POLY_FAR && (polyPinned() || polyCount() <= POLY_FEW));
+  else if (m > POLY_OFF) polyOn = m <= POLY_FAR * 1.15 && (polyPinned() || polyCount() <= POLY_FEW * 1.3);
+  return polyOn;
+}
+function polyViewBox(mg) {
+  const sx = KX * S;
+  return [cx - (W / 2 + mg) / sx, cy - (H / 2 + mg) / S, cx + (W / 2 + mg) / sx, cy + (H / 2 + mg) / S];
+}
+// ---- разбор файла района ----
+function polyOrient(xy, s, t, outer) {
+  let a = 0;
+  for (let v = s, w = t - 1; v < t; w = v++) a += xy[2 * w] * xy[2 * v + 1] - xy[2 * v] * xy[2 * w + 1];
+  if (a > 0 === outer) return;
+  for (let i = s, j = t - 1; i < j; i++, j--) {
+    const x = xy[2 * i], y = xy[2 * i + 1];
+    xy[2 * i] = xy[2 * j]; xy[2 * i + 1] = xy[2 * j + 1]; xy[2 * j] = x; xy[2 * j + 1] = y;
+  }
+}
+function polyRing2(xy, s, t) {
+  let a = 0;
+  for (let v = s, w = t - 1; v < t; w = v++) a += xy[2 * w] * xy[2 * v + 1] - xy[2 * v] * xy[2 * w + 1];
+  return a;
+}
+// Для каждой вершины кольца считается «важность»: наибольший допуск Дугласа-Пекера, при котором вершина ещё нужна (в единицах 1e-5 градуса,
+// долгота с поправкой на широту). В кадре остаются вершины с важностью не меньше допуска в пикселях: линия упрощается под масштаб без пересчёта.
+function polyImportance(xy, ip, s, t) {
+  const n = t - s;
+  if (n < 4) { for (let v = s; v < t; v++) ip[v] = 1e9; return; }
+  const k = KX, ax = xy[2 * s] * k, ay = xy[2 * s + 1];
+  let far = s + 1, fd = -1;
+  for (let v = s + 1; v < t; v++) { const dx = xy[2 * v] * k - ax, dy = xy[2 * v + 1] - ay, d = dx * dx + dy * dy; if (d > fd) { fd = d; far = v; } }
+  ip[s] = 1e9; ip[far] = 1e9;
+  const st = [s, far, far, t];
+  while (st.length) {
+    const b = st.pop(), a = st.pop();
+    if (b - a < 2) continue;
+    const ib = b === t ? s : b;
+    const x0 = xy[2 * a] * k, y0 = xy[2 * a + 1], ddx = xy[2 * ib] * k - x0, ddy = xy[2 * ib + 1] - y0, l2 = ddx * ddx + ddy * ddy;
+    let md = -1, mi = a + 1;
+    for (let v = a + 1; v < b; v++) {
+      const px = xy[2 * v] * k - x0, py = xy[2 * v + 1] - y0;
+      let u = l2 ? (px * ddx + py * ddy) / l2 : 0; u = u < 0 ? 0 : u > 1 ? 1 : u;
+      const qx = px - u * ddx, qy = py - u * ddy, d2 = qx * qx + qy * qy;
+      if (d2 > md) { md = d2; mi = v; }
+    }
+    const d = Math.sqrt(md);
+    ip[mi] = Math.min(d, ip[a], ip[ib]);
+    st.push(a, mi, mi, b);
+  }
+}
+function polyDecode(d, j) {
+  const m = j.m, n = m.length, ox = Math.round(DIS[d].b[0] * 1e5), oy = Math.round(DIS[d].b[1] * 1e5);
+  let nr = 0, nv = 0;
+  for (let a = 0; a < n; a++) { const ps = m[a][1]; for (let b = 0; b < ps.length; b++) { const rs = ps[b]; for (let c = 0; c < rs.length; c++) { nr++; nv += rs[c].length >> 1; } } }
+  const e = {d: d, n: n, ox: ox, oy: oy, nv: nv, used: ++polyTick, x0: 1e9, y0: 1e9, x1: -1e9, y1: -1e9,
+    mid: new Int32Array(n), pt: new Int32Array(n), cl: new Uint8Array(n), lay: new Uint8Array(n), box: new Float32Array(4 * n), ar: new Float32Array(n), cell: 1, rg: new Int32Array(n + 1),
+    ro: new Int32Array(nr + 1), rb: new Float32Array(4 * nr), xy: new Float32Array(2 * nv), ip: new Float32Array(nv), idx: new Map(), ne: [], la: null};
+  let ri = 0, vi = 0;
+  for (let a = 0; a < n; a++) {
+    const id = m[a][0] | 0, ps = m[a][1], pi = midPt.get(id);
+    e.mid[a] = id; e.pt[a] = pi === undefined ? -1 : pi; e.cl[a] = pi === undefined ? 8 : cls[pi]; e.idx.set(id, a); e.rg[a] = ri;
+    if (pi === undefined) e.ne.push(a);
+    let bx0 = 1e9, by0 = 1e9, bx1 = -1e9, by1 = -1e9, a2 = 0;
+    for (let b = 0; b < ps.length; b++) {
+      const rs = ps[b];
+      for (let c = 0; c < rs.length; c++) {
+        const r = rs[c], len = r.length >> 1;
+        e.ro[ri] = vi;
+        let x = r[0], y = r[1], rx0 = 1e9, ry0 = 1e9, rx1 = -1e9, ry1 = -1e9;
+        for (let q = 0; q < len; q++) {
+          if (q) { x += r[2 * q]; y += r[2 * q + 1]; }
+          const u = x - ox, v = y - oy;
+          e.xy[2 * vi] = u; e.xy[2 * vi + 1] = v; vi++;
+          if (u < rx0) rx0 = u; if (u > rx1) rx1 = u; if (v < ry0) ry0 = v; if (v > ry1) ry1 = v;
+        }
+        // Контуры соседних махаллей местами перекрываются (одна лежит на другой), поэтому слой заливается по правилу «ненулевой обход»,
+        // а не «чёт-нечет»: перекрытие не превращается в дыру. Для этого внешнее кольцо ориентируется против часовой стрелки, дыры по часовой.
+        polyOrient(e.xy, e.ro[ri], vi, c === 0);
+        a2 += polyRing2(e.xy, e.ro[ri], vi);
+        polyImportance(e.xy, e.ip, e.ro[ri], vi);
+        e.rb[4 * ri] = rx0; e.rb[4 * ri + 1] = ry0; e.rb[4 * ri + 2] = rx1; e.rb[4 * ri + 3] = ry1;
+        if (rx0 < bx0) bx0 = rx0; if (ry0 < by0) by0 = ry0; if (rx1 > bx1) bx1 = rx1; if (ry1 > by1) by1 = ry1;
+        ri++;
+      }
+    }
+    e.box[4 * a] = bx0; e.box[4 * a + 1] = by0; e.box[4 * a + 2] = bx1; e.box[4 * a + 3] = by1;
+    e.ar[a] = Math.abs(a2) * 0.5;
+    if (bx0 < e.x0) e.x0 = bx0; if (by0 < e.y0) e.y0 = by0; if (bx1 > e.x1) e.x1 = bx1; if (by1 > e.y1) e.y1 = by1;
+  }
+  e.rg[n] = ri; e.ro[ri] = vi;
+  // типичный размер клетки: медиана корня из площади (единицы 1e-5 градуса); от неё зависит вид точек
+  { const sz = Float32Array.from(e.ar, v => Math.sqrt(v)).sort(); e.cell = n ? sz[n >> 1] : 1; }
+  polyLayers(e);
+  return e;
+}
+// Контуры местами перекрываются: махалля целиком лежит внутри другой. Такая рисуется позже и сверху, иначе цвета наложились бы друг на друга.
+// Слой = число более крупных махаллей, внутри которых лежит репрезентативная точка контура (не больше 3).
+function polyInside(e, mi, u, v) {
+  const xy = e.xy;
+  let inside = false;
+  for (let r = e.rg[mi], re = e.rg[mi + 1]; r < re; r++) {
+    const rq = 4 * r;
+    if (u < e.rb[rq] || u > e.rb[rq + 2] || v < e.rb[rq + 1] || v > e.rb[rq + 3]) continue;
+    const s = e.ro[r], t = e.ro[r + 1];
+    for (let a = s, b = t - 1; a < t; b = a++) {
+      const xi = xy[2 * a], yi = xy[2 * a + 1], xj = xy[2 * b], yj = xy[2 * b + 1];
+      if ((yi > v) !== (yj > v) && u < (xj - xi) * (v - yi) / (yj - yi) + xi) inside = !inside;
+    }
+  }
+  return inside;
+}
+function polyLayers(e) {
+  const n = e.n, px = new Float64Array(n), py = new Float64Array(n), ar = new Float64Array(n), box = e.box, xy = e.xy;
+  for (let a = 0; a < n; a++) {
+    let br = e.rg[a], bl = -1;
+    for (let r = e.rg[a]; r < e.rg[a + 1]; r++) if (e.ro[r + 1] - e.ro[r] > bl) { bl = e.ro[r + 1] - e.ro[r]; br = r; }
+    let sx = 0, sy = 0;
+    for (let v = e.ro[br]; v < e.ro[br + 1]; v++) { sx += xy[2 * v]; sy += xy[2 * v + 1]; }
+    px[a] = sx / Math.max(1, bl); py[a] = sy / Math.max(1, bl);
+    ar[a] = (box[4 * a + 2] - box[4 * a]) * (box[4 * a + 3] - box[4 * a + 1]);
+  }
+  for (let a = 0; a < n; a++) {
+    let depth = 0;
+    for (let b = 0; b < n && depth < 3; b++) {
+      if (b === a || ar[b] <= ar[a]) continue;
+      if (px[a] < box[4 * b] || px[a] > box[4 * b + 2] || py[a] < box[4 * b + 1] || py[a] > box[4 * b + 3]) continue;
+      if (polyInside(e, b, px[a], py[a])) depth++;
+    }
+    e.lay[a] = depth;
+  }
+}
+// Кэш ограничен числом районов и числом вершин. Выбрасывается самый давний район из тех, что не видны в кадре (с запасом):
+// видимые остаются, даже если кадр больше предела (предел мягкий).
+// lim - сколько районов оставить (по умолчанию POLY_LRU); anyView - можно выбрасывать и районы в кадре (слой выключен, они не нужны)
+function polyEvict(keepD, lim, anyView) {
+  lim = lim || POLY_LRU;
+  if (PC.size <= lim && polyVerts <= POLY_VERTS) return;
+  const vb = polyViewBox(Math.min(W, H) * 0.25);
+  while (PC.size > lim || polyVerts > POLY_VERTS) {
+    let od = -1, ou = 1e18;
+    PC.forEach((e, d) => {
+      if (d === keepD || e.used >= ou) return;
+      const b = DIS[d].b;
+      if (!anyView && !(b[2] < vb[0] || b[0] > vb[2] || b[3] < vb[1] || b[1] > vb[3])) return;
+      ou = e.used; od = d;
+    });
+    if (od < 0) break;
+    polyVerts -= PC.get(od).nv; PC.delete(od); PS[od] = 0;
+  }
+}
+// Предел в 60 районов мягкий: после перелёта из общего плана кадр на мгновение содержит все районы, и выбросить нечего.
+// Поэтому кэш подрезается ещё раз, когда вид остановился (polyScan), и сжимается до POLY_KEEP, если слой несколько секунд выключен или далеко.
+const POLY_KEEP = 20;
+let polyTrimTm = 0;
+function polyTrimSoon() {
+  if (polyTrimTm || PC.size <= POLY_KEEP) return;
+  polyTrimTm = setTimeout(() => {
+    polyTrimTm = 0;
+    if (!(polyEnabled && polyOn) && !anim) polyEvict(-1, POLY_KEEP, true);
+  }, 4000);
+}
+// ---- загрузка ----
+function polyStart(d) {
+  PS[d] = 2; polyAct++;
+  let p;
+  if (!POLY_HTTP) p = Promise.reject(new Error('file'));
+  else { try { p = window.fetch(POLY_URL + DIS[d].c + '.json', {credentials: 'same-origin'}); } catch (err) { p = Promise.reject(err); } }
+  p.then(r => { if (!r || !r.ok) throw new Error('http'); return r.json(); })
+    .then(j => { polyStore(d, j); })
+    .catch(() => { polyFailed(d); })
+    .then(() => { polyAct--; polyFlag(); polyPump(); polyUi(); });
+}
+function polyStore(d, j) {
+  const e = polyDecode(d, j);
+  const old = PC.get(d); if (old) polyVerts -= old.nv;
+  PC.set(d, e); polyVerts += e.nv; PS[d] = 3; polyFailRun = 0; polyRetryN = 0;
+  polyEvict(d);
+  // новый район дорисовывается в готовый растр; замена уже нарисованного района требует перерисовки целиком
+  if (old || !(polyEnabled && polyOn)) polyInvalidate();
+  else if (PR.ok && PR.S === S) polyRender(PR.x0, PR.y0, PR.x1, PR.y1, e);
+  markBase(); markLabels(); requestDraw(); polyNow();
+  // выбранная махалля ждала контур: подгоняем вид под него, если пользователь больше ничего не трогал
+  const pd = polyPend;
+  if (pd && (flyTok !== pd.tok || moveStamp !== pd.stamp || selP !== pd.i)) polyPend = null;
+  else if (pd && pDi[pd.i] === d) {
+    polyPend = null;
+    const mi = e.idx.get(pMid[pd.i]);
+    if (mi !== undefined) animateTo(polyFitTarget(e, mi, pd.i), 440);
+  }
+}
+function polyFailed(d) {
+  PS[d] = 4; pFailT[d] = performance.now(); pFailS[d] = S; pFailX[d] = cx; pFailY[d] = cy;
+  // три неудачи подряд (нет сети): пауза, затем одиночная проба; так без сети не уходят десятки запросов
+  if (++polyFailRun >= 3) polyHold = pFailT[d] + 2500;
+  polyRetryLater();
+}
+// Сбой лечится сам: две повторные попытки (через 3 и 8 с после последней неудачи) без требования сдвинуть карту; затем только сдвиг или возврат сети
+let polyRetryTm = 0, polyRetryN = 0;
+function polyRetryLater() {
+  if (!POLY_HTTP || polyRetryN >= 2) return;
+  clearTimeout(polyRetryTm);
+  polyRetryTm = setTimeout(() => {
+    polyRetryTm = 0; polyRetryN++;
+    let any = false;
+    for (let d = 0; d < ND; d++) if (PS[d] === 4) { PS[d] = 0; any = true; }
+    if (any) polyScan();
+  }, polyRetryN === 0 ? 3000 : 8000);
+}
+window.addEventListener('online', () => {
+  polyRetryN = 0; clearTimeout(polyRetryTm); polyRetryTm = 0;
+  let any = false;
+  for (let d = 0; d < ND; d++) if (PS[d] === 4) { PS[d] = 0; any = true; }
+  polyFailRun = 0; polyHold = 0;
+  if (any || polyFail) { polyScanKey = ''; polyScan(); }
+});
+function polyPump() {
+  let cap = POLY_CAP;
+  if (polyFailRun >= 3) {
+    const wait = polyHold - performance.now();
+    if (wait > 0) { if (!polyHoldTm && polyQ.length) polyHoldTm = setTimeout(() => { polyHoldTm = 0; polyPump(); polyUi(); }, wait + 5); return; }
+    cap = 1;
+  }
+  while (polyAct < cap && polyQ.length) {
+    let bi = 0, bd = 1e18;
+    for (let q = 0; q < polyQ.length; q++) {
+      const b = DIS[polyQ[q]].b, dx = ((b[0] + b[2]) / 2 - cx) * KX, dy = (b[1] + b[3]) / 2 - cy, dd = dx * dx + dy * dy;
+      if (dd < bd) { bd = dd; bi = q; }
+    }
+    polyStart(polyQ.splice(bi, 1)[0]);
+  }
+}
+// Вид, для которого нужны районы: во время анимации это её цель, и загрузка идёт параллельно перелёту, а не после него
+function polyViewNow() { return anim ? {cx: anim.cx1, cy: anim.cy1, S: Math.exp(anim.ls1)} : {cx: cx, cy: cy, S: S}; }
+// какие районы нужны для вида; лишнее из очереди снимается, ошибочные районы пробуются снова после сдвига или смены масштаба
+function polyScan() {
+  const v = polyViewNow(), m = MPD / v.S, near = new Uint8Array(ND);
+  let nn = 0;
+  const dense = m <= POLY_ON || (m <= POLY_FAR && (polyPinned() || polyCountAt(v.cx, v.cy, v.S) <= POLY_FEW));
+  const on = anim ? dense : polyOn || dense;
+  if (polyEnabled && (on || m <= POLY_ON * 1.6)) {
+    const sx = KX * v.S, mg = Math.min(W, H) * 0.12;
+    const lon0 = v.cx - (W / 2 + mg) / sx, lon1 = v.cx + (W / 2 + mg) / sx, lat0 = v.cy - (H / 2 + mg) / v.S, lat1 = v.cy + (H / 2 + mg) / v.S;
+    // крупнее порога при фильтре нужны только выбранные районы: остальные были бы приглушёнными и в кадре почти ничего не добавят
+    const only = filteredFlag && m > POLY_ON;
+    for (let d = 0; d < ND; d++) {
+      const b = DIS[d].b;
+      if (b[2] < lon0 || b[0] > lon1 || b[3] < lat0 || b[1] > lat1) continue;
+      if (only && !(maskD[d] === 1 || (maskR[DIS[d].r] === 1 && rHasD[DIS[d].r] === 0))) continue;
+      near[d] = 1; nn++;
+    }
+    // издалека заранее грузятся только небольшие виды, иначе страна целиком ушла бы в сеть
+    if (!on && nn > 8) { near.fill(0); nn = 0; }
+  }
+  const now = performance.now();
+  for (let q = polyQ.length - 1; q >= 0; q--) if (!near[polyQ[q]]) { PS[polyQ[q]] = 0; polyQ.splice(q, 1); }
+  for (let d = 0; d < ND; d++) {
+    if (!near[d]) continue;
+    if (PS[d] === 4 && POLY_HTTP && now - pFailT[d] > 1500 &&
+        (Math.abs(Math.log(S / pFailS[d])) > 0.03 || Math.hypot((cx - pFailX[d]) * KX * S, (cy - pFailY[d]) * S) > 24)) PS[d] = 0;
+    if (PS[d] === 0) { PS[d] = 1; polyQ.push(d); }
+  }
+  polyFlag();
+  if (polyAct + polyQ.length > 0 && !polyBusyT) polyBusyT = now;
+  polyPump();
+  polyUi();
+  // вид остановился: кэш подрезается до предела (вид во время перелёта ещё меняется, тогда видимые районы нельзя выбрасывать)
+  if (!anim) polyEvict(-1);
+}
+// есть ли среди районов в кадре такой, контур которого не загрузился
+function polyFlag() {
+  let fail = false;
+  if (polyOn && polyEnabled) {
+    const vb = polyViewBox(0);
+    for (let d = 0; d < ND && !fail; d++) {
+      if (PS[d] !== 4) continue;
+      const b = DIS[d].b;
+      if (!(b[2] < vb[0] || b[0] > vb[2] || b[3] < vb[1] || b[1] > vb[3])) fail = true;
+    }
+  }
+  polyFail = fail;
+}
+let polyScanKey = '';
+function polyWatch() {
+  // вид сдвинулся или сменился масштаб: пересчитать список нужных районов.
+  // Пока идёт жест масштаба (колесо, щипок, анимация), промежуточные виды не сканируются: файлы для них не пригодятся и не будут нарисованы;
+  // скан выполняется один раз после остановки (поллинг продолжается через polyKick)
+  if (polyZooming()) { polyKick(); return; }
+  const key = (cx * 1e4 | 0) + '|' + (cy * 1e4 | 0) + '|' + (S | 0) + '|' + (W | 0) + (polyEnabled ? 1 : 0);
+  if (key === polyScanKey) return;
+  polyScanKey = key;
+  polyScan();
+}
+// Слою не нужны кадры, чтобы начать работу: любое изменение вида зовёт requestDraw, а он через 60 мс будит polyPoll.
+// Так загрузка стартует и тогда, когда анимация вида завершилась по таймеру, и в окружении без requestAnimationFrame.
+function polyKick() { if (!polyKickTm) polyKickTm = setTimeout(polyPoll, 60); }
+// то же без задержки: данные пришли или вид остановился, слой должен начать появляться сразу
+function polyNow() { clearTimeout(polyKickTm); polyPoll(); }
+function polyPoll() {
+  polyKickTm = 0;
+  polyZoom();
+  // растр готовится и без кадров: к началу появления слоя он уже нарисован; если он изменился, холст нужно перерисовать
+  if (polyEnabled && polyOn && !polyZooming() && polyAnyInView()) {
+    const s0 = PR.S, ok0 = PR.ok, x0 = PR.RX, y0 = PR.RY;
+    polyPrepare();
+    if (PR.S !== s0 || PR.ok !== ok0 || PR.RX !== x0 || PR.RY !== y0) { markBase(); requestDraw(); }
+  } else if (!polyOn && polyTo === 0 && !polyT0) polyFree();
+  if (!(polyEnabled && polyOn)) polyTrimSoon();
+  polyRetarget(performance.now()); polyWatch();
+  // жест масштаба ещё идёт: проверить снова после его конца, тогда растянутый растр заменится чётким, а слой начнёт появляться
+  if (polyEnabled && polyOn && polyZooming()) polyKick();
+}
+function polyWant(d) {
+  // немедленная просьба (поиск): район нужен, даже если вид ещё не приблизился
+  if (!polyEnabled) return;
+  if (PS[d] === 4 && POLY_HTTP) PS[d] = 0;
+  if (PS[d] === 0) { PS[d] = 1; polyQ.unshift(d); if (!polyBusyT) polyBusyT = performance.now(); polyPump(); polyUi(); }
+}
+// ---- слой: появление и исчезновение ----
+function polyAnyInView() {
+  const k = 1e-5 * KX * S, ky = 1e-5 * S, ox = W / 2 - cx * KX * S, oy = H / 2 + cy * S;
+  for (const e of PC.values()) {
+    const bx = ox + e.ox * k, by = oy - e.oy * ky;
+    if (bx + e.x1 * k < 0 || bx + e.x0 * k > W || by - e.y0 * ky < 0 || by - e.y1 * ky > H) continue;
+    return true;
+  }
+  return false;
+}
+function polyAlpha(now) {
+  if (!polyT0) return polyTo;
+  const p = (now - polyT0) / POLY_FADE;
+  return p >= 1 ? polyTo : polyFrom + (polyTo - polyFrom) * p;
+}
+// цель слоя: показан, если включён, масштаб достиг порога и в кадре есть загруженные контуры; переход идёт по времени, а не по числу кадров
+function polyRetarget(now) {
+  const want = polyEnabled && polyOn && polyAnyInView() && (PR.ok || !polyZooming()) ? 1 : 0;
+  if (want === polyTo) return;
+  clearTimeout(polyFadeTm); polyFadeTm = 0;
+  if (RM()) { polyA = polyTo = want; polyT0 = 0; markBase(); needDraw = true; schedule(); return; }
+  polyFrom = polyAlpha(now); polyTo = want; polyT0 = now;
+  polyFadeTm = setTimeout(() => { polyFadeTm = 0; polyA = polyTo; polyT0 = 0; markBase(); requestDraw(); }, POLY_FADE + 45);
+  markBase(); needDraw = true; schedule();
+}
+function polyStep(now) {
+  if (anim || gesture || now < wheelUntil) polyKick();   // пока вид движется, список районов и растр проверяются каждые 60 мс
+  polyZoom(); polyRetarget(now);
+  const a = polyAlpha(now);
+  if (a !== polyA) { polyA = a; markBase(); needDraw = true; }
+  return polyT0 !== 0 && now - polyT0 < POLY_FADE;
+}
+// ---- растровый слой ----
+// Контуры рисуются не в каждом кадре, а в отдельный холст в пикселях устройства. Сдвиг карты сдвигает готовый растр на целое число
+// пикселей и дорисовывает только открывшуюся кромку; при смене масштаба растр перерисовывается целиком (на время жеста старый растягивается).
+// Появление и исчезновение слоя - прозрачность при выводе растра, поэтому перерисовка для него не нужна.
+const PR = {cv: null, c: null, cv2: null, c2: null, ok: false, S: 0, RX: 0, RY: 0, x0: 0, y0: 0, x1: 0, y1: 0};
+const nd = [0, 0, 0, 0];
+function polyInvalidate() { PR.ok = false; }
+function polyFree() {
+  if (PR.cv && PR.cv.width > 1) PR.cv.width = PR.cv.height = 1;
+  if (PR.cv2) { PR.cv2 = PR.c2 = null; }
+  PR.ok = false;
+}
+function polyCanvas() {
+  if (!PR.cv) { PR.cv = document.createElement('canvas'); PR.c = PR.cv.getContext('2d'); PR.ok = false; }
+  if (PR.cv.width !== DW || PR.cv.height !== DH) { PR.cv.width = DW; PR.cv.height = DH; PR.ok = false; PR.cv2 = PR.c2 = null; }
+}
+// идёт ли изменение масштаба: анимация, щипок, колесо или частая смена масштаба подряд (в этот момент растр не перерисовывается, а растягивается)
+let polyLastS = 0, polyZoomT = 0;
+function polyZooming() {
+  const now = performance.now();
+  if (S !== polyLastS) { if (polyLastS) polyZoomT = now; polyLastS = S; }
+  return (!!anim && anim.ls0 !== anim.ls1) || (!!gesture && gesture.kind === 'pinch') || now < wheelUntil || now - polyZoomT < 80;
+}
+function polyNeed() {
+  const p = plateCur || plateRect();
+  nd[0] = Math.max(0, Math.floor(p.l * DPR) - 2); nd[1] = Math.max(0, Math.floor(p.t * DPR) - 2);
+  nd[2] = Math.min(DW, Math.ceil(p.r * DPR) + 2); nd[3] = Math.min(DH, Math.ceil(p.b * DPR) + 2);
+  return nd;
+}
+let polyPat = null, polyPatKey = '';
+function nonePattern() {
+  const key = T['poly-none'] + '|' + T['poly-none-hatch'] + '|' + DPR;
+  if (polyPat && polyPatKey === key) return polyPat;
+  const n = Math.round(8 * DPR), c = document.createElement('canvas');
+  c.width = c.height = n;
+  const g = c.getContext('2d');
+  g.fillStyle = T['poly-none']; g.fillRect(0, 0, n, n);
+  g.strokeStyle = T['poly-none-hatch']; g.lineWidth = Math.max(1, DPR * 0.9);
+  g.beginPath();
+  for (let q = 0; q < 3; q++) { const o = q * n; g.moveTo(o + 2, -2); g.lineTo(o - n - 2, n + 2); }
+  g.stroke();
+  let pat = null;
+  try { pat = PR.c.createPattern(c, 'repeat'); } catch (err) { /* без узора остаётся сплошной фон */ }
+  polyPat = pat || T['poly-none']; polyPatKey = key;
+  return polyPat;
+}
+// видна ли махалля при текущем фильтре (так же, как точки: вне фильтра она приглушается)
+function polyShown(e, mi) {
+  const pt = e.pt[mi];
+  if (pt >= 0) return vis[pt] === 1;
+  const r = DIS[e.d].r;
+  return !filteredFlag || maskD[e.d] === 1 || (maskR[r] === 1 && rHasD[r] === 0);
+}
+// рисует контуры в прямоугольник растра [x0,x1) x [y0,y1) (пиксели устройства); only - один район (дорисовка), иначе все
+function polyRender(x0, y0, x1, y1, only) {
+  if (x1 <= x0 || y1 <= y0) return;
+  const c = PR.c, kx = 1e-5 * KX * S * DPR, ky = 1e-5 * S * DPR, RX = PR.RX, RY = PR.RY, pad = 2;
+  const eps = 0.55 / ky, minPx = 0.6 * DPR, lx0 = x0 - pad, lx1 = x1 + pad, ly0 = y0 - pad, ly1 = y1 + pad;
+  c.save(); c.setTransform(1, 0, 0, 1, 0, 0);
+  c.beginPath(); c.rect(x0, y0, x1 - x0, y1 - y0); c.clip();
+  if (!only) c.clearRect(x0, y0, x1 - x0, y1 - y0);
+  for (let q = 0; q < 36; q++) PP[q] = null;
+  let any = false;
+  const each = e => {
+    const bx = RX + e.ox * kx, by = RY - e.oy * ky;
+    if (bx + e.x1 * kx < lx0 || bx + e.x0 * kx > lx1 || by - e.y0 * ky < ly0 || by - e.y1 * ky > ly1) return;
+    e.used = ++polyTick;
+    const box = e.box, xy = e.xy, ip = e.ip, ro = e.ro, rb = e.rb, rg = e.rg;
+    for (let mi = 0; mi < e.n; mi++) {
+      const q = 4 * mi, ax = bx + box[q] * kx, ex = bx + box[q + 2] * kx, ay = by - box[q + 3] * ky, ey = by - box[q + 1] * ky;
+      if (ex < lx0 || ax > lx1 || ey < ly0 || ay > ly1) continue;
+      if (ex - ax < minPx && ey - ay < minPx) continue;
+      const shown = polyShown(e, mi), cl = shown ? e.cl[mi] : 7;
+      const k = e.lay[mi] * 9 + cl;
+      const P = PP[k] || (PP[k] = new Path2D());
+      for (let r = rg[mi], re = rg[mi + 1]; r < re; r++) {
+        const rq = 4 * r;
+        if ((rb[rq + 2] - rb[rq]) * kx < minPx && (rb[rq + 3] - rb[rq + 1]) * ky < minPx) continue;
+        const s = ro[r], t = ro[r + 1];
+        P.moveTo(bx + xy[2 * s] * kx, by - xy[2 * s + 1] * ky);
+        for (let v = s + 1; v < t; v++) if (ip[v] >= eps) P.lineTo(bx + xy[2 * v] * kx, by - xy[2 * v + 1] * ky);
+        P.closePath();
+      }
+      any = true;
+    }
+  };
+  if (only) each(only); else PC.forEach(each);
+  if (any) {
+    // В растре цвета непрозрачны, а прозрачность слоя применяется при выводе: вложенная махалля заменяет цвет объемлющей, а не смешивается с ним
+    const fa = T.polyA, lw = clamp(1.08 - MPD / S * 0.0045, 0.5, 0.95) * DPR;
+    const dim = parseColor(T['poly-dim']), dimL = parseColor(T['poly-dim-line']), ln = parseColor(T['poly-line']);
+    const rgb = a => 'rgb(' + a[0] + ',' + a[1] + ',' + a[2] + ')';
+    // Каждая махалля носит цвет своего класса, как точка и ступень легенды, при любом размере: серых «блёклых» пятен нет,
+    // нейтральны только штриховка «нет оценки» и приглушение вне фильтра
+    for (let q = 0; q < 36; q++) {
+      const P = PP[q]; if (!P) continue;
+      const k = q % 9;
+      c.globalAlpha = k < 7 ? (hoverCls >= 0 && k !== hoverCls ? 0.2 : 1) : k === 7 ? Math.min(1, dim[3] / fa) : 1;
+      c.fillStyle = k < 7 ? T.cp[k] : k === 7 ? rgb(dim) : nonePattern();
+      c.fill(P, 'nonzero');
+    }
+    c.lineJoin = 'round'; c.lineWidth = lw;
+    for (let q = 0; q < 36; q++) {
+      const P = PP[q]; if (!P) continue;
+      const k = q % 9, dm = k === 7;
+      c.globalAlpha = Math.min(1, (dm ? dimL[3] : ln[3]) / fa) * (k < 7 && hoverCls >= 0 && k !== hoverCls ? 0.3 : 1);
+      c.strokeStyle = rgb(dm ? dimL : ln);
+      c.stroke(P);
+    }
+  }
+  c.restore();
+}
+// сдвиг готового растра на целое число пикселей устройства (карта сдвинулась, масштаб прежний): копия в запасной холст и обмен холстов;
+// копирование холста в самого себя в несколько раз дороже
+function polyShift(dx, dy) {
+  const d0x = Math.max(0, PR.x0 + dx), d0y = Math.max(0, PR.y0 + dy), d1x = Math.min(DW, PR.x1 + dx), d1y = Math.min(DH, PR.y1 + dy);
+  PR.RX += dx; PR.RY += dy;
+  if (d1x <= d0x || d1y <= d0y) { PR.ok = false; return; }
+  if (!PR.cv2) { PR.cv2 = document.createElement('canvas'); PR.cv2.width = DW; PR.cv2.height = DH; PR.c2 = PR.cv2.getContext('2d'); }
+  const c = PR.c2;
+  c.setTransform(1, 0, 0, 1, 0, 0); c.globalAlpha = 1; c.globalCompositeOperation = 'source-over';
+  c.clearRect(d0x, d0y, d1x - d0x, d1y - d0y);
+  c.drawImage(PR.cv, d0x - dx, d0y - dy, d1x - d0x, d1y - d0y, d0x, d0y, d1x - d0x, d1y - d0y);
+  let t = PR.cv; PR.cv = PR.cv2; PR.cv2 = t; t = PR.c; PR.c = PR.c2; PR.c2 = t;
+  PR.x0 = d0x; PR.y0 = d0y; PR.x1 = d1x; PR.y1 = d1y;
+}
+// дорисовывает часть нужного прямоугольника, которой нет в готовой области растра
+function polyFill(n) {
+  const ix0 = Math.max(n[0], PR.x0), iy0 = Math.max(n[1], PR.y0), ix1 = Math.min(n[2], PR.x1), iy1 = Math.min(n[3], PR.y1);
+  if (ix1 <= ix0 || iy1 <= iy0) polyRender(n[0], n[1], n[2], n[3], null);
+  else {
+    if (n[1] < iy0) polyRender(n[0], n[1], n[2], iy0, null);
+    if (n[3] > iy1) polyRender(n[0], iy1, n[2], n[3], null);
+    if (n[0] < ix0) polyRender(n[0], iy0, ix0, iy1, null);
+    if (n[2] > ix1) polyRender(ix1, iy0, n[2], iy1, null);
+  }
+  PR.x0 = n[0]; PR.y0 = n[1]; PR.x1 = n[2]; PR.y1 = n[3];
+}
+// приводит растр в соответствие с видом; true, если растр можно показывать (во время жеста масштаба - растянутым)
+function polyPrepare() {
+  polyZoom();
+  if (!(polyEnabled && polyOn)) return false;
+  polyCanvas();
+  const n = polyNeed(), sx = KX * S, RXi = (W / 2 - cx * sx) * DPR, RYi = (H / 2 + cy * S) * DPR;
+  if (PR.ok && PR.S !== S) { if (polyZooming()) return true; PR.ok = false; }
+  if (PR.ok) {
+    const dx = Math.round(RXi) - PR.RX, dy = Math.round(RYi) - PR.RY;
+    if (dx || dy) {
+      if (Math.abs(dx) > (n[2] - n[0]) * 0.7 || Math.abs(dy) > (n[3] - n[1]) * 0.7) PR.ok = false; else polyShift(dx, dy);
+    }
+  }
+  if (!PR.ok) {
+    if (polyZooming() || !polyAnyInView()) return false;
+    PR.S = S; PR.RX = Math.round(RXi); PR.RY = Math.round(RYi);
+    polyRender(n[0], n[1], n[2], n[3], null);
+    PR.x0 = n[0]; PR.y0 = n[1]; PR.x1 = n[2]; PR.y1 = n[3]; PR.ok = true;
+    return true;
+  }
+  polyFill(n);
+  return true;
+}
+function polyComposite() {
+  if (polyA < 0.004 || !PR.ok || !(polyEnabled && polyOn)) return;
+  ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = polyA * T.polyA;
+  if (PR.S === S) ctx.drawImage(PR.cv, PR.x0, PR.y0, PR.x1 - PR.x0, PR.y1 - PR.y0, PR.x0, PR.y0, PR.x1 - PR.x0, PR.y1 - PR.y0);
+  else {
+    const f = S / PR.S, sx = KX * S;
+    ctx.beginPath(); ctx.rect(nd[0], nd[1], nd[2] - nd[0], nd[3] - nd[1]); ctx.clip();
+    ctx.setTransform(f, 0, 0, f, (W / 2 - cx * sx) * DPR - PR.RX * f, (H / 2 + cy * S) * DPR - PR.RY * f);
+    ctx.drawImage(PR.cv, PR.x0, PR.y0, PR.x1 - PR.x0, PR.y1 - PR.y0, PR.x0, PR.y0, PR.x1 - PR.x0, PR.y1 - PR.y0);
+  }
+  ctx.restore();
+}
+// сколько контуров лежит в кадре и показывается (для polygons().drawn)
+function polyCountDrawn() {
+  if (polyA < 0.004 || !PR.ok || !(polyEnabled && polyOn)) return 0;
+  const p = plateCur || plateRect(), kx = 1e-5 * KX * S, ky = 1e-5 * S, ox = W / 2 - cx * KX * S, oy = H / 2 + cy * S;
+  let n = 0;
+  PC.forEach(e => {
+    const bx = ox + e.ox * kx, by = oy - e.oy * ky;
+    if (bx + e.x1 * kx < p.l || bx + e.x0 * kx > p.r || by - e.y0 * ky < p.t || by - e.y1 * ky > p.b) return;
+    for (let mi = 0; mi < e.n; mi++) {
+      const q = 4 * mi, ax = bx + e.box[q] * kx, ex = bx + e.box[q + 2] * kx, ay = by - e.box[q + 3] * ky, ey = by - e.box[q + 1] * ky;
+      if (ex < p.l || ax > p.r || ey < p.t || ay > p.b || (ex - ax < 0.6 && ey - ay < 0.6)) continue;
+      n++;
+    }
+  });
+  return n;
+}
+// ---- один контур для выделения ----
+function polyPathOf(e, mi, sx, ox, oy) {
+  const k = 1e-5 * sx, ky = 1e-5 * S, bx = ox + e.ox * k, by = oy - e.oy * ky, q = 4 * mi;
+  if (bx + e.box[q + 2] * k < -20 || bx + e.box[q] * k > W + 20 || by - e.box[q + 1] * ky < -20 || by - e.box[q + 3] * ky > H + 20) return null;
+  const P = new Path2D(), xy = e.xy, eps = 0.3 / ky;
+  for (let r = e.rg[mi], re = e.rg[mi + 1]; r < re; r++) {
+    const s = e.ro[r], t = e.ro[r + 1];
+    P.moveTo(bx + xy[2 * s] * k, by - xy[2 * s + 1] * ky);
+    for (let v = s + 1; v < t; v++) if (e.ip[v] >= eps) P.lineTo(bx + xy[2 * v] * k, by - xy[2 * v + 1] * ky);
+    P.closePath();
+  }
+  return P;
+}
+function polyOf(i) {
+  const e = PC.get(pDi[i]); if (!e) return -1;
+  const mi = e.idx.get(pMid[i]);
+  return mi === undefined ? -1 : mi;
+}
+function polyMark(e, mi, kind, sx, ox, oy) {
+  const P = polyPathOf(e, mi, sx, ox, oy);
+  if (!P) return false;
+  if (kind === 1) {
+    // выбранная махалля: вуаль акцентного цвета и контур с акцентным кольцом снаружи (2,5 px) между двумя светлыми (в тёмной теме тёмными) кромками:
+    // 1,5 px снаружи отделяют кольцо от заливки соседей любого класса, 2 px внутри отделяют его от заливки самой махалли
+    ctx.globalAlpha = polyA; ctx.fillStyle = T['poly-sel-wash']; ctx.fill(P, 'nonzero');
+    ctx.save();
+    const outer = new Path2D(); outer.rect(-16, -16, W + 32, H + 32); outer.addPath(P);
+    ctx.clip(outer, 'evenodd');
+    ctx.lineJoin = 'round';
+    ctx.lineWidth = 8; ctx.strokeStyle = T['poly-halo']; ctx.stroke(P);
+    ctx.lineWidth = 5; ctx.strokeStyle = T['poly-sel']; ctx.stroke(P);
+    ctx.restore();
+    ctx.save();
+    ctx.clip(P, 'evenodd');
+    ctx.lineJoin = 'round';
+    ctx.lineWidth = 4; ctx.strokeStyle = T['poly-halo']; ctx.stroke(P);
+    ctx.restore();
+  } else {
+    // наведение не зависит от класса заливки: лёгкая вуаль, светлая (в тёмной теме тёмная) кайма 2 px внутри и противоположная 1 px снаружи;
+    // одна из двух кайм контрастна к любой из семи заливок и к приглушённой
+    ctx.globalAlpha = polyA;
+    ctx.fillStyle = T['poly-hover-wash']; ctx.fill(P, 'nonzero');
+    ctx.save();
+    const outer = new Path2D(); outer.rect(-16, -16, W + 32, H + 32); outer.addPath(P);
+    ctx.clip(outer, 'evenodd');
+    ctx.lineWidth = 2; ctx.strokeStyle = T['poly-hover']; ctx.stroke(P);
+    ctx.restore();
+    ctx.save();
+    ctx.clip(P, 'evenodd');
+    ctx.lineWidth = 4; ctx.strokeStyle = T['poly-hover-in']; ctx.stroke(P);
+    ctx.restore();
+  }
+  ctx.globalAlpha = 1;
+  return true;
+}
+// ---- попадание курсора в контур ----
+let hitE = null, hitM = -1, hoverNE = null, hoverNEm = -1;
+// Контуры местами перекрываются: под курсором берётся наименьший по рамке (вложенная махалля не заслоняется объемлющей)
+function polyAt(mx, my) {
+  if (!polyInter() || polyA < 0.5) return false;
+  const ux = unLon(mx) * 1e5, uy = unLat(my) * 1e5;
+  let best = 1e18;
+  hitE = null; hitM = -1;
+  PC.forEach(e => {
+    const u = ux - e.ox, v = uy - e.oy;
+    if (u < e.x0 || u > e.x1 || v < e.y0 || v > e.y1) return;
+    const box = e.box;
+    for (let mi = 0; mi < e.n; mi++) {
+      const q = 4 * mi;
+      if (u < box[q] || u > box[q + 2] || v < box[q + 1] || v > box[q + 3]) continue;
+      const ar = (box[q + 2] - box[q]) * (box[q + 3] - box[q + 1]);
+      if (ar >= best) continue;
+      const inside = polyInside(e, mi, u, v);
+      if (inside && polyShown(e, mi)) { best = ar; hitE = e; hitM = mi; }
+    }
+  });
+  return hitE !== null;
+}
+// ---- названия махаллей на контурах ----
+// Контур шире POLY_LAB_W px при масштабе не грубее POLY_LAB_MPP м/пкс получает подпись: одна строка, обводка, многоточие, если название длиннее.
+// Подпись стоит в «полюсе недоступности» контура (точка, наиболее удалённая от границы) и не заходит за границу махалли.
+// Список считается, когда вид остановился (как подписи регионов), и рисуется каждый кадр, пока масштаб не менялся; крупные контуры выигрывают место.
+const POLY_LAB_MPP = 40, POLY_LAB_W = 66, POLY_LAB_H = 22, POLY_LAB_MAX = 90;
+const PLB = [];
+let plN = 0, plS = 0, plOnPrev = false;
+const plW = new Map();
+function plTextW(t) {
+  let w = plW.get(t);
+  if (w === undefined) { w = ctx.measureText(t).width; if (plW.size > 4000) plW.clear(); plW.set(t, w); }
+  return w;
+}
+function plEllipsize(t, maxW) {
+  if (plTextW(t) <= maxW) return t;
+  let lo = 1, hi = t.length - 1;
+  while (lo < hi) { const m = (lo + hi + 1) >> 1; if (ctx.measureText(t.slice(0, m).trimEnd() + '…').width <= maxW) lo = m; else hi = m - 1; }
+  return t.slice(0, lo).trimEnd() + '…';
+}
+function polyPointIn(px, py, n, u, v) {
+  let inside = false;
+  for (let a = 0, b = n - 1; a < n; b = a++) {
+    if ((py[a] > v) !== (py[b] > v) && u < (px[b] - px[a]) * (v - py[a]) / (py[b] - py[a]) + px[a]) inside = !inside;
+  }
+  return inside;
+}
+// Полюс недоступности самого крупного кольца махалли: сетка 9 x 9 по рамке и три уточнения вокруг лучшей точки; результат кэшируется в районе
+// (единицы 1e-5 градуса от начала района). Кольцо берётся упрощённым (допуск ~1,2% рамки), поэтому поиск дёшев.
+function polyAnchor(e, mi, r) {
+  if (!e.la) { e.la = new Float32Array(3 * e.n); e.la.fill(NaN); }
+  const q = 3 * mi;
+  if (e.la[q] === e.la[q]) return q;
+  const s = e.ro[r], t = e.ro[r + 1], xy = e.xy, ip = e.ip, rq = 4 * r, k = KX;
+  const x0 = e.rb[rq] * k, x1 = e.rb[rq + 2] * k, y0 = e.rb[rq + 1], y1 = e.rb[rq + 3];
+  const eps = Math.max(x1 - x0, y1 - y0) * 0.012;
+  let px = [], py = [];
+  for (let v = s; v < t; v++) if (ip[v] >= eps) { px.push(xy[2 * v] * k); py.push(xy[2 * v + 1]); }
+  if (px.length < 3) { px = []; py = []; for (let v = s; v < t; v++) { px.push(xy[2 * v] * k); py.push(xy[2 * v + 1]); } }
+  const n = px.length;
+  const score = (u, v) => {
+    if (!polyPointIn(px, py, n, u, v)) return -1;
+    let md = 1e30;
+    for (let a = 0, b = n - 1; a < n; b = a++) {
+      const dx = px[a] - px[b], dy = py[a] - py[b], l2 = dx * dx + dy * dy;
+      let tt = l2 ? ((u - px[b]) * dx + (v - py[b]) * dy) / l2 : 0; tt = tt < 0 ? 0 : tt > 1 ? 1 : tt;
+      const qx = u - px[b] - tt * dx, qy = v - py[b] - tt * dy, d2 = qx * qx + qy * qy;
+      if (d2 < md) md = d2;
+    }
+    return Math.sqrt(md);
+  };
+  let best = -1, bu = (x0 + x1) / 2, bv = (y0 + y1) / 2;
+  const G = 9;
+  for (let gy = 0; gy < G; gy++) for (let gx = 0; gx < G; gx++) {
+    const u = x0 + (gx + 0.5) / G * (x1 - x0), v = y0 + (gy + 0.5) / G * (y1 - y0), d = score(u, v);
+    if (d > best) { best = d; bu = u; bv = v; }
+  }
+  let su = (x1 - x0) / G, sv = (y1 - y0) / G;
+  for (let it = 0; it < 3; it++) {
+    su /= 2; sv /= 2;
+    const cu = bu, cv = bv;
+    for (let j = -2; j <= 2; j++) for (let i = -2; i <= 2; i++) { const d = score(cu + i * su, cv + j * sv); if (d > best) { best = d; bu = cu + i * su; bv = cv + j * sv; } }
+  }
+  if (best < 0) { let mu = 0, mv = 0; for (let a = 0; a < n; a++) { mu += px[a]; mv += py[a]; } bu = mu / n; bv = mv / n; best = 0; }
+  e.la[q] = bu / k; e.la[q + 1] = bv; e.la[q + 2] = best;
+  return q;
+}
+const plCand = [];
+function polyLabelsCompute(sx, ox, oy) {
+  plN = 0; PLB.length = 0; plS = S;
+  if (!(polyEnabled && polyOn) || polyA < 0.5 || MPD / S > POLY_LAB_MPP) return;
+  const p = plateCur || plateRect(), kx = 1e-5 * sx, ky = 1e-5 * S;
+  plCand.length = 0;
+  PC.forEach(e => {
+    const bx = ox + e.ox * kx, by = oy - e.oy * ky;
+    if (bx + e.x1 * kx < p.l || bx + e.x0 * kx > p.r || by - e.y0 * ky < p.t || by - e.y1 * ky > p.b) return;
+    for (let mi = 0; mi < e.n; mi++) {
+      const pt = e.pt[mi];
+      if (pt < 0 || !vis[pt]) continue;
+      let br = -1, ba = 0;
+      for (let r = e.rg[mi], re = e.rg[mi + 1]; r < re; r++) { const rq = 4 * r, a = (e.rb[rq + 2] - e.rb[rq]) * (e.rb[rq + 3] - e.rb[rq + 1]); if (a > ba) { ba = a; br = r; } }
+      if (br < 0) continue;
+      const rq = 4 * br, sw = (e.rb[rq + 2] - e.rb[rq]) * kx, sh = (e.rb[rq + 3] - e.rb[rq + 1]) * ky;
+      if (sw < POLY_LAB_W || sh < POLY_LAB_H) continue;
+      const ax = bx + e.rb[rq] * kx, ex = bx + e.rb[rq + 2] * kx, ay = by - e.rb[rq + 3] * ky, ey = by - e.rb[rq + 1] * ky;
+      if (ex < p.l + 10 || ax > p.r - 10 || ey < p.t + 10 || ay > p.b - 10) continue;
+      plCand.push({e: e, mi: mi, r: br, a: sw * sh, sw: sw, bx: bx, by: by});
+    }
+  });
+  if (!plCand.length) return;
+  plCand.sort((a, b) => b.a - a.a);
+  ctx.font = '600 11px ' + T.font;
+  if ('letterSpacing' in ctx) ctx.letterSpacing = '0px';
+  const boxes = [], il = p.l + 8, ir = p.r - 8, it = p.t + 12, ib = p.b - 8, ks = keep.length;
+  // открытая карточка (на телефоне нижняя шторка) закрывает карту: подписи под ней не ставятся
+  const cb = cardRectInMap();
+  for (let c = 0; c < plCand.length && PLB.length < POLY_LAB_MAX; c++) {
+    const o = plCand[c], e = o.e, mi = o.mi, pt = e.pt[mi], name = pName[pt];
+    const q = polyAnchor(e, mi, o.r), X = o.bx + e.la[q] * kx, Y = o.by - e.la[q + 1] * ky;
+    if (X < il || X > ir || Y < it || Y > ib) continue;
+    const full = plTextW(name), top = Math.min(full, o.sw * 0.92);
+    for (let f = 0; f < 4; f++) {
+      const w = top * (f === 0 ? 1 : f === 1 ? 0.8 : f === 2 ? 0.64 : 0.5);
+      if (w < 34) break;
+      const text = full <= w ? name : plEllipsize(name, w), tw = full <= w ? full : ctx.measureText(text).width;
+      // обрезанное до огрызка название (две-три буквы с многоточием) ничего не говорит: такая подпись не ставится
+      if (full > w && text.length - 1 < Math.min(name.length, Math.max(5, Math.ceil(name.length * 0.55)))) break;
+      const x0 = X - tw / 2 - 3, x1 = X + tw / 2 + 3, y0 = Y - 8, y1 = Y + 8;
+      if (x0 < il - 2 || x1 > ir + 2 || y0 < it - 6 || y1 > ib + 2) continue;
+      let bad = !!cb && x0 < cb[2] + 4 && x1 > cb[0] - 4 && y0 < cb[3] + 4 && y1 > cb[1] - 4;
+      for (let q2 = 0; q2 < ks && !bad; q2++) { const z = keep[q2]; bad = x0 < z[2] && x1 > z[0] && y0 < z[3] && y1 > z[1]; }
+      for (let q2 = 0; q2 < boxes.length && !bad; q2++) { const z = boxes[q2]; bad = x0 < z[2] + 4 && x1 > z[0] - 4 && y0 < z[3] + 2 && y1 > z[1] - 2; }
+      if (bad) continue;
+      // подпись целиком внутри контура: 4 ряда по 9 контрольных точек вдоль текста
+      let inn = true;
+      for (let row = 0; row < 4 && inn; row++) for (let col = 0; col < 9 && inn; col++) {
+        const u = (X - tw / 2 - 3 + (tw + 6) * col / 8 - o.bx) / kx, v = (o.by - (Y + (row - 1.5) * 4.4)) / ky;
+        inn = polyInside(e, mi, u, v);
+      }
+      if (!inn) continue;
+      boxes.push([x0, y0, x1, y1]);
+      PLB.push({pi: pt, t: text, lon: (e.ox + e.la[q]) * 1e-5, lat: (e.oy + e.la[q + 1]) * 1e-5, k: cls[pt]});
+      break;
+    }
+  }
+  plN = PLB.length;
+}
+function polyLabelsPrepare(sx, ox, oy) {
+  const on = polyEnabled && polyOn && polyA >= 0.5;
+  if ((plDirty || on !== plOnPrev) && !isMoving()) { plDirty = false; plOnPrev = on; polyLabelsCompute(sx, ox, oy); }
+}
+function polyLabelsLayer(sx, ox, oy) {
+  if (!plN || polyA < 0.5 || !(polyEnabled && polyOn) || Math.abs(Math.log(S / plS)) > 0.1) return;
+  const p = plateCur || plateRect();
+  ctx.save();
+  ctx.globalAlpha = sstep(0.5, 1, polyA);
+  ctx.font = '600 11px ' + T.font; if ('letterSpacing' in ctx) ctx.letterSpacing = '0px';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.lineJoin = 'round'; ctx.lineWidth = 3.4;
+  for (let k = 0; k < plN; k++) {
+    const o = PLB[k];
+    if (o.pi === hoverP || o.pi === selP) continue;   // название выбранной и наведённой махалли уже есть в карточке и подсказке
+    const X = ox + o.lon * sx, Y = oy - o.lat * S;
+    if (X < p.l || X > p.r || Y < p.t || Y > p.b) continue;
+    ctx.strokeStyle = T.lh[o.k]; ctx.strokeText(o.t, X, Y);
+    ctx.fillStyle = T.lt[o.k]; ctx.fillText(o.t, X, Y);
+  }
+  ctx.restore();
+}
+// Есть ли в кадре махалля без оценки населения: тогда легенда получает строку с образцом штриховки
+let lgNone = false;
+function polyNoneInView() {
+  if (!(polyEnabled && polyOn) || polyA < 0.5) return false;
+  const p = plateCur || plateRect(), kx = 1e-5 * KX * S, ky = 1e-5 * S, ox = W / 2 - cx * KX * S, oy = H / 2 + cy * S;
+  for (const e of PC.values()) {
+    if (!e.ne.length) continue;
+    const bx = ox + e.ox * kx, by = oy - e.oy * ky;
+    for (let q = 0; q < e.ne.length; q++) {
+      const m = 4 * e.ne[q];
+      if (bx + e.box[m + 2] * kx < p.l || bx + e.box[m] * kx > p.r || by - e.box[m + 1] * ky < p.t || by - e.box[m + 3] * ky > p.b) continue;
+      return true;
+    }
+  }
+  return false;
+}
+function polyLegendNote() {
+  const v = polyNoneInView();
+  if (v === lgNone) return;
+  lgNone = v;
+  $('lg-n').hidden = !v;
+  syncLayout(); requestDraw();
+}
+// рамка выбранной махалли в пикселях (для карточки и подгонки вида); null, если контура нет или слой не виден
+const sbox = [0, 0, 0, 0];
+function polyBoxPx(i) {
+  if (!polyInter() || polyA < 0.5) return null;
+  const mi = polyOf(i); if (mi < 0) return null;
+  const e = PC.get(pDi[i]), q = 4 * mi, k = 1e-5 * KX * S, ky = 1e-5 * S, ox = W / 2 - cx * KX * S, oy = H / 2 + cy * S;
+  sbox[0] = ox + (e.ox + e.box[q]) * k; sbox[2] = ox + (e.ox + e.box[q + 2]) * k;
+  sbox[1] = oy - (e.oy + e.box[q + 3]) * ky; sbox[3] = oy - (e.oy + e.box[q + 1]) * ky;
+  return sbox;
+}
+// вид, в который вписан контур выбранной махалли
+// Прямоугольник, в который вписывается контур. Широкая пластина: карточка справа от контура. Узкая (около 1000-1150 px окна): место под карточку
+// выбирается по размеру контура: справа (контур уже) или полоса снизу над легендой (контур шире); карточка при этом не заходит ни на контур, ни на легенду и кнопки.
+// bw, bh - размеры рамки контура в градусах (долгота с поправкой на широту).
+function polyFitRect(bw, bh) {
+  const p = plateRect(), comp = isCompact();
+  if (comp) {
+    const r = {l: p.l + 24, t: p.t + 30, r: p.r - 24, b: cardOpen ? card.offsetTop - 18 : p.b - 24};
+    if (r.b - r.t < 90) r.b = r.t + 90;
+    return r;
+  }
+  const A = {l: p.l + 24, t: p.t + 30, r: p.r - 24 - (cardW + 28), b: p.b - LAY.ctlH + 14};
+  if (p.r - p.l > 760) { if (A.b - A.t < 90) A.b = A.t + 90; return A; }
+  const B = {l: p.l + 24, t: p.t + 30, r: p.r - 24, b: p.b - LAY.ctlH + 10 - cardH - 24};
+  const okA = A.r - A.l >= 120 && A.b - A.t >= 90, okB = B.b - B.t >= 90;
+  const sc = r => Math.min((r.r - r.l) / Math.max(bw, 1e-5), (r.b - r.t) / Math.max(bh, 1e-5));
+  if (okA && (!okB || sc(A) >= sc(B) * 0.98)) return A;
+  if (okB) return B;
+  if (A.r - A.l >= 120) { A.b = A.t + 90; return A; }
+  B.b = B.t + 90;
+  return B;
+}
+function polyFitTarget(e, mi, i) {
+  const q = 4 * mi;
+  const lon0 = (e.ox + e.box[q]) * 1e-5, lat0 = (e.oy + e.box[q + 1]) * 1e-5, lon1 = (e.ox + e.box[q + 2]) * 1e-5, lat1 = (e.oy + e.box[q + 3]) * 1e-5;
+  const rect = polyFitRect(Math.max(lon1 - lon0, 1e-5) * KX, Math.max(lat1 - lat0, 1e-5));
+  const rw = Math.max(40, rect.r - rect.l), rh = Math.max(40, rect.b - rect.t);
+  let s = Math.min(rw / (Math.max(lon1 - lon0, 1e-5) * KX), rh / Math.max(lat1 - lat0, 1e-5));
+  const sFloor = MPD / POLY_FLY, sFar = MPD / POLY_BIGFIT;
+  let mlon = (lon0 + lon1) / 2, mlat = (lat0 + lat1) / 2;
+  polyBig = -1;
+  if (s < sFloor) {
+    // рамка не помещается при 95 м/пкс (огромная махалля пустынного района): она вписывается на более мелком масштабе, до POLY_BIGFIT,
+    // чтобы были видны контур и соседи; слой на таких масштабах удерживается выбором (polyPinned). Если рамка не помещается и там,
+    // вид стоит на предельном масштабе у точки махалли, и её контур уходит за кромку, но остаётся в кадре
+    polyBig = i;
+    if (s < sFar) { s = sFar; mlon = pLon[i]; mlat = pLat[i]; }
+  }
+  s = clamp(s, 20, SMAX);
+  const scx = (rect.l + rect.r) / 2, scy = (rect.t + rect.b) / 2;
+  return {cx: mlon - (scx - W / 2) / (KX * s), cy: mlat + (scy - H / 2) / s, S: s};
+}
+// ---- состояние, подсказки и кнопка ----
+function polyIdle() { return polyAct === 0 && !polyKickTm && !polyFadeTm; }
+// Подсказка у кнопки: плашка над кнопкой со стрелкой, центрирована по ней, но не выходит за рамку карты (на телефоне кнопка у правого края)
+function polyPlacePill(st) {
+  const b = $('btn-poly').getBoundingClientRect(), m = cv.getBoundingClientRect(), pl = plateCur || plateRect();
+  const w = st.offsetWidth, mid = b.left - m.left + b.width / 2;
+  const left = clamp(mid - w / 2, pl.l + 8, Math.max(pl.l + 8, pl.r - 8 - w));
+  st.style.left = left.toFixed(1) + 'px'; st.style.right = 'auto';
+  st.style.bottom = (m.bottom - b.top + 10).toFixed(1) + 'px';
+  st.style.setProperty('--ax', clamp(mid - left, 14, Math.max(14, w - 14)).toFixed(1) + 'px');
+}
+function polyUi() {
+  const b = $('btn-poly'), st = $('poly-status'), now = performance.now();
+  const shown = polyEnabled && polyOn;
+  const hint = !polyEnabled ? 'Показать контуры махаллей' : shown ? 'Скрыть контуры махаллей' : 'Контуры появляются при увеличении';
+  // Подсказка видна не только в title. По наведению и с клавиатуры она показывается плашкой над кнопкой. На сенсорном экране наведения нет,
+  // поэтому нажатие на кнопку на дальнем плане (когда слой показаться не может) показывает плашку 2,5 с и при включении, и при выключении.
+  // Пока открыта карточка-шторка на телефоне или планшете, кнопки скрыты и плашка не нужна.
+  const noBtn = isCompact() && cardOpen;
+  const msgOn = !polyOn && !noBtn && now < polyMsgUntil;
+  const hintOn = polyEnabled && !polyOn && !noBtn && polyHintHold;
+  if (msgOn) { clearTimeout(polyHintTm); polyHintTm = setTimeout(polyUi, polyMsgUntil - now + 30); }
+  if (b.title !== hint) { b.title = hint; $('poly-hint').textContent = !polyEnabled ? 'Контуры выключены' : shown ? 'Контуры показаны' : 'Контуры появляются при увеличении'; }
+  const pr = polyEnabled ? 'true' : 'false';
+  if (b.getAttribute('aria-pressed') !== pr) b.setAttribute('aria-pressed', pr);
+  const far = polyEnabled && !polyOn;
+  if (b.classList.contains('far') !== far) b.classList.toggle('far', far);
+  const busy = polyAct + polyQ.length > 0;
+  if (!busy) polyBusyT = 0;
+  let s = '';
+  if (shown && polyFail) s = 'fail';
+  else if (shown && busy && polyBusyT && now - polyBusyT > 350) s = 'load';
+  else if (msgOn || hintOn) s = 'hint';
+  const txt = s === 'fail' ? 'Контуры не загрузились' : s === 'load' ? 'Загрузка контуров…' : s === 'hint' ? (msgOn ? polyMsg : 'Контуры появятся при увеличении') : '';
+  if (s) {
+    const at = s === 'hint';
+    if (st.classList.contains('at-r') !== at) {
+      st.classList.toggle('at-r', at);
+      if (!at) { st.style.left = st.style.right = st.style.bottom = ''; }
+    }
+  }
+  if (st.dataset.s !== s) { st.dataset.s = s; if (s) $('poly-st-t').textContent = txt; else { clearTimeout(polyUiTm2); polyUiTm2 = setTimeout(() => { if (!st.dataset.s) $('poly-st-t').textContent = ''; }, 260); } }
+  else if (s && $('poly-st-t').textContent !== txt) $('poly-st-t').textContent = txt;
+  if (s === 'hint') polyPlacePill(st);
+  // загрузка шла дольше 350 мс - показать строку состояния; проверка повторяется, пока идёт загрузка
+  if (shown && busy && !s) { clearTimeout(polyUiTm); polyUiTm = setTimeout(polyUi, 380); }
+}
+function setPolyEnabled(on) {
+  if (polyEnabled === on) return;
+  polyEnabled = on;
+  try { localStorage.setItem('mahalla-poly', on ? '1' : '0'); } catch (e) { /* без хранилища */ }
+  if (!on) { hoverNE = null; hoverNEm = -1; polyPend = null; }
+  polyInvalidate();
+  polyScanKey = ''; polyZoom(); polyRetarget(performance.now()); markBase(); polyWatch(); requestDraw();
+  $('sel-live').textContent = on ? 'Контуры махаллей включены.' : 'Контуры махаллей выключены.';
+}
+function neTip(e) {
+  const r = DIS[e.d].r;
+  return '<b>Нет оценки населения</b>' + esc(DIS[e.d].n) + '<br>' + esc(REG[r].n) + '<span class="th">Контур махалли есть, оценки модели для неё нет</span>';
+}
 function renderBase(sx, ox, oy) {
   ctx = baseCtx;
   ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
   ctx.fillStyle = T.sea; ctx.fillRect(0, 0, W, H);
   graticule(sx, ox, oy);
   regionsLayer(sx, ox, oy);
+  polyPrepare(); polyComposite();
   dotsLayer(sx, ox, oy);
   ctx = mainCtx;
   baseDirty = false; bCx = cx; bCy = cy; bS = S;
@@ -2531,16 +3727,22 @@ function draw() {
   ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
   if (hoverR >= 0 && !hiMask[hoverR] && RP[hoverR]) { ctx.fillStyle = T['accent-wash']; ctx.fill(RP[hoverR], 'evenodd'); }
   plateLayer();
+  placeCard();   // до подписей: они обходят карточку и должны знать её положение в этом же кадре
   marksLayer();
   gratPrepare();
   labelsPrepare(sx, ox, oy);
+  polyLabelsPrepare(sx, ox, oy);
   gratLabelsLayer();
   labelsLayer();
+  polyLabelsLayer(sx, ox, oy);
   ctx.restore();
   plateFrame();
   updateScale();
-  placeCard();
+  const sp = polyA > 0.02;
+  if (sp !== scalePill) { scalePill = sp; $('scale').classList.toggle('on-poly', sp); appEl.classList.toggle('poly-vis', sp); }
+  polyLegendNote();
 }
+let scalePill = false;
 
 // ---------- поиск точки и региона ----------
 function inPlate(x, y) { const p = plateCur; return !!p && x >= p.l && x <= p.r && y >= p.t && y <= p.b; }
@@ -2677,7 +3879,10 @@ function selectPoint(i, zoom) {
   }
   renderScope();
   requestDraw();
+  hoverRefresh();
 }
+// карточка открылась, закрылась или вид сменился: подсказку под неподвижным указателем нужно пересчитать (она обходит карточку)
+function hoverRefresh() { if (lastMouse && !gesture) { hoverQ = lastMouse; schedule(); } }
 
 // ---------- KPI ----------
 const KDUR = 350;
@@ -3092,7 +4297,7 @@ function buildLegend() {
 }
 function setHoverCls(k) {
   if (k === hoverCls) return;
-  hoverCls = k; markBase();
+  hoverCls = k; markBase(); polyInvalidate();
   document.querySelectorAll('#lg-bar i').forEach(e => e.classList.toggle('hot', +e.dataset.c === k));
   requestDraw();
 }
@@ -3133,14 +4338,15 @@ function showCard(i) {
   card.classList.add('open');
   appEl.classList.add('card-open');
   cardW = card.offsetWidth; cardH = card.offsetHeight;
-  placeCard(); applyPanels();
+  appEl.style.setProperty('--card-h', cardH + 'px');
+  placeCard(); applyPanels(); polyUi(); plDirty = true;
 }
 function hideCard() {
   cardOpen = false; selP = -1;
-  card.classList.remove('open', 'above', 'below');
+  card.classList.remove('open', 'above', 'below', 'rt', 'lt');
   delete card.dataset.side;
   appEl.classList.remove('card-open');
-  renderScope(); applyPanels();
+  renderScope(); applyPanels(); polyUi(); plDirty = true;
 }
 function placeCard() {
   if (!cardOpen || selP < 0 || isCompact()) return;
@@ -3149,13 +4355,33 @@ function placeCard() {
   const pl = plateCur || plateRect();
   const lb = pl.l + 4, rb = pl.r - 4, tb = pl.t + 4, bb = pl.b - 4;
   const w = cardW, h = cardH;
-  const left = clamp(X - w / 2, lb, Math.max(lb, rb - w));
-  let top = Y - h - 20, side = 'above';
-  if (top < tb) { top = Y + 20; side = 'below'; }
-  if (top + h > bb) { top = Math.max(tb, bb - h); side = ''; }
+  let left = 0, top = 0, side = null;
+  // с видимым контуром карточка встаёт рядом с ним (справа, слева, сверху, снизу), а не поверх выбранной махалли
+  const g = polyBoxPx(selP);
+  // нижняя граница карточки везде одна: над легендой и кнопками, чтобы она их не накрывала
+  const bot = Math.min(bb, pl.b - LAY.ctlH + 10);
+  if (g) {
+    const gap = 16, mid = (g[1] + g[3]) / 2, gx = (g[0] + g[2]) / 2;
+    if (g[2] + gap + w <= rb) { left = g[2] + gap; top = clamp(mid - h / 2, tb, Math.max(tb, bot - h)); side = 'right'; }
+    else if (g[0] - gap - w >= lb) { left = g[0] - gap - w; top = clamp(mid - h / 2, tb, Math.max(tb, bot - h)); side = 'left'; }
+    else if (g[1] - gap - h >= tb && g[1] - gap <= bot) { top = g[1] - gap - h; left = clamp(gx - w / 2, lb, Math.max(lb, rb - w)); side = 'above'; }
+    else if (g[3] + gap + h <= bot) { top = g[3] + gap; left = clamp(gx - w / 2, lb, Math.max(lb, rb - w)); side = 'below'; }
+  }
+  if (side === null) {
+    left = clamp(X - w / 2, lb, Math.max(lb, rb - w));
+    top = Y - h - 20; side = 'above';
+    if (top < tb) { top = Y + 20; side = 'below'; }
+    if (top + h > bot) { top = Math.max(tb, bot - h); side = ''; }
+  }
   card.style.transform = 'translate(' + Math.round(left) + 'px,' + Math.round(top) + 'px)';
+  cardPos[0] = Math.round(left); cardPos[1] = Math.round(top); cardPos[2] = Math.round(left) + w; cardPos[3] = Math.round(top) + h;
   card.style.setProperty('--ax', clamp(X - left, 22, w - 22).toFixed(0) + 'px');
-  if (card.dataset.side !== side) { card.dataset.side = side; card.classList.toggle('above', side === 'above'); card.classList.toggle('below', side === 'below'); }
+  card.style.setProperty('--ay', clamp(Y - top, 22, h - 22).toFixed(0) + 'px');
+  if (card.dataset.side !== side) {
+    card.dataset.side = side;
+    card.classList.toggle('above', side === 'above'); card.classList.toggle('below', side === 'below');
+    card.classList.toggle('rt', side === 'right'); card.classList.toggle('lt', side === 'left');
+  }
 }
 function pointTip(i) {
   return '<b>' + esc(pName[i]) + '</b>' + esc(DIS[pDi[i]].n) + '<br>' + esc(REG[pRi[i]].n) + '<span class="tv"><strong>' + fmt(pPop[i]) + '</strong> чел., оценка</span>';
@@ -3168,14 +4394,45 @@ function hideTip() {
   tip.style.display = 'none'; tipBox = null;
   if (labTipHid) requestDraw();
 }
+// Рамка открытой карточки (или нижней шторки на телефоне) в координатах карты; подсказка обходит её, а не ложится сверху
+const cardBox = [0, 0, 0, 0], cardPos = [0, 0, 0, 0];
+function cardRectInMap() {
+  if (!cardOpen) return null;
+  // на широком экране рамку задаёт placeCard (она всегда свежая); шторка телефона стоит на месте, её рамка берётся из разметки
+  if (!isCompact() && selP >= 0) return cardPos;
+  const c = card.getBoundingClientRect(), m = cv.getBoundingClientRect();
+  if (c.width < 1 || c.height < 1) return null;
+  cardBox[0] = c.left - m.left; cardBox[1] = c.top - m.top; cardBox[2] = c.right - m.left; cardBox[3] = c.bottom - m.top;
+  return cardBox;
+}
+const TIP_GAP = 8;
+const tipClear = (tx, ty, w, h, cr) => tx + w + TIP_GAP <= cr[0] || tx >= cr[2] + TIP_GAP || ty + h + TIP_GAP <= cr[1] || ty >= cr[3] + TIP_GAP;
 function showTip(html, x, y) {
   if (!html) { hideTip(); return; }
   tip.innerHTML = html; tip.style.display = 'block';
   const w = tip.offsetWidth, h = tip.offsetHeight;
-  let tx = x + 16, ty = y + 18;
-  if (tx + w > W - 8) tx = x - w - 14;
-  if (ty + h > H - 8) ty = y - h - 14;
-  tx = Math.round(Math.max(8, tx)); ty = Math.round(Math.max(8, ty));
+  const cr = cardRectInMap();
+  const xMax = Math.max(8, W - 8 - w), yMax = Math.max(8, H - 8 - h);
+  // справа снизу от курсора, затем слева, сверху, слева сверху; без карточки подходит первое положение, у края окна оно переворачивается само
+  let tx = 0, ty = 0, ok = false;
+  for (let q = 0; q < 4 && !ok; q++) {
+    let ax = q & 1 ? x - w - 14 : x + 16, ay = q & 2 ? y - h - 14 : y + 18;
+    if (!(q & 1) && ax + w > W - 8) ax = x - w - 14;
+    if (!(q & 2) && ay + h > H - 8) ay = y - h - 14;
+    ax = Math.min(Math.max(8, ax), xMax); ay = Math.min(Math.max(8, ay), yMax);
+    tx = ax; ty = ay;
+    ok = !cr || tipClear(ax, ay, w, h, cr);
+  }
+  let under = false;
+  if (!ok) {
+    // ни одно положение у курсора не свободно: рамка прижимается к карточке слева (или справа от неё), а при остатке пересечения уходит под карточку
+    const left = cr[0] - TIP_GAP - w, right = cr[2] + TIP_GAP;
+    if (left >= 8) tx = left; else if (right <= xMax) tx = right;
+    ty = Math.min(Math.max(8, y - h / 2), yMax);
+    under = !tipClear(tx, ty, w, h, cr);
+  }
+  tx = Math.round(tx); ty = Math.round(ty);
+  if (tip.classList.contains('under') !== under) tip.classList.toggle('under', under);
   tip.style.transform = 'translate(' + tx + 'px,' + ty + 'px)';
   // подписи регионов под подсказкой скрываются, а не обрезаются ею
   tipBox = [tx, ty, tx + w, ty + h];
@@ -3204,6 +4461,7 @@ function downAt(id, x, y, type) {
   }
 }
 function moveAt(id, x, y, type) {
+  if (type === 'mouse') { LM.x = x; LM.y = y; lastMouse = LM; }
   if (ptrs.has(id)) {
     const prev = ptrs.get(id);
     if (gesture && gesture.kind === 'pan' && ptrs.size === 1) {
@@ -3221,7 +4479,7 @@ function moveAt(id, x, y, type) {
     }
     return;
   }
-  if (type === 'mouse') { hoverQ = {x, y, out: false}; schedule(); }
+  if (type === 'mouse') { hoverQ = LM; schedule(); }
 }
 function upAt(id, x, y, isUp) {
   if (!ptrs.has(id)) return;
@@ -3281,23 +4539,59 @@ cv.addEventListener('wheel', e => {
 cv.addEventListener('focus', () => { try { cvFocus = cv.matches(':focus-visible'); } catch (e) { cvFocus = true; } requestDraw(); });
 cv.addEventListener('blur', () => { cvFocus = false; requestDraw(); });
 cv.addEventListener('dblclick', e => { clearTimeout(regTimer); e.preventDefault(); resetView(); });
+function setHoverNE(e, mi) {
+  if (e === hoverNE && mi === hoverNEm) return;
+  hoverNE = e; hoverNEm = mi; requestDraw();
+}
+// Указатель покоится, а вид сменился (колесо, клавиши, перелёт, поиск): подсказка и обводка под курсором устарели.
+// Пока вид движется, они снимаются; когда он остановился, под последним положением указателя ищется махалля заново.
+function hoverClear() {
+  if (hoverP < 0 && !hoverNE && hoverR < 0 && tip.style.display === 'none') return;
+  hoverP = -1; setHoverNE(null, -1); setHoverRegion(-1); showTip(null); cv.classList.remove('ptr'); requestDraw();
+}
+function hoverStale(now) {
+  if (!lastMouse || gesture || hoverQ || (cx === hvCx && cy === hvCy && S === hvS)) return;
+  if (anim || now < wheelUntil) { hoverClear(); return; }
+  hoverQ = lastMouse; hvCx = cx; hvCy = cy; hvS = S;
+}
 function processHover(q) {
   if (q.out) {
-    hoverP = -1; setHoverRegion(-1); showTip(null); cv.classList.remove('ptr'); requestDraw(); return;
+    lastMouse = null;
+    hoverP = -1; setHoverNE(null, -1); setHoverRegion(-1); showTip(null); cv.classList.remove('ptr'); requestDraw(); return;
   }
   if (gesture) return;
-  const i = pickPoint(q.x, q.y, Math.max(8, dotR() + 4));
-  const r = regionAtPx(q.x, q.y);
+  hvCx = cx; hvCy = cy; hvS = S;
+  // с видимым слоем контуров махалля под курсором важнее ближайшей точки; вне контуров работает прежний поиск точки
+  let i = -1, ne = false;
+  if (polyAt(q.x, q.y)) { if (hitE.pt[hitM] >= 0) i = hitE.pt[hitM]; else ne = true; }
+  const eN = ne ? hitE : null, mN = ne ? hitM : -1;
+  if (i < 0 && !ne) i = pickPoint(q.x, q.y, Math.max(8, dotR() + 4));
+  // пока видны контуры махаллей, регион под курсором не предлагается: пустая земля между сёлами - не повод выбрать область и улететь с места
+  const r = i >= 0 || ne || polyInter() ? -1 : regionAtPx(q.x, q.y);
   if (i !== hoverP) { hoverP = i; requestDraw(); }
+  setHoverNE(eN, mN);
   setHoverRegion(r);
-  cv.classList.toggle('ptr', i >= 0 || r >= 0);
-  showTip(i >= 0 ? pointTip(i) : (r >= 0 ? regionTip(r) : null), q.x, q.y);
+  cv.classList.toggle('ptr', i >= 0 || r >= 0 || ne);
+  showTip(i >= 0 ? pointTip(i) : ne ? neTip(eN) : (r >= 0 ? regionTip(r) : null), q.x, q.y);
 }
+let neTm = 0;
 function onMapClick(x, y, touch) {
+  if (polyAt(x, y)) {
+    if (hitE.pt[hitM] >= 0) { selectPoint(hitE.pt[hitM], false); return; }
+    // махалля без оценки: выбрать нечего, поясняем и не трогаем выбор региона
+    const e = hitE, m = hitM;
+    $('sel-live').textContent = 'Нет оценки населения: ' + DIS[e.d].n + '.';
+    if (touch) {
+      // на сенсорном экране наведения нет: контур подсвечивается и подсказка показывается на пару секунд
+      setHoverNE(e, m); tip.classList.add('force'); showTip(neTip(e), x, y);
+      clearTimeout(neTm); neTm = setTimeout(() => { tip.classList.remove('force'); hideTip(); setHoverNE(null, -1); }, 2600);
+    }
+    return;
+  }
   const i = pickPoint(x, y, Math.max(touch ? 20 : 9, dotR() + 5));
   if (i >= 0) { selectPoint(i, false); return; }
   if (selP >= 0) { selectPoint(-1); return; }
-  if (touch) return;
+  if (touch || polyInter()) return;
   const r = regionAtPx(x, y);
   if (r >= 0) { clearTimeout(regTimer); regTimer = setTimeout(() => toggleRegion(r), 240); }
 }
@@ -3316,18 +4610,18 @@ cv.addEventListener('keydown', e => {
     return;
   }
   const step = 90;
-  let h = true;
+  // масштаб, сброс и Escape запускают собственную анимацию: общий хвост с cancelAnim() убил бы её в первом же кадре
+  if (e.key === '+' || e.key === '=') { e.preventDefault(); zoomBy(1.6); return; }
+  if (e.key === '-' || e.key === '_') { e.preventDefault(); zoomBy(1 / 1.6); return; }
+  if (e.key === '0') { e.preventDefault(); resetView(); return; }
+  if (e.key === 'Escape') { e.preventDefault(); if (selP >= 0) selectPoint(-1); return; }
   if (e.key === 'ArrowLeft') cx -= step / (KX * S);
   else if (e.key === 'ArrowRight') cx += step / (KX * S);
   else if (e.key === 'ArrowUp') cy += step / S;
   else if (e.key === 'ArrowDown') cy -= step / S;
-  else if (e.key === '+' || e.key === '=') { zoomBy(1.6); h = false; }
-  else if (e.key === '-' || e.key === '_') { zoomBy(1 / 1.6); h = false; }
-  else if (e.key === '0') { resetView(); h = false; }
-  else if (e.key === 'Escape') { if (selP >= 0) selectPoint(-1); h = false; }
   else return;
   e.preventDefault(); cancelAnim(); userMoved = true; markLabels();
-  if (h) requestDraw();
+  requestDraw();
 });
 
 // ---------- поиск ----------
@@ -3571,6 +4865,16 @@ $('btn-theme').addEventListener('click', toggleTheme);
 $('z-in').addEventListener('click', () => zoomBy(1.7));
 $('z-out').addEventListener('click', () => zoomBy(1 / 1.7));
 $('btn-view').addEventListener('click', resetView);
+$('btn-poly').addEventListener('click', () => {
+  setPolyEnabled(!polyEnabled);
+  polyMsg = polyEnabled ? 'Контуры включены, появятся при увеличении' : 'Контуры выключены';
+  polyMsgUntil = performance.now() + 2500;
+  polyUi();
+});
+$('btn-poly').addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') { polyHintHold = true; polyUi(); } });
+$('btn-poly').addEventListener('pointerleave', () => { polyHintHold = false; polyUi(); });
+$('btn-poly').addEventListener('focus', () => { let fv = true; try { fv = $('btn-poly').matches(':focus-visible'); } catch (e) { /* без поддержки */ } if (fv) { polyHintHold = true; polyUi(); } });
+$('btn-poly').addEventListener('blur', () => { polyHintHold = false; polyUi(); });
 $('skip').addEventListener('click', e => { e.preventDefault(); cv.focus(); });
 function setAbout(o) {
   const el = $('about'), b = $('btn-about');
@@ -3643,7 +4947,7 @@ function onResize() {
   applyPanels(); syncLayout(); setPlate(false); markLabels();
   computeS0();
   if (!userMoved) fitCurrent(false); else lastFit = fitRect();
-  if (cardOpen) { cardW = card.offsetWidth; cardH = card.offsetHeight; }
+  if (cardOpen) { cardW = card.offsetWidth; cardH = card.offsetHeight; appEl.style.setProperty('--card-h', cardH + 'px'); }
   updateFades(); updateScopeFade();
   requestDraw();
 }
@@ -3679,13 +4983,31 @@ window.__app = {
   state() {
     return {
       regions: Array.from(selR).sort((a, b) => a - b), districts: Array.from(selD).sort((a, b) => a - b),
-      selected: selP, count: ST.cnt, population: Math.round(ST.pop), query, resultCount: results.length
+      selected: selP, count: ST.cnt, population: Math.round(ST.pop), query, resultCount: results.length,
+      polygons: polygonsInfo()
     };
-  }
+  },
+  polygons() { return polygonsInfo(); },
+  // прыжок без анимации (для проверок): центр в градусах, масштаб в метрах на пиксель
+  setView(lon, lat, m) {
+    cancelAnim();
+    S = clamp(MPD / Math.max(+m || 1, 0.5), 20, SMAX); cx = +lon; cy = +lat;
+    userMoved = true; markLabels(); markBase(); polyZoom(); polyScan(); requestDraw();
+  },
+  view() { return {lon: cx, lat: cy, mpp: MPD / S}; },
+  idle() { return !anim && !plateAnim && !numsActive && !gesture && polyIdle(); }
 };
+// отложенный кадр отрисовывается сразу: счётчик drawn и список загруженных районов должны соответствовать тому, что видно
+function flushDraw() { if (needDraw || hoverQ) { if (rafId) { cancelAnimationFrame(rafId); rafId = 0; } frame(performance.now()); } }
+function polygonsInfo() {
+  flushDraw();
+  const loaded = [];
+  PC.forEach((e, d) => { loaded.push(DIS[d].c); });
+  return {enabled: polyEnabled, visible: polyEnabled && polyOn, loaded: loaded.sort(), inflight: polyAct, drawn: polyCountDrawn(), failed: polyFail};
+}
 
 // ---------- старт ----------
-readTheme(); themeButton();
+readTheme(); themeButton(); polyUi();
 layoutCanvas();
 regNum('pop', $('kv-pop'), $('ku-pop'), v => compact(v));
 regNum('cnt', $('kv-cnt'), null, v => [fmt(v)]);

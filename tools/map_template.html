@@ -632,12 +632,16 @@
   .scale { position: absolute; z-index: 9; right: calc(26px + var(--rp)); bottom: calc(var(--bot) + 68px); display: flex; flex-direction: column; align-items: flex-end; gap: 3px; font-size: 12px; font-weight: 500; color: var(--ink-2); pointer-events: none; transition: right .32s var(--ease); text-shadow: var(--text-halo); font-variant-numeric: tabular-nums; }
   .scale i { display: block; height: 5px; border: 1.5px solid var(--ink-2); border-top: 0; border-radius: 0 0 1px 1px; }
 
-  .foot { position: absolute; z-index: 10; left: 16px; right: 16px; bottom: 12px; padding: 8px 4px 0; border-top: 1px solid var(--line-2); font-size: 12px; line-height: 1.5; color: var(--ink-3); }
-  .foot b { font-weight: 600; color: var(--ink-2); }
-  .foot a { color: var(--ink-2); text-underline-offset: 2px; }
-  .foot a:hover { color: var(--accent-ink); }
-  .foot-top { display: none; }
-  .foot-full { display: block; }
+  /* ---- «?» в шапке: примечания открываются по запросу ---- */
+  .about { position: absolute; z-index: 70; top: calc(100% + 8px); right: 12px; width: 392px; max-width: calc(100vw - 32px); padding: 16px 18px 14px; border-radius: 14px; background: var(--glass-solid); border: 1px solid var(--hair); box-shadow: var(--shadow-2); font-size: 13px; line-height: 1.55; color: var(--ink-2); }
+  .about[hidden] { display: none; }
+  .about-t { margin: 0 0 8px; padding-right: 36px; font-size: var(--fs-3); font-weight: 650; letter-spacing: -.005em; color: var(--ink); }
+  .about p { margin: 0 0 8px; }
+  .about p:last-child { margin-bottom: 0; }
+  .about b { font-weight: 600; color: var(--ink); }
+  .about a { color: var(--accent-ink); text-underline-offset: 2px; }
+  .about-x { position: absolute; top: 8px; right: 8px; }
+  #btn-about[aria-expanded="true"] { background: var(--accent-wash-2); color: var(--accent-ink); }
 
   /* ---- подсказка и карточка ---- */
   .tip { position: absolute; z-index: 55; left: 0; top: 0; pointer-events: none; display: none; max-width: 290px; padding: 9px 12px 10px; border-radius: 12px; background: var(--pop); border: 1px solid var(--hair); box-shadow: var(--shadow-2); font-size: var(--fs-2); line-height: 1.4; color: var(--ink-2); }
@@ -820,7 +824,7 @@
     .scope { min-height: 48px; padding-left: 16px; }
     .brand-s { display: none; }
 
-    .dock { position: absolute; z-index: 40; left: 8px; right: 8px; bottom: 58px; display: flex; gap: 8px; padding: 6px; border-radius: 18px; }
+    .dock { position: absolute; z-index: 40; left: 8px; right: 8px; bottom: calc(8px + env(safe-area-inset-bottom, 0px)); display: flex; gap: 8px; padding: 6px; border-radius: 18px; }
     .dock-b { flex: 1 1 0; min-width: 0; padding: 0 10px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; border-radius: 13px; border: 1px solid var(--hair); background: var(--surface-2); color: var(--ink); font-size: 14px; font-weight: 600; cursor: pointer; }
     .dock-b:active { transform: scale(.97); }
     .dock-chev { color: var(--ink-3); margin-left: 2px; }
@@ -894,29 +898,13 @@
     .chk input:checked + .box::after { background: var(--on-accent); transform: translateX(16px); }
     .chk input { left: auto; right: 8px; width: 40px; height: 24px; }
 
-    /* подвал: две строки всегда видны, подробности открываются поверх карты */
-    .foot { left: 8px; right: 8px; bottom: calc(8px + env(safe-area-inset-bottom, 0px)); padding: 4px 0 0 4px; }
-    .foot-top { display: flex; align-items: center; gap: 8px; }
-    .foot-lines { flex: 1; min-width: 0; }
-    .foot-core { font-size: var(--fs-1); line-height: 17px; color: var(--ink-2); }
-    .foot-tash { font-weight: 400; color: var(--ink-2); }
-    .foot-credit { font-size: 12px; line-height: 17px; color: var(--ink-3); }
-    .foot-credit a { display: inline-block; padding: 13px 4px; margin: -13px -4px; }
-    .gh-s { display: none; }
-    .foot-more { flex: none; display: inline-grid; place-items: center; width: 40px; height: 40px; border: 0; background: none; color: var(--accent-ink); cursor: pointer; border-radius: 10px; }
-    .foot-more:hover { background: var(--surface-3); }
-    .foot-more .ic-x { display: none; }
-    .foot.open .foot-more .ic-x { display: block; }
-    .foot.open .foot-more .ic-i { display: none; }
-    .foot-full { display: none; }
-    .foot-cr { display: none; }
-    .foot.open { z-index: 70; }
-    .foot.open .foot-full { display: block; position: absolute; left: 0; right: 0; bottom: calc(100% + 8px); max-height: 60vh; overflow: auto; padding: 14px 16px; border-radius: 14px; background: var(--glass-solid); border: 1px solid var(--hair); box-shadow: var(--shadow-2); font-size: 13px; line-height: 1.5; color: var(--ink-2); }
+    .about { left: 8px; right: 8px; width: auto; max-width: none; max-height: calc(100dvh - 120px); overflow: auto; }
+    #link-code { display: none; }
     .tip { display: none !important; }
     .card { position: absolute; z-index: 65; left: 8px !important; right: 8px; top: auto !important; bottom: calc(8px + env(safe-area-inset-bottom, 0px)); width: auto; max-width: 640px; margin-inline: auto; transform: none !important; }
     .card-open .mapctl { opacity: 0; pointer-events: none; }
     .lg-bar { pointer-events: none; }
-    .card-open .dock, .card-open .foot { visibility: hidden; }
+    .card-open .dock { visibility: hidden; }
     .card::after { display: none !important; }
     .card-v .num { font-size: 34px; }
   }
@@ -1007,19 +995,6 @@
 
     .hc-area { height: 168px; }
     .quant div { padding-left: 8px; }
-  }
-  @media (max-width: 700px) {
-    .foot-core { font-size: 12px; line-height: 16px; }
-    .foot-credit { line-height: 16px; }
-  }
-  @media (max-width: 380px) {
-    .foot-ne { display: none; }
-  }
-  @media (max-width: 400px) {
-    .foot-credit { font-size: var(--fs-1); }
-  }
-  @media (max-width: 374px) {
-    .foot-credit { font-size: var(--fs-1); white-space: nowrap; }
   }
   @media (max-width: 440px) {
     .gh-l { display: none; }
@@ -1183,6 +1158,7 @@
     <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
     <symbol id="i-code" viewBox="0 0 24 24"><path d="M8.5 7l-5 5 5 5M15.5 7l5 5-5 5M13.5 4.5l-3 15"/></symbol>
     <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8v.01"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.6a2.5 2.5 0 1 1 3.6 2.25c-.8.4-1.2 1-1.2 1.9M12 17v.01"/></symbol>
     <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4.5 5v4.5H9"/><path d="M5.2 9.5A8 8 0 1 1 4.2 13.5"/></symbol>
     <symbol id="i-chev-up" viewBox="0 0 24 24"><path d="M6 14.5l6-6 6 6"/></symbol>
     <symbol id="i-chev-down" viewBox="0 0 24 24"><path d="M6 9.5l6 6 6-6"/></symbol>
@@ -1219,6 +1195,14 @@
         </button>
         <a class="icon-btn" id="link-code" href="https://github.com/pdlpad/SOATO" target="_blank" rel="noopener" aria-label="Данные и код на GitHub (откроется в новой вкладке)" title="Данные и код на GitHub"><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg></a>
         <button class="icon-btn" id="btn-theme" type="button" aria-label="Переключить тему" title="Сменить тему"><svg class="ic" aria-hidden="true"><use id="theme-use" href="#i-moon"/></svg></button>
+        <button class="icon-btn" id="btn-about" type="button" aria-expanded="false" aria-controls="about" aria-label="О данных и источниках" title="О данных и источниках"><svg class="ic" aria-hidden="true"><use href="#i-help"/></svg></button>
+        <div class="about" id="about" role="group" aria-labelledby="about-t" hidden>
+          <h2 class="about-t" id="about-t">О данных и источниках</h2>
+          <button class="icon-btn sm about-x" id="about-x" type="button" aria-label="Закрыть"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+          <p>Население махалли — <b>оценка модели</b> (GHS-POP и здания OSM), приведённая к официальным итогам по районам. Это не официальная статистика.</p>
+          <p>Границы регионов: Natural Earth (public domain). Граница Тошкент шаҳри в этом источнике устарела и не охватывает, например, Яшнобод, поэтому часть городских точек может лежать на карте вне полигона города.</p>
+          <p>© OpenStreetMap contributors. Данные и код: <a href="https://github.com/pdlpad/SOATO" target="_blank" rel="noopener">github.com/pdlpad/SOATO</a>.</p>
+        </div>
       </div>
     </div>
 
@@ -1382,20 +1366,6 @@
 
   <div class="scrim" id="scrim" aria-hidden="true"></div>
 
-  <footer class="foot" id="foot">
-    <div class="foot-top">
-      <div class="foot-lines">
-        <p class="foot-core"><b>Оценка модели, не официальная статистика.</b><span class="foot-tash"> Граница Ташкента устарела.</span></p>
-        <p class="foot-credit">© OpenStreetMap contributors<span class="foot-ne"> · Natural Earth</span> · <a href="https://github.com/pdlpad/SOATO" target="_blank" rel="noopener"><span class="gh-l">github.com/pdlpad/SOATO</span><span class="gh-s">GitHub</span></a></p>
-      </div>
-      <button class="foot-more" id="foot-more" type="button" aria-expanded="false" aria-controls="foot-full" aria-label="Подробнее о данных и источниках"><svg class="ic ic-i" aria-hidden="true"><use href="#i-info"/></svg><svg class="ic ic-x" aria-hidden="true"><use href="#i-x"/></svg></button>
-    </div>
-    <div class="foot-full" id="foot-full">
-      Население махалли — <b>оценка модели</b> (GHS-POP и здания OSM), приведённая к официальным итогам по районам; это не официальная статистика.
-      Границы регионов: Natural Earth (public domain). Граница Тошкент шаҳри в этом источнике устарела и не охватывает, например, Яшнобод, поэтому часть городских точек может лежать на карте вне полигона города.
-      <span class="foot-cr">© OpenStreetMap contributors. Данные и код: <a href="https://github.com/pdlpad/SOATO" target="_blank" rel="noopener">github.com/pdlpad/SOATO</a>.</span>
-    </div>
-  </footer>
 </div>
 <div class="tip" id="ctip" role="presentation"></div>
 
@@ -1680,11 +1650,11 @@ function layoutCanvas() {
   if (occ.length < occW * occH) occ = new Uint8Array(occW * occH);
 }
 function syncLayout() {
-  const foot = $('foot').offsetHeight, fb = parseFloat(getComputedStyle($('foot')).bottom) || 8;
   const comp = isCompact();
+  const fb = comp ? (parseFloat(getComputedStyle($('dock')).bottom) || 8) : 16;
   // телефон: карта не ниже 45% высоты экрана; если места не хватает, шапка теряет второстепенные подписи
   if (isPhone()) {
-    const sheetB = foot + fb + 6 + $('dock').offsetHeight + 6;
+    const sheetB = fb + $('dock').offsetHeight + 6;
     appEl.classList.remove('kpi-tight', 'kpi-min');
     const room = H - sheetB - 8 - $('bar').getBoundingClientRect().bottom, col = $('kpis').classList.contains('collapsed');
     // сначала уходит композиция регионов, затем (в свёрнутой шапке) строка со средней и медианой: развернуть шапку можно кнопкой
@@ -1697,13 +1667,12 @@ function syncLayout() {
   if (comp) {
     const hero = document.querySelector('.k-hero').getBoundingClientRect();
     appEl.style.setProperty('--sheet-top', Math.round(hero.bottom + 12) + 'px');
-    const dockB = foot + fb + 6;
-    $('dock').style.bottom = dockB + 'px';
-    LAY.sheetB = dockB + $('dock').offsetHeight + 6;
+    $('dock').style.bottom = '';
+    LAY.sheetB = fb + $('dock').offsetHeight + 6;
     appEl.style.setProperty('--sheet-b', LAY.sheetB + 'px');
   } else {
     $('dock').style.bottom = '';
-    LAY.bot = foot + fb + 16;
+    LAY.bot = fb;
     appEl.style.setProperty('--bot', LAY.bot + 'px');
   }
   const lg = $('legend').offsetHeight || 64;
@@ -3435,11 +3404,12 @@ document.addEventListener('mousedown', e => {
 });
 
 // ---------- панели и шторки ----------
-const INERT_IDS = ['bar', 'main', 'dock', 'foot'];
+const INERT_IDS = ['bar', 'main', 'dock'];
 function applyPanels() {
   const comp = isCompact(), sheet = comp && (P.pf || P.pi);
   appEl.classList.toggle('pf-open', P.pf); appEl.classList.toggle('pi-open', P.pi);
   appEl.classList.toggle('sheet-open', sheet);
+  if (sheet) setAbout(false);
   if (!sheet) delete appEl.dataset.snap;
   if (!('inert' in $('pf'))) { $('pf').setAttribute('aria-hidden', P.pf ? 'false' : 'true'); $('pi').setAttribute('aria-hidden', P.pi ? 'false' : 'true'); }
   ['pf', 'pi'].forEach(id => {
@@ -3450,7 +3420,7 @@ function applyPanels() {
   if ('inert' in $('pf')) {
     $('pf').inert = !P.pf; $('pi').inert = !P.pi;
     for (const id of INERT_IDS) $(id).inert = sheet;
-    $('dock').inert = sheet || (comp && cardOpen); $('foot').inert = sheet || (comp && cardOpen);
+    $('dock').inert = sheet || (comp && cardOpen);
   }
   document.querySelectorAll('[data-panel]').forEach(b => { if (b.hasAttribute('aria-expanded')) b.setAttribute('aria-expanded', P[b.dataset.panel] ? 'true' : 'false'); });
   $('scrim').setAttribute('aria-hidden', sheet ? 'false' : 'true');
@@ -3602,10 +3572,16 @@ $('z-in').addEventListener('click', () => zoomBy(1.7));
 $('z-out').addEventListener('click', () => zoomBy(1 / 1.7));
 $('btn-view').addEventListener('click', resetView);
 $('skip').addEventListener('click', e => { e.preventDefault(); cv.focus(); });
-$('foot-more').addEventListener('click', () => {
-  const f = $('foot'), o = !f.classList.contains('open');
-  f.classList.toggle('open', o); $('foot-more').setAttribute('aria-expanded', o ? 'true' : 'false'); $('foot-more').setAttribute('aria-label', o ? 'Свернуть примечания' : 'Подробнее о данных и источниках');
-  syncLayout();
+function setAbout(o) {
+  const el = $('about'), b = $('btn-about');
+  el.hidden = !o;
+  b.setAttribute('aria-expanded', o ? 'true' : 'false');
+  b.setAttribute('aria-label', o ? 'Закрыть сведения о данных' : 'О данных и источниках');
+}
+$('btn-about').addEventListener('click', () => setAbout($('about').hidden));
+$('about-x').addEventListener('click', () => { setAbout(false); $('btn-about').focus(); });
+document.addEventListener('pointerdown', e => {
+  if (!$('about').hidden && !e.target.closest('#about') && !e.target.closest('#btn-about')) setAbout(false);
 });
 // легенда: класс подсвечивается при наведении и с клавиатуры (стрелки), на сенсорных экранах она неактивна
 const lgBar = $('lg-bar');
@@ -3644,8 +3620,8 @@ document.addEventListener('keydown', e => {
     if (isPhone()) $('mast').classList.add('searching');
     $('q').focus();
   } else if (e.key === 'Escape') {
+    if (!$('about').hidden) { setAbout(false); $('btn-about').focus(); return; }
     if (document.activeElement === cv) return;
-    const f = $('foot'); if (f.classList.contains('open')) { $('foot-more').click(); return; }
     const pn = document.activeElement && document.activeElement.closest ? document.activeElement.closest('.panel') : null;
     if (pn && !(document.activeElement.tagName === 'INPUT' && document.activeElement.value)) { setPanel(pn.id, false); focusToggleFor(pn.id); return; }
     if (isCompact() && (P.pf || P.pi)) { const n = P.pf ? 'pf' : 'pi'; closePanels(); focusToggleFor(n); return; }
@@ -3686,7 +3662,7 @@ if (window.ResizeObserver) {
     }
   };
   const ro = new ResizeObserver(() => { clearTimeout(roTm); roTm = setTimeout(roWork, 0); });
-  ro.observe($('bar')); ro.observe($('foot')); ro.observe(appEl);
+  ro.observe($('bar')); ro.observe(appEl);
 }
 try { window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { setTimeout(themeChanged, 0); }); } catch (e) { /* старый браузер */ }
 try { mqCompact.addEventListener('change', () => { clearTimeout(rsTimer); rsTimer = setTimeout(onResize, 0); }); } catch (e) { /* старый браузер */ }

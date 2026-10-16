@@ -38,10 +38,21 @@ def _word_has_kk_letters(text, i):
     return any(c.lower() in KK_ONLY for c in text[a:b])
 
 
+def _is_karakalpak_name(text):
+    """Название каракалпакское, если в нём есть буквы ә ө ү ң ы или ў рядом с гласной (таў, Наўрыз)."""
+    low = text.lower()
+    if any(c in KK_ONLY for c in low):
+        return True
+    return any(c == "ў" and i and low[i - 1] in VOWELS and low[i - 1] != "ў" for i, c in enumerate(low))
+
+
 def to_latin(text, karakalpak=False):
-    """Кириллица -> латиница. В режиме karakalpak буква ў читается как w только рядом с гласной
-    (таў, Наўрыз), между согласными это узбекское oʻ (Дўстлик -> Doʻstlik); заглавная И даёт İ
-    только в слове с каракалпакскими буквами (ә ө ү ң ы)."""
+    """Кириллица -> латиница. В режиме karakalpak каракалпакские правила (ǵ, ı, w) применяются только к
+    каракалпакским названиям (см. _is_karakalpak_name), остальные читаются по-узбекски; в каракалпакском
+    названии ў даёт w рядом с гласной (таў, Наўрыз) и oʻ между согласными, заглавная И даёт İ в слове с
+    каракалпакскими буквами (ә ө ү ң ы)."""
+    if karakalpak and not _is_karakalpak_name(text):
+        karakalpak = False  # узбекское название внутри Каракалпакстана читается по узбекским правилам
     table = KK if karakalpak else UZ
     out = []
     prev_w = False

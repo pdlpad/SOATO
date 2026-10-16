@@ -14,6 +14,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 TEMPLATE = ROOT / "tools" / "map_template.html"
 OUT = ROOT / "docs" / "index.html"
+POLY_INDEX = ROOT / "docs" / "polygons" / "index.json"
 
 # В data/regions/*.json три названия сокращены: заменяем их полными.
 DISPLAY = {
@@ -38,11 +39,19 @@ def build_data():
                         "rings": rings_of(f["geometry"]), "_soato": soato})
     region_index = {r["_soato"]: k for k, r in enumerate(regions)}
 
+    poly_index = {}
+    if POLY_INDEX.exists():
+        pi = json.loads(POLY_INDEX.read_text(encoding="utf-8"))
+        poly_index = {k: [round(v * pi["u"], 5) for v in d["b"]] for k, d in pi["d"].items()}
+
     districts = []
     for path in glob.glob(str(DATA / "districts" / "*" / "*.json")):
         o = json.loads(pathlib.Path(path).read_text(encoding="utf-8"))
-        districts.append({"n": o["name_soato"], "r": region_index[o["region_soato"]],
-                          "_code": o["soato"].replace("+", "_"), "_region": o["region_soato"]})
+        code = o["soato"].replace("+", "_")
+        d = {"n": o["name_soato"], "r": region_index[o["region_soato"]], "_code": code, "_region": o["region_soato"]}
+        if code in poly_index:
+            d["c"], d["b"] = code, poly_index[code]  # файл docs/polygons/<c>.json и границы района [minLon, minLat, maxLon, maxLat]
+        districts.append(d)
     districts.sort(key=lambda d: (d["r"], d["n"], d["_code"]))
 
     points = []
@@ -56,7 +65,7 @@ def build_data():
         for ft in geo["features"]:
             mid = ft["properties"]["mahalla_id"]
             lon, lat = ft["geometry"]["coordinates"]
-            points.append([ft["properties"]["name"], k, round(pops[mid]), round(lon, 5), round(lat, 5)])
+            points.append([ft["properties"]["name"], k, round(pops[mid]), round(lon, 5), round(lat, 5), mid])
 
     for r in regions:
         del r["_soato"]

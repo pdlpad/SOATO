@@ -140,6 +140,22 @@ class Integrity(unittest.TestCase):
                 if r["quality_flags"] != "no_data":
                     self.assertIn(mid, seen, (poly_path, mid))
 
+    def test_web_polygons(self):
+        docs = DATA.parent / "docs" / "polygons"
+        index = load(docs / "index.json")
+        for p in (DATA / "polygons").glob("*/*.geojson"):
+            ids = {ft["properties"]["mahalla_id"] for ft in load(p)["features"]}
+            web = load(docs / f"{p.stem}.json")
+            self.assertEqual({m[0] for m in web["m"]}, ids, p)
+            self.assertEqual(index["d"][p.stem]["n"], len(ids), p)
+            for _, polys in web["m"]:
+                self.assertTrue(polys)
+                for rings in polys:
+                    for ring in rings:
+                        self.assertGreaterEqual(len(ring), 6, p)
+                        self.assertEqual(len(ring) % 2, 0, p)
+        self.assertEqual(len(index["d"]), len(list((DATA / "polygons").glob("*/*.geojson"))))
+
     def test_map_page_is_current(self):
         spec = importlib.util.spec_from_file_location("build_map", DATA.parent / "tools" / "build_map.py")
         mod = importlib.util.module_from_spec(spec)

@@ -89,7 +89,7 @@ print(len(rows), rows[0]["name"], rows[0]["pop_2026_est"])  # 71 Өрнек МФ
 
 ## Карта и проверки
 
-Интерактивная карта: https://pdlpad.github.io/SOATO/ (границы регионов, фильтры по регионам и районам, поиск махалли, инфографика). При приближении к району или городу карта подгружает контуры махаллей и красит их по населению.
+Интерактивная карта: https://pdlpad.github.io/SOATO/ (границы регионов, фильтры по регионам и районам, поиск махалли, инфографика). При приближении к району или городу карта подгружает контуры махаллей и красит их по населению. Язык интерфейса (русский или узбекский, латиница) переключается кнопкой RU | OʻZ в шапке; ссылка на узбекскую версию: https://pdlpad.github.io/SOATO/?lang=uz.
 
 ```bash
 python3 tools/build_web_polygons.py           # облегчённые контуры для карты: docs/polygons/
@@ -196,7 +196,7 @@ print(len(rows), rows[0]["name"], rows[0]["pop_2026_est"])  # 71 Өрнек МФ
 
 ### Xarita va tekshiruvlar
 
-Interaktiv xarita: https://pdlpad.github.io/SOATO/ (viloyat chegaralari, viloyat va tumanlar boʻyicha filtrlar, mahalla qidiruvi, infografika). Tuman yoki shaharga yaqinlashtirilganda xarita mahalla konturlarini yuklaydi va ularni aholi soni boʻyicha boʻyaydi.
+Interaktiv xarita: https://pdlpad.github.io/SOATO/ (viloyat chegaralari, viloyat va tumanlar boʻyicha filtrlar, mahalla qidiruvi, infografika). Tuman yoki shaharga yaqinlashtirilganda xarita mahalla konturlarini yuklaydi va ularni aholi soni boʻyicha boʻyaydi. Interfeys tili (rus yoki oʻzbek, lotin) sarlavhadagi RU | OʻZ tugmasi bilan almashtiriladi; oʻzbekcha versiya havolasi: https://pdlpad.github.io/SOATO/?lang=uz.
 
 ```bash
 python3 tools/build_web_polygons.py           # xarita uchun yengil konturlar: docs/polygons/
@@ -227,7 +227,7 @@ Reference dataset of **9,471 mahallas** (neighbourhoods) of Uzbekistan, linked t
 - `data/layers/mahallas_2026_simplified.geojson`: ready-to-use layer for QGIS/ArcGIS (polygons plus attributes, Cyrillic and Latin names, ~29 MB). A full-detail layer: `python3 tools/build_gis_layer.py --full OUT.geojson`.
 - `method` is `здания OSM`, `GHS-POP` or `GHS-POP (дыра в OSM)`. The estimation script is not in this repository.
 - Polygons carry only `mahalla_id`, `name` and `district_soato`; population lives in the CSV. Region boundaries (Natural Earth, public domain) are in `data/regions/regions.geojson`; the Tashkent city boundary there is outdated.
-- Interactive map (region boundaries, filters by region and district, search): https://pdlpad.github.io/SOATO/. Rebuild with `python3 tools/build_map.py`; run the checks with `python3 -m unittest discover -s tests -v`.
+- Interactive map (region boundaries, mahalla polygons when zoomed in, filters by region and district, search, Russian and Uzbek-Latin interface): https://pdlpad.github.io/SOATO/ (Uzbek: `?lang=uz`). Rebuild with `python3 tools/build_map.py`; run the checks with `python3 -m unittest discover -s tests -v`.
 - Licence: data under [CC BY 4.0](DATA_LICENSE.md), code under MIT. The data contains OpenStreetMap-derived values: © OpenStreetMap contributors. Sources: [SOURCES.md](SOURCES.md).
 
 A Python example (reading a district CSV and dropping `no_data` rows) is in the Russian section above. Until a DOI is assigned, cite the repository: https://github.com/pdlpad/SOATO

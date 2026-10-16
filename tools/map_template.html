@@ -10,6 +10,7 @@
 <meta name="theme-color" content="#e6ecf5">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23184f95'/%3E%3Ccircle cx='10' cy='11.5' r='2.5' fill='%23fff'/%3E%3Ccircle cx='18.5' cy='9' r='1.9' fill='%23fff'/%3E%3Ccircle cx='22' cy='17' r='3.4' fill='%23fff'/%3E%3Ccircle cx='12.5' cy='21' r='3' fill='%23fff'/%3E%3C/svg%3E">
 <script>try{var m=localStorage.getItem('mahalla-theme');if(m==='light'||m==='dark')document.documentElement.setAttribute('data-theme',m)}catch(e){}</script>
+<script>(function(){var d=document.documentElement,L='ru';try{var m=/[?&]lang=([a-z]{2})/i.exec(location.search),c=m?m[1].toLowerCase():'';if(c==='ru'||c==='uz')L=c;else{var s=null;try{s=localStorage.getItem('mahalla-lang')}catch(e){}if(s==='ru'||s==='uz')L=s;else{var v=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language];for(var i=0;i<v.length;i++){var x=String(v[i]||'').toLowerCase();if(x.indexOf('uz')===0){L='uz';break}if(x.indexOf('ru')===0)break}}}}catch(e){}d.setAttribute('data-lang',L);if(L==='uz'){d.setAttribute('lang','uz-Latn');d.className+=' lp';document.title='Oʻzbekiston mahallalari: sentroidlar';var q=document.querySelector('meta[name="description"]');if(q)q.setAttribute('content','Oʻzbekistondagi __COUNT__ ta mahalla sentroidlari SOATO kodlariga bogʻlangan: viloyat va tumanlar boʻyicha filtrlar, qidiruv va aholi taxmini (2026-yil 1-yanvar holatiga). Model taxmini, rasmiy statistika emas.')}})()</script>
 <style>
   /* ============================================================
      Токены. Светлая тема первой; тёмная переопределена дважды
@@ -380,6 +381,18 @@
   .tools { margin-left: auto; display: flex; align-items: center; gap: 8px; min-width: 0; }
   .tools .sep { width: 1px; height: 20px; background: var(--line-2); margin: 0 4px; }
 
+  /* переключатель языка RU | OʻZ: двухсегментная плашка рядом с кнопкой темы; нажатый сегмент поднят, как в других переключателях */
+  .lang { display: inline-flex; align-items: stretch; flex: none; padding: 2px; gap: 2px; border-radius: 10px; background: var(--surface-3); }
+  .lang button { position: relative; min-width: 36px; height: 32px; padding: 0 9px; border: 0; border-radius: 8px; background: none; color: var(--ink-2); font-size: 12px; font-weight: 650; letter-spacing: .02em; line-height: 1; cursor: pointer; }
+  .lang button::after { content: ""; position: absolute; inset: -4px 0; }
+  .lang button:hover { color: var(--ink); }
+  .lang button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: var(--shadow-btn), 0 0 0 1px var(--hair); }
+  .lang button:focus-visible { outline-offset: -1px; }
+  /* до применения языка (ранний скрипт в head ставит lp для uz) страница скрыта, чтобы не мигал русский текст; если скрипт не отработал, она появляется сама */
+  html.lp { background: var(--bg); }
+  html.lp body { visibility: hidden; animation: lp-show 0s linear 2s forwards; }
+  @keyframes lp-show { to { visibility: visible; } }
+
   .field {
     display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 8px 0 12px; border-radius: 10px;
     background: var(--surface-2); border: 1px solid var(--hair); color: var(--ink-3);
@@ -404,6 +417,7 @@
     padding: 6px; border-radius: 14px; background: var(--glass-solid); border: 1px solid var(--hair); box-shadow: var(--shadow-2);
     max-height: min(76vh, 660px); overflow: auto; overscroll-behavior: contain;
   }
+  @media (min-width: 701px) and (max-width: 1023px) { .results { left: auto; right: 0; } }
   .res { display: grid; grid-template-columns: 1fr auto; column-gap: 12px; align-items: baseline; padding: 8px 10px; border-radius: 9px; cursor: pointer; min-height: 44px; }
   .res[aria-selected="true"], .res:hover { background: var(--accent-wash); }
   .res-n { font-size: 14px; font-weight: 600; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -437,6 +451,8 @@
     .k-b1 .k-ll, .k-b2 .k-ll { display: none; }
     .k-b1 .k-ls, .k-b2 .k-ls { display: inline; }
   }
+  /* узкая плитка «Mahallalar» (планшет): подпись «mamlakatdagi ulushi 4,8%» теряет первое слово и остаётся в одну строку, как русская */
+  @container kr (max-width: 540px) { .cap-x { display: none; } }
 
   .k-hero { justify-content: space-between; padding: 0; border-left: 0; }
   /* строка подписи героя той же высоты (14px), что и у подписей плиток: базовые линии совпадают */
@@ -499,6 +515,7 @@
     border: 1px solid var(--accent-line); background: var(--accent-wash); color: var(--accent-ink);
     font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap;
   }
+  .btn-reset-all .lbl-s { display: none; }
   .btn-reset-all:hover:not(:disabled) { background: var(--accent-wash-2); }
   .btn-reset-all:active:not(:disabled) { transform: scale(.97); }
   .btn-reset-all:disabled { cursor: default; color: var(--ink-3); border-color: var(--line); background: none; opacity: .5; }
@@ -531,9 +548,14 @@
   .seg button:hover { color: var(--ink); }
   .seg button[aria-pressed="true"], .seg button[aria-selected="true"] { background: var(--surface); color: var(--ink); box-shadow: var(--shadow-btn), 0 0 0 1px var(--hair); }
   .seg-wide { display: flex; width: 100%; }
-  .seg-wide button { flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 32px; }
+  .seg-wide button { flex: 1; min-width: 0; display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 32px; }
   .seg-n { font-size: 12px; font-weight: 650; min-width: 22px; padding: 1px 6px; border-radius: 9px; background: var(--surface-3); color: var(--ink-2); font-variant-numeric: tabular-nums; }
   .seg button[aria-pressed="true"] .seg-n { background: var(--surface-2); }
+  /* узкая левая панель (1024-1439 px): подписи и счётчик плотнее, чтобы значок количества не выходил за край пилюли */
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    .seg-wide button { padding: 0 6px; gap: 6px; font-size: var(--fs-1); }
+    .seg-wide .seg-n { padding: 1px 5px; min-width: 0; }
+  }
   .seg .seg-n.act, .seg button[aria-pressed="true"] .seg-n.act { background: var(--accent-btn); color: var(--on-accent); }
   .hint { font-size: var(--fs-1); color: var(--ink-3); }
 
@@ -611,11 +633,32 @@
   .tbl td, .tbl tbody th { padding: 0; border-bottom: 1px solid var(--line); height: 26px; font-weight: 400; color: var(--ink-2); font-size: var(--fs-1); }
   .tbl th:first-child, .tbl tbody th, .tbl tfoot th { text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .tbl .n { text-align: right; font-variant-numeric: tabular-nums; padding-left: 12px; white-space: nowrap; }
+  /* таблица распределения: подписи колонок и интервалов могут занять вторую строку, а не обрезаются (узбекские подписи длиннее русских) */
+  .tbl.tbl-dist thead th { white-space: normal; line-height: 1.15; vertical-align: bottom; }
+  .tbl.tbl-dist tbody th { white-space: normal; text-overflow: clip; line-height: 1.2; vertical-align: middle; }
+  html[lang="uz-Latn"] .tbl-dist:not(.nof) col.c-n { width: 40%; }
+  html[lang="uz-Latn"] .tbl-dist:not(.nof) col.c-a, html[lang="uz-Latn"] .tbl-dist:not(.nof) col.c-b, html[lang="uz-Latn"] .tbl-dist:not(.nof) col.c-c { width: 20%; }
+  /* узкая таблица (телефон и боковая панель): «Mahallalar» и «Mamlakatda» (70 px) получают ширину по слову с зазором в 10 px, первая колонка берёт остаток */
+  @media (max-width: 700px), (min-width: 1024px) {
+    html[lang="uz-Latn"] .tbl-dist:not(.nof) .n { padding-left: 10px; }
+    html[lang="uz-Latn"] .tbl-dist:not(.nof) col.c-n { width: auto; }
+    html[lang="uz-Latn"] .tbl-dist:not(.nof) col.c-a { width: 72px; }
+    html[lang="uz-Latn"] .tbl-dist:not(.nof) col.c-b { width: 52px; }
+    html[lang="uz-Latn"] .tbl-dist:not(.nof) col.c-c { width: 84px; }
+  }
+  /* самый узкий телефон (320 px): подпись «9 000–10 000» (78 px) должна остаться в одну строку, поэтому колонки и зазор прежние */
+  @media (max-width: 359px) {
+    html[lang="uz-Latn"] .tbl-dist:not(.nof) .n { padding-left: 8px; }
+    html[lang="uz-Latn"] .tbl-dist:not(.nof) col.c-a { width: 68px; }
+    html[lang="uz-Latn"] .tbl-dist:not(.nof) col.c-b { width: 46px; }
+    html[lang="uz-Latn"] .tbl-dist:not(.nof) col.c-c { width: 80px; }
+  }
   .tbl tbody th { color: var(--ink); }
   .tbl tfoot th { padding: 0; }
   .tbl tfoot th, .tbl tfoot td { position: sticky; bottom: 0; z-index: 2; background: var(--glass-solid); font-weight: 650; color: var(--ink); border-bottom: 0; border-top: 0; box-shadow: inset 0 1px 0 var(--axis); height: 32px; }
   .filt .tbl tfoot th, .filt .tbl tfoot td { color: var(--accent-ink); }
   .tbl .tb { display: flex; flex-direction: column; justify-content: center; width: 100%; min-height: 26px; border: 0; background: none; text-align: left; cursor: pointer; color: inherit; font: inherit; padding: 0; border-radius: 6px; overflow: hidden; }
+  .nw { white-space: nowrap; }
   .tbl .tb-n, .tbl .tb-s { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .tbl .tb-s { padding-bottom: 3px; font-size: 12px; line-height: 14px; color: var(--accent-ink); font-variant-numeric: tabular-nums; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .tbl tr.on th, .tbl tr.on td { background: var(--accent-wash); }
@@ -675,6 +718,7 @@
   .legend { position: absolute; z-index: 10; left: calc(26px + var(--lp)); bottom: calc(var(--bot) + 10px); width: 288px; padding: 10px 14px 8px; border-radius: 14px; transition: left .32s var(--ease), opacity .2s; box-shadow: none; }
   .lg-t { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: var(--fs-2); margin-bottom: 8px; white-space: nowrap; min-width: 0; }
   .lg-tt { font-weight: 600; color: var(--ink); }
+  .lg-s { display: none; }
   .lg-u { font-weight: 450; color: var(--ink-3); }
   .lg-bar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; padding: 9px 0; margin: -9px 0; border-radius: 6px; }
   .lg-bar i { display: block; height: 10px; background: var(--c1); transition: transform .12s; }
@@ -720,11 +764,12 @@
   .ctl-tight .mapctl .btn-poly .rt-t, .ctl-tight .mapctl .btn-view .rt-t { display: none; }
   .poly-status {
     position: absolute; z-index: 10; left: calc(26px + var(--lp)); bottom: calc(var(--bot) + 10px + var(--lg-h, 62px) + 8px);
-    display: flex; align-items: center; gap: 8px; height: 28px; padding: 0 12px 0 10px; border-radius: 14px; box-shadow: none;
-    font-size: 12px; line-height: 1; color: var(--ink-2); white-space: nowrap; pointer-events: none;
+    display: flex; align-items: center; gap: 8px; height: auto; min-height: 28px; max-width: calc(100% - 24px); padding: 6px 12px 6px 10px; border-radius: 14px; box-shadow: none;
+    font-size: 12px; line-height: 1.25; color: var(--ink-2); white-space: normal; pointer-events: none;
     opacity: 0; visibility: hidden; transform: translateY(4px);
     transition: opacity .18s, transform .18s var(--ease), visibility 0s linear .18s, left .32s var(--ease);
   }
+  .poly-status > span { text-wrap: balance; }
   .poly-status:not([data-s=""]) { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
   /* подсказка к кнопке «Контуры» стоит над самой кнопкой, по её центру, со стрелкой; положение и стрелку задаёт скрипт (left, bottom и --ax) */
   .poly-status.at-r { background: var(--glass-solid); box-shadow: var(--shadow-btn); transition: opacity .18s, transform .18s var(--ease), visibility 0s linear .18s; }
@@ -749,7 +794,7 @@
   /* ---- «?» в шапке: примечания открываются по запросу ---- */
   .about { position: absolute; z-index: 70; top: calc(100% + 8px); right: 12px; width: 392px; max-width: calc(100vw - 32px); padding: 16px 18px 14px; border-radius: 14px; background: var(--glass-solid); border: 1px solid var(--hair); box-shadow: var(--shadow-2); font-size: 13px; line-height: 1.55; color: var(--ink-2); }
   .about[hidden] { display: none; }
-  .about-t { margin: 0 0 8px; padding-right: 36px; font-size: var(--fs-3); font-weight: 650; letter-spacing: -.005em; color: var(--ink); }
+  .about-t { margin: 0 0 8px; padding-right: 36px; font-size: var(--fs-3); font-weight: 650; letter-spacing: -.005em; color: var(--ink); text-wrap: balance; }
   .about p { margin: 0 0 8px; }
   .about p:last-child { margin-bottom: 0; }
   .about b { font-weight: 600; color: var(--ink); }
@@ -782,11 +827,15 @@
   .rampbar i:last-child { border-radius: 1px 4px 4px 1px; }
   .rampbar em { position: absolute; top: -5px; width: 3px; height: 18px; margin-left: -1.5px; background: var(--ink); border-radius: 2px; box-shadow: 0 0 0 2px var(--glass-solid); }
   .card-r { font-size: var(--fs-2); line-height: 1.4; color: var(--ink-2); }
+  /* узбекские подписи и координаты («41,3443° sh. k., 69,2335° sh. u.») длиннее русских: карточка чуть шире, чтобы строка координат не переносилась */
+  @media (min-width: 1024px) { html[lang="uz-Latn"] .card { width: 340px; } }
   .card-g { display: grid; grid-template-columns: repeat(3, auto); justify-content: space-between; gap: 8px; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); }
+  .card-g > div { display: flex; flex-direction: column; justify-content: flex-end; }
   .card-g dt { font-size: 12px; color: var(--ink-3); }
-  .card-g dd { font-size: var(--fs-3); font-weight: 600; font-variant-numeric: tabular-nums; margin-top: 1px; }
-  .card-f { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 12px; font-size: 12px; color: var(--ink-3); }
-  .card-f .coords { font-family: var(--mono); font-size: var(--fs-1); }
+  .card-g dd { font-size: var(--fs-3); font-weight: 600; font-variant-numeric: tabular-nums; margin-top: 1px; white-space: nowrap; }
+  /* на самом узком телефоне ссылка OSM уходит на вторую строку, а координаты не рвутся посередине (в обоих языках) */
+  .card-f { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 4px 12px; margin-top: 12px; font-size: 12px; color: var(--ink-3); }
+  .card-f .coords { font-family: var(--mono); font-size: var(--fs-1); white-space: nowrap; }
   .card-f a { display: inline-flex; align-items: center; gap: 4px; color: var(--accent-ink); font-weight: 550; text-decoration: none; white-space: nowrap; }
   .card-f a:hover { text-decoration: underline; text-underline-offset: 3px; }
   .card::after { content: ""; position: absolute; width: 12px; height: 12px; left: var(--ax, 50%); margin-left: -6px; background: var(--pop); border: 1px solid var(--hair); transform: rotate(45deg); display: none; }
@@ -866,6 +915,8 @@
     .k-s { grid-column: 2; margin: 0; min-height: 0; }
     .k-s-max .where { display: none; }
     @container kr (max-width: 700px) { .k-rest .k-v .u { display: none; } }
+    /* подпись стоит рядом с числом и в окнах 1024-1180 px переносилась бы на вторую строку («mamlakatdagi / ulushi 4,8%»): плашка растёт, карта прыгает при каждом выборе */
+    @container kr (max-width: 800px) { .cap-x { display: none; } }
     .scope { min-height: 44px; padding-top: 5px; padding-bottom: 5px; }
     .panel-h { padding-top: 8px; padding-bottom: 4px; }
     .sec-sub { margin-bottom: 6px; }
@@ -923,6 +974,16 @@
     .tr-name { flex: 0 1 auto; max-width: 62%; }
     .tr-d { flex: 1 1 0; min-width: 0; }
     .tr-vw { row-gap: 2px; }
+  }
+
+  /* окно уже 1440 px и ниже 740 px: правая панель уже 360 px, район встаёт строкой под названием (десять строк по 30 px помещаются), а не сжимается до нескольких букв */
+  @media (min-width: 1024px) and (max-width: 1439px) and (min-height: 641px) and (max-height: 740px) {
+    .top li { flex-basis: 29px; min-height: 29px; }
+    .trow { min-height: 29px; }
+    .tr-m { flex-direction: column; align-items: stretch; gap: 0; }
+    .tr-name { flex: none; max-width: none; }
+    .tr-d { flex: none; }
+    .tr-vw { row-gap: 4px; }
   }
 
   /* ============================================================
@@ -1069,7 +1130,7 @@
     .k-a2, .k-a3 { border-top: 1px solid var(--line); }
     .k-rest > .k:nth-child(n+4) { margin-top: 8px; padding-top: 7px; }
     .k-rest > .k:nth-child(4) { padding-left: 0; border-left: 0; }
-    .k-l { font-size: 12px; line-height: 14px; white-space: normal; }
+    .k-l { font-size: 12px; line-height: 14px; white-space: normal; text-wrap: balance; }
     .k-a1 .k-l, .k-a2 .k-l, .k-a3 .k-l { font-size: 12px; line-height: 14px; }
     .k-v { font-size: 22px; height: 26px; line-height: 26px; margin-top: 2px; }
     .k-a1 .k-v, .k-a2 .k-v, .k-a3 .k-v { font-size: 19px; height: 22px; line-height: 22px; margin-top: 0; }
@@ -1080,6 +1141,9 @@
     .k-a1 .k-s, .k-a2 .k-s, .k-a3 .k-s { display: none; }
     .k-s { font-size: 12px; line-height: 16px; margin-top: 1px; min-height: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; overflow-wrap: normal; }
     .k-s .where { display: none; }
+    /* подпись со значением («mamlakat 3 640») никогда не обрезается многоточием: при нехватке места она переносится, а число не рвётся (разряды склеены неразрывным пробелом) */
+    .k-b1 .k-s, .k-b2 .k-s { white-space: normal; overflow: visible; text-overflow: clip; }
+    .k-rest > .k:nth-child(5) { padding-right: 0; }
     /* зона касания ссылки на крупнейшую махаллю не меньше 40 px; раскладка не меняется */
     .k-s.k-s-max { height: auto; overflow: visible; flex-wrap: nowrap; }
     .k-link { padding: 13px 0; margin: -13px 0; }
@@ -1101,11 +1165,12 @@
     .btn-reset-all { height: 40px; padding: 0 12px 0 8px; }
     .btn-reset-all { min-height: 40px; }
     .scope.many .btn-reset-all { width: 40px; padding: 0; justify-content: center; }
-    .scope.many .btn-reset-all .lbl { display: none; }
+    .scope.many .btn-reset-all .lbl, .scope.many .btn-reset-all .lbl-s { display: none; }
 
     .legend { width: 196px; left: 14px; bottom: calc(var(--sheet-b) + 8px); overflow: hidden; }
     .poly-status { left: 14px; bottom: calc(var(--sheet-b) + 8px + var(--lg-h, 56px) + 8px); }
-    .lg-m { display: none; }
+    .lg-l { display: none; }
+    .lg-s { display: inline; }
     .mapctl { right: 14px; bottom: calc(var(--sheet-b) + 8px); }
     .lg-ticks { font-size: 12px; }
     .mapctl { gap: 6px; }
@@ -1121,15 +1186,37 @@
     .hc-area { height: 168px; }
     .quant div { padding-left: 8px; }
   }
+  @media (min-width: 360px) and (max-width: 700px) {
+    #app:not(.kpi-tight) .k-rest > .k:nth-child(n+4) { justify-content: flex-end; }
+  }
   @media (max-width: 440px) {
     .gh-l { display: none; }
     .gh-s { display: inline; }
   }
+  /* узкий телефон: с переключателем языка название встаёт в две строки (не сжимается и не обрезается), кнопки остаются на месте;
+     одной строкой название с переключателем помещается только от 470 px (в 451-458 px кнопка «?» выступала за плашку) */
+  @media (max-width: 470px) {
+    .brand { flex: 1 1 auto; min-width: 0; }
+    .brand-t { white-space: normal; line-height: 1.12; text-wrap: balance; }
+    .tools { flex: none; gap: 4px; }
+    .lang button { min-width: 32px; height: 36px; padding: 0 7px; }
+  }
+  @media (max-width: 400px) {
+    /* «Hammasini tozalash» длиннее русской подписи: до 400 px кнопка сброса несёт короткую «Tozalash» (полная подпись остаётся в aria-label) */
+    html[lang="uz-Latn"] .btn-reset-all .lbl { display: none; }
+    html[lang="uz-Latn"] .btn-reset-all .lbl-s { display: inline; }
+    /* узбекские подписи боковых показателей чуть плотнее, чтобы число не выходило за правый край столбца */
+    html[lang="uz-Latn"] .k-a1 .k-l, html[lang="uz-Latn"] .k-a2 .k-l, html[lang="uz-Latn"] .k-a3 .k-l { font-size: 11px; letter-spacing: -.01em; }
+  }
   @media (max-width: 380px) {
+    /* узкий телефон: на кнопке сброса короткая подпись («Tozalash»), полная остаётся в aria-label */
+    .btn-reset-all .lbl { display: none; }
+    .btn-reset-all .lbl-s { display: inline; }
     /* узкий телефон: доли жителей и махаллей двумя короткими строками */
+    .brand-t { font-size: 13px; }
     .kpis:not(.collapsed) .cap-sep { display: none; }
     .kpis:not(.collapsed) .cap-c { display: block; }
-    .k-b1 .k-s, .k-b2 .k-s { font-size: var(--fs-1); }
+    .k-b1 .k-s, .k-b2 .k-s { font-size: 11px; letter-spacing: -.01em; }
     .k-a1 .k-l, .k-a2 .k-l, .k-a3 .k-l { font-size: var(--fs-1); }
     .k-a1 .k-v, .k-a2 .k-v, .k-a3 .k-v { font-size: 17px; }
     .k-rest > .k:nth-child(-n+3) { gap: 4px; }
@@ -1146,6 +1233,18 @@
     #app:not(.filtered) .k-b1 .k-s, #app:not(.filtered) .k-b2 .k-s { visibility: hidden; }
   }
   @media (max-width: 359px) {
+    /* пояснения скрыты совсем, но их строка остаётся (одна, 16 px): как и выше, нижние кромки ячеек совпадают, а значения лежат на одной линии */
+    #app:not(.kpi-tight) .k-rest > .k:nth-child(n+4) { justify-content: flex-end; }
+    #app:not(.kpi-tight) .k-b1 .k-s, #app:not(.kpi-tight) .k-b2 .k-s { display: block; visibility: hidden; height: 16px; overflow: hidden; }
+    /* карточка: три подписи («Mamlakatdagi oʻrni», «Tumanda», «Tumandagi ulushi») остаются в одну строку */
+    html[lang="uz-Latn"] .card-g dt { font-size: 11px; letter-spacing: -.01em; }
+  }
+  @media (max-width: 339px) {
+    /* итог в подвале шторки фильтров («159 ta mahalla · 502 ming») на самом узком телефоне не всегда помещается в строку: две части друг под другом, без точки; высоту подвала задаёт кнопка */
+    .panel-f .sum .nw { display: block; }
+    .panel-f .sum .dot { display: none; }
+  }
+  @media (max-width: 359px) {
     .kpis { padding-left: 10px; padding-right: 10px; }
     .k-hero .k-v { font-size: 48px; }
     .k-v { font-size: 18px; }
@@ -1157,8 +1256,8 @@
     .k-b1 .k-s, .k-b2 .k-s { display: none; }
     .k-l { font-size: var(--fs-1); }
     #link-code { display: none; }
-    .brand-t { font-size: 14px; }
-    .mark { width: 24px; height: 24px; }
+    .brand-t { font-size: 13px; }
+    .mark { display: none; }
     .brand { gap: 8px; }
     .mast { padding-left: 10px; gap: 4px; }
     .icon-btn { width: 36px; }
@@ -1219,6 +1318,11 @@
     .kpis .k-rest > .k, .kpis.collapsed .k-rest > .k:nth-child(-n+3) { display: flex; grid-column: auto; grid-row: auto; margin: 0; padding: 0 8px 0 12px; border-top: 0; border-left: 1px solid var(--line); }
     .kpis.collapsed .k-rest > .k:nth-child(n+4) { display: none; }
     .k-rest > .k:nth-child(1) { border-left: 0; padding-left: 0; }
+    /* узкая сетка показателей (560-620 px): первые три показателя стоят в столбик, подпись над значением, как остальные;
+       в строку значение не помещалось («Mahallalar 9 473» выступало за ячейку и ложилось на соседнюю подпись). Шире сетка прежняя, в строку */
+    @container kr (max-width: 410px) {
+      .kpis .k-rest > .k:nth-child(-n+3) { flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0; }
+    }
     .k-l, .k-a1 .k-l, .k-a2 .k-l, .k-a3 .k-l { font-size: var(--fs-1); line-height: 14px; white-space: nowrap; }
     .k-ll { display: none; }
     .k-ls { display: inline; }
@@ -1235,8 +1339,15 @@
     .kpis:not(.collapsed) .k-rest > .k:nth-child(n+4) { display: flex; margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--line); }
     .kpis:not(.collapsed) .k-rest > .k:nth-child(4) { padding-left: 0; border-left: 0; }
   }
-  @media (max-width: 1023px) and (max-height: 520px) and (orientation: landscape) and (min-width: 700px) {
-    /* от 700 px все шесть показателей в одной строке, кнопка не нужна */
+  @media (max-width: 1023px) and (max-height: 520px) and (orientation: landscape) and (min-width: 560px) and (max-width: 659px) {
+    .btn-search { display: inline-grid; }
+    .search { display: none; position: absolute; left: 6px; right: 6px; top: 2px; width: auto; min-width: 0; max-width: none; flex: none; z-index: 3; }
+    .search .field { height: 36px; }
+    .mast.searching .search { display: block; }
+    .mast.searching .brand, .mast.searching .tools > :not(.search) { visibility: hidden; }
+  }
+  @media (max-width: 1023px) and (max-height: 520px) and (orientation: landscape) and (min-width: 701px) {
+    /* от 701 px все шесть показателей в одной строке, кнопка не нужна (ровно 700 px ещё телефон: три плюс три) */
     .k-hero .k-toggle { display: none; }
     .k-rest { grid-template-columns: repeat(6, minmax(0, 1fr)); }
     .kpis .k-rest > .k, .kpis.collapsed .k-rest > .k, .kpis:not(.collapsed) .k-rest > .k:nth-child(n+4) { display: flex; margin: 0; padding: 0 6px 0 10px; border-top: 0; border-left: 1px solid var(--line); }
@@ -1290,139 +1401,143 @@
     <symbol id="i-chev-down" viewBox="0 0 24 24"><path d="M6 9.5l6 6 6-6"/></symbol>
   </defs>
 </svg>
-<a class="skip" id="skip" href="#c">К карте</a>
-<noscript><div class="noscript">Для работы карты нужен JavaScript. Данные и код: github.com/pdlpad/SOATO</div></noscript>
+<a class="skip" id="skip" href="#c" data-i18n="skip">К карте</a>
+<noscript><div class="noscript">Для работы карты нужен JavaScript. Данные и код: github.com/pdlpad/SOATO<br>Xarita ishlashi uchun JavaScript kerak. Maʼlumotlar va kod: github.com/pdlpad/SOATO</div></noscript>
 
 <div id="app">
   <header class="bar glass" id="bar">
     <div class="mast" id="mast">
       <div class="brand">
         <svg class="mark" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="8"/><circle cx="9" cy="10" r="2.2"/><circle cx="16.5" cy="8" r="1.7"/><circle cx="19.5" cy="15" r="3"/><circle cx="11" cy="18.5" r="2.6"/><circle cx="17.5" cy="21" r="1.5"/></svg>
-        <h1 class="brand-t">Махалли Узбекистана</h1>
+        <h1 class="brand-t" data-i18n="brand.t">Махалли Узбекистана</h1>
         <span class="brand-s" id="brand-s">центроиды __COUNT__ махаллей</span>
       </div>
       <div class="tools">
         <div class="search" id="search" role="search">
           <label class="field" id="qfield">
             <svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>
-            <span class="sr">Поиск махалли по названию</span>
-            <input id="q" type="search" role="combobox" aria-expanded="false" aria-controls="results" aria-autocomplete="list" aria-haspopup="listbox" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" placeholder="Найти махаллю">
+            <span class="sr" data-i18n="search.label">Поиск махалли по названию</span>
+            <input id="q" type="search" role="combobox" aria-expanded="false" aria-controls="results" aria-autocomplete="list" aria-haspopup="listbox" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" placeholder="Найти махаллю" data-i18n-attr="placeholder:search.ph">
             <kbd aria-hidden="true">/</kbd>
-            <button class="icon-btn sm clear" id="qclear" type="button" aria-label="Очистить поиск"><svg class="ic ic-sm" aria-hidden="true"><use href="#i-x"/></svg></button>
+            <button class="icon-btn sm clear" id="qclear" type="button" aria-label="Очистить поиск" data-i18n-attr="aria-label:search.clear"><svg class="ic ic-sm" aria-hidden="true"><use href="#i-x"/></svg></button>
           </label>
-          <div class="results" id="results" role="listbox" aria-label="Результаты поиска махалли" hidden></div>
+          <div class="results" id="results" role="listbox" aria-label="Результаты поиска махалли" data-i18n-attr="aria-label:search.results" hidden></div>
           <div class="sr" id="res-live" role="status" aria-live="polite"></div>
         </div>
-        <button class="icon-btn btn-search" id="btn-search" type="button" aria-label="Поиск махалли"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg></button>
-        <button class="icon-btn btn-filters-m" id="btn-filters-m" type="button" data-panel="pf" aria-expanded="false" aria-controls="pf" aria-label="Фильтры"><svg class="ic" aria-hidden="true"><use href="#i-sliders"/></svg><span class="badge" data-badge hidden></span></button>
+        <button class="icon-btn btn-search" id="btn-search" type="button" aria-label="Поиск махалли" data-i18n-attr="aria-label:search.open"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg></button>
+        <button class="icon-btn btn-filters-m" id="btn-filters-m" type="button" data-panel="pf" aria-expanded="false" aria-controls="pf" aria-label="Фильтры" data-i18n-attr="aria-label:nav.filters"><svg class="ic" aria-hidden="true"><use href="#i-sliders"/></svg><span class="badge" data-badge hidden></span></button>
         <span class="sep" aria-hidden="true"></span>
         <button class="btn btn-panel" id="btn-insights" type="button" data-panel="pi" aria-expanded="false" aria-controls="pi">
-          <svg class="ic" aria-hidden="true"><use href="#i-chart"/></svg><span>Инфографика</span>
+          <svg class="ic" aria-hidden="true"><use href="#i-chart"/></svg><span data-i18n="nav.insights">Инфографика</span>
         </button>
-        <a class="icon-btn" id="link-code" href="https://github.com/pdlpad/SOATO" target="_blank" rel="noopener" aria-label="Данные и код на GitHub (откроется в новой вкладке)" title="Данные и код на GitHub"><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg></a>
-        <button class="icon-btn" id="btn-theme" type="button" aria-label="Переключить тему" title="Сменить тему"><svg class="ic" aria-hidden="true"><use id="theme-use" href="#i-moon"/></svg></button>
-        <button class="icon-btn" id="btn-about" type="button" aria-expanded="false" aria-controls="about" aria-label="О данных и источниках" title="О данных и источниках"><svg class="ic" aria-hidden="true"><use href="#i-help"/></svg></button>
+        <a class="icon-btn" id="link-code" href="https://github.com/pdlpad/SOATO" target="_blank" rel="noopener" aria-label="Данные и код на GitHub (откроется в новой вкладке)" title="Данные и код на GitHub" data-i18n-attr="aria-label:nav.code.aria;title:nav.code.title"><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg></a>
+        <div class="lang" id="lang" role="group" aria-label="Язык интерфейса" data-i18n-attr="aria-label:lang.group">
+          <button type="button" lang="ru" data-lang="ru" aria-pressed="true" aria-label="RU, Русский" title="Русский" data-i18n-attr="aria-label:lang.ru.aria;title:lang.ru">RU</button>
+          <button type="button" lang="uz" data-lang="uz" aria-pressed="false" aria-label="OʻZ, Oʻzbekcha" title="Oʻzbekcha" data-i18n-attr="aria-label:lang.uz.aria;title:lang.uz">OʻZ</button>
+        </div>
+        <button class="icon-btn" id="btn-theme" type="button" aria-label="Переключить тему" title="Сменить тему" data-i18n-attr="aria-label:theme.toggle;title:theme.toggle.title"><svg class="ic" aria-hidden="true"><use id="theme-use" href="#i-moon"/></svg></button>
+        <button class="icon-btn" id="btn-about" type="button" aria-expanded="false" aria-controls="about" title="О данных и источниках" data-i18n-attr="title:about.btn"><svg class="ic" aria-hidden="true"><use href="#i-help"/></svg></button>
         <div class="about" id="about" role="group" aria-labelledby="about-t" hidden>
-          <h2 class="about-t" id="about-t">О данных и источниках</h2>
-          <button class="icon-btn sm about-x" id="about-x" type="button" aria-label="Закрыть"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
-          <p>Население махалли — <b>оценка модели</b> (GHS-POP и здания OSM), приведённая к официальным итогам по районам. Это не официальная статистика.</p>
-          <p>Границы регионов: Natural Earth (public domain). Граница Тошкент шаҳри в этом источнике устарела и не охватывает, например, Яшнобод, поэтому часть городских точек может лежать на карте вне полигона города.</p>
-          <p>© OpenStreetMap contributors. Данные и код: <a href="https://github.com/pdlpad/SOATO" target="_blank" rel="noopener">github.com/pdlpad/SOATO</a>.</p>
+          <h2 class="about-t" id="about-t" data-i18n="about.h">О данных и источниках</h2>
+          <button class="icon-btn sm about-x" id="about-x" type="button" aria-label="Закрыть" data-i18n-attr="aria-label:about.x"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+          <p data-i18n-html="about.p1">Население махалли — <b>оценка модели</b> (GHS-POP и здания OSM), приведённая к официальным итогам по районам. Это не официальная статистика.</p>
+          <p data-i18n-html="about.p2">Границы регионов: Natural Earth (public domain). Граница Тошкент шаҳри в этом источнике устарела и не охватывает, например, Яшнобод, поэтому часть городских точек может лежать на карте вне полигона города.</p>
+          <p data-i18n-html="about.p3">© OpenStreetMap contributors. Данные и код: <a href="https://github.com/pdlpad/SOATO" target="_blank" rel="noopener">github.com/pdlpad/SOATO</a>.</p>
         </div>
       </div>
     </div>
 
-    <section class="kpis" id="kpis" aria-label="Ключевые показатели">
+    <section class="kpis" id="kpis" aria-label="Ключевые показатели" data-i18n-attr="aria-label:kpi.aria">
       <div class="k k-hero">
-        <div class="k-l"><span>Население</span><span class="pill" aria-describedby="est-note">оценка</span><span class="sr" id="est-note">Оценка на 01.01.2026, не официальная статистика</span>
+        <div class="k-l"><span data-i18n="kpi.pop">Население</span><span class="pill" aria-describedby="est-note" data-i18n="kpi.est">оценка</span><span class="sr" id="est-note" data-i18n="kpi.estNote">Оценка на 01.01.2026, не официальная статистика</span>
           <button class="k-toggle" id="k-toggle" type="button" aria-expanded="true" aria-controls="k-rest" aria-label="Скрыть остальные показатели"><svg class="ic ic-sm" aria-hidden="true"><use href="#i-chev-up"/></svg></button>
         </div>
         <div class="k-v"><span id="kv-pop">38,24</span><span class="u unit" id="ku-pop">млн</span></div>
-        <div class="k-viz"><div class="comp" id="comp" role="group" aria-label="Население по регионам, от крупного к малому. Стрелки переключают регион, Enter выбирает"></div></div>
+        <div class="k-viz"><div class="comp" id="comp" role="group" aria-label="Население по регионам, от крупного к малому. Стрелки переключают регион, Enter выбирает" data-i18n-attr="aria-label:kpi.comp.aria"></div></div>
         <div class="k-foot"><div class="k-s" id="ks-pop">__TOTAL__ человек</div><div class="k-cap" id="comp-cap" aria-hidden="true">регионы по численности</div></div>
         <div class="k-strip" id="k-strip"></div>
       </div>
       <div class="k-rest" id="k-rest">
         <div class="k k-a1">
-          <div class="k-l">Махалли</div>
+          <div class="k-l" data-i18n="kpi.mahalla">Махалли</div>
           <div class="k-v"><span id="kv-cnt">__COUNT__</span></div>
           <div class="k-s" id="ks-cnt"></div>
         </div>
         <div class="k k-a2">
-          <div class="k-l">Районы</div>
+          <div class="k-l" data-i18n="kpi.districts">Районы</div>
           <div class="k-v"><span id="kv-dist">205</span></div>
           <div class="k-s" id="ks-dist"></div>
         </div>
         <div class="k k-a3">
-          <div class="k-l">Регионы</div>
+          <div class="k-l" data-i18n="kpi.regions">Регионы</div>
           <div class="k-v"><span id="kv-reg">14</span></div>
           <div class="k-s" id="ks-reg"></div>
         </div>
         <div class="k k-b1">
-          <div class="k-l"><span class="k-ll">Средняя численность</span><span class="k-ls">Средняя</span></div>
-          <div class="k-v"><span id="kv-mean">4 039</span><span class="u">чел.</span></div>
+          <div class="k-l"><span class="k-ll" data-i18n="kpi.meanL">Средняя численность</span><span class="k-ls" data-i18n="kpi.meanS">Средняя</span></div>
+          <div class="k-v"><span id="kv-mean">4 039</span><span class="u" data-i18n="unit.pers">чел.</span></div>
           <div class="k-s" id="ks-mean"></div>
         </div>
         <div class="k k-b2">
-          <div class="k-l"><span class="k-ll">Медианная численность</span><span class="k-ls">Медиана</span></div>
-          <div class="k-v"><span id="kv-med">3 642</span><span class="u">чел.</span></div>
+          <div class="k-l"><span class="k-ll" data-i18n="kpi.medL">Медианная численность</span><span class="k-ls" data-i18n="kpi.medS">Медиана</span></div>
+          <div class="k-v"><span id="kv-med">3 642</span><span class="u" data-i18n="unit.pers">чел.</span></div>
           <div class="k-s" id="ks-med"></div>
         </div>
         <div class="k k-b3">
-          <div class="k-l"><span class="k-ll">Крупнейшая махалля</span><span class="k-ls">Крупнейшая</span></div>
-          <div class="k-v"><span id="kv-max">37 656</span><span class="u">чел.</span></div>
+          <div class="k-l"><span class="k-ll" data-i18n="kpi.maxL">Крупнейшая махалля</span><span class="k-ls" data-i18n="kpi.maxS">Крупнейшая</span></div>
+          <div class="k-v"><span id="kv-max">37 656</span><span class="u" data-i18n="unit.pers">чел.</span></div>
           <div class="k-s k-s-max" id="ks-maxline"><button class="k-link" id="ks-max" type="button"></button><span class="where" id="ks-maxw"></span></div>
         </div>
       </div>
     </section>
 
-    <div class="scope" id="scope" role="group" aria-label="Выбранная область">
+    <div class="scope" id="scope" role="group" aria-label="Выбранная область" data-i18n-attr="aria-label:scope.aria">
       <button class="btn btn-panel btn-scope" id="btn-filters" type="button" data-panel="pf" aria-expanded="false" aria-controls="pf">
-        <svg class="ic" aria-hidden="true"><use href="#i-sliders"/></svg><span>Фильтры</span><span class="badge" data-badge hidden></span><svg class="ic ic-sm chev" aria-hidden="true"><use href="#i-chev-down"/></svg>
+        <svg class="ic" aria-hidden="true"><use href="#i-sliders"/></svg><span data-i18n="nav.filters">Фильтры</span><span class="badge" data-badge hidden></span><svg class="ic ic-sm chev" aria-hidden="true"><use href="#i-chev-down"/></svg>
       </button>
       <div class="scope-body" id="scope-body"></div>
-      <button class="btn-reset-all" id="reset-all" type="button" aria-label="Сбросить всё" disabled><svg class="ic ic-sm" aria-hidden="true"><use href="#i-reset"/></svg><span class="lbl">Сбросить всё</span></button>
+      <button class="btn-reset-all" id="reset-all" type="button" aria-label="Сбросить всё" data-i18n-attr="aria-label:scope.resetAll" disabled><svg class="ic ic-sm" aria-hidden="true"><use href="#i-reset"/></svg><span class="lbl" data-i18n="scope.resetAll">Сбросить всё</span><span class="lbl-s" data-i18n="scope.resetAll.s">Сбросить всё</span></button>
     </div>
     <div class="sr" id="kpi-live" role="status" aria-live="polite"></div>
   </header>
 
-  <aside class="panel panel-l glass" id="pf" role="complementary" aria-label="Фильтры по регионам и районам">
+  <aside class="panel panel-l glass" id="pf" role="complementary" aria-label="Фильтры по регионам и районам" data-i18n-attr="aria-label:pf.aria">
     <div class="grip" id="grip-pf" aria-hidden="true"></div>
     <div class="panel-h">
-      <h2>Фильтры</h2>
-      <button class="link-btn" id="pf-reset" type="button" hidden>Сбросить</button>
-      <button class="icon-btn sm" type="button" data-close="pf" aria-label="Закрыть панель фильтров"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+      <h2 data-i18n="pf.h">Фильтры</h2>
+      <button class="link-btn" id="pf-reset" type="button" data-i18n="pf.reset" hidden>Сбросить</button>
+      <button class="icon-btn sm" type="button" data-close="pf" aria-label="Закрыть панель фильтров" data-i18n-attr="aria-label:pf.close"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
     </div>
     <div class="pf-top">
-      <div class="chips-in" id="chips-in" aria-label="Активные фильтры" hidden></div>
-      <div class="seg seg-wide" role="group" aria-label="Что фильтровать">
-        <button type="button" id="t-reg" aria-pressed="true">Регионы <span class="seg-n" id="tn-reg">14</span></button>
-        <button type="button" id="t-dist" aria-pressed="false">Районы <span class="seg-n" id="tn-dist">205</span></button>
+      <div class="chips-in" id="chips-in" aria-label="Активные фильтры" data-i18n-attr="aria-label:pf.active" hidden></div>
+      <div class="seg seg-wide" role="group" aria-label="Что фильтровать" data-i18n-attr="aria-label:pf.what">
+        <button type="button" id="t-reg" aria-pressed="true"><span data-i18n="pf.tabR">Регионы</span> <span class="seg-n" id="tn-reg">14</span></button>
+        <button type="button" id="t-dist" aria-pressed="false"><span data-i18n="pf.tabD">Районы</span> <span class="seg-n" id="tn-dist">205</span></button>
       </div>
       <label class="field" id="dfield" hidden>
         <svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>
-        <span class="sr">Найти район по названию</span>
-        <input id="dq" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Найти район">
+        <span class="sr" data-i18n="pf.dsr">Найти район по названию</span>
+        <input id="dq" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search" placeholder="Найти район" data-i18n-attr="placeholder:pf.dph">
       </label>
       <div class="hint" id="dcount" hidden></div>
     </div>
     <div class="panel-b" id="pf-b">
-      <div class="checklist" id="regions" role="group" aria-label="Регионы"></div>
-      <div class="checklist" id="districts" role="group" aria-label="Районы" hidden></div>
+      <div class="checklist" id="regions" role="group" aria-label="Регионы" data-i18n-attr="aria-label:pf.tabR"></div>
+      <div class="checklist" id="districts" role="group" aria-label="Районы" data-i18n-attr="aria-label:pf.tabD" hidden></div>
     </div>
-    <div class="panel-f"><div class="sum" id="pf-sum" aria-live="polite"></div><button class="btn" id="pf-done" type="button" data-close="pf">Готово</button></div>
+    <div class="panel-f"><div class="sum" id="pf-sum" aria-live="polite"></div><button class="btn" id="pf-done" type="button" data-close="pf" data-i18n="pf.done">Готово</button></div>
   </aside>
 
   <main class="mapwrap" id="main">
-    <canvas id="c" tabindex="0" role="application" aria-roledescription="карта" aria-describedby="map-help" aria-label="Карта махаллей Узбекистана. Цвет точки и, при увеличении, контура махалли показывает оценку населения."></canvas>
-    <p class="sr" id="map-help">Стрелки двигают карту, плюс и минус меняют масштаб, ноль сбрасывает вид. Enter выбирает ближайшую к центру махаллю, затем стрелки переходят к соседним махаллям, Escape закрывает карточку. Махаллю можно также выбрать через поиск или список крупнейших. Контуры махаллей появляются при увеличении и отключаются кнопкой «Контуры».</p>
+    <canvas id="c" tabindex="0" role="application" aria-roledescription="карта" aria-describedby="map-help" aria-label="Карта махаллей Узбекистана. Цвет точки и, при увеличении, контура махалли показывает оценку населения." data-i18n-attr="aria-roledescription:map.role;aria-label:map.aria"></canvas>
+    <p class="sr" id="map-help" data-i18n="map.help">Стрелки двигают карту, плюс и минус меняют масштаб, ноль сбрасывает вид. Enter выбирает ближайшую к центру махаллю, затем стрелки переходят к соседним махаллям, Escape закрывает карточку. Махаллю можно также выбрать через поиск или список крупнейших. Контуры махаллей появляются при увеличении и отключаются кнопкой «Контуры».</p>
     <div class="sr" id="sel-live" role="status" aria-live="polite"></div>
 
-    <div class="legend glass" id="legend" role="group" aria-label="Шкала цвета: население махалли">
-      <div class="lg-t"><span class="lg-tt">Население<span class="lg-m"> махалли</span></span><span class="lg-u">тыс. чел.</span></div>
-      <div class="lg-bar" id="lg-bar" role="group" tabindex="0" aria-label="Классы численности. Стрелки влево и вправо подсвечивают класс на карте"></div>
+    <div class="legend glass" id="legend" role="group" aria-label="Шкала цвета: население махалли" data-i18n-attr="aria-label:lg.aria">
+      <div class="lg-t"><span class="lg-tt" data-i18n-html="lg.title"><span class="lg-l">Население махалли</span><span class="lg-s">Население</span></span><span class="lg-u" data-i18n="lg.unit">тыс. чел.</span></div>
+      <div class="lg-bar" id="lg-bar" role="group" tabindex="0" aria-label="Классы численности. Стрелки влево и вправо подсвечивают класс на карте" data-i18n-attr="aria-label:lg.bar.aria"></div>
       <div class="lg-ticks" id="lg-ticks" aria-hidden="true"></div>
-      <div class="lg-n" id="lg-n" hidden><i class="lg-nh" aria-hidden="true"></i><span>Нет оценки населения</span></div>
+      <div class="lg-n" id="lg-n" hidden><i class="lg-nh" aria-hidden="true"></i><span data-i18n="lg.none">Нет оценки населения</span></div>
     </div>
 
     <div class="poly-status glass" id="poly-status" role="status" aria-live="polite" data-s=""><i class="ps-dot" aria-hidden="true"></i><span id="poly-st-t"></span></div>
@@ -1431,37 +1546,37 @@
     <div class="scale" id="scale" aria-hidden="true"><span id="scale-t">100 км</span><i id="scale-i" style="width:80px"></i></div>
 
     <div class="mapctl" id="mapctl">
-      <button class="btn btn-poly glass" id="btn-poly" type="button" aria-pressed="true" aria-label="Контуры махаллей" aria-describedby="poly-hint" title="Контуры появляются при увеличении"><svg class="ic" aria-hidden="true"><use href="#i-poly"/></svg><span class="rt-t">Контуры</span></button>
-      <div class="zoom glass" role="group" aria-label="Масштаб карты">
-        <button class="icon-btn" id="z-out" type="button" aria-label="Уменьшить"><svg class="ic" aria-hidden="true"><use href="#i-minus"/></svg></button>
-        <button class="icon-btn" id="z-in" type="button" aria-label="Увеличить"><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></button>
+      <button class="btn btn-poly glass" id="btn-poly" type="button" aria-pressed="true" aria-label="Контуры махаллей" data-i18n-attr="aria-label:poly.aria" aria-describedby="poly-hint" title="Контуры появляются при увеличении"><svg class="ic" aria-hidden="true"><use href="#i-poly"/></svg><span class="rt-t" data-i18n="poly.btn">Контуры</span></button>
+      <div class="zoom glass" role="group" aria-label="Масштаб карты" data-i18n-attr="aria-label:zoom.group">
+        <button class="icon-btn" id="z-out" type="button" aria-label="Уменьшить" data-i18n-attr="aria-label:zoom.out"><svg class="ic" aria-hidden="true"><use href="#i-minus"/></svg></button>
+        <button class="icon-btn" id="z-in" type="button" aria-label="Увеличить" data-i18n-attr="aria-label:zoom.in"><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></button>
       </div>
-      <button class="btn btn-view glass" id="btn-view" type="button" aria-label="Сбросить вид" title="Сбросить вид"><svg class="ic" aria-hidden="true"><use href="#i-fit"/></svg><span class="rt-t">Сбросить вид</span></button>
+      <button class="btn btn-view glass" id="btn-view" type="button" title="Сбросить вид" data-i18n-attr="title:view.reset"><svg class="ic" aria-hidden="true"><use href="#i-fit"/></svg><span class="rt-t" data-i18n="view.reset">Сбросить вид</span></button>
     </div>
 
     <div class="tip" id="tip" role="presentation"></div>
     <div class="card glass" id="card" role="dialog" aria-modal="false" aria-labelledby="card-title"></div>
   </main>
 
-  <aside class="panel panel-r glass" id="pi" role="complementary" aria-label="Инфографика">
+  <aside class="panel panel-r glass" id="pi" role="complementary" aria-label="Инфографика" data-i18n-attr="aria-label:pi.aria">
     <div class="grip" id="grip-pi" aria-hidden="true"></div>
     <div class="panel-h">
-      <h2>Инфографика</h2>
+      <h2 data-i18n="pi.h">Инфографика</h2>
       <span class="scope-t" id="pi-scope">вся страна</span>
-      <div class="tabs" role="tablist" aria-label="Разделы инфографики">
-        <button type="button" role="tab" id="tab-reg" aria-selected="true" aria-controls="tp-reg">Регионы</button>
-        <button type="button" role="tab" id="tab-top" aria-selected="false" aria-controls="tp-top" tabindex="-1">Топ-10</button>
-        <button type="button" role="tab" id="tab-dist" aria-selected="false" aria-controls="tp-dist" tabindex="-1">Распределение</button>
+      <div class="tabs" role="tablist" aria-label="Разделы инфографики" data-i18n-attr="aria-label:pi.tabs">
+        <button type="button" role="tab" id="tab-reg" aria-selected="true" aria-controls="tp-reg" data-i18n="pi.tabReg">Регионы</button>
+        <button type="button" role="tab" id="tab-top" aria-selected="false" aria-controls="tp-top" tabindex="-1" data-i18n="pi.tabTop">Топ-10</button>
+        <button type="button" role="tab" id="tab-dist" aria-selected="false" aria-controls="tp-dist" tabindex="-1" data-i18n="pi.tabDist">Распределение</button>
       </div>
-      <button class="icon-btn sm" type="button" data-close="pi" aria-label="Закрыть панель инфографики"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+      <button class="icon-btn sm" type="button" data-close="pi" aria-label="Закрыть панель инфографики" data-i18n-attr="aria-label:pi.close"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
     </div>
     <div class="panel-b" id="pi-b">
       <section id="tp-reg" role="tabpanel" aria-labelledby="tab-reg">
         <div class="sec-h">
-          <h3>Население регионов</h3>
-          <div class="seg" role="group" aria-label="Вид диаграммы регионов">
-            <button type="button" id="rv-chart" aria-pressed="true">График</button>
-            <button type="button" id="rv-table" aria-pressed="false">Таблица</button>
+          <h3 data-i18n="reg.h">Население регионов</h3>
+          <div class="seg" role="group" aria-label="Вид диаграммы регионов" data-i18n-attr="aria-label:reg.view">
+            <button type="button" id="rv-chart" aria-pressed="true" data-i18n="view.chart">График</button>
+            <button type="button" id="rv-table" aria-pressed="false" data-i18n="view.table">Таблица</button>
           </div>
         </div>
         <p class="sec-sub" id="reg-sub">млн человек · клик по строке выбирает регион</p>
@@ -1469,19 +1584,19 @@
         <div id="reg-table" hidden></div>
       </section>
       <section id="tp-top" role="tabpanel" aria-labelledby="tab-top" hidden>
-        <div class="sec-h"><h3>Крупнейшие махалли</h3><span class="muted" id="top-sub">вся страна</span></div>
-        <p class="sec-sub">топ-10 по населению, человек</p>
+        <div class="sec-h"><h3 data-i18n="top.h">Крупнейшие махалли</h3><span class="muted" id="top-sub">вся страна</span></div>
+        <p class="sec-sub" data-i18n="top.sub">топ-10 по населению, человек</p>
         <ol class="top" id="top"></ol>
       </section>
       <section id="tp-dist" role="tabpanel" aria-labelledby="tab-dist" hidden>
         <div class="sec-h">
-          <h3>Распределение</h3>
-          <div class="seg" role="group" aria-label="Вид диаграммы распределения">
-            <button type="button" id="dv-chart" aria-pressed="true">График</button>
-            <button type="button" id="dv-table" aria-pressed="false">Таблица</button>
+          <h3 data-i18n="dist.h">Распределение</h3>
+          <div class="seg" role="group" aria-label="Вид диаграммы распределения" data-i18n-attr="aria-label:dist.view">
+            <button type="button" id="dv-chart" aria-pressed="true" data-i18n="view.chart">График</button>
+            <button type="button" id="dv-table" aria-pressed="false" data-i18n="view.table">Таблица</button>
           </div>
         </div>
-        <p class="quant-cap" id="quant-cap">Квантили численности махалли, человек</p>
+        <p class="quant-cap" id="quant-cap" data-i18n="dist.quantCap">Квантили численности махалли, человек</p>
         <dl class="quant" id="quant"></dl>
         <p class="sec-sub sec-sub-hist" id="dist-sub">доля махаллей, шаг 1 000 чел.</p>
         <div id="dist-chart"></div>
@@ -1490,9 +1605,9 @@
     </div>
   </aside>
 
-  <nav class="dock glass" id="dock" aria-label="Панели">
-    <button class="dock-b" type="button" data-panel="pf" aria-expanded="false" aria-controls="pf"><svg class="ic" aria-hidden="true"><use href="#i-sliders"/></svg><span>Фильтры</span><span class="badge" data-badge hidden></span><svg class="ic ic-sm dock-chev" aria-hidden="true"><use href="#i-chev-up"/></svg></button>
-    <button class="dock-b" type="button" data-panel="pi" aria-expanded="false" aria-controls="pi"><svg class="ic" aria-hidden="true"><use href="#i-chart"/></svg><span>Инфографика</span><svg class="ic ic-sm dock-chev" aria-hidden="true"><use href="#i-chev-up"/></svg></button>
+  <nav class="dock glass" id="dock" aria-label="Панели" data-i18n-attr="aria-label:dock.aria">
+    <button class="dock-b" type="button" data-panel="pf" aria-expanded="false" aria-controls="pf"><svg class="ic" aria-hidden="true"><use href="#i-sliders"/></svg><span data-i18n="nav.filters">Фильтры</span><span class="badge" data-badge hidden></span><svg class="ic ic-sm dock-chev" aria-hidden="true"><use href="#i-chev-up"/></svg></button>
+    <button class="dock-b" type="button" data-panel="pi" aria-expanded="false" aria-controls="pi"><svg class="ic" aria-hidden="true"><use href="#i-chart"/></svg><span data-i18n="nav.insights">Инфографика</span><svg class="ic ic-sm dock-chev" aria-hidden="true"><use href="#i-chev-up"/></svg></button>
   </nav>
 
   <div class="scrim" id="scrim" aria-hidden="true"></div>
@@ -1509,7 +1624,6 @@ const $ = id => document.getElementById(id);
 const root = document.documentElement;
 const clamp = (v, a, b) => v < a ? a : v > b ? b : v;
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'})[c]);
-const plural = (n, a, b, c) => { const m = n % 100, d = n % 10; return (m >= 11 && m <= 14) ? c : d === 1 ? a : (d >= 2 && d <= 4) ? b : c; };
 const rmq = window.matchMedia('(prefers-reduced-motion: reduce)');
 const RM = () => rmq.matches;
 const mqCompact = window.matchMedia('(max-width: 1023px)');
@@ -1520,16 +1634,471 @@ const isPhone = () => mqPhone.matches;
 const oneAtATime = () => mqOne.matches;
 const TAU = Math.PI * 2;
 
-// ---------- форматирование (ru-RU, неразрывный пробел между разрядами) ----------
-const nf0 = new Intl.NumberFormat('ru-RU', {maximumFractionDigits: 0});
-const nf1 = new Intl.NumberFormat('ru-RU', {minimumFractionDigits: 1, maximumFractionDigits: 1});
-const nf2 = new Intl.NumberFormat('ru-RU', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+// ---------- язык интерфейса ----------
+// Один словарь I18N = {ru, uz}. Подстановки {n}, {name}; существительные при числах - массивы форм
+// (русский: три формы, узбекский: одна, см. PLURAL). Названия махаллей, районов и регионов - данные: кириллица в ru, латиница в uz.
+const I18N = {
+  ru: {
+    'meta.title': 'Махалли Узбекистана: центроиды',
+    'meta.desc': 'Центроиды {n} махаллей Узбекистана с привязкой к СОАТО: фильтры по регионам и районам, поиск и оценка населения на 01.01.2026. Оценка модели, не официальная статистика.',
+    'skip': 'К карте',
+    'brand.t': 'Махалли Узбекистана',
+    'brand.s': 'центроиды {n}',
+    'search.label': 'Поиск махалли по названию',
+    'search.ph': 'Найти махаллю',
+    'search.clear': 'Очистить поиск',
+    'search.results': 'Результаты поиска махалли',
+    'search.open': 'Поиск махалли',
+    'nav.filters': 'Фильтры',
+    'nav.insights': 'Инфографика',
+    'nav.code.aria': 'Данные и код на GitHub (откроется в новой вкладке)',
+    'nav.code.title': 'Данные и код на GitHub',
+    'theme.toggle': 'Переключить тему',
+    'theme.toggle.title': 'Сменить тему',
+    'theme.toLight': 'Включить светлую тему',
+    'theme.toDark': 'Включить тёмную тему',
+    'theme.light': 'Светлая тема',
+    'theme.dark': 'Тёмная тема',
+    'lang.group': 'Язык интерфейса',
+    'lang.ru': 'Русский',
+    'lang.uz': 'Oʻzbekcha',
+    'lang.ru.aria': 'RU, Русский',
+    'lang.uz.aria': 'OʻZ, Oʻzbekcha',
+    'about.btn': 'О данных и источниках',
+    'about.h': 'О данных и источниках',
+    'about.close': 'Закрыть сведения о данных',
+    'about.x': 'Закрыть',
+    'about.p1': 'Население махалли — <b>оценка модели</b> (GHS-POP и здания OSM), приведённая к официальным итогам по районам. Это не официальная статистика.',
+    'about.p2': 'Границы регионов: Natural Earth (public domain). Граница Тошкент шаҳри в этом источнике устарела и не охватывает, например, Яшнобод, поэтому часть городских точек может лежать на карте вне полигона города.',
+    'about.p3': '© OpenStreetMap contributors. Данные и код: <a href="https://github.com/pdlpad/SOATO" target="_blank" rel="noopener">github.com/pdlpad/SOATO</a>.',
+    'kpi.aria': 'Ключевые показатели',
+    'kpi.pop': 'Население',
+    'kpi.est': 'оценка',
+    'kpi.estNote': 'Оценка на 01.01.2026, не официальная статистика',
+    'kpi.hide': 'Скрыть остальные показатели',
+    'kpi.show': 'Показать остальные показатели',
+    'kpi.comp.aria': 'Население по регионам, от крупного к малому. Стрелки переключают регион, Enter выбирает',
+    'kpi.comp.cap': 'регионы по численности',
+    'kpi.comp.capSel': 'выбрано по регионам',
+    'kpi.mahalla': 'Махалли',
+    'kpi.districts': 'Районы',
+    'kpi.regions': 'Регионы',
+    'kpi.meanL': 'Средняя численность',
+    'kpi.meanS': 'Средняя',
+    'kpi.medL': 'Медианная численность',
+    'kpi.medS': 'Медиана',
+    'kpi.maxL': 'Крупнейшая махалля',
+    'kpi.maxS': 'Крупнейшая',
+    'unit.pers': 'чел.',
+    'unit.mln': 'млн',
+    'unit.thou': 'тыс.',
+    'cap.pop.all': '{n} человек',
+    'cap.pop.sel': '<b>{p}</b> населения страны<span class="cap-n"> · {n} чел.</span>',
+    'cap.pop.selPhone': '<span aria-hidden="true"><b>{p}</b> жителей<span class="cap-c"><span class="cap-sep"> · </span><b>{c}</b> махаллей</span></span><span class="sr">{p} населения страны, {c} всех махаллей</span>',
+    'cap.cnt.all': 'по стране',
+    'cap.cnt.sel': '<b>{p}</b> всех махаллей',
+    'cap.dist.all': 'в {n} регионах',
+    'cap.dist.sel': 'из {n}',
+    'cap.reg.all': 'по СОАТО',
+    'cap.reg.sel': 'из {n}',
+    'cap.mean.all': 'на одну махаллю',
+    'cap.mean.allS': 'на махаллю',
+    'cap.mean.sel': 'по стране {n}',
+    'cap.mean.selS': 'в стране {n}',
+    'cap.med.all': 'половина меньше',
+    'cap.med.allS': 'половина ниже',
+    'strip.max': 'Крупнейшая: <b>{name}</b>, {n} чел.',
+    'strip.avg': 'сред. <b>{mean}</b> · мед. <b>{med}</b> чел.',
+    'live.all': 'Вся страна: население {pop}, {m}, {d}.',
+    'live.sel': '{scope}: население {pop}, {p} населения страны, {m}, {d}.',
+    'max.aria': 'Крупнейшая махалля: {name}, {d}, {r}, {n} человек. Показать на карте',
+    'nn.mahalla': ['{n} махалля', '{n} махалли', '{n} махаллей'],
+    'nn.mahallaGen': ['{n} махалли', '{n} махаллей', '{n} махаллей'],
+    'nn.district': ['{n} район', '{n} района', '{n} районов'],
+    'nn.region': ['{n} регион', '{n} региона', '{n} регионов'],
+    'scope.aria': 'Выбранная область',
+    'scope.all': '<b>Вся страна</b>, фильтры не заданы',
+    'scope.nation': 'вся страна',
+    'scope.resetAll': 'Сбросить всё',
+    'scope.resetAll.s': 'Сбросить всё',
+    'chip.remove': 'Убрать фильтр: {what}',
+    'chip.reg': 'регион {name}',
+    'chip.dist': 'район {name}',
+    'chip.allR': 'все выбранные регионы',
+    'chip.allD': 'все выбранные районы',
+    'pf.aria': 'Фильтры по регионам и районам',
+    'pf.h': 'Фильтры',
+    'pf.reset': 'Сбросить',
+    'pf.close': 'Закрыть панель фильтров',
+    'pf.active': 'Активные фильтры',
+    'pf.what': 'Что фильтровать',
+    'pf.tabR': 'Регионы',
+    'pf.tabD': 'Районы',
+    'pf.dsr': 'Найти район по названию',
+    'pf.dph': 'Найти район',
+    'pf.done': 'Готово',
+    'pf.dcount.sel': 'Районы выбранных регионов: ',
+    'pf.dcount.all': 'Все районы: ',
+    'pf.of': '{n} из {t}',
+    'pf.none': 'Районов с таким названием нет',
+    'map.aria': 'Карта махаллей Узбекистана. Цвет точки и, при увеличении, контура махалли показывает оценку населения.',
+    'map.role': 'карта',
+    'map.help': 'Стрелки двигают карту, плюс и минус меняют масштаб, ноль сбрасывает вид. Enter выбирает ближайшую к центру махаллю, затем стрелки переходят к соседним махаллям, Escape закрывает карточку. Махаллю можно также выбрать через поиск или список крупнейших. Контуры махаллей появляются при увеличении и отключаются кнопкой «Контуры».',
+    'lg.aria': 'Шкала цвета: население махалли',
+    'lg.title': '<span class="lg-l">Население махалли</span><span class="lg-s">Население</span>',
+    'lg.unit': 'тыс. чел.',
+    'lg.bar.aria': 'Классы численности. Стрелки влево и вправо подсвечивают класс на карте',
+    'lg.none': 'Нет оценки населения',
+    'lg.cls': 'Класс: {r} человек, {m}.',
+    'cls.lt': 'меньше {a}',
+    'cls.rng': 'от {a} до {b}',
+    'cls.ge': '{a} и больше',
+    'bin.last': '{a} и больше',
+    'poly.btn': 'Контуры',
+    'poly.aria': 'Контуры махаллей',
+    'poly.hint.show': 'Показать контуры махаллей',
+    'poly.hint.hide': 'Скрыть контуры махаллей',
+    'poly.hint.far': 'Контуры появляются при увеличении',
+    'poly.sr.off': 'Контуры выключены',
+    'poly.sr.on': 'Контуры показаны',
+    'poly.st.fail': 'Контуры не загрузились',
+    'poly.st.load': 'Загрузка контуров…',
+    'poly.st.soon': 'Контуры появятся при увеличении',
+    'poly.msg.on': 'Контуры включены, появятся при увеличении',
+    'poly.msg.off': 'Контуры выключены',
+    'poly.live.on': 'Контуры махаллей включены.',
+    'poly.live.off': 'Контуры махаллей выключены.',
+    'zoom.group': 'Масштаб карты',
+    'zoom.out': 'Уменьшить',
+    'zoom.in': 'Увеличить',
+    'view.reset': 'Сбросить вид',
+    'scale.km': '{n} км',
+    'tip.none.s': 'Контур махалли есть, оценки модели для неё нет',
+    'tip.pt': '<strong>{n}</strong> чел., оценка',
+    'tip.reg.on': 'Нажмите, чтобы выбрать регион',
+    'tip.reg.off': 'Нажмите, чтобы снять выбор',
+    'rt.share': '{p} населения страны',
+    'rt.tv': '{v}, оценка',
+    'rt.insel': 'в выборе {v}',
+    'sel.suffix': '; выбран',
+    'sel.live': 'Выбрана махалля {name}, {d}, {n} человек, оценка.',
+    'sel.none': 'Нет оценки населения: {d}.',
+    'grat.e': ' в. д.',
+    'grat.n': ' с. ш.',
+    'coord': '{lat}° с. ш., {lon}° в. д.',
+    'pi.aria': 'Инфографика',
+    'pi.h': 'Инфографика',
+    'pi.close': 'Закрыть панель инфографики',
+    'pi.tabs': 'Разделы инфографики',
+    'pi.tabReg': 'Регионы',
+    'pi.tabTop': 'Топ-10',
+    'pi.tabDist': 'Распределение',
+    'view.chart': 'График',
+    'view.table': 'Таблица',
+    'reg.h': 'Население регионов',
+    'reg.view': 'Вид диаграммы регионов',
+    'reg.sub.all': 'млн человек<span class="sub-h"> · клик по строке выбирает регион</span>',
+    'reg.sub.sel': 'млн · <span class="lgi"><i class="sub-sw a"></i>выбрано</span><span class="lgi"><i class="sub-sw g"></i>{rest}</span>',
+    'reg.rest.r': 'остальные',
+    'reg.rest.d': 'остальное',
+    'top.h': 'Крупнейшие махалли',
+    'top.sub': 'топ-10 по населению, человек',
+    'dist.h': 'Распределение',
+    'dist.view': 'Вид диаграммы распределения',
+    'dist.quantCap': 'Квантили численности махалли, человек',
+    'dist.q.med': 'медиана',
+    'dist.sub.all': 'доля махаллей, шаг 1\u00a0000 чел.',
+    'dist.sub.sel': 'доля махаллей, % · <span class="lgi"><i class="sub-sw a"></i>выбрано</span><span class="lgi"><i class="sub-sw o"></i>вся страна</span>',
+    'dist.cols.aria': 'Доля махаллей по интервалам численности',
+    'dist.cap': 'Население махалли, тысяч человек',
+    'dist.med': 'медиана {n}',
+    'dist.tt': '{bin} человек',
+    'dist.ts.sel': 'по стране: {n} · {p}',
+    'dist.ts.all': 'доля махаллей страны',
+    'tbl.reg.cap': 'Население по регионам, оценка',
+    'tbl.region': 'Регион',
+    'tbl.m': 'Махалли',
+    'tbl.mln': 'Млн',
+    'tbl.share': 'Доля',
+    'tbl.total': 'Всего',
+    'tbl.sel': 'В выборе',
+    'tbl.insel': 'в выборе {n}',
+    'tbl.dist.cap': 'Число махаллей по интервалам численности',
+    'tbl.pers': 'Человек',
+    'tbl.nat': 'По стране',
+    'card.close': 'Закрыть карточку',
+    'card.unit': 'человек, оценка',
+    'card.top': 'Самая крупная махалля страны',
+    'card.more': 'Больше, чем у {p}% махаллей страны',
+    'card.less': 'Меньше, чем у {p}% махаллей страны',
+    'card.rank': 'Место в стране',
+    'card.rankD': 'В районе',
+    'card.rankDv': '№ {n} из {t}',
+    'card.share': 'Доля района',
+    'dock.aria': 'Панели',
+    'res.empty': 'Ничего не найдено. Попробуйте часть названия.',
+    'res.note': 'Показаны первые 10 из {n}. Уточните запрос',
+    'res.found': 'Найдено: {n}',
+    'res.none': 'Ничего не найдено'
+  },
+  uz: {
+    'meta.title': 'Oʻzbekiston mahallalari: sentroidlar',
+    'meta.desc': 'Oʻzbekistondagi {n} ta mahalla sentroidlari SOATO kodlariga bogʻlangan: viloyat va tumanlar boʻyicha filtrlar, qidiruv va aholi taxmini (2026-yil 1-yanvar holatiga). Model taxmini, rasmiy statistika emas.',
+    'skip': 'Xaritaga oʻtish',
+    'brand.t': 'Oʻzbekiston mahallalari',
+    'brand.s': '{n} sentroidlari',
+    'search.label': 'Mahalla nomi boʻyicha qidirish',
+    'search.ph': 'Mahalla qidirish',
+    'search.clear': 'Qidiruvni tozalash',
+    'search.results': 'Mahalla qidiruvi natijalari',
+    'search.open': 'Mahalla qidirish',
+    'nav.filters': 'Filtrlar',
+    'nav.insights': 'Infografika',
+    'nav.code.aria': 'GitHub: maʼlumotlar va kod (yangi yorliqda ochiladi)',
+    'nav.code.title': 'GitHub: maʼlumotlar va kod',
+    'theme.toggle': 'Mavzuni almashtirish',
+    'theme.toggle.title': 'Mavzuni oʻzgartirish',
+    'theme.toLight': 'Yorugʻ mavzuni yoqish',
+    'theme.toDark': 'Qorongʻi mavzuni yoqish',
+    'theme.light': 'Yorugʻ mavzu',
+    'theme.dark': 'Qorongʻi mavzu',
+    'lang.group': 'Interfeys tili',
+    'lang.ru': 'Русский',
+    'lang.uz': 'Oʻzbekcha',
+    'lang.ru.aria': 'RU, Русский',
+    'lang.uz.aria': 'OʻZ, Oʻzbekcha',
+    'about.btn': 'Maʼlumotlar va manbalar haqida',
+    'about.h': 'Maʼlumotlar va manbalar haqida',
+    'about.close': 'Maʼlumot panelini yopish',
+    'about.x': 'Yopish',
+    'about.p1': 'Mahalla aholisi — <b>model taxmini</b> (GHS-POP va OSM binolari asosida), tumanlar boʻyicha rasmiy aholi soniga moslashtirilgan. Bu rasmiy statistika emas.',
+    'about.p2': 'Viloyat chegaralari: Natural Earth (public domain). Bu manbadagi Toshkent shahri chegarasi eskirgan va, masalan, Yashnobodni qamrab olmaydi, shuning uchun shahar nuqtalarining bir qismi xaritada shahar poligonidan tashqarida joylashishi mumkin.',
+    'about.p3': '© OpenStreetMap contributors. Maʼlumotlar va kod: <a href="https://github.com/pdlpad/SOATO" target="_blank" rel="noopener">github.com/pdlpad/SOATO</a>.',
+    'kpi.aria': 'Asosiy koʻrsatkichlar',
+    'kpi.pop': 'Aholi',
+    'kpi.est': 'taxmin',
+    'kpi.estNote': '2026-yil 1-yanvar holatiga taxmin, rasmiy statistika emas',
+    'kpi.hide': 'Qolgan koʻrsatkichlarni yashirish',
+    'kpi.show': 'Qolgan koʻrsatkichlarni koʻrsatish',
+    'kpi.comp.aria': 'Viloyatlar boʻyicha aholi, kattadan kichikka. Yoʻnalish tugmalari viloyatni almashtiradi, Enter tanlaydi',
+    'kpi.comp.cap': 'viloyatlar aholi soni boʻyicha',
+    'kpi.comp.capSel': 'tanlangan viloyatlar',
+    'kpi.mahalla': 'Mahallalar',
+    'kpi.districts': 'Tumanlar',
+    'kpi.regions': 'Viloyatlar',
+    'kpi.meanL': 'Oʻrtacha aholi soni',
+    'kpi.meanS': 'Oʻrtacha',
+    'kpi.medL': 'Aholi soni medianasi',
+    'kpi.medS': 'Mediana',
+    'kpi.maxL': 'Eng yirik mahalla',
+    'kpi.maxS': 'Eng yirik',
+    'unit.pers': 'kishi',
+    'unit.mln': 'mln',
+    'unit.thou': 'ming',
+    'cap.pop.all': '{n} kishi',
+    'cap.pop.sel': 'mamlakatdagi ulushi <b>{p}</b><span class="cap-n"> · {n} kishi</span>',
+    'cap.pop.selPhone': '<span aria-hidden="true"><b>{p}</b> aholi<span class="cap-c"><span class="cap-sep"> · </span><b>{c}</b> mahalla</span></span><span class="sr">mamlakat aholisining {p} qismi, barcha mahallalarning {c} qismi</span>',
+    'cap.cnt.all': 'mamlakat boʻyicha',
+    'cap.cnt.sel': '<span class="cap-x">mamlakatdagi </span>ulushi <b>{p}</b>',
+    'cap.dist.all': '{n}\u00a0ta viloyatda',
+    'cap.dist.sel': '{n} tadan',
+    'cap.reg.all': 'SOATO boʻyicha',
+    'cap.reg.sel': '{n} tadan',
+    'cap.mean.all': 'bir mahallaga',
+    'cap.mean.allS': 'mahallaga',
+    'cap.mean.sel': 'mamlakatda {n}',
+    'cap.mean.selS': 'mamlakat {n}',
+    'cap.med.all': 'yarmi bundan kam',
+    'cap.med.allS': 'yarmi pastroq',
+    'strip.max': 'Eng yirik: <b>{name}</b>, {n} kishi',
+    'strip.avg': 'oʻrt. <b>{mean}</b> · med. <b>{med}</b> kishi',
+    'live.all': 'Butun mamlakat: aholi {pop}, {m}, {d}.',
+    'live.sel': '{scope}: aholi {pop}, mamlakat aholisining {p} qismi, {m}, {d}.',
+    'max.aria': 'Eng yirik mahalla: {name}, {d}, {r}, {n} kishi. Xaritada koʻrsatish',
+    'nn.mahalla': ['{n}\u00a0ta mahalla'],
+    'nn.mahallaGen': ['{n}\u00a0ta mahalla'],
+    'nn.district': ['{n}\u00a0ta tuman'],
+    'nn.region': ['{n}\u00a0ta viloyat'],
+    'scope.aria': 'Tanlangan hudud',
+    'scope.all': '<b>Butun mamlakat</b>, filtrlar tanlanmagan',
+    'scope.nation': 'butun mamlakat',
+    'scope.resetAll': 'Hammasini tozalash',
+    'scope.resetAll.s': 'Tozalash',
+    'chip.remove': 'Filtrni olib tashlash: {what}',
+    'chip.reg': '{name}',
+    'chip.dist': '{name}',
+    'chip.allR': 'barcha tanlangan viloyatlar',
+    'chip.allD': 'barcha tanlangan tumanlar',
+    'pf.aria': 'Viloyat va tumanlar boʻyicha filtrlar',
+    'pf.h': 'Filtrlar',
+    'pf.reset': 'Tozalash',
+    'pf.close': 'Filtrlar panelini yopish',
+    'pf.active': 'Faol filtrlar',
+    'pf.what': 'Nimani filtrlash',
+    'pf.tabR': 'Viloyatlar',
+    'pf.tabD': 'Tumanlar',
+    'pf.dsr': 'Tuman nomi boʻyicha qidirish',
+    'pf.dph': 'Tuman qidirish',
+    'pf.done': 'Tayyor',
+    'pf.dcount.sel': 'Tanlangan viloyatlar tumanlari: ',
+    'pf.dcount.all': 'Barcha tumanlar: ',
+    'pf.of': '{t} tadan {n} tasi',
+    'pf.none': 'Bunday nomli tuman topilmadi',
+    'map.aria': 'Oʻzbekiston mahallalari xaritasi. Nuqtaning va, kattalashtirilganda, mahalla konturining rangi aholi taxminini koʻrsatadi.',
+    'map.role': 'xarita',
+    'map.help': 'Yoʻnalish tugmalari xaritani siljitadi, plyus va minus tugmalari masshtabni oʻzgartiradi, nol tugmasi koʻrinishni tiklaydi. Enter markazga eng yaqin mahallani tanlaydi, keyin yoʻnalish tugmalari tanlovni qoʻshni mahallalarga oʻtkazadi, Escape kartochkani yopadi. Mahallani qidiruv yoki eng yirik mahallalar roʻyxati orqali ham tanlash mumkin. Mahalla konturlari kattalashtirilganda paydo boʻladi va «Konturlar» tugmasi bilan oʻchiriladi.',
+    'lg.aria': 'Rang shkalasi: mahalla aholisi',
+    'lg.title': '<span class="lg-l">Mahalla aholisi</span><span class="lg-s">Aholi</span>',
+    'lg.unit': 'ming kishi',
+    'lg.bar.aria': 'Aholi sinflari. Chap va oʻng yoʻnalish tugmalari sinfni xaritada ajratib koʻrsatadi',
+    'lg.none': 'Aholi taxmini yoʻq',
+    'lg.cls': 'Sinf: {r} kishi, {m}.',
+    'cls.lt': '{a} dan kam',
+    'cls.rng': '{a} dan {b} gacha',
+    'cls.ge': '{a} va undan koʻp',
+    'bin.last': '{a}+',
+    'poly.btn': 'Konturlar',
+    'poly.aria': 'Mahalla konturlari',
+    'poly.hint.show': 'Mahalla konturlarini koʻrsatish',
+    'poly.hint.hide': 'Mahalla konturlarini yashirish',
+    'poly.hint.far': 'Konturlar kattalashtirilganda paydo boʻladi',
+    'poly.sr.off': 'Konturlar oʻchirilgan',
+    'poly.sr.on': 'Konturlar koʻrsatilgan',
+    'poly.st.fail': 'Konturlar yuklanmadi',
+    'poly.st.load': 'Konturlar yuklanmoqda…',
+    'poly.st.soon': 'Konturlar kattalashtirilganda paydo boʻladi',
+    'poly.msg.on': 'Konturlar yoqildi, kattalashtirilganda paydo boʻladi',
+    'poly.msg.off': 'Konturlar oʻchirildi',
+    'poly.live.on': 'Mahalla konturlari yoqildi.',
+    'poly.live.off': 'Mahalla konturlari oʻchirildi.',
+    'zoom.group': 'Xarita masshtabi',
+    'zoom.out': 'Kichraytirish',
+    'zoom.in': 'Kattalashtirish',
+    'view.reset': 'Koʻrinishni tiklash',
+    'scale.km': '{n} km',
+    'tip.none.s': 'Mahalla konturi bor, lekin model taxmini yoʻq',
+    'tip.pt': '<strong>{n}</strong> kishi, taxmin',
+    'tip.reg.on': 'Viloyatni tanlash uchun bosing',
+    'tip.reg.off': 'Tanlovni bekor qilish uchun bosing',
+    'rt.share': 'mamlakat aholisining {p} qismi',
+    'rt.tv': '{v}, taxmin',
+    'rt.insel': 'tanlanganlarda {v}',
+    'sel.suffix': '; tanlangan',
+    'sel.live': 'Mahalla tanlandi: {name}, {d}, {n} kishi, taxmin.',
+    'sel.none': 'Aholi taxmini yoʻq: {d}.',
+    'grat.e': ' sh. u.',
+    'grat.n': ' sh. k.',
+    'coord': '{lat}° sh. k., {lon}° sh. u.',
+    'pi.aria': 'Infografika',
+    'pi.h': 'Infografika',
+    'pi.close': 'Infografika panelini yopish',
+    'pi.tabs': 'Infografika boʻlimlari',
+    'pi.tabReg': 'Viloyatlar',
+    'pi.tabTop': 'Eng yirik 10 ta',
+    'pi.tabDist': 'Taqsimot',
+    'view.chart': 'Grafik',
+    'view.table': 'Jadval',
+    'reg.h': 'Viloyatlar aholisi',
+    'reg.view': 'Viloyatlar diagrammasi koʻrinishi',
+    'reg.sub.all': 'mln kishi<span class="sub-h"> · viloyatni tanlash uchun qatorni bosing</span>',
+    'reg.sub.sel': 'mln · <span class="lgi"><i class="sub-sw a"></i>tanlangan</span><span class="lgi"><i class="sub-sw g"></i>{rest}</span>',
+    'reg.rest.r': 'qolgan',
+    'reg.rest.d': 'qolgan',
+    'top.h': 'Eng yirik mahallalar',
+    'top.sub': 'aholi boʻyicha eng yirik 10 ta, kishi',
+    'dist.h': 'Taqsimot',
+    'dist.view': 'Taqsimot diagrammasi koʻrinishi',
+    'dist.quantCap': 'Mahalla aholisi kvantillari, kishi',
+    'dist.q.med': 'mediana',
+    'dist.sub.all': 'mahallalar ulushi, oraliq 1\u00a0000 kishi',
+    'dist.sub.sel': 'mahallalar ulushi, % · <span class="lgi"><i class="sub-sw a"></i>tanlangan</span><span class="lgi"><i class="sub-sw o"></i>butun mamlakat</span>',
+    'dist.cols.aria': 'Mahallalar ulushi aholi intervallari boʻyicha',
+    'dist.cap': 'Mahalla aholisi, ming kishi',
+    'dist.med': 'mediana {n}',
+    'dist.tt': '{bin} kishi',
+    'dist.ts.sel': 'mamlakat boʻyicha: {n} · {p}',
+    'dist.ts.all': 'mamlakat mahallalari ulushi',
+    'tbl.reg.cap': 'Viloyatlar aholisi, taxmin',
+    'tbl.region': 'Viloyat',
+    'tbl.m': 'Mahallalar',
+    'tbl.mln': 'Mln',
+    'tbl.share': 'Ulush',
+    'tbl.total': 'Jami',
+    'tbl.sel': 'Tanlangan',
+    'tbl.insel': 'tanlanganlarda {n}',
+    'tbl.dist.cap': 'Mahallalar soni aholi intervallari boʻyicha',
+    'tbl.pers': 'Kishi',
+    'tbl.nat': 'Mamlakatda',
+    'card.close': 'Maʼlumot kartochkasini yopish',
+    'card.unit': 'kishi, taxmin',
+    'card.top': 'Mamlakatdagi eng yirik mahalla',
+    'card.more': 'Mamlakat mahallalarining {p} foizidan yirik',
+    'card.less': 'Mamlakat mahallalarining {p} foizidan kichik',
+    'card.rank': 'Mamlakatdagi oʻrni',
+    'card.rankD': 'Tumanda',
+    'card.rankDv': '№ {n} / {t}',
+    'card.share': 'Tumandagi ulushi',
+    'dock.aria': 'Panellar',
+    'res.empty': 'Hech narsa topilmadi. Nomning bir qismini yozib koʻring.',
+    'res.note': '{n} tadan dastlabki 10 tasi koʻrsatilgan. Soʻrovni aniqlashtiring',
+    'res.found': 'Topildi: {n}',
+    'res.none': 'Hech narsa topilmadi'
+  }
+};
+const PLURAL = {
+  ru: n => { const m = n % 100, d = n % 10; return (m >= 11 && m <= 14) ? 2 : d === 1 ? 0 : (d >= 2 && d <= 4) ? 1 : 2; },
+  uz: () => 0   // в узбекском нет согласования с числительным: «452 ta mahalla»
+};
+const LANG_KEY = 'mahalla-lang';
+const langOf = c => { c = String(c || '').toLowerCase(); return c.indexOf('uz') === 0 ? 'uz' : c.indexOf('ru') === 0 ? 'ru' : null; };
+// выбор языка: ?lang= в адресе, затем сохранённый выбор, затем первый из navigator.languages на uz или ru, иначе русский (то же самое делает ранний скрипт в head)
+function detectLang() {
+  let c = null;
+  try { c = langOf(new URLSearchParams(location.search).get('lang')); } catch (e) { /* без адреса */ }
+  if (c) return c;
+  try { c = localStorage.getItem(LANG_KEY); if (c === 'ru' || c === 'uz') return c; } catch (e) { /* без хранилища */ }
+  try {
+    const ls = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language];
+    for (let k = 0; k < ls.length; k++) { c = langOf(ls[k]); if (c) return c; }
+  } catch (e) { /* старый браузер */ }
+  return 'ru';
+}
+let LANG = (root.getAttribute('data-lang') === 'uz' || root.getAttribute('data-lang') === 'ru') ? root.getAttribute('data-lang') : detectLang();
+let DICT = I18N[LANG];
+let langBusy = false;   // идёт перерисовка при смене языка: подписи меняются без анимации появления
+function t(key, p) {
+  let s = DICT[key];
+  if (s === undefined) s = I18N.ru[key];
+  if (s === undefined) return key;
+  if (Array.isArray(s)) s = s[0];
+  return p ? s.replace(/\{(\w+)\}/g, (m, k) => p[k] !== undefined ? p[k] : m) : s;
+}
+// существительное при числе: формы из словаря, число подставляется в {n}
+function nn(n, key) {
+  const f = DICT[key] || I18N.ru[key];
+  return f[Math.min(PLURAL[LANG](n), f.length - 1)].replace('{n}', fmt(n));
+}
+
+// ---------- форматирование чисел ----------
+// ru: Intl ru-RU. uz: десятичная запятая и неразрывный пробел между разрядами; Intl 'uz' в Chromium даёт «38,236,700» и «38.24»,
+// поэтому разряды и запятая ставятся вручную поверх цифр en-US (округление то же, что у русского формата).
+function makeNF(lang, minF, maxF) {
+  if (lang === 'ru') return new Intl.NumberFormat('ru-RU', {minimumFractionDigits: minF, maximumFractionDigits: maxF});
+  const base = new Intl.NumberFormat('en-US', {minimumFractionDigits: minF, maximumFractionDigits: maxF, useGrouping: false});
+  return {format(v) {
+    const s = base.format(v), dot = s.indexOf('.'), head = dot < 0 ? s : s.slice(0, dot);
+    return head.replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + (dot < 0 ? '' : ',' + s.slice(dot + 1));
+  }};
+}
+let nf0, nf1, nf2;
+function setNumberFormats() { nf0 = makeNF(LANG, 0, 0); nf1 = makeNF(LANG, 1, 1); nf2 = makeNF(LANG, 2, 2); }
+setNumberFormats();
 const fmt = v => nf0.format(Math.round(v));
 function compact(v) {
   v = Math.round(v);
-  if (v >= 1e6) return [nf2.format(v / 1e6), 'млн'];
-  if (v >= 1e5) return [nf0.format(Math.round(v / 1e3)), 'тыс.'];
-  return [fmt(v), 'чел.'];
+  if (v >= 1e6) return [nf2.format(v / 1e6), t('unit.mln')];
+  if (v >= 1e5) return [nf0.format(Math.round(v / 1e3)), t('unit.thou')];
+  return [fmt(v), t('unit.pers')];
 }
 function compactText(v) { const c = compact(v); return c[0] + ' ' + c[1]; }
 function pct(x) {
@@ -1537,29 +2106,52 @@ function pct(x) {
   if (x > 0 && x < 0.05) return '<0,1%';
   return nf1.format(x) + '%';
 }
-const mln = v => nf2.format(v / 1e6) + ' млн';
-const noun = (n, a, b, c) => fmt(n) + ' ' + plural(n, a, b, c);
+const mln = v => nf2.format(v / 1e6) + ' ' + t('unit.mln');
+
+// ---------- поиск: ключи без регистра и без различий в написании апострофа ----------
+// Апострофы (ʻ ʼ ' ` ‘ ’ ´) сводятся к одному знаку, буквы каракалпакской латиницы (á ó ú ń ǵ ı) к основным; замены один к одному по длине,
+// поэтому позицию совпадения можно переносить на показанное название. x и h, q и k остаются разными буквами.
+const FOLD1 = {'á': 'a', 'ó': 'o', 'ú': 'u', 'ń': 'n', 'ǵ': 'g', 'ı': 'i'};
+function nrm(s) {
+  return String(s).replace(/İ/g, 'i').toLowerCase().replace(/[ʻʼʹʽ‘’′`´]/g, "'").replace(/[áóúńǵı]/g, c => FOLD1[c]);
+}
+// в данных несколько кириллических названий начинаются с латинской A (и одно с латинской a): для поиска такие буквы приводятся к кириллическим
+const HOMO = {A: 'А', B: 'В', C: 'С', E: 'Е', H: 'Н', K: 'К', M: 'М', O: 'О', P: 'Р', T: 'Т', X: 'Х', a: 'а', c: 'с', e: 'е', o: 'о', p: 'р', x: 'х', y: 'у'};
+const hasCyr = s => /[Ѐ-ӿ]/.test(s);
+const cyrKey = s => hasCyr(s) ? s.replace(/[A-Za-z]/g, c => HOMO[c] || c) : s;
+const noApos = s => s.replace(/'/g, '');
 
 // ---------- данные ----------
 const REG = D.regions, DIS = D.districts, PTS = D.points;
 const N = PTS.length, NR = REG.length, ND = DIS.length;
-const pName = new Array(N), lname = new Array(N);
+const pNameC = new Array(N), pNameL = new Array(N), kC = new Array(N), kL = new Array(N), kL2 = new Array(N);
+let pName = pNameC;   // названия махаллей на языке интерфейса (applyNames)
 const pDi = new Int32Array(N), pRi = new Int32Array(N);
 const pPop = new Float64Array(N), pLon = new Float64Array(N), pLat = new Float64Array(N);
 for (let i = 0; i < N; i++) {
   const p = PTS[i];
-  pName[i] = p[0]; lname[i] = String(p[0]).toLowerCase();
+  // название, уже записанное латиницей в данных (без отдельного nameLatin), в узбекском интерфейсе показывается с ʻ вместо ASCII-апострофа после o и g
+  pNameC[i] = p[0]; pNameL[i] = p[6] || p[0].replace(/([oOgG])['`\u2018\u2019\u00b4]/g, '$1\u02bb');
+  kC[i] = nrm(cyrKey(p[0])); kL[i] = nrm(pNameL[i]); kL2[i] = noApos(kL[i]);
   pDi[i] = p[1]; pRi[i] = DIS[p[1]].r; pPop[i] = p[2]; pLon[i] = p[3]; pLat[i] = p[4];
 }
 // классы цвета на карте: шесть границ, семь классов
 const CUTS = [2000, 3000, 4000, 5000, 6000, 8000];
 const NC = 7;
-const CLASS_RANGE = ['меньше 2 000', 'от 2 000 до 3 000', 'от 3 000 до 4 000', 'от 4 000 до 5 000', 'от 5 000 до 6 000', 'от 6 000 до 8 000', '8 000 и больше'];
 const TICK_LABELS = ['&lt;2', '2–3', '3–4', '4–5', '5–6', '6–8', '8+'];
 // гистограмма: равные интервалы по 1 000 человек, последний открытый
 const HB = 11;
-const BIN_LABEL = Array.from({length: HB}, (_, b) => b < HB - 1 ? (b ? fmt(b * 1000) : '0') + '–' + fmt((b + 1) * 1000) : fmt((HB - 1) * 1000) + ' и больше');
+// подписи классов и интервалов зависят от языка: пересобираются в buildTables()
+let CLASS_RANGE = [], BIN_LABEL = [];
+function buildTables() {
+  const a = CUTS.map(fmt);
+  CLASS_RANGE = [t('cls.lt', {a: a[0]})];
+  for (let k = 1; k < CUTS.length; k++) CLASS_RANGE.push(t('cls.rng', {a: a[k - 1], b: a[k]}));
+  CLASS_RANGE.push(t('cls.ge', {a: a[CUTS.length - 1]}));
+  BIN_LABEL = Array.from({length: HB}, (_, b) => b < HB - 1 ? (b ? fmt(b * 1000) : '0') + '–' + fmt((b + 1) * 1000) : t('bin.last', {a: fmt((HB - 1) * 1000)}));
+}
 const binOf = p => { const b = Math.floor(p / 1000); return b > HB - 1 ? HB - 1 : b; };
+buildTables();
 
 const cls = new Uint8Array(N);
 const clsCountAll = new Int32Array(NC);
@@ -1586,9 +2178,30 @@ const NAT_MEDIAN = (sortedAsc[(N - 1) >> 1] + sortedAsc[N >> 1]) / 2;
 function lowerBound(arr, v) { let lo = 0, hi = arr.length; while (lo < hi) { const m = (lo + hi) >> 1; if (arr[m] < v) lo = m + 1; else hi = m; } return lo; }
 function upperBound(arr, v) { let lo = 0, hi = arr.length; while (lo < hi) { const m = (lo + hi) >> 1; if (arr[m] <= v) lo = m + 1; else hi = m; } return lo; }
 const regOrder = Array.from({length: NR}, (_, r) => r).sort((a, b) => regPop[b] - regPop[a]);
-const regShort = REG.map(r => r.n.replace(' Республикаси', ''));
-const regAbbr = REG.map(r => r.n.replace(' Республикаси', '').replace('Тошкент шаҳри', 'Тошкент ш.').replace('Тошкент вилояти', 'Тошкент вил.'));
-const regMapLabel = REG.map(r => r.n.replace(' Республикаси', '').replace('Тошкент шаҳри', 'Тошкент ш.').replace('Тошкент вилояти', 'Тошкент вил.').toUpperCase());
+// названия на двух языках (кириллица в ru, латиница в uz); активные массивы выбираются в applyNames()
+const NMS = {
+  ru: {r: REG.map(r => r.n), d: DIS.map(d => d.n), p: pNameC, strip: ' Республикаси', city: 'Тошкент шаҳри', cityA: 'Тошкент ш.', prov: 'Тошкент вилояти', provA: 'Тошкент вил.'},
+  uz: {r: REG.map(r => r.nl || r.n), d: DIS.map(d => d.nl || d.n), p: pNameL, strip: ' Respublikasi', city: 'Toshkent shahri', cityA: 'Toshkent sh.', prov: 'Toshkent viloyati', provA: 'Toshkent vil.'}
+};
+// порядок районов в списке фильтра: внутри региона по алфавиту показанного написания (в латинице oʻ и gʻ идут после o и g, а не среди знаков)
+const distOrders = {ru: Array.from({length: ND}, (_, d) => d)};
+{
+  const key = n => n.toLowerCase().replace(/([og])[\u02bb\u02bc']/g, '$1{');
+  const ks = NMS.uz.d.map(key);
+  distOrders.uz = distOrders.ru.slice().sort((a, b) => DIS[a].r - DIS[b].r || (ks[a] < ks[b] ? -1 : ks[a] > ks[b] ? 1 : a - b));
+}
+let rName, dName, regShort, regAbbr, regMapLabel, distOrder = distOrders.ru;
+function applyNames() {
+  const m = NMS[LANG];
+  pName = m.p; rName = m.r; dName = m.d; distOrder = distOrders[LANG];
+  regShort = rName.map(n => n.replace(m.strip, ''));
+  regAbbr = regShort.map(n => n.replace(m.city, m.cityA).replace(m.prov, m.provA));
+  regMapLabel = regAbbr.map(n => n.toUpperCase());
+}
+applyNames();
+// ключи поиска по названиям районов и регионов в обоих написаниях
+const dKC = DIS.map(d => nrm(cyrKey(d.n))), dKL = DIS.map(d => nrm(d.nl || d.n)), dKL2 = dKL.map(noApos);
+const rKC = REG.map(r => nrm(cyrKey(r.n))), rKL = REG.map(r => nrm(r.nl || r.n));
 const TINT = [2, 2, 0, 0, 1, 0, 2, 1, 1, 0, 2, 1, 1, 0];
 
 // контуры регионов: плоские массивы [lon, lat, ...]
@@ -1691,16 +2304,16 @@ function readTheme() {
   T.tint = [T.land, T['land-2'], T['land-3']];
   T.font = g('--font') || 'system-ui, sans-serif';
   T.mono = g('--mono') || 'ui-monospace, monospace';
-  labW[0].length = 0; labW[1].length = 0; gMeasure = {};
+  labW.forEach(a => { a.length = 0; }); gMeasure = {};
   const m = document.querySelector('meta[name="theme-color"]');
   if (m && T.bg) m.setAttribute('content', T.bg);
 }
-const labW = [[], []];
+const labW = [[], [], []];   // ширины подписей по кеглям LV
 function themeButton() {
   const dark = T.scheme === 'dark';
   $('theme-use').setAttribute('href', dark ? '#i-sun' : '#i-moon');
-  $('btn-theme').setAttribute('aria-label', dark ? 'Включить светлую тему' : 'Включить тёмную тему');
-  $('btn-theme').title = dark ? 'Светлая тема' : 'Тёмная тема';
+  $('btn-theme').setAttribute('aria-label', dark ? t('theme.toLight') : t('theme.toDark'));
+  $('btn-theme').title = dark ? t('theme.light') : t('theme.dark');
 }
 function themeChanged() { readTheme(); themeButton(); markLabels(); markBase(); requestDraw(); }
 function toggleTheme() {
@@ -2311,8 +2924,10 @@ let labDirty = true, plDirty = true, wheelUntil = 0, wheelTm = 0;
 let hoverGeo = null, hoverGeoR = -1, hoverVar = 0, hoverLead = 0;
 const isMoving = () => !!anim || (gesture && gesture.kind !== 'pan' ? true : (gesture && gesture.moved >= 6)) || performance.now() < wheelUntil;
 const markLabels = () => { labDirty = true; plDirty = true; };
-// два кегля: основной и запасной (на узких экранах крупнейшие регионы иначе остаются без подписи)
-const LV = [{px: 11, ls: 0.9, hh: 9}, {px: 10, ls: 0.3, hh: 8}];
+// кегли подписей: основной и запасной (на узких экранах крупнейшие регионы иначе остаются без подписи); третий, самый мелкий, только для двух крупнейших регионов
+// на телефоне: Қорақалпоғистон там занимает около 120 px, и название длиннее русского (QORAQALPOGʻISTON) не помещается кеглем 10
+const LV = [{px: 11, ls: 0.9, hh: 9}, {px: 10, ls: 0.3, hh: 8}, {px: 9, ls: 0.2, hh: 7}];
+const LVN = 2;   // обычных кеглей: все поиски места, кроме запасного для крупнейших регионов, перебирают только их
 function labelFont(v) {
   ctx.font = '650 ' + LV[v].px + 'px ' + T.font;
   if ('letterSpacing' in ctx) ctx.letterSpacing = LV[v].ls + 'px';
@@ -2353,6 +2968,12 @@ function gratWidth(t) {
   if (w === undefined) { ctx.font = '500 10.5px ' + T.mono; if ('letterSpacing' in ctx) ctx.letterSpacing = '0px'; w = gMeasure[t] = ctx.measureText(t).width; }
   return w;
 }
+// подписи сетки кэшируются по оси, числу знаков и значению (и сбрасываются при смене языка): в кадре строки не форматируются заново
+let gratTxt = {};
+function gratLab(axis, dec, nf, v, first) {
+  const k = axis + dec + '|' + v + (first ? '*' : '');
+  return gratTxt[k] || (gratTxt[k] = nf.format(v) + '°' + (first ? t(axis === 'x' ? 'grat.e' : 'grat.n') : ''));
+}
 function gratAdd(t, key, x, y, w, align) {
   let e = GL[glN]; if (!e) e = GL[glN] = {t: '', key: '', x: 0, y: 0, al: 'left', b0: 0, b1: 0, b2: 0, b3: 0};
   glN++;
@@ -2369,8 +2990,8 @@ function gratPrepare() {
   for (let k = 0; k < glX.length; k++) {
     const X = glX[k];
     if (X < p.l + 44 || X > p.r - 44 || X - lastX < 62 || gSkip['x' + glXv[k]]) continue;
-    const t = nf.format(glXv[k]) + '°' + (first ? ' в. д.' : '');
-    const n0 = glN; gratAdd(t, 'x' + glXv[k], X, p.t + 14, gratWidth(t), 'center');
+    const lab = gratLab('x', dec, nf, glXv[k], first);
+    const n0 = glN; gratAdd(lab, 'x' + glXv[k], X, p.t + 14, gratWidth(lab), 'center');
     if (!freeBox(GL[n0].b0, GL[n0].b1, GL[n0].b2, GL[n0].b3, keep.length)) { glN = n0; continue; }
     lastX = X; first = false;
   }
@@ -2378,11 +2999,11 @@ function gratPrepare() {
   for (let k = glY.length - 1; k >= 0; k--) {
     const Y = glY[k];
     if (Y < p.t + 40 || Y > p.b - LAY.ctlH - 10 || Y - lastY < 56) continue;
-    const t = nf.format(glYv[k]) + '°' + (first ? ' с. ш.' : ''), w = gratWidth(t);
+    const lab = gratLab('y', dec, nf, glYv[k], first), w = gratWidth(lab);
     for (let side = 0; side < 2; side++) {
       const key = (side ? 'Y' : 'y') + glYv[k];
       if (gSkip[key]) continue;
-      const n0 = glN; gratAdd(t, key, side ? p.r - 11 : p.l + 11, Y - 8, w, side ? 'right' : 'left');
+      const n0 = glN; gratAdd(lab, key, side ? p.r - 11 : p.l + 11, Y - 8, w, side ? 'right' : 'left');
       if (freeBox(GL[n0].b0, GL[n0].b1, GL[n0].b2, GL[n0].b3, keep.length)) { lastY = Y; first = false; break; }
       glN = n0;
     }
@@ -2520,7 +3141,7 @@ function inSpot(r, v, forced, allow, sx, ox, oy, pl, n, maxOc) {
 function findSpot(r, forced, sx, ox, oy, pl, n) {
   const ax = ox + regAnchor[r][0] * sx, ay = oy - regAnchor[r][1] * S;
   let A = null, B = null;
-  for (let v = 0; v < LV.length && !A; v++) A = inSpot(r, v, forced, 0, sx, ox, oy, pl, n, 0.35);
+  for (let v = 0; v < LVN && !A; v++) A = inSpot(r, v, forced, 0, sx, ox, oy, pl, n, 0.35);
   if (!forced) {
     if (A) return A;
     A = inSpot(r, 1, false, 0, sx, ox, oy, pl, n, 0.62);
@@ -2529,15 +3150,21 @@ function findSpot(r, forced, sx, ox, oy, pl, n) {
     if (labOrder.indexOf(r) < 2) { A = inSpot(r, 1, false, 3, sx, ox, oy, pl, n, 0.35); if (A) return A; }
     // выноски на общем плане нужны, пока карта достаточно велика: в низком альбомном окне и на узком телефоне они бы только загромождали её
     if (!filteredFlag && pl.b - pl.t >= 280 && pl.r - pl.l >= 520 && ax > pl.l + 12 && ax < pl.r - 12 && ay > pl.t + 26 && ay < pl.b - 12) {
-      for (let v = 0; v < LV.length && !B; v++) B = outsideSpot(r, v, ax, ay, pl, n, sx, clamp((pl.r - pl.l) * 0.09, 62, 92), true, 0.3);
+      for (let v = 0; v < LVN && !B; v++) B = outsideSpot(r, v, ax, ay, pl, n, sx, clamp((pl.r - pl.l) * 0.09, 62, 92), true, 0.3);
     }
-    return B;
+    if (B) return B;
+    // крайний случай, где раньше подписи не было: регион шириной около 120 px на телефоне. Самый мелкий кегль, сначала целиком внутри контура, затем с небольшим выходом
+    if (labOrder.indexOf(r) < 2) {
+      A = inSpot(r, 2, false, 0, sx, ox, oy, pl, n, 0.62); if (A) return A;
+      A = inSpot(r, 2, false, 3, sx, ox, oy, pl, n, 0.62); if (A) return A;
+    }
+    return null;
   }
   if (A && A[4] <= 0.3) return A;
-  for (let v = 0; v < LV.length && !B; v++) B = outsideSpot(r, v, ax, ay, pl, n, sx, 172, false, 0.5);
+  for (let v = 0; v < LVN && !B; v++) B = outsideSpot(r, v, ax, ay, pl, n, sx, 172, false, 0.5);
   if (B) return B;
   if (A) return A;
-  for (let v = 0; v < LV.length && !A; v++) A = inSpot(r, v, true, 2, sx, ox, oy, pl, n, 1.01);
+  for (let v = 0; v < LVN && !A; v++) A = inSpot(r, v, true, 2, sx, ox, oy, pl, n, 1.01);
   return A;
 }
 function computeHoverSpot(sx, ox, oy) {
@@ -2754,7 +3381,7 @@ function updateScale() {
   const key = km + '|' + Math.round(km * pxKm);
   if (key !== scaleKey) {
     scaleKey = key;
-    $('scale-t').textContent = (km >= 1 ? fmt(km) : nf1.format(km)) + ' км';
+    $('scale-t').textContent = t('scale.km', {n: km >= 1 ? fmt(km) : nf1.format(km)});
     $('scale-i').style.width = Math.round(km * pxKm) + 'px';
   }
 }
@@ -3487,6 +4114,10 @@ function polyAnchor(e, mi, r) {
   return q;
 }
 const plCand = [];
+// Типовой хвост названия (МФЙ, ОФЙ, ШФЙ, «маҳалла фуқаролар йиғини») на подписях контуров лишь отнимает место у различающей части: на холсте он опускается.
+// В подсказке, карточке и списках название остаётся полным.
+const GEN_TAIL = /\s+(?:маҳалла\s+фуқаролар\s+йиғини|mahalla\s+fuqarolar\s+yig[ʻʼ'‘’`´]ini|МФЙ|ОФЙ|ШФЙ|MFY|OFY|SHFY)$/i;
+const plShort = name => { const r = name.replace(GEN_TAIL, ''); return r.length >= 3 ? r : name; };
 function polyLabelsCompute(sx, ox, oy) {
   plN = 0; PLB.length = 0; plS = S;
   if (!(polyEnabled && polyOn) || polyA < 0.5 || MPD / S > POLY_LAB_MPP) return;
@@ -3516,7 +4147,7 @@ function polyLabelsCompute(sx, ox, oy) {
   // открытая карточка (на телефоне нижняя шторка) закрывает карту: подписи под ней не ставятся
   const cb = cardRectInMap();
   for (let c = 0; c < plCand.length && PLB.length < POLY_LAB_MAX; c++) {
-    const o = plCand[c], e = o.e, mi = o.mi, pt = e.pt[mi], name = pName[pt];
+    const o = plCand[c], e = o.e, mi = o.mi, pt = e.pt[mi], name = plShort(pName[pt]);
     const q = polyAnchor(e, mi, o.r), X = o.bx + e.la[q] * kx, Y = o.by - e.la[q + 1] * ky;
     if (X < il || X > ir || Y < it || Y > ib) continue;
     const full = plTextW(name), top = Math.min(full, o.sw * 0.92);
@@ -3644,11 +4275,25 @@ function polyFitTarget(e, mi, i) {
 }
 // ---- состояние, подсказки и кнопка ----
 function polyIdle() { return polyAct === 0 && !polyKickTm && !polyFadeTm; }
-// Подсказка у кнопки: плашка над кнопкой со стрелкой, центрирована по ней, но не выходит за рамку карты (на телефоне кнопка у правого края)
+// Подсказка у кнопки: плашка над кнопкой со стрелкой, центрирована по ней, но не выходит за рамку карты (на телефоне кнопка у правого края).
+// Если по высоте плашка задевает легенду (слева) или масштабную линейку (справа), она остаётся между ними: сдвигается и при нехватке места переносится на вторую строку.
 function polyPlacePill(st) {
   const b = $('btn-poly').getBoundingClientRect(), m = cv.getBoundingClientRect(), pl = plateCur || plateRect();
-  const w = st.offsetWidth, mid = b.left - m.left + b.width / 2;
-  const left = clamp(mid - w / 2, pl.l + 8, Math.max(pl.l + 8, pl.r - 8 - w));
+  const lgR = $('legend').getBoundingClientRect(), scEl = $('scale'), scR = scEl.offsetWidth ? scEl.getBoundingClientRect() : null;
+  const mid = b.left - m.left + b.width / 2, yB = b.top - 10, lo = pl.l + 8, hi = pl.r - 8;
+  let minL = lo, maxR = hi;
+  // ширина плашки не больше рамки карты (длинный текст переносится); пока меряем, плашка прижата к левому краю, чтобы старое положение не сужало её
+  st.style.maxWidth = Math.max(120, hi - lo).toFixed(0) + 'px'; st.style.left = lo.toFixed(1) + 'px'; st.style.right = 'auto';
+  // границы зависят от высоты плашки (перенос строки поднимает её верхний край), поэтому шаг повторяется, пока границы не перестанут меняться
+  for (let it = 0; it < 3; it++) {
+    const yT = yB - st.offsetHeight;
+    const nMin = lgR.width > 1 && lgR.top < yB && lgR.bottom > yT ? Math.max(lo, lgR.right - m.left + 8) : lo;
+    const nMax = scR && scR.top < yB && scR.bottom > yT && scR.left - m.left > mid ? Math.min(hi, scR.left - m.left - 8) : hi;
+    if (it > 0 && nMin === minL && nMax === maxR) break;
+    minL = nMin; maxR = nMax;
+    st.style.maxWidth = Math.max(120, maxR - minL).toFixed(0) + 'px'; st.style.left = minL.toFixed(1) + 'px';
+  }
+  const w = st.offsetWidth, left = clamp(mid - w / 2, minL, Math.max(minL, maxR - w));
   st.style.left = left.toFixed(1) + 'px'; st.style.right = 'auto';
   st.style.bottom = (m.bottom - b.top + 10).toFixed(1) + 'px';
   st.style.setProperty('--ax', clamp(mid - left, 14, Math.max(14, w - 14)).toFixed(1) + 'px');
@@ -3656,7 +4301,7 @@ function polyPlacePill(st) {
 function polyUi() {
   const b = $('btn-poly'), st = $('poly-status'), now = performance.now();
   const shown = polyEnabled && polyOn;
-  const hint = !polyEnabled ? 'Показать контуры махаллей' : shown ? 'Скрыть контуры махаллей' : 'Контуры появляются при увеличении';
+  const hint = t(!polyEnabled ? 'poly.hint.show' : shown ? 'poly.hint.hide' : 'poly.hint.far');
   // Подсказка видна не только в title. По наведению и с клавиатуры она показывается плашкой над кнопкой. На сенсорном экране наведения нет,
   // поэтому нажатие на кнопку на дальнем плане (когда слой показаться не может) показывает плашку 2,5 с и при включении, и при выключении.
   // Пока открыта карточка-шторка на телефоне или планшете, кнопки скрыты и плашка не нужна.
@@ -3664,7 +4309,7 @@ function polyUi() {
   const msgOn = !polyOn && !noBtn && now < polyMsgUntil;
   const hintOn = polyEnabled && !polyOn && !noBtn && polyHintHold;
   if (msgOn) { clearTimeout(polyHintTm); polyHintTm = setTimeout(polyUi, polyMsgUntil - now + 30); }
-  if (b.title !== hint) { b.title = hint; $('poly-hint').textContent = !polyEnabled ? 'Контуры выключены' : shown ? 'Контуры показаны' : 'Контуры появляются при увеличении'; }
+  if (b.title !== hint) { b.title = hint; $('poly-hint').textContent = t(!polyEnabled ? 'poly.sr.off' : shown ? 'poly.sr.on' : 'poly.hint.far'); }
   const pr = polyEnabled ? 'true' : 'false';
   if (b.getAttribute('aria-pressed') !== pr) b.setAttribute('aria-pressed', pr);
   const far = polyEnabled && !polyOn;
@@ -3675,12 +4320,12 @@ function polyUi() {
   if (shown && polyFail) s = 'fail';
   else if (shown && busy && polyBusyT && now - polyBusyT > 350) s = 'load';
   else if (msgOn || hintOn) s = 'hint';
-  const txt = s === 'fail' ? 'Контуры не загрузились' : s === 'load' ? 'Загрузка контуров…' : s === 'hint' ? (msgOn ? polyMsg : 'Контуры появятся при увеличении') : '';
+  const txt = s === 'fail' ? t('poly.st.fail') : s === 'load' ? t('poly.st.load') : s === 'hint' ? t(msgOn ? polyMsg : 'poly.st.soon') : '';
   if (s) {
     const at = s === 'hint';
     if (st.classList.contains('at-r') !== at) {
       st.classList.toggle('at-r', at);
-      if (!at) { st.style.left = st.style.right = st.style.bottom = ''; }
+      if (!at) { st.style.left = st.style.right = st.style.bottom = st.style.maxWidth = ''; }
     }
   }
   if (st.dataset.s !== s) { st.dataset.s = s; if (s) $('poly-st-t').textContent = txt; else { clearTimeout(polyUiTm2); polyUiTm2 = setTimeout(() => { if (!st.dataset.s) $('poly-st-t').textContent = ''; }, 260); } }
@@ -3696,11 +4341,11 @@ function setPolyEnabled(on) {
   if (!on) { hoverNE = null; hoverNEm = -1; polyPend = null; }
   polyInvalidate();
   polyScanKey = ''; polyZoom(); polyRetarget(performance.now()); markBase(); polyWatch(); requestDraw();
-  $('sel-live').textContent = on ? 'Контуры махаллей включены.' : 'Контуры махаллей выключены.';
+  $('sel-live').textContent = t(on ? 'poly.live.on' : 'poly.live.off');
 }
 function neTip(e) {
   const r = DIS[e.d].r;
-  return '<b>Нет оценки населения</b>' + esc(DIS[e.d].n) + '<br>' + esc(REG[r].n) + '<span class="th">Контур махалли есть, оценки модели для неё нет</span>';
+  return '<b>' + t('lg.none') + '</b>' + esc(dName[e.d]) + '<br>' + esc(rName[r]) + '<span class="th">' + t('tip.none.s') + '</span>';
 }
 function renderBase(sx, ox, oy) {
   ctx = baseCtx;
@@ -3872,7 +4517,7 @@ function selectPoint(i, zoom) {
     if (zoom) flyToPoint(i);
     else if (refit) fitCurrent(true);
     else revealPoint(i);
-    $('sel-live').textContent = 'Выбрана махалля ' + pName[i] + ', ' + DIS[pDi[i]].n + ', ' + fmt(pPop[i]) + ' человек, оценка.';
+    $('sel-live').textContent = t('sel.live', {name: pName[i], d: dName[pDi[i]], n: fmt(pPop[i])});
   } else {
     if (cardOpen) hideCard();
     if (refit) fitCurrent(true);
@@ -3921,7 +4566,7 @@ function setCap(id, html) {
   const el = $(id);
   if (el.innerHTML === html) return;
   el.innerHTML = html;
-  if (started) { el.classList.remove('fade'); void el.offsetWidth; el.classList.add('fade'); }
+  if (started && !langBusy) { el.classList.remove('fade'); void el.offsetWidth; el.classList.add('fade'); }
 }
 let liveTimer = 0, kpiAuto = false, kpiLastF = false;
 function buildKpiViz() {
@@ -3932,8 +4577,8 @@ function buildKpiViz() {
 function regTipInfo(r) {
   const part = filteredFlag && ST.rScope[r] > 0 && ST.rScope[r] < regPop[r] - 0.5;
   return {
-    tt: REG[r].n, tv: mln(regPop[r]) + ', оценка',
-    ts: noun(regCount[r], 'махалля', 'махалли', 'махаллей') + ' · ' + pct(regPop[r] / TOTAL_POP * 100) + ' населения страны' + (part ? ' · в выборе ' + mln(ST.rScope[r]) : '')
+    tt: rName[r], tv: t('rt.tv', {v: mln(regPop[r])}),
+    ts: nn(regCount[r], 'nn.mahalla') + ' · ' + t('rt.share', {p: pct(regPop[r] / TOTAL_POP * 100)}) + (part ? ' · ' + t('rt.insel', {v: mln(ST.rScope[r])}) : '')
   };
 }
 function renderKpis() {
@@ -3943,22 +4588,20 @@ function renderKpis() {
   setNum('mean', st.mean); setNum('med', st.median); setNum('max', st.maxI >= 0 ? pPop[st.maxI] : 0);
   const shP = TOTAL_POP ? st.pop / TOTAL_POP * 100 : 0, shC = st.cnt / N * 100;
   // на телефоне подпись героя короткая и в одну строку; полный текст остаётся для чтения с экрана
-  setCap('ks-pop', f ? (isPhone()
-    ? '<span aria-hidden="true"><b>' + pct(shP) + '</b> жителей<span class="cap-c"><span class="cap-sep"> · </span><b>' + pct(shC) + '</b> махаллей</span></span><span class="sr">' + pct(shP) + ' населения страны, ' + pct(shC) + ' всех махаллей</span>'
-    : '<b>' + pct(shP) + '</b> населения страны<span class="cap-n"> · ' + fmt(st.pop) + ' чел.</span>') : fmt(TOTAL_POP) + ' человек');
+  setCap('ks-pop', f ? (isPhone() ? t('cap.pop.selPhone', {p: pct(shP), c: pct(shC)}) : t('cap.pop.sel', {p: pct(shP), n: fmt(st.pop)})) : t('cap.pop.all', {n: fmt(TOTAL_POP)}));
   // свёрнутая шапка на низких телефонах: счётчики и крупнейшая махалля остаются на виду одной-двумя строками
-  const stripHTML = '<span>' + noun(st.cnt, 'махалля', 'махалли', 'махаллей') + ' · ' + noun(st.nd, 'район', 'района', 'районов') + ' · ' + noun(st.nr, 'регион', 'региона', 'регионов') + '</span>' +
-    (st.maxI >= 0 ? '<span>Крупнейшая: <b>' + esc(pName[st.maxI]) + '</b>, ' + fmt(pPop[st.maxI]) + ' чел.</span>' : '') +
-    '<span class="ks-avg">сред. <b>' + fmt(st.mean) + '</b> · мед. <b>' + fmt(st.median) + '</b> чел.</span>';
+  const stripHTML = '<span>' + nn(st.cnt, 'nn.mahalla') + ' · ' + nn(st.nd, 'nn.district') + ' · ' + nn(st.nr, 'nn.region') + '</span>' +
+    (st.maxI >= 0 ? '<span>' + t('strip.max', {name: esc(pName[st.maxI]), n: fmt(pPop[st.maxI])}) + '</span>' : '') +
+    '<span class="ks-avg">' + t('strip.avg', {mean: fmt(st.mean), med: fmt(st.median)}) + '</span>';
   if ($('k-strip').innerHTML !== stripHTML) $('k-strip').innerHTML = stripHTML;
-  setCap('ks-cnt', f ? '<b>' + pct(shC) + '</b> всех махаллей' : 'по стране');
-  setCap('ks-dist', f ? 'из ' + ND : 'в ' + NR + ' регионах');
-  setCap('ks-reg', f ? 'из ' + NR : 'по СОАТО');
+  setCap('ks-cnt', f ? t('cap.cnt.sel', {p: pct(shC)}) : t('cap.cnt.all'));
+  setCap('ks-dist', f ? t('cap.dist.sel', {n: ND}) : t('cap.dist.all', {n: NR}));
+  setCap('ks-reg', f ? t('cap.reg.sel', {n: NR}) : t('cap.reg.all'));
   // на телефоне подписи короче: ячейка около 100 px, обрезанное число хуже отсутствующего слова
   const ph = isPhone();
-  setCap('ks-mean', f ? (ph ? 'в стране ' : 'по стране ') + fmt(NAT_MEAN) : (ph ? 'на махаллю' : 'на одну махаллю'));
-  setCap('ks-med', f ? (ph ? 'в стране ' : 'по стране ') + fmt(NAT_MEDIAN) : (ph ? 'половина ниже' : 'половина меньше'));
-  setText($('comp-cap'), f ? 'выбрано по регионам' : 'регионы по численности');
+  setCap('ks-mean', f ? t(ph ? 'cap.mean.selS' : 'cap.mean.sel', {n: fmt(NAT_MEAN)}) : t(ph ? 'cap.mean.allS' : 'cap.mean.all'));
+  setCap('ks-med', f ? t(ph ? 'cap.mean.selS' : 'cap.mean.sel', {n: fmt(NAT_MEDIAN)}) : t(ph ? 'cap.med.allS' : 'cap.med.all'));
+  setText($('comp-cap'), t(f ? 'kpi.comp.capSel' : 'kpi.comp.cap'));
   // композиция по регионам: закрашена выбранная часть каждого региона; сегмент - кнопка с той же подсказкой, что у графика
   const segs = $('comp').children;
   for (let k = 0; k < NR; k++) {
@@ -3966,15 +4609,15 @@ function renderKpis() {
     sg.firstChild.style.width = (regPop[r] ? st.rScope[r] / regPop[r] * 100 : 0).toFixed(2) + '%';
     sg.dataset.tt = ti.tt; sg.dataset.tv = ti.tv; sg.dataset.ts = ti.ts;
     sg.setAttribute('aria-pressed', hiMask[r] ? 'true' : 'false');
-    sg.setAttribute('aria-label', ti.tt + ': ' + ti.tv + '; ' + ti.ts + (hiMask[r] ? '; выбран' : ''));
+    sg.setAttribute('aria-label', ti.tt + ': ' + ti.tv + '; ' + ti.ts + (hiMask[r] ? t('sel.suffix') : ''));
   }
   const mxb = $('ks-max'), mxw = $('ks-maxw');
   if (st.maxI >= 0) {
     const i = st.maxI;
     setText(mxb, pName[i]); mxb.dataset.p = i; mxb.disabled = false;
-    mxb.setAttribute('aria-label', 'Крупнейшая махалля: ' + pName[i] + ', ' + DIS[pDi[i]].n + ', ' + REG[pRi[i]].n + ', ' + fmt(pPop[i]) + ' человек. Показать на карте');
-    setText(mxw, '· ' + DIS[pDi[i]].n);
-    $('ks-maxline').title = pName[i] + ' · ' + DIS[pDi[i]].n + ' · ' + REG[pRi[i]].n;
+    mxb.setAttribute('aria-label', t('max.aria', {name: pName[i], d: dName[pDi[i]], r: rName[pRi[i]], n: fmt(pPop[i])}));
+    setText(mxw, '· ' + dName[pDi[i]]);
+    $('ks-maxline').title = pName[i] + ' · ' + dName[pDi[i]] + ' · ' + rName[pRi[i]];
   } else { setText(mxb, '—'); mxb.dataset.p = -1; mxb.disabled = true; setText(mxw, ''); $('ks-maxline').removeAttribute('title'); }
   // полоса регионов в герое - вспомогательный элемент: на телефоне сегменты слишком малы для касания, там остаётся график
   const cp = $('comp'), ph2 = isPhone();
@@ -3989,30 +4632,30 @@ function renderKpis() {
   kpiLastF = f;
   clearTimeout(liveTimer);
   liveTimer = setTimeout(() => {
-    $('kpi-live').textContent = (f ? scopeText() + ': ' : 'Вся страна: ') + 'население ' + compactText(st.pop) + (f ? ', ' + pct(shP) + ' населения страны' : '') +
-      ', ' + noun(st.cnt, 'махалля', 'махалли', 'махаллей') + ', ' + noun(st.nd, 'район', 'района', 'районов') + '.';
+    const lp = {scope: scopeText(), pop: compactText(st.pop), p: pct(shP), m: nn(st.cnt, 'nn.mahalla'), d: nn(st.nd, 'nn.district')};
+    $('kpi-live').textContent = t(f ? 'live.sel' : 'live.all', lp);
   }, KDUR + 150);
 }
 function setText(el, v) { if (el.textContent !== v) el.textContent = v; }
 
 // ---------- область выбора, чипы, списки ----------
 function scopeText() {
-  if (!filteredFlag) return 'вся страна';
-  if (selD.size) return selD.size === 1 ? DIS[selD.values().next().value].n : noun(selD.size, 'район', 'района', 'районов');
-  return selR.size === 1 ? regShort[selR.values().next().value] : noun(selR.size, 'регион', 'региона', 'регионов');
+  if (!filteredFlag) return t('scope.nation');
+  if (selD.size) return selD.size === 1 ? dName[selD.values().next().value] : nn(selD.size, 'nn.district');
+  return selR.size === 1 ? regShort[selR.values().next().value] : nn(selR.size, 'nn.region');
 }
 function chipItems() {
   const items = [];
   const rs = Array.from(selR).sort((a, b) => a - b), ds = Array.from(selD).sort((a, b) => a - b);
   const lim = isPhone() ? 2 : 3;
-  if (rs.length <= lim) rs.forEach(r => items.push({k: 'r', i: r, t: regShort[r], a: 'регион ' + regShort[r]}));
-  else items.push({k: 'R', i: -1, t: noun(rs.length, 'регион', 'региона', 'регионов'), a: 'все выбранные регионы'});
-  if (ds.length <= lim) ds.forEach(d => items.push({k: 'd', i: d, t: DIS[d].n, a: 'район ' + DIS[d].n}));
-  else items.push({k: 'D', i: -1, t: noun(ds.length, 'район', 'района', 'районов'), a: 'все выбранные районы'});
+  if (rs.length <= lim) rs.forEach(r => items.push({k: 'r', i: r, t: regShort[r], a: t('chip.reg', {name: regShort[r]})}));
+  else items.push({k: 'R', i: -1, t: nn(rs.length, 'nn.region'), a: t('chip.allR')});
+  if (ds.length <= lim) ds.forEach(d => items.push({k: 'd', i: d, t: dName[d], a: t('chip.dist', {name: dName[d]})}));
+  else items.push({k: 'D', i: -1, t: nn(ds.length, 'nn.district'), a: t('chip.allD')});
   return items;
 }
 function chipHTML(it) {
-  return '<span class="chip' + (it.k === 'd' || it.k === 'D' ? ' d' : '') + '"><span class="chip-t">' + esc(it.t) + '</span><button class="chip-x" type="button" data-chip="' + it.k + ':' + it.i + '" aria-label="Убрать фильтр: ' + esc(it.a) + '"><svg class="ic ic-sm" aria-hidden="true"><use href="#i-x"/></svg></button></span>';
+  return '<span class="chip' + (it.k === 'd' || it.k === 'D' ? ' d' : '') + '"><span class="chip-t">' + esc(it.t) + '</span><button class="chip-x" type="button" data-chip="' + it.k + ':' + it.i + '" aria-label="' + esc(t('chip.remove', {what: it.a})) + '"><svg class="ic ic-sm" aria-hidden="true"><use href="#i-x"/></svg></button></span>';
 }
 let scopeKey = '';
 function updateScopeFade() {
@@ -4023,11 +4666,11 @@ function updateScopeFade() {
 function renderScope() {
   const items = chipItems();
   const canReset = filteredFlag || query.trim() !== '' || selP >= 0;
-  const key = items.map(x => x.k + x.i).join(',') + '|' + canReset;
+  const key = items.map(x => x.k + x.i + ':' + x.t).join(',') + '|' + canReset;
   const body = $('scope-body');
   if (key !== scopeKey) {
     scopeKey = key;
-    body.innerHTML = items.length ? items.map(chipHTML).join('') : '<span class="scope-all"><b>Вся страна</b>, фильтры не заданы</span>';
+    body.innerHTML = items.length ? items.map(chipHTML).join('') : '<span class="scope-all">' + t('scope.all') + '</span>';
     $('chips-in').innerHTML = items.map(chipHTML).join('');
     $('chips-in').hidden = items.length === 0;
   }
@@ -4045,7 +4688,7 @@ function renderRegionList() {
   const box = $('regions');
   if (!regBuilt) {
     box.innerHTML = REG.map((r, k) => chkHTML('r', k, regShort[k], fmt(regCount[k]), false)).join('');
-    box.querySelectorAll('label').forEach((l, k) => { l.title = REG[k].n; });
+    box.querySelectorAll('label').forEach((l, k) => { l.title = rName[k]; });
     regBuilt = true;
   }
   box.querySelectorAll('label').forEach(l => {
@@ -4055,23 +4698,24 @@ function renderRegionList() {
   rovApply(box, 'input');
 }
 function renderDistrictList() {
-  const q = $('dq').value.trim().toLowerCase();
+  const q = nrm($('dq').value.trim()), qs = noApos(q);
   const key = Array.from(selR).sort((a, b) => a - b).join(',') + '|' + q;
   const box = $('districts');
   if (key !== distKey) {
     distKey = key;
     const parts = []; let n = 0, curR = -1;
-    for (let d = 0; d < ND; d++) {
+    for (let k = 0; k < ND; k++) {
+      const d = distOrder[k];
       if (selR.size && !selR.has(DIS[d].r)) continue;
-      if (q && !DIS[d].n.toLowerCase().includes(q)) continue;
+      if (q && !(dKC[d].includes(q) || dKL[d].includes(q) || (qs && qs === q && dKL2[d].includes(qs)))) continue;
       n++;
       if (DIS[d].r !== curR) { curR = DIS[d].r; parts.push('<div class="grp">' + esc(regShort[curR]) + '</div>'); }
-      parts.push(chkHTML('d', d, DIS[d].n, fmt(distCnt[d]), selD.has(d)));
+      parts.push(chkHTML('d', d, dName[d], fmt(distCnt[d]), selD.has(d)));
     }
-    box.innerHTML = parts.join('') || '<div class="none">Районов с таким названием нет</div>';
+    box.innerHTML = parts.join('') || '<div class="none">' + t('pf.none') + '</div>';
     rovApply(box, 'input');
     const total = selR.size ? Array.from(selR).reduce((s, r) => s + regDistN[r], 0) : ND;
-    setText($('dcount'), (selR.size ? 'Районы выбранных регионов: ' : 'Все районы: ') + (n === total ? n : n + ' из ' + total));
+    setText($('dcount'), t(selR.size ? 'pf.dcount.sel' : 'pf.dcount.all') + (n === total ? n : t('pf.of', {n: n, t: total})));
   } else {
     box.querySelectorAll('label').forEach(l => {
       const on = selD.has(+l.dataset.d);
@@ -4086,7 +4730,7 @@ function renderFilters() {
   const tr = $('tn-reg'), td = $('tn-dist');
   setText(tr, String(selR.size || NR)); tr.classList.toggle('act', selR.size > 0);
   setText(td, String(selD.size || (selR.size ? Array.from(selR).reduce((s, r) => s + regDistN[r], 0) : ND))); td.classList.toggle('act', selD.size > 0);
-  $('pf-sum').innerHTML = '<b>' + noun(ST.cnt, 'махалля', 'махалли', 'махаллей') + '</b> · ' + compactText(ST.pop);
+  $('pf-sum').innerHTML = '<b>' + nn(ST.cnt, 'nn.mahalla') + '</b> <span class="nw"><span class="dot">· </span>' + compactText(ST.pop) + '</span>';
 }
 function setTab(dist) {
   $('regions').hidden = dist; $('districts').hidden = !dist;
@@ -4119,14 +4763,14 @@ function buildRegionChart() {
   }
   grid += '</div>'; axis += '</div>';
   const rows = regOrder.map(r =>
-    '<button class="rrow" type="button" data-r="' + r + '" aria-pressed="false"><span class="rname" title="' + esc(REG[r].n) + '">' + esc(regAbbr[r]) + '</span>' +
+    '<button class="rrow" type="button" data-r="' + r + '" aria-pressed="false"><span class="rname" title="' + esc(rName[r]) + '">' + esc(regAbbr[r]) + '</span>' +
     '<span class="plot"><i class="b-all"></i><i class="b-sel"></i><span class="rval"></span></span></button>').join('');
   $('reg-chart').innerHTML = grid + rows + axis;
   measureRegionLabels();
-  let t = '<table class="tbl tbl-reg"><caption class="sr">Население по регионам, оценка</caption><colgroup><col class="c-n"><col class="c-a"><col class="c-b"><col class="c-c"></colgroup><thead><tr><th scope="col">Регион</th><th scope="col" class="n">Махалли</th><th scope="col" class="n">Млн</th><th scope="col" class="n">Доля</th></tr></thead><tbody>';
-  t += regOrder.map(r => '<tr data-r="' + r + '"><th scope="row"><button class="tb" type="button" data-r="' + r + '" aria-pressed="false" title="' + esc(REG[r].n) + '"><span class="tb-n">' + esc(regAbbr[r]) + '</span><span class="tb-s" hidden></span></button></th><td class="n">' + fmt(regCount[r]) + '</td><td class="n">' + nf2.format(regPop[r] / 1e6) + '</td><td class="n">' + pct(regPop[r] / TOTAL_POP * 100) + '</td></tr>').join('');
-  t += '</tbody><tfoot><tr><th scope="row" id="rt-l">Всего</th><td class="n" id="rt-c">' + fmt(N) + '</td><td class="n" id="rt-m">' + nf2.format(TOTAL_POP / 1e6) + '</td><td class="n" id="rt-s">100%</td></tr></tfoot></table>';
-  $('reg-table').innerHTML = t;
+  let tb = '<table class="tbl tbl-reg"><caption class="sr">' + t('tbl.reg.cap') + '</caption><colgroup><col class="c-n"><col class="c-a"><col class="c-b"><col class="c-c"></colgroup><thead><tr><th scope="col">' + t('tbl.region') + '</th><th scope="col" class="n">' + t('tbl.m') + '</th><th scope="col" class="n">' + t('tbl.mln') + '</th><th scope="col" class="n">' + t('tbl.share') + '</th></tr></thead><tbody>';
+  tb += regOrder.map(r => '<tr data-r="' + r + '"><th scope="row"><button class="tb" type="button" data-r="' + r + '" aria-pressed="false" title="' + esc(rName[r]) + '"><span class="tb-n">' + esc(regAbbr[r]) + '</span><span class="tb-s" hidden></span></button></th><td class="n">' + fmt(regCount[r]) + '</td><td class="n">' + nf2.format(regPop[r] / 1e6) + '</td><td class="n">' + pct(regPop[r] / TOTAL_POP * 100) + '</td></tr>').join('');
+  tb += '</tbody><tfoot><tr><th scope="row" id="rt-l">' + t('tbl.total') + '</th><td class="n" id="rt-c">' + fmt(N) + '</td><td class="n" id="rt-m">' + nf2.format(TOTAL_POP / 1e6) + '</td><td class="n" id="rt-s">100%</td></tr></tfoot></table>';
+  $('reg-table').innerHTML = tb;
   rovApply($('reg-chart'), '.rrow'); rovApply($('reg-table'), '.tb');
 }
 function renderBars() {
@@ -4142,26 +4786,26 @@ function renderBars() {
     setText(v, nf2.format(regPop[r] / 1e6));
     const ti = regTipInfo(r);
     b.dataset.tt = ti.tt; b.dataset.tv = ti.tv; b.dataset.ts = ti.ts;
-    b.setAttribute('aria-label', REG[r].n + ': ' + b.dataset.tv + '; ' + b.dataset.ts + (on ? '; выбран' : ''));
+    b.setAttribute('aria-label', rName[r] + ': ' + b.dataset.tv + '; ' + b.dataset.ts + (on ? t('sel.suffix') : ''));
   });
   document.querySelectorAll('#reg-table tr[data-r]').forEach(tr => {
     const r = +tr.dataset.r, on = !!hiMask[r];
     tr.classList.toggle('on', on); tr.querySelector('button').setAttribute('aria-pressed', on ? 'true' : 'false');
     const sm = tr.querySelector('.tb-s'), part = f && ST.rScope[r] > 0 && ST.rScope[r] < regPop[r] - 0.5;
-    sm.hidden = !part; if (part) setText(sm, 'в выборе ' + nf2.format(ST.rScope[r] / 1e6));
+    sm.hidden = !part; setText(sm, part ? t('tbl.insel', {n: nf2.format(ST.rScope[r] / 1e6)}) : '');
   });
   $('reg-table').classList.toggle('filt', f);
-  setText($('rt-l'), f ? 'В выборе' : 'Всего');
+  setText($('rt-l'), t(f ? 'tbl.sel' : 'tbl.total'));
   setText($('rt-c'), fmt(ST.cnt)); setText($('rt-m'), nf2.format(ST.pop / 1e6)); setText($('rt-s'), pct(TOTAL_POP ? ST.pop / TOTAL_POP * 100 : 0));
-  const sub = f ? 'млн · <span class="lgi"><i class="sub-sw a"></i>выбрано</span><span class="lgi"><i class="sub-sw g"></i>' + (selD.size ? 'остальное' : 'остальные') + '</span>' : 'млн человек<span class="sub-h"> · клик по строке выбирает регион</span>';
+  const sub = f ? t('reg.sub.sel', {rest: t(selD.size ? 'reg.rest.d' : 'reg.rest.r')}) : t('reg.sub.all');
   if ($('reg-sub').innerHTML !== sub) $('reg-sub').innerHTML = sub;
   $('reg-sub').classList.toggle('hint', !f);
 }
 function renderTop() {
   const f = filteredFlag, top = ST.top, mx = top.length ? pPop[top[0]] : 1;
-  setText($('top-sub'), f ? scopeText() : 'вся страна');
+  setText($('top-sub'), f ? scopeText() : t('scope.nation'));
   $('top').innerHTML = top.map((i, k) =>
-    '<li><button class="trow" type="button" data-p="' + i + '"><span class="tr-n">' + (k < 9 ? '0' : '') + (k + 1) + '</span><span class="tr-m"><span class="tr-name">' + esc(pName[i]) + '</span><span class="tr-d" title="' + esc(DIS[pDi[i]].n + ' · ' + REG[pRi[i]].n) + '">' + esc(DIS[pDi[i]].n) + (ST.nr > 1 ? ' · ' + esc(regAbbr[pRi[i]]) : '') + '</span></span><span class="tr-vw"><span class="tr-v">' + fmt(pPop[i]) + '</span><span class="ttrack"><i class="tbar" style="--p:' + (pPop[i] / mx).toFixed(4) + '"></i></span></span></button></li>').join('');
+    '<li><button class="trow" type="button" data-p="' + i + '"><span class="tr-n">' + (k < 9 ? '0' : '') + (k + 1) + '</span><span class="tr-m"><span class="tr-name">' + esc(pName[i]) + '</span><span class="tr-d" title="' + esc(dName[pDi[i]] + ' · ' + rName[pRi[i]]) + '">' + esc(dName[pDi[i]]) + (ST.nr > 1 ? ' · ' + esc(regAbbr[pRi[i]]) : '') + '</span></span><span class="tr-vw"><span class="tr-v">' + fmt(pPop[i]) + '</span><span class="ttrack"><i class="tbar" style="--p:' + (pPop[i] / mx).toFixed(4) + '"></i></span></span></button></li>').join('');
   rovApply($('top'), '.trow');
 }
 // распределение: равные интервалы по 1 000 человек
@@ -4171,16 +4815,16 @@ function buildDist() {
   let xl = '<div class="hc-x" aria-hidden="true">';
   for (let b = 0; b <= HB - 1; b += 2) xl += '<span style="left:' + (b / HB * 100).toFixed(2) + '%">' + (b === HB - 1 ? b + '+' : b) + '</span>';
   xl += '</div>';
-  let cols = '<div class="hc-cols" role="group" aria-label="Доля махаллей по интервалам численности">';
+  let cols = '<div class="hc-cols" role="group" aria-label="' + t('dist.cols.aria') + '">';
   for (let b = 0; b < HB; b++) cols += '<button class="hcol" type="button" data-b="' + b + '"><i class="a"></i><i class="b"></i></button>';
   cols += '</div>';
   $('dist-chart').innerHTML = '<div class="hc"><div class="hc-area"><div class="hc-grid" id="hc-grid" aria-hidden="true"></div><div class="hc-y" id="hc-y" aria-hidden="true"></div>' + cols +
-    '<svg class="hc-nat" viewBox="0 0 ' + HB + ' 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path id="hc-nat-p" d=""/></svg><div class="hc-med" id="hc-med"><b></b><span id="hc-med-t"></span></div></div>' + xl + '</div><p class="hc-cap">Население махалли, тысяч человек</p>';
+    '<svg class="hc-nat" viewBox="0 0 ' + HB + ' 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path id="hc-nat-p" d=""/></svg><div class="hc-med" id="hc-med"><b></b><span id="hc-med-t"></span></div></div>' + xl + '</div><p class="hc-cap">' + t('dist.cap') + '</p>';
   let body = '';
   for (let b = 0; b < HB; b++) body += '<tr data-b="' + b + '"><th scope="row">' + BIN_LABEL[b] + '</th><td class="n sel"></td><td class="n shr"></td><td class="n">' + fmt(histAll[b]) + '</td></tr>';
-  $('dist-table').innerHTML = '<table class="tbl tbl-dist"><caption class="sr">Число махаллей по интервалам численности</caption><colgroup><col class="c-n"><col class="c-a"><col class="c-b"><col class="c-c"></colgroup><thead><tr><th scope="col">Человек</th><th scope="col" class="n">Махалли</th><th scope="col" class="n">Доля</th><th scope="col" class="n">По стране</th></tr></thead><tbody>' + body +
-    '</tbody><tfoot><tr><th scope="row">Всего</th><td class="n" id="dt-sum"></td><td class="n">100%</td><td class="n">' + fmt(N) + '</td></tr></tfoot></table>';
-  $('quant').innerHTML = ['10%', '25%', 'медиана', '75%', '90%'].map((l, k) => '<div class="' + (k === 2 ? 'm' : '') + '"><dt>' + l + '</dt><dd></dd></div>').join('');
+  $('dist-table').innerHTML = '<table class="tbl tbl-dist"><caption class="sr">' + t('tbl.dist.cap') + '</caption><colgroup><col class="c-n"><col class="c-a"><col class="c-b"><col class="c-c"></colgroup><thead><tr><th scope="col">' + t('tbl.pers') + '</th><th scope="col" class="n">' + t('tbl.m') + '</th><th scope="col" class="n">' + t('tbl.share') + '</th><th scope="col" class="n">' + t('tbl.nat') + '</th></tr></thead><tbody>' + body +
+    '</tbody><tfoot><tr><th scope="row">' + t('tbl.total') + '</th><td class="n" id="dt-sum"></td><td class="n">100%</td><td class="n">' + fmt(N) + '</td></tr></tfoot></table>';
+  $('quant').innerHTML = ['10%', '25%', t('dist.q.med'), '75%', '90%'].map((l, k) => '<div class="' + (k === 2 ? 'm' : '') + '"><dt>' + l + '</dt><dd></dd></div>').join('');
 }
 function renderDist() {
   const f = filteredFlag, cols = $('dist-chart').querySelectorAll('.hcol');
@@ -4205,9 +4849,9 @@ function renderDist() {
   cols.forEach((c, b) => {
     c.children[0].style.height = (shA[b] / histY * 100).toFixed(2) + '%';
     c.children[1].style.height = (shS[b] / histY * 100).toFixed(2) + '%';
-    const tv = noun(ST.hist[b], 'махалля', 'махалли', 'махаллей') + ' · ' + pct(shS[b]);
-    const ts = f ? 'по стране: ' + fmt(histAll[b]) + ' · ' + pct(shA[b]) : 'доля махаллей страны';
-    c.dataset.tt = BIN_LABEL[b] + ' человек'; c.dataset.tv = tv; c.dataset.ts = ts;
+    const tv = nn(ST.hist[b], 'nn.mahalla') + ' · ' + pct(shS[b]);
+    const ts = f ? t('dist.ts.sel', {n: fmt(histAll[b]), p: pct(shA[b])}) : t('dist.ts.all');
+    c.dataset.tt = t('dist.tt', {bin: BIN_LABEL[b]}); c.dataset.tv = tv; c.dataset.ts = ts;
     c.setAttribute('aria-label', c.dataset.tt + ': ' + tv + '. ' + ts);
   });
   // вся страна: ступенчатая линия поверх столбцов выбора
@@ -4219,7 +4863,7 @@ function renderDist() {
   const med = $('hc-med'), pos = clamp(ST.median / 1000 / HB * 100, 0, 100);
   med.style.left = pos.toFixed(2) + '%';
   med.classList.toggle('flip', pos > 52);
-  setText($('hc-med-t'), 'медиана ' + fmt(ST.median));
+  setText($('hc-med-t'), t('dist.med', {n: fmt(ST.median)}));
   $('dist-table').querySelectorAll('tbody tr').forEach((tr, b) => {
     tr.querySelector('.sel').textContent = fmt(ST.hist[b]);
     tr.querySelector('.shr').textContent = pct(shS[b]);
@@ -4227,7 +4871,7 @@ function renderDist() {
   setText($('dt-sum'), fmt(ST.cnt));
   const dd = $('quant').querySelectorAll('dd');
   ST.q.forEach((v, k) => { setText(dd[k], fmt(v)); });
-  const sub = f ? 'доля махаллей, % · <span class="lgi"><i class="sub-sw a"></i>выбрано</span><span class="lgi"><i class="sub-sw o"></i>вся страна</span>' : 'доля махаллей, шаг 1 000 чел.';
+  const sub = t(f ? 'dist.sub.sel' : 'dist.sub.all');
   if ($('dist-sub').innerHTML !== sub) $('dist-sub').innerHTML = sub;
 }
 function renderInsights() {
@@ -4317,18 +4961,18 @@ function cardHTML(i) {
   const less = lowerBound(sortedAsc, pPop[i]), more = N - upperBound(sortedAsc, pPop[i]);
   const posPct = (less + (upperBound(sortedAsc, pPop[i]) - less) / 2) / N * 100;
   let sentence;
-  if (rankNat[i] === 1) sentence = 'Самая крупная махалля страны';
-  else if (less >= more) sentence = 'Больше, чем у ' + nf1.format(Math.floor(less / N * 1000) / 10) + '% махаллей страны';
-  else sentence = 'Меньше, чем у ' + nf1.format(Math.floor(more / N * 1000) / 10) + '% махаллей страны';
+  if (rankNat[i] === 1) sentence = t('card.top');
+  else if (less >= more) sentence = t('card.more', {p: nf1.format(Math.floor(less / N * 1000) / 10)});
+  else sentence = t('card.less', {p: nf1.format(Math.floor(more / N * 1000) / 10)});
   const ramp = Array.from({length: NC}, (_, k) => '<i style="flex:' + clsCountAll[k] + ' 1 0;background:var(--c' + (k + 1) + ')"></i>').join('');
-  return '<div class="card-h"><div class="card-eyebrow">' + esc(REG[r].n) + ' · ' + esc(DIS[d].n) + '</div>' +
-    '<button class="icon-btn sm" id="card-x" type="button" aria-label="Закрыть карточку"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button></div>' +
+  return '<div class="card-h"><div class="card-eyebrow">' + esc(rName[r]) + ' · ' + esc(dName[d]) + '</div>' +
+    '<button class="icon-btn sm" id="card-x" type="button" aria-label="' + t('card.close') + '"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button></div>' +
     '<h3 class="card-t" id="card-title">' + esc(pName[i]) + '</h3>' +
-    '<div class="card-v"><span class="num">' + fmt(pPop[i]) + '</span><span class="card-u">человек, оценка</span></div>' +
+    '<div class="card-v"><span class="num">' + fmt(pPop[i]) + '</span><span class="card-u">' + t('card.unit') + '</span></div>' +
     '<div class="rampbar" aria-hidden="true">' + ramp + '<em style="left:' + posPct.toFixed(2) + '%"></em></div>' +
     '<div class="card-r">' + sentence + '</div>' +
-    '<dl class="card-g"><div><dt>Место в стране</dt><dd>№ ' + fmt(rankNat[i]) + '</dd></div><div><dt>В районе</dt><dd>№ ' + rankD + ' из ' + list.length + '</dd></div><div><dt>Доля района</dt><dd>' + pct(pPop[i] / distPop[d] * 100) + '</dd></div></dl>' +
-    '<div class="card-f"><span class="coords">' + lat.toFixed(4).replace('.', ',') + '° с. ш., ' + lon.toFixed(4).replace('.', ',') + '° в. д.</span>' +
+    '<dl class="card-g"><div><dt>' + t('card.rank') + '</dt><dd>№ ' + fmt(rankNat[i]) + '</dd></div><div><dt>' + t('card.rankD') + '</dt><dd>' + t('card.rankDv', {n: rankD, t: list.length}) + '</dd></div><div><dt>' + t('card.share') + '</dt><dd>' + pct(pPop[i] / distPop[d] * 100) + '</dd></div></dl>' +
+    '<div class="card-f"><span class="coords">' + t('coord', {lat: lat.toFixed(4).replace('.', ','), lon: lon.toFixed(4).replace('.', ',')}) + '</span>' +
     '<a href="https://www.openstreetmap.org/?mlat=' + lat.toFixed(5) + '&amp;mlon=' + lon.toFixed(5) + '#map=16/' + lat.toFixed(5) + '/' + lon.toFixed(5) + '" target="_blank" rel="noopener">OSM <svg class="ic ic-sm" aria-hidden="true"><use href="#i-ext"/></svg></a></div>';
 }
 function showCard(i) {
@@ -4384,11 +5028,11 @@ function placeCard() {
   }
 }
 function pointTip(i) {
-  return '<b>' + esc(pName[i]) + '</b>' + esc(DIS[pDi[i]].n) + '<br>' + esc(REG[pRi[i]].n) + '<span class="tv"><strong>' + fmt(pPop[i]) + '</strong> чел., оценка</span>';
+  return '<b>' + esc(pName[i]) + '</b>' + esc(dName[pDi[i]]) + '<br>' + esc(rName[pRi[i]]) + '<span class="tv">' + t('tip.pt', {n: fmt(pPop[i])}) + '</span>';
 }
 function regionTip(r) {
-  return '<b>' + esc(REG[r].n) + '</b>' + noun(regCount[r], 'махалля', 'махалли', 'махаллей') + ' · ' + noun(regDistN[r], 'район', 'района', 'районов') +
-    '<span class="tv"><strong>' + compactText(regPop[r]) + '</strong> · ' + pct(regPop[r] / TOTAL_POP * 100) + ' населения страны</span><span class="th">' + (hiMask[r] ? 'Нажмите, чтобы снять выбор' : 'Нажмите, чтобы выбрать регион') + '</span>';
+  return '<b>' + esc(rName[r]) + '</b>' + nn(regCount[r], 'nn.mahalla') + ' · ' + nn(regDistN[r], 'nn.district') +
+    '<span class="tv"><strong>' + compactText(regPop[r]) + '</strong> · ' + t('rt.share', {p: pct(regPop[r] / TOTAL_POP * 100)}) + '</span><span class="th">' + t(hiMask[r] ? 'tip.reg.off' : 'tip.reg.on') + '</span>';
 }
 function hideTip() {
   tip.style.display = 'none'; tipBox = null;
@@ -4580,7 +5224,7 @@ function onMapClick(x, y, touch) {
     if (hitE.pt[hitM] >= 0) { selectPoint(hitE.pt[hitM], false); return; }
     // махалля без оценки: выбрать нечего, поясняем и не трогаем выбор региона
     const e = hitE, m = hitM;
-    $('sel-live').textContent = 'Нет оценки населения: ' + DIS[e.d].n + '.';
+    $('sel-live').textContent = t('sel.none', {d: dName[e.d]});
     if (touch) {
       // на сенсорном экране наведения нет: контур подсвечивается и подсказка показывается на пару секунд
       setHoverNE(e, m); tip.classList.add('force'); showTip(neTip(e), x, y);
@@ -4626,34 +5270,112 @@ cv.addEventListener('keydown', e => {
 
 // ---------- поиск ----------
 let results = [], resTotal = 0, resActive = -1, resOpen = false;
+// Запрос и названия сравниваются без регистра и без различий в апострофах, по кириллическому и латинскому написанию сразу
+// (кириллица находит кириллическое название, латиница латинское, показанное название может быть в другом написании).
+// Порядок: точное название, начало, середина; затем совпадения без апострофов (qoshtepa находит Qoʻshtepa).
+// Если по названиям махаллей ничего нет, ищутся названия района и региона (в обоих написаниях), махалли идут по убыванию населения.
+let resFb = false;
 function runSearch(q) {
-  q = q.trim().toLowerCase();
-  const ex = [], pre = [], sub = [];
-  if (!q) return {list: [], total: 0};
+  const qn = nrm(q.trim()), qs = noApos(qn);
+  const ex = [], pre = [], sub = [], loose = [];
+  resFb = false;
+  if (!qn) return {list: [], total: 0};
   for (let k = 0; k < N; k++) {
-    const i = ordDesc[k], at = lname[i].indexOf(q);
-    if (at < 0) continue;
-    if (at === 0) (lname[i].length === q.length ? ex : pre).push(i); else sub.push(i);
+    const i = ordDesc[k], c = kC[i], l = kL[i], ac = c.indexOf(qn), al = l === c ? ac : l.indexOf(qn);
+    if (ac >= 0 || al >= 0) {
+      if (c === qn || l === qn) ex.push(i); else if (ac === 0 || al === 0) pre.push(i); else sub.push(i);
+    } else if (qs && qs === qn && kL2[i].indexOf(qs) >= 0) loose.push(i);
   }
-  const all = ex.concat(pre, sub);
+  let all = ex.concat(pre, sub, loose);
+  if (!all.length) {
+    for (let k = 0; k < N; k++) {
+      const i = ordDesc[k], d = pDi[i], r = pRi[i];
+      if (dKC[d].indexOf(qn) >= 0 || dKL[d].indexOf(qn) >= 0 || rKC[r].indexOf(qn) >= 0 || rKL[r].indexOf(qn) >= 0 || (qs && dKL2[d].indexOf(qs) >= 0)) all.push(i);
+    }
+    resFb = all.length > 0;
+  }
   return {list: all.slice(0, 10), total: all.length};
 }
-function hl(name, q) {
-  const k = name.toLowerCase().indexOf(q);
-  if (k < 0 || !q.length) return esc(name);
-  return esc(name.slice(0, k)) + '<mark>' + esc(name.slice(k, k + q.length)) + '</mark>' + esc(name.slice(k + q.length));
+// Выравнивание кириллического названия и его латинской записи: посимвольная транслитерация (как в tools/translit.py, но в свёрнутом виде:
+// строчные буквы, апострофы одним знаком, каракалпакские буквы основными) с поиском пути по таблице. Нужно, чтобы совпадение, найденное в одном написании,
+// подсвечивалось в другом, которое показано на экране. Если названия не сходятся (нерегулярная запись), подсветки нет.
+const C2L = {а: ['a'], б: ['b'], в: ['v'], г: ['g'], д: ['d'], е: ['e', 'ye'], ё: ['yo'], ж: ['j'], з: ['z'], и: ['i'], й: ['y'], к: ['k'], л: ['l'], м: ['m'], н: ['n'], о: ['o'], п: ['p'], р: ['r'], с: ['s'], т: ['t'], у: ['u'],
+  ф: ['f'], х: ['x'], ц: ['ts', 's'], ч: ['ch'], ш: ['sh'], щ: ['sh'], ъ: ["'"], ы: ['i'], ь: ['', "'"], э: ['e'], ю: ['yu'], я: ['ya'], ў: ["o'", 'w'], қ: ['q'], ғ: ["g'", 'g'], ҳ: ['h'], ә: ['a'], ө: ["o'", 'o'], ү: ['u'], ң: ['ng', 'n']};
+// возвращает массив: позиция в латинском ключе после k символов кириллического (длина n + 1) или null
+function alignCL(c, l) {
+  const n = c.length, m = l.length, W = m + 1, prev = new Int16Array((n + 1) * W).fill(-1);
+  prev[0] = 0;
+  for (let i = 0; i < n; i++) {
+    const cands = C2L[c[i]] || [c[i]];
+    for (let j = 0; j <= m; j++) {
+      if (prev[i * W + j] < 0) continue;
+      for (let q = 0; q < cands.length; q++) {
+        const w = cands[q];
+        if (l.startsWith(w, j) && prev[(i + 1) * W + j + w.length] < 0) prev[(i + 1) * W + j + w.length] = j;
+      }
+    }
+  }
+  if (prev[n * W + m] < 0) return null;
+  const a = new Int16Array(n + 1);
+  a[n] = m;
+  for (let i = n; i > 0; i--) a[i - 1] = prev[i * W + a[i]];
+  return a;
+}
+// подсветка в названии махалли: сначала по ключу показанного написания, иначе по ключу другого написания через выравнивание
+function hlPair(name, kc, kl, qn) {
+  if (!qn) return esc(name);
+  const uz = LANG === 'uz', dk = uz ? kl : kc, ok = uz ? kc : kl;
+  let k = dk.indexOf(qn), len = qn.length;
+  if (k >= 0) return esc(name.slice(0, k)) + '<mark>' + esc(name.slice(k, k + len)) + '</mark>' + esc(name.slice(k + len));
+  if (dk !== ok) {
+    // совпадение в ключе другого написания; запрос без апострофов находит и название с апострофами (qoshtepa в qo'shtepa): позиция
+    // ищется в ключе без апострофов и переносится на исходный ключ, как это делает hl()
+    let at = ok.indexOf(qn), qlen = qn.length;
+    if (at < 0 && qn.indexOf("'") < 0) {
+      const map = []; let st = '';
+      for (let j = 0; j < ok.length; j++) if (ok[j] !== "'") { map.push(j); st += ok[j]; }
+      const kk = st.indexOf(qn);
+      if (kk >= 0) { at = map[kk]; qlen = map[kk + qn.length - 1] - at + 1; }
+    }
+    const a = at >= 0 ? alignCL(kc, kl) : null;
+    if (a) {
+      if (uz) { k = a[at]; len = a[at + qlen] - k; }
+      else {   // ключ другого написания латинский: индексы латиницы переводятся в индексы кириллицы
+        const n = a.length - 1, ja = at, jb = at + qlen;
+        let i0 = 0; while (i0 < n - 1 && a[i0 + 1] <= ja) i0++;
+        let i1 = i0; while (i1 < n - 1 && a[i1 + 1] < jb) i1++;
+        k = i0; len = i1 + 1 - i0;
+      }
+      if (len > 0) return esc(name.slice(0, k)) + '<mark>' + esc(name.slice(k, k + len)) + '</mark>' + esc(name.slice(k + len));
+    }
+  }
+  return hl(name, qn);
+}
+const hlName = (i, qn) => hlPair(pName[i], kC[i], kL[i], qn);
+// выделение найденного места в показанном тексте по одному ключу (районы и регионы, совпадения без апострофов)
+function hl(name, qn) {
+  const key = nrm(name), qs = noApos(qn);
+  let k = qn ? key.indexOf(qn) : -1, len = qn.length;
+  if (k < 0 && qs) {
+    const map = []; let st = '';
+    for (let j = 0; j < key.length; j++) if (key[j] !== "'") { map.push(j); st += key[j]; }
+    const kk = st.indexOf(qs);
+    if (kk >= 0) { k = map[kk]; len = map[kk + qs.length - 1] - k + 1; }
+  }
+  if (k < 0 || !len) return esc(name);
+  return esc(name.slice(0, k)) + '<mark>' + esc(name.slice(k, k + len)) + '</mark>' + esc(name.slice(k + len));
 }
 function renderResults() {
-  const box = $('results'), inp = $('q'), ql = query.trim().toLowerCase();
+  const box = $('results'), inp = $('q'), ql = nrm(query.trim());
   $('qfield').classList.toggle('has-text', !!query);
   if (!resOpen || !ql) { box.hidden = true; inp.setAttribute('aria-expanded', 'false'); inp.removeAttribute('aria-activedescendant'); return; }
-  if (!results.length) box.innerHTML = '<div class="res-empty" role="presentation">Ничего не найдено. Попробуйте часть названия.</div>';
+  if (!results.length) box.innerHTML = '<div class="res-empty" role="presentation">' + t('res.empty') + '</div>';
   else box.innerHTML = results.map((i, n) =>
-    '<div class="res" role="option" id="res-' + n + '" data-n="' + n + '" aria-selected="' + (n === resActive ? 'true' : 'false') + '"><span class="res-n">' + hl(pName[i], ql) + '</span><span class="res-v">' + fmt(pPop[i]) + '</span><span class="res-d">' + esc(DIS[pDi[i]].n) + ' · ' + esc(REG[pRi[i]].n) + '</span></div>').join('') +
-    (resTotal > 10 ? '<div class="res-note" role="presentation">Показаны первые 10 из ' + fmt(resTotal) + '. Уточните запрос</div>' : '');
+    '<div class="res" role="option" id="res-' + n + '" data-n="' + n + '" aria-selected="' + (n === resActive ? 'true' : 'false') + '"><span class="res-n">' + hlName(i, ql) + '</span><span class="res-v">' + fmt(pPop[i]) + '</span><span class="res-d">' + (resFb ? hlPair(dName[pDi[i]], dKC[pDi[i]], dKL[pDi[i]], ql) + ' · ' + hlPair(rName[pRi[i]], rKC[pRi[i]], rKL[pRi[i]], ql) : esc(dName[pDi[i]]) + ' · ' + esc(rName[pRi[i]])) + '</span></div>').join('') +
+    (resTotal > 10 ? '<div class="res-note" role="presentation">' + t('res.note', {n: fmt(resTotal)}) + '</div>' : '');
   box.hidden = false; inp.setAttribute('aria-expanded', 'true');
   if (resActive >= 0) inp.setAttribute('aria-activedescendant', 'res-' + resActive); else inp.removeAttribute('aria-activedescendant');
-  $('res-live').textContent = results.length ? 'Найдено: ' + fmt(resTotal) : 'Ничего не найдено';
+  $('res-live').textContent = results.length ? t('res.found', {n: fmt(resTotal)}) : t('res.none');
 }
 function setQuery(text) {
   query = String(text == null ? '' : text);
@@ -4856,18 +5578,19 @@ const kpisEl = $('kpis'), kToggle = $('k-toggle');
 function setKpiCollapsed(c) {
   kpisEl.classList.toggle('collapsed', c);
   kToggle.setAttribute('aria-expanded', c ? 'false' : 'true');
-  kToggle.setAttribute('aria-label', c ? 'Показать остальные показатели' : 'Скрыть остальные показатели');
+  kToggle.setAttribute('aria-label', t(c ? 'kpi.show' : 'kpi.hide'));
   if (started) syncLayout();
 }
 kToggle.addEventListener('click', () => { kpiAuto = false; setKpiCollapsed(!kpisEl.classList.contains('collapsed')); animWindow(); });
 if (window.matchMedia('(max-width: 700px) and (max-height: 640px)').matches) setKpiCollapsed(true);
 $('btn-theme').addEventListener('click', toggleTheme);
+$('lang').addEventListener('click', e => { const b = e.target.closest('[data-lang]'); if (b) switchLang(b.getAttribute('data-lang')); });
 $('z-in').addEventListener('click', () => zoomBy(1.7));
 $('z-out').addEventListener('click', () => zoomBy(1 / 1.7));
 $('btn-view').addEventListener('click', resetView);
 $('btn-poly').addEventListener('click', () => {
   setPolyEnabled(!polyEnabled);
-  polyMsg = polyEnabled ? 'Контуры включены, появятся при увеличении' : 'Контуры выключены';
+  polyMsg = polyEnabled ? 'poly.msg.on' : 'poly.msg.off';
   polyMsgUntil = performance.now() + 2500;
   polyUi();
 });
@@ -4880,17 +5603,18 @@ function setAbout(o) {
   const el = $('about'), b = $('btn-about');
   el.hidden = !o;
   b.setAttribute('aria-expanded', o ? 'true' : 'false');
-  b.setAttribute('aria-label', o ? 'Закрыть сведения о данных' : 'О данных и источниках');
+  // имя кнопки берётся из title (отдельный aria-label повторял бы его в описании); при открытом окне подсказка и имя говорят «закрыть»
+  b.title = t(o ? 'about.close' : 'about.btn');
 }
 $('btn-about').addEventListener('click', () => setAbout($('about').hidden));
 $('about-x').addEventListener('click', () => { setAbout(false); $('btn-about').focus(); });
 document.addEventListener('pointerdown', e => {
-  if (!$('about').hidden && !e.target.closest('#about') && !e.target.closest('#btn-about')) setAbout(false);
+  if (!$('about').hidden && !e.target.closest('#about') && !e.target.closest('#btn-about') && !e.target.closest('#lang')) setAbout(false);
 });
 // легенда: класс подсвечивается при наведении и с клавиатуры (стрелки), на сенсорных экранах она неактивна
 const lgBar = $('lg-bar');
 let lgSel = -1;
-function lgAnnounce(k) { $('sel-live').textContent = k < 0 ? '' : 'Класс: ' + CLASS_RANGE[k] + ' человек, ' + noun(clsCountAll[k], 'махалля', 'махалли', 'махаллей') + '.'; }
+function lgAnnounce(k) { $('sel-live').textContent = k < 0 ? '' : t('lg.cls', {r: CLASS_RANGE[k], m: nn(clsCountAll[k], 'nn.mahalla')}); }
 lgBar.addEventListener('pointermove', e => {
   if (isCompact() || e.pointerType !== 'mouse') return;
   const r = lgBar.getBoundingClientRect();
@@ -4972,6 +5696,58 @@ try { window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change
 try { mqCompact.addEventListener('change', () => { clearTimeout(rsTimer); rsTimer = setTimeout(onResize, 0); }); } catch (e) { /* старый браузер */ }
 try { mqPhone.addEventListener('change', () => { renderKpis(); }); } catch (e) { /* старый браузер */ }
 
+// ---------- смена языка ----------
+// Статический текст берётся из словаря по data-i18n (текст), data-i18n-html (разметка) и data-i18n-attr ("атрибут:ключ;атрибут:ключ").
+const metaDesc = document.querySelector('meta[name="description"]');
+function applyStatic() {
+  document.querySelectorAll('[data-i18n]').forEach(el => { const v = t(el.getAttribute('data-i18n')); if (el.textContent !== v) el.textContent = v; });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => { el.innerHTML = t(el.getAttribute('data-i18n-html')); });
+  document.querySelectorAll('[data-i18n-attr]').forEach(el => {
+    el.getAttribute('data-i18n-attr').split(';').forEach(pair => { const k = pair.indexOf(':'); if (k > 0) el.setAttribute(pair.slice(0, k).trim(), t(pair.slice(k + 1).trim())); });
+  });
+  setText($('brand-s'), t('brand.s', {n: nn(N, 'nn.mahallaGen')}));
+  kToggle.setAttribute('aria-label', t(kpisEl.classList.contains('collapsed') ? 'kpi.show' : 'kpi.hide'));
+  document.title = t('meta.title');
+  if (metaDesc) metaDesc.setAttribute('content', t('meta.desc', {n: fmt(N)}));
+  root.setAttribute('lang', LANG === 'uz' ? 'uz-Latn' : 'ru'); root.setAttribute('data-lang', LANG);
+  document.querySelectorAll('#lang [data-lang]').forEach(b => b.setAttribute('aria-pressed', b.getAttribute('data-lang') === LANG ? 'true' : 'false'));
+}
+// Перерисовка динамических частей на новом языке: состояние (фильтры, выбор, вид карты, открытая карточка, вкладка, панели) не трогается.
+function renderLang() {
+  langBusy = true;
+  finishNums();
+  DICT = I18N[LANG];
+  setNumberFormats(); applyNames(); buildTables();
+  gratTxt = {}; labW.forEach(a => { a.length = 0; }); gMeasure = {}; scaleKey = '';
+  applyStatic();
+  regBuilt = false; distKey = null; scopeKey = '';
+  buildRegionChart(); buildDist(); buildLegend(); histY = 0;
+  document.querySelectorAll('#lg-bar i').forEach(e => e.classList.toggle('hot', +e.dataset.c === hoverCls));
+  themeButton(); setAbout(!$('about').hidden);
+  renderFilters(); renderKpis(); renderInsights();
+  if (cardOpen && selP >= 0) {
+    card.innerHTML = cardHTML(selP);
+    cardW = card.offsetWidth; cardH = card.offsetHeight; appEl.style.setProperty('--card-h', cardH + 'px');
+    placeCard();
+  }
+  renderResults();
+  // скрытые «живые» области не должны оставаться на прежнем языке: сообщение о выборе гасится, итог поиска пересобирается
+  $('sel-live').textContent = '';
+  $('res-live').textContent = query.trim() ? (results.length ? t('res.found', {n: fmt(resTotal)}) : t('res.none')) : '';
+  hideTip(); hideCTip(); polyUi();
+  hoverGeoR = -1; markLabels(); markBase(); requestDraw(); hoverRefresh();
+  syncLayout(); updateFades(); updateScopeFade();
+  langBusy = false;
+}
+// выбор языка пользователем (переключатель и __app.setLang): перерисовка, запоминание в localStorage и ?lang= в адресе, чтобы ссылкой можно было поделиться
+function switchLang(code) {
+  if (code !== 'ru' && code !== 'uz') return LANG;
+  if (code !== LANG) { LANG = code; renderLang(); }
+  try { localStorage.setItem(LANG_KEY, LANG); } catch (e) { /* без хранилища */ }
+  try { const u = new URL(location.href); u.searchParams.set('lang', LANG); history.replaceState(history.state, '', u.pathname + u.search + u.hash); } catch (e) { /* file:// и встроенные окна */ }
+  return LANG;
+}
+
 // ---------- публичный интерфейс для проверок ----------
 window.__app = {
   selectRegions(indices) { setRegions(Array.from(indices || [])); },
@@ -4984,10 +5760,22 @@ window.__app = {
     return {
       regions: Array.from(selR).sort((a, b) => a - b), districts: Array.from(selD).sort((a, b) => a - b),
       selected: selP, count: ST.cnt, population: Math.round(ST.pop), query, resultCount: results.length,
-      polygons: polygonsInfo()
+      lang: LANG, polygons: polygonsInfo()
     };
   },
   polygons() { return polygonsInfo(); },
+  lang() { return LANG; },
+  // подписи, нарисованные на холсте в последнем кадре (для проверок перевода): названия регионов, подписи градусной сетки, названия махаллей на контурах
+  labels() {
+    flushDraw();
+    const reg = [], grat = [], poly = [];
+    for (let k = 0; k < lbN; k++) reg.push(regMapLabel[LB[k].r]);
+    for (let k = 0; k < glN; k++) grat.push(GL[k].t);
+    for (let k = 0; k < plN; k++) poly.push(PLB[k].t);
+    return {regions: reg, grat: grat, poly: poly, scale: $('scale-t').textContent};
+  },
+  // тот же путь, что у переключателя: перерисовка, localStorage, ?lang=; возвращает код языка после перерисовки
+  setLang(code) { return switchLang(code); },
   // прыжок без анимации (для проверок): центр в градусах, масштаб в метрах на пиксель
   setView(lon, lat, m) {
     cancelAnim();
@@ -5007,6 +5795,7 @@ function polygonsInfo() {
 }
 
 // ---------- старт ----------
+applyStatic();
 readTheme(); themeButton(); polyUi();
 layoutCanvas();
 regNum('pop', $('kv-pop'), $('ku-pop'), v => compact(v));
@@ -5018,7 +5807,6 @@ regNum('med', $('kv-med'), null, v => [fmt(v)]);
 regNum('max', $('kv-max'), null, v => [fmt(v)]);
 buildKpiViz(); buildRegionChart(); buildDist(); buildLegend();
 rovBind($('regions'), 'input'); rovBind($('districts'), 'input'); rovBind($('reg-chart'), '.rrow'); rovBind($('comp'), '.cs'); rovBind($('reg-table'), '.tb'); rovBind($('top'), '.trow');
-setText($('brand-s'), 'центроиды ' + noun(N, 'махалли', 'махаллей', 'махаллей'));
 recompute();
 renderFilters(); renderKpis(); renderInsights();
 if (!isCompact()) { P.pi = true; if (window.innerWidth >= 1600) P.pf = true; }
@@ -5029,6 +5817,7 @@ computeS0();
 fitCurrent(false);
 started = true;
 draw();
+root.classList.remove('lp');   // язык применён: страница показывается (класс lp ставит ранний скрипт в head, чтобы не мигал русский текст)
 requestAnimationFrame(() => { syncLayout(); setPlate(false); computeS0(); if (!userMoved) fitCurrent(false); draw(); animWindow(); });
 })();
 </script>

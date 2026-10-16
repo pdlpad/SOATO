@@ -5,8 +5,8 @@
   "name_polygon_set": "Олмазор т.",
   "population_2026_official": 418300,
   "estimation_method": "здания OSM",
-  "calibration_factor": 0.031661,
-  "mahallas_in_source": 65,
+  "calibration_factor": 0.032151,
+  "mahallas_in_source": 64,
   "area_km2": 34.9579,
   "model_vs_official_gap": -0.3044
 }

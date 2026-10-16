@@ -4,7 +4,7 @@
 
 **[Интерактивная карта](https://pdlpad.github.io/SOATO/)** · [English](#english)
 
-Набор данных о **9 467 махаллях** Узбекистана. Для каждой махалли есть оценка населения на 01.01.2026, площадь, плотность, точка-центроид и контур-полигон (EPSG:4326). Махалли привязаны к СОАТО **до уровня района** (7-значный код). Охват: 14 регионов, 205 районов, 38 236 715 человек, что равно официальной численности.
+Набор данных о **9 473 махаллях** Узбекистана. Для каждой махалли есть оценка населения на 01.01.2026, площадь, плотность, точка-центроид и контур-полигон (EPSG:4326). Махалли привязаны к СОАТО **до уровня района** (7-значный код). Охват: 14 регионов, 205 районов, 38 236 700 человек. Суммы по районам равны официальным (в пределах одного человека).
 
 > Население по махаллям — **оценка модели** (GHS-POP и здания OSM), приведённая к официальным итогам по районам. Это не официальная статистика.
 
@@ -54,12 +54,12 @@ tests/                               проверки целостности д�
 
 | Флаг | Строк | Что означает |
 |---|---|---|
-| `no_data` | 194 | строка-заглушка: махалля есть в списке района, но оценки, метода и точки нет |
+| `no_data` | 188 | строка-заглушка: махалля есть в списке района, но оценки, метода и точки нет |
 | `district_ghs_diverges_2x` | 189 | в районе GHS-POP расходится с официальным итогом примерно вдвое или больше |
 | `district_buildings_diverge_50pct` | 64 | в районе здания OSM расходятся с официальным итогом на 50 % и больше |
 | `small_polygon` | 46 | очень маленький контур махалли в источнике, оценка менее надёжна |
 
-Строки `no_data` нужно отфильтровывать. Без них остаётся 9 467 махаллей, и именно по ним построены точки и карта. Названия флагов даны как в данных; расчётного кода в репозитории нет.
+Строки `no_data` нужно отфильтровывать. Без них остаётся 9 473 махаллей, и именно по ним построены точки и карта. Названия флагов даны как в данных; расчётного кода в репозитории нет.
 
 ## Быстрый старт
 
@@ -74,7 +74,7 @@ print(len(rows), rows[0]["name"], rows[0]["pop_2026_est"])  # 71 Өрнек МФ
 
 ## Ограничения
 
-- Контуры махаллей: 9 473 объекта, из них 9 467 соответствуют махаллям с оценкой. Ещё 6 контуров относятся к махаллям района Чуст тумани (СОАТО 1714237), у которых в CSV нет оценки (`no_data`). Все центроиды лежат внутри своих контуров, площади контуров совпадают с `area_km2` в пределах 1 %.
+- Контуры махаллей: 9 473 объекта, по одному на каждую махаллю с оценкой. Строка `no_data` без контура есть только в районе Чуст тумани (1714237, махалля Янгичак). Все центроиды лежат внутри своих контуров, площади контуров совпадают с `area_km2` в пределах 1 %.
 - Данные о населении хранятся только в CSV, в контурах их нет. Все файлы контуров занимают около 75 МБ.
 - Контуры соседних махаллей местами перекрываются: у 365 махаллей (около 4 %) внутренняя точка лежит внутри контура другой махалли. Геометрия оставлена как в исходном файле.
 - Границы регионов взяты из Natural Earth. Граница Тошкент шаҳри там устарела и не охватывает, например, Яшнобод, поэтому часть городских точек на карте лежит вне полигона города.
@@ -94,7 +94,7 @@ python3 -m unittest discover -s tests -v      # проверки целостн�
 
 - Данные: [CC BY 4.0](DATA_LICENSE.md). Код: MIT.
 - Население районов — официальная статистика. Оценка по махаллям использует здания OpenStreetMap (© OpenStreetMap contributors, ODbL) и GHS-POP (JRC, Европейская комиссия). Границы регионов — Natural Earth (public domain).
-- Контуры махаллей: файл `mahallalar_2026.geojson` от владельца репозитория, происхождение исходных границ в нём не указано (см. [SOURCES.md](SOURCES.md)).
+- Контуры махаллей: файл `mahallalar_2026.geojson` от владельца репозитория; владелец подтвердил право публикации и сообщил, что границы махаллей — общедоступная информация. Происхождение исходных границ в файле не указано (см. [SOURCES.md](SOURCES.md)).
 - Подробнее: [SOURCES.md](SOURCES.md), [DATA_LICENSE.md](DATA_LICENSE.md).
 
 Пока нет DOI, ссылайтесь на репозиторий: https://github.com/pdlpad/SOATO
@@ -103,15 +103,15 @@ python3 -m unittest discover -s tests -v      # проверки целостн�
 
 ## English
 
-Reference dataset of **9,467 mahallas** (neighbourhoods) of Uzbekistan, linked to **SOATO** district codes (7-digit, district level). For each mahalla: area, populated area, estimated population as of 01.01.2026, gross and populated density, and a centroid point (EPSG:4326). Coverage: 14 regions, 205 districts, 38,236,715 people, which equals the official total.
+Reference dataset of **9,473 mahallas** (neighbourhoods) of Uzbekistan, linked to **SOATO** district codes (7-digit, district level). For each mahalla: area, populated area, estimated population as of 01.01.2026, gross and populated density, and a centroid point (EPSG:4326). Coverage: 14 regions, 205 districts, 38,236,700 people; district sums equal the official figures (within one person).
 
 > Population by mahalla is a **model estimate** (GHS-POP and OSM buildings), not official statistics. Each district's total is calibrated to its official 2026 population.
 
 - `data/mahallas/<region>/<district>.csv`: mahalla table. Column descriptions are in [`schema/`](schema/README.md).
 - `data/points/<region>/<district>.geojson`: centroids. `data/polygons/<region>/<district>.geojson`: mahalla boundary polygons (9,473 features, ~75 MB). `data/districts/` and `data/regions/` hold metadata.
-- Rows with `quality_flags = no_data` (194) are placeholders: no estimate, no point. Filter them out.
+- Rows with `quality_flags = no_data` (188) are placeholders: no estimate, no point. Filter them out.
 - `method` is `здания OSM`, `GHS-POP` or `GHS-POP (дыра в OSM)`. The estimation script is not in this repository.
-- Polygons carry only `mahalla_id`, `name` and `district_soato`; population lives in the CSV. 6 polygons (Chust district, 1714237) belong to mahallas with no estimate in the CSV. Region boundaries (Natural Earth, public domain) are in `data/regions/regions.geojson`; the Tashkent city boundary there is outdated.
+- Polygons carry only `mahalla_id`, `name` and `district_soato`; population lives in the CSV. Region boundaries (Natural Earth, public domain) are in `data/regions/regions.geojson`; the Tashkent city boundary there is outdated.
 - Interactive map (region boundaries, filters by region and district, search): https://pdlpad.github.io/SOATO/. Rebuild with `python3 tools/build_map.py`; run the checks with `python3 -m unittest discover -s tests -v`.
 - Licence: data under [CC BY 4.0](DATA_LICENSE.md), code under MIT. The data contains OpenStreetMap-derived values: © OpenStreetMap contributors. Sources: [SOURCES.md](SOURCES.md).
 
